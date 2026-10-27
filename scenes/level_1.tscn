@@ -8,23 +8,35 @@
 [ext_resource type="PackedScene" uid="uid://c61no3ofj84pg" path="res://assets/nature/flower_purple.glb" id="6_2cbcq"]
 [ext_resource type="PackedScene" uid="uid://dylxxucpiab6" path="res://assets/nature/grass.glb" id="7_isj1j"]
 [ext_resource type="PackedScene" uid="uid://4durf7c5jmsp" path="res://assets/nature/tropical_plant.glb" id="8_so66j"]
+[ext_resource type="PackedScene" uid="uid://71th1p514ngq" path="res://assets/meshy/plants/Meshy_AI_Emerald_Fern_Bloom_1027212651_texture.glb" id="8_tdlki"]
 [ext_resource type="PackedScene" uid="uid://d25jtp6d2nbdc" path="res://assets/nature/bush.glb" id="9_tr1x6"]
+[ext_resource type="PackedScene" uid="uid://1pc8kxqvfo6w" path="res://assets/meshy/plants/Meshy_AI__1027212759_texture.glb" id="9_v8pws"]
 [ext_resource type="PackedScene" uid="uid://8im08wo2yllh" path="res://assets/nature/flower_red.glb" id="10_d5akn"]
+[ext_resource type="PackedScene" uid="uid://bcqu7sltwuher" path="res://assets/nature/jungle/bamboo_cluster.glb" id="10_rscm6"]
 [ext_resource type="PackedScene" uid="uid://cyo5nbv27sicd" path="res://assets/nature/fern_small.glb" id="11_wbtxt"]
+[ext_resource type="PackedScene" uid="uid://cewt7wkxtmitt" path="res://assets/nature/jungle/elephant_ear.glb" id="11_wom8k"]
+[ext_resource type="PackedScene" uid="uid://ckxxahw23m3jd" path="res://assets/nature/jungle/ground_leaves.glb" id="12_wa552"]
 [ext_resource type="PackedScene" uid="uid://bxd7j3o78p55a" path="res://assets/nature/bromeliad.glb" id="12_x2fux"]
 [ext_resource type="PackedScene" uid="uid://qhm1c70583iu" path="res://assets/nature/tree_large.glb" id="13_s7g0b"]
+[ext_resource type="PackedScene" uid="uid://cls6j875d6rec" path="res://assets/nature/jungle/jungle_bush_dense.glb" id="13_v0i6o"]
+[ext_resource type="PackedScene" uid="uid://6ghc5or7xusv" path="res://assets/nature/jungle/monstera.glb" id="14_bamb7"]
 [ext_resource type="PackedScene" uid="uid://sq4vibmbp3st" path="res://assets/nature/palm.glb" id="14_mmfjm"]
+[ext_resource type="PackedScene" uid="uid://b23pbt85r350p" path="res://assets/nature/jungle/tree_fern.glb" id="15_8jqp6"]
 [ext_resource type="PackedScene" uid="uid://bymunw0b4nj10" path="res://assets/nature/tree_medium.glb" id="15_k8ld0"]
+[ext_resource type="PackedScene" uid="uid://qljvqs23kqrd" path="res://assets/nature/jungle/heliconia.glb" id="16_jscgt"]
 [ext_resource type="PackedScene" uid="uid://bubbhuxn7robh" path="res://assets/nature/banana_plant.glb" id="16_mbb35"]
+[ext_resource type="PackedScene" uid="uid://dt1kmcuwidgu2" path="res://assets/nature/jungle/bird_of_paradise.glb" id="17_0bysi"]
 [ext_resource type="PackedScene" uid="uid://dxlc4tf0dlt84" path="res://assets/meshy/terrain/Meshy_AI_Sapphire_Water_Block_1025143846_texture.glb" id="17_1s4pk"]
 [ext_resource type="PackedScene" uid="uid://dihe5ggh8f7f0" path="res://assets/meshy/obstacle/Meshy_AI_Mossy_Fallen_Log_1026200851_texture.glb" id="17_x2xxo"]
 [ext_resource type="PackedScene" uid="uid://dymtvg3skbofb" path="res://assets/terrain/ground_straight_earth.glb" id="18_2cbcq"]
 [ext_resource type="PackedScene" uid="uid://codr4vqstc7a4" path="res://scenes/traps/round_pit.tscn" id="18_tr1x6"]
+[ext_resource type="PackedScene" uid="uid://f8actc71chse" path="res://assets/nature/jungle/giant_tree.glb" id="18_y0ove"]
 [ext_resource type="PackedScene" uid="uid://ds7mbftvgx7ik" path="res://assets/meshy/elements/Meshy_AI_Mossy_Fallen_Branch_1026211759_texture.glb" id="19_isj1j"]
 [ext_resource type="PackedScene" uid="uid://8nr44k8spyeh" path="res://assets/meshy/elements/Meshy_AI__1026211657_texture.glb" id="20_so66j"]
 [ext_resource type="PackedScene" uid="uid://dmq5q6563eh13" path="res://assets/meshy/animals/Meshy_AI_Armored_Alligator_1026212352_texture.glb" id="22_d5akn"]
 [ext_resource type="Script" uid="uid://ooqp4hu36i2" path="res://scripts/vine.gd" id="23_wbtxt"]
 [ext_resource type="PackedScene" uid="uid://clmrkl8dm78s6" path="res://scenes/kill_zone.tscn" id="25_x2fux"]
+[ext_resource type="PackedScene" uid="uid://1r6v3bkrkfyh" path="res://assets/deco/driftwood.glb" id="37_awarj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bswci"]
 sky_top_color = Color(0.32, 0.55, 0.72, 1)
@@ -636,6 +648,99 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -106)
 [node name="flower_purple3" parent="Umgebung/ground" unique_id=1125563917 instance=ExtResource("6_2cbcq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -50)
 
+[node name="fern_large4" parent="Umgebung/ground" unique_id=1858196196 instance=ExtResource("4_1s4pk")]
+transform = Transform3D(1, 0, 0, 0, 1.4, 0, 0, 0, 1, -6, -0.05690527, -29)
+
+[node name="tropical_plant" parent="Umgebung/ground" unique_id=1509538564 instance=ExtResource("8_so66j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -32)
+
+[node name="Meshy_AI_Emerald_Fern_Bloom_1027212651_texture" parent="Umgebung/ground" unique_id=524679512 instance=ExtResource("8_tdlki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -76)
+
+[node name="Meshy_AI__1027212759_texture" parent="Umgebung/ground" unique_id=1915514326 instance=ExtResource("9_v8pws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -14)
+
+[node name="Meshy_AI__1027212759_texture2" parent="Umgebung/ground" unique_id=447197722 instance=ExtResource("9_v8pws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -21)
+
+[node name="Meshy_AI__1027212759_texture3" parent="Umgebung/ground" unique_id=1852673864 instance=ExtResource("9_v8pws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -26)
+
+[node name="Meshy_AI__1027212759_texture4" parent="Umgebung/ground" unique_id=1802840872 instance=ExtResource("9_v8pws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -29)
+
+[node name="Meshy_AI__1027212759_texture5" parent="Umgebung/ground" unique_id=1063545746 instance=ExtResource("9_v8pws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -45)
+
+[node name="Meshy_AI_Emerald_Fern_Bloom_1027212651_texture2" parent="Umgebung/ground" unique_id=763630853 instance=ExtResource("8_tdlki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -52)
+
+[node name="Meshy_AI_Emerald_Fern_Bloom_1027212651_texture3" parent="Umgebung/ground" unique_id=594102471 instance=ExtResource("8_tdlki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -50)
+
+[node name="Meshy_AI__1027212759_texture6" parent="Umgebung/ground" unique_id=1997820413 instance=ExtResource("9_v8pws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -69)
+
+[node name="Meshy_AI__1027212759_texture7" parent="Umgebung/ground" unique_id=1571290593 instance=ExtResource("9_v8pws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -69)
+
+[node name="Meshy_AI_Emerald_Fern_Bloom_1027212651_texture4" parent="Umgebung/ground" unique_id=1443545622 instance=ExtResource("8_tdlki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -81)
+
+[node name="Meshy_AI__1027212759_texture8" parent="Umgebung/ground" unique_id=726646588 instance=ExtResource("9_v8pws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -17)
+
+[node name="bamboo_cluster2" parent="Umgebung/ground" unique_id=2084218311 instance=ExtResource("10_rscm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -27)
+
+[node name="bamboo_cluster3" parent="Umgebung/ground" unique_id=638968675 instance=ExtResource("10_rscm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -11)
+
+[node name="elephant_ear2" parent="Umgebung/ground" unique_id=372118125 instance=ExtResource("11_wom8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -16)
+
+[node name="bamboo_cluster4" parent="Umgebung/ground" unique_id=1237600830 instance=ExtResource("10_rscm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -34)
+
+[node name="ground_leaves2" parent="Umgebung/ground" unique_id=522953243 instance=ExtResource("12_wa552")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -32)
+
+[node name="jungle_bush_dense2" parent="Umgebung/ground" unique_id=1664046038 instance=ExtResource("13_v0i6o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -13)
+
+[node name="monstera2" parent="Umgebung/ground" unique_id=1506117112 instance=ExtResource("14_bamb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -46)
+
+[node name="tree_fern2" parent="Umgebung/ground" unique_id=855274623 instance=ExtResource("15_8jqp6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -50)
+
+[node name="heliconia2" parent="Umgebung/ground" unique_id=96244737 instance=ExtResource("16_jscgt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -68)
+
+[node name="bird_of_paradise2" parent="Umgebung/ground" unique_id=1622026254 instance=ExtResource("17_0bysi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -72)
+
+[node name="bamboo_cluster5" parent="Umgebung/ground" unique_id=1160169658 instance=ExtResource("10_rscm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.0011531115, -75)
+
+[node name="tree_fern3" parent="Umgebung/ground" unique_id=1738493188 instance=ExtResource("15_8jqp6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -3)
+
+[node name="heliconia3" parent="Umgebung/ground" unique_id=1582007057 instance=ExtResource("16_jscgt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.009889775, -2)
+
+[node name="giant_tree2" parent="Umgebung/ground" unique_id=1931555723 instance=ExtResource("18_y0ove")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -5)
+
+[node name="giant_tree3" parent="Umgebung/ground" unique_id=1959239870 instance=ExtResource("18_y0ove")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -76)
+
+[node name="giant_tree4" parent="Umgebung/ground" unique_id=432007183 instance=ExtResource("18_y0ove")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -35)
+
+[node name="giant_tree5" parent="Umgebung/ground" unique_id=2019209306 instance=ExtResource("18_y0ove")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -54)
+
 [node name="FloorRight" type="MeshInstance3D" parent="Umgebung" unique_id=927326483]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 86, 0, 0)
 mesh = SubResource("PlaneMesh_iw4em")
@@ -678,7 +783,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -30)
 [node name="grass9" parent="Umgebung/deco" unique_id=1949148059 instance=ExtResource("7_isj1j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -25)
 
-[node name="tropical_plant" parent="Umgebung/deco" unique_id=1509538564 instance=ExtResource("8_so66j")]
+[node name="tropical_plant" parent="Umgebung/deco" unique_id=1131625634 instance=ExtResource("8_so66j")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.0000017, 0, 19)
 
 [node name="bush" parent="Umgebung/deco" unique_id=1102882426 instance=ExtResource("9_tr1x6")]
@@ -1194,5 +1299,20 @@ transform = Transform3D(-3, 0, 4.4845754e-07, 0, 1, 0, -4.5298742e-07, 0, -2.97,
 
 [node name="KillZone2" parent="." unique_id=616528353 instance=ExtResource("25_x2fux")]
 transform = Transform3D(-2.9, 0, 5.9794337e-07, 0, 2, 0, -4.3788785e-07, 0, -3.96, 0, -0.49, 90)
+
+[node name="driftwood" parent="." unique_id=758417109 instance=ExtResource("37_awarj")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 5.9999886, 0, 77)
+
+[node name="Meshy_AI_Emerald_Fern_Bloom_1027212651_texture" parent="." unique_id=1825550623 instance=ExtResource("8_tdlki")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 6.9999986, 0, 10.000001)
+
+[node name="Meshy_AI_Emerald_Fern_Bloom_1027212651_texture2" parent="." unique_id=953880175 instance=ExtResource("8_tdlki")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -6.0000014, 0, 10.999999)
+
+[node name="Meshy_AI_Emerald_Fern_Bloom_1027212651_texture3" parent="." unique_id=428005215 instance=ExtResource("8_tdlki")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -6.000003, 0.66336507, 19)
+
+[node name="Meshy_AI_Emerald_Fern_Bloom_1027212651_texture4" parent="." unique_id=2050735239 instance=ExtResource("8_tdlki")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 2.9999952, 5.9604645e-08, 32)
 
 [editable path="KillZone2"]
