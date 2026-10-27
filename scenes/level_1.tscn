@@ -19,10 +19,12 @@
 [ext_resource type="PackedScene" uid="uid://dxlc4tf0dlt84" path="res://assets/meshy/terrain/Meshy_AI_Sapphire_Water_Block_1025143846_texture.glb" id="17_1s4pk"]
 [ext_resource type="PackedScene" uid="uid://dihe5ggh8f7f0" path="res://assets/meshy/obstacle/Meshy_AI_Mossy_Fallen_Log_1026200851_texture.glb" id="17_x2xxo"]
 [ext_resource type="PackedScene" uid="uid://dymtvg3skbofb" path="res://assets/terrain/ground_straight_earth.glb" id="18_2cbcq"]
-[ext_resource type="PackedScene" path="res://scenes/traps/round_pit.tscn" id="18_tr1x6"]
+[ext_resource type="PackedScene" uid="uid://codr4vqstc7a4" path="res://scenes/traps/round_pit.tscn" id="18_tr1x6"]
 [ext_resource type="PackedScene" uid="uid://ds7mbftvgx7ik" path="res://assets/meshy/elements/Meshy_AI_Mossy_Fallen_Branch_1026211759_texture.glb" id="19_isj1j"]
 [ext_resource type="PackedScene" uid="uid://8nr44k8spyeh" path="res://assets/meshy/elements/Meshy_AI__1026211657_texture.glb" id="20_so66j"]
 [ext_resource type="PackedScene" uid="uid://dmq5q6563eh13" path="res://assets/meshy/animals/Meshy_AI_Armored_Alligator_1026212352_texture.glb" id="22_d5akn"]
+[ext_resource type="Script" uid="uid://ooqp4hu36i2" path="res://scripts/vine.gd" id="23_wbtxt"]
+[ext_resource type="PackedScene" uid="uid://clmrkl8dm78s6" path="res://scenes/kill_zone.tscn" id="25_x2fux"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bswci"]
 sky_top_color = Color(0.32, 0.55, 0.72, 1)
@@ -84,10 +86,10 @@ material = SubResource("StandardMaterial3D_l3403")
 size = Vector3(12, 1, 8)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h8c8n"]
-size = Vector3(12, 1, 8)
+size = Vector3(12, 1, 12)
 
 [node name="level1" type="Node3D" unique_id=784429693]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1161051698]
 transform = Transform3D(0.819152, -0.383798, 0.42625, 0, 0.743145, 0.669131, -0.573576, -0.54812, 0.608749, 0, 20, 0)
@@ -352,33 +354,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 
 [node name="ground_grass27" parent="Umgebung/ground" unique_id=753690951 instance=ExtResource("1_bswci")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -32)
 
-[node name="ground_grass28" parent="Umgebung/ground" unique_id=1090408595 instance=ExtResource("1_bswci")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, -36)
-
-[node name="ground_grass29" parent="Umgebung/ground" unique_id=1854211705 instance=ExtResource("1_bswci")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -40)
-
-[node name="ground_grass30" parent="Umgebung/ground" unique_id=867443433 instance=ExtResource("1_bswci")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -40)
-
-[node name="ground_grass31" parent="Umgebung/ground" unique_id=332238462 instance=ExtResource("1_bswci")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -40)
-
-[node name="ground_grass32" parent="Umgebung/ground" unique_id=708670550 instance=ExtResource("1_bswci")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, -36)
-
-[node name="ground_grass33" parent="Umgebung/ground" unique_id=875789591 instance=ExtResource("1_bswci")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, -36)
-
-[node name="ground_grass34" parent="Umgebung/ground" unique_id=402922468 instance=ExtResource("1_bswci")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -44)
-
-[node name="ground_grass35" parent="Umgebung/ground" unique_id=193839674 instance=ExtResource("1_bswci")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -44)
-
-[node name="ground_grass36" parent="Umgebung/ground" unique_id=1197151074 instance=ExtResource("1_bswci")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -44)
-
 [node name="ground_grass37" parent="Umgebung/ground" unique_id=1743013455 instance=ExtResource("1_bswci")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, -48)
 
@@ -497,10 +472,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -35)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -11)
 
 [node name="ground_grass72" parent="Umgebung/ground" unique_id=784770563 instance=ExtResource("1_bswci")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, -64)
-
-[node name="ground_grass75" parent="Umgebung/ground" unique_id=229128367 instance=ExtResource("1_bswci")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, -60)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, -68)
 
 [node name="ground_grass73" parent="Umgebung/ground" unique_id=1655576887 instance=ExtResource("1_bswci")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -68)
@@ -512,10 +484,10 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, -68)
 
 [node name="ground_grass79" parent="Umgebung/ground" unique_id=1914779710 instance=ExtResource("1_bswci")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, -64)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, -68)
 
 [node name="ground_grass80" parent="Umgebung/ground" unique_id=494158455 instance=ExtResource("1_bswci")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, -64)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, -68)
 
 [node name="ground_grass81" parent="Umgebung/ground" unique_id=1330639006 instance=ExtResource("1_bswci")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, -72)
@@ -605,7 +577,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -72)
 
 [node name="fern_large3" parent="Umgebung/ground" unique_id=198327966 instance=ExtResource("4_1s4pk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -64)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -65)
 
 [node name="ground_grass120" parent="Umgebung/ground" unique_id=326786496 instance=ExtResource("1_bswci")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, -100)
@@ -663,12 +635,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -106)
 
 [node name="flower_purple3" parent="Umgebung/ground" unique_id=1125563917 instance=ExtResource("6_2cbcq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -50)
-
-[node name="Meshy_AI_Armored_Alligator_1026212352_texture" parent="Umgebung/ground" unique_id=756769149 instance=ExtResource("22_d5akn")]
-transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, 1, -0.6, -87)
-
-[node name="Meshy_AI_Armored_Alligator_1026212352_texture2" parent="Umgebung/ground" unique_id=79757680 instance=ExtResource("22_d5akn")]
-transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, 1, -0.6, -93)
 
 [node name="FloorRight" type="MeshInstance3D" parent="Umgebung" unique_id=927326483]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 86, 0, 0)
@@ -926,7 +892,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -70)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -73)
 
 [node name="fern_small10" parent="Umgebung/deco" unique_id=2125652458 instance=ExtResource("11_wbtxt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -64)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -65)
 
 [node name="fern_small13" parent="Umgebung/deco" unique_id=164394633 instance=ExtResource("11_wbtxt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -71)
@@ -1032,61 +998,68 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -1, -69)
 
 [node name="water" type="Node" parent="Umgebung" unique_id=1226647722]
 
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture" parent="Umgebung/water" unique_id=1641988947 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, -4, -1, -84)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture2" parent="Umgebung/water" unique_id=463318916 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, -4, -1, -88)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture3" parent="Umgebung/water" unique_id=918996961 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, -4, -1, -92)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture4" parent="Umgebung/water" unique_id=1743144805 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 0, -1, -84)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture5" parent="Umgebung/water" unique_id=1466336323 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 0, -1, -88)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture6" parent="Umgebung/water" unique_id=2003239663 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 0, -1, -92)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture7" parent="Umgebung/water" unique_id=1208996918 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -84)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture8" parent="Umgebung/water" unique_id=259489762 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -88)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture9" parent="Umgebung/water" unique_id=1723342556 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -92)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture10" parent="Umgebung/water" unique_id=1471836425 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, -4, -1, -92)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture11" parent="Umgebung/water" unique_id=1647795709 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 0, -1, -92)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture12" parent="Umgebung/water" unique_id=1894558472 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -92)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture13" parent="Umgebung/water" unique_id=670205903 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, -4, -1, -96)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture14" parent="Umgebung/water" unique_id=1351482800 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 0, -1, -96)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture15" parent="Umgebung/water" unique_id=1845797364 instance=ExtResource("17_1s4pk")]
+transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -96)
+
 [node name="obstacle" type="Node" parent="Umgebung" unique_id=1709607924]
 
+[node name="RoundPit" parent="Umgebung/obstacle" unique_id=2083530729 instance=ExtResource("18_tr1x6")]
+transform = Transform3D(1, 0, 6.3573026e-08, 0, 1, 0, -6.3573026e-08, 0, 1, -2.5429208e-06, 0, -40)
+
 [node name="Meshy_AI_Mossy_Fallen_Log_1026200851_texture" parent="Umgebung/obstacle" unique_id=1813438665 instance=ExtResource("17_x2xxo")]
-transform = Transform3D(1.6, 0, -6.3573026e-08, 0, 1, 0, 1.01716836e-07, 0, 1, -1, 0, -22)
+transform = Transform3D(1.6, 0, -6.357302e-08, 0, 0.8, 0, 1.0171683e-07, 0, 1, -1, 0, -22)
 
 [node name="traps" type="Node" parent="Umgebung" unique_id=510237239]
 
-[node name="RoundPit" parent="Umgebung/traps" unique_id=981485352 instance=ExtResource("18_tr1x6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -38)
-max_radius = 5.0
+[node name="animals" type="Node" parent="Umgebung" unique_id=144307362]
 
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture" parent="Umgebung" unique_id=1641988947 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, -4, -1, -84)
+[node name="Meshy_AI_Armored_Alligator_1026212352_texture" parent="Umgebung/animals" unique_id=756769149 instance=ExtResource("22_d5akn")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, 1, -0.6, -87.5)
 
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture2" parent="Umgebung" unique_id=463318916 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, -4, -1, -88)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture3" parent="Umgebung" unique_id=918996961 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, -4, -1, -92)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture4" parent="Umgebung" unique_id=1743144805 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 0, -1, -84)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture5" parent="Umgebung" unique_id=1466336323 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 0, -1, -88)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture6" parent="Umgebung" unique_id=2003239663 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 0, -1, -92)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture7" parent="Umgebung" unique_id=1208996918 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -84)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture8" parent="Umgebung" unique_id=259489762 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -88)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture9" parent="Umgebung" unique_id=1723342556 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -92)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture10" parent="Umgebung" unique_id=1471836425 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, -4, -1, -92)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture11" parent="Umgebung" unique_id=1647795709 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 0, -1, -92)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture12" parent="Umgebung" unique_id=1894558472 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -92)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture13" parent="Umgebung" unique_id=670205903 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, -4, -1, -96)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture14" parent="Umgebung" unique_id=1351482800 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 0, -1, -96)
-
-[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture15" parent="Umgebung" unique_id=1845797364 instance=ExtResource("17_1s4pk")]
-transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -96)
+[node name="Meshy_AI_Armored_Alligator_1026212352_texture2" parent="Umgebung/animals" unique_id=79757680 instance=ExtResource("22_d5akn")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, 1, -0.6, -93.5)
 
 [node name="Hole" type="Node3D" parent="." unique_id=1444227735]
 
@@ -1094,39 +1067,39 @@ transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 4, -1, -96)
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Hole/StaticBody3D" unique_id=660765550]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7, -58)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.54, 1.2714622e-07, -7, -60)
 mesh = SubResource("BoxMesh_h8c8n")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hole/StaticBody3D" unique_id=1478979404]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7, -58)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2714622e-07, -7, -60)
 shape = SubResource("BoxShape3D_h8c8n")
 
 [node name="ground_straight_earth" parent="Hole" unique_id=779375604 instance=ExtResource("18_2cbcq")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.0000057, -2, 64)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.000006, -2, 68)
 
 [node name="ground_straight_earth3" parent="Hole" unique_id=936600794 instance=ExtResource("18_2cbcq")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9999945, -2, 64)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.999994, -2, 68)
 
 [node name="ground_straight_earth2" parent="Hole" unique_id=1823124560 instance=ExtResource("18_2cbcq")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -5.5950577e-06, -2, 64)
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -6.1990413e-06, -2, 68)
 
 [node name="ground_straight_earth4" parent="Hole" unique_id=1801687037 instance=ExtResource("18_2cbcq")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -4.0000057, -4, 64)
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -4.000006, -4, 68)
 
 [node name="ground_straight_earth5" parent="Hole" unique_id=1277573670 instance=ExtResource("18_2cbcq")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9999945, -4, 64)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.999994, -4, 68)
+
+[node name="ground_straight_earth7" parent="Hole" unique_id=62634159 instance=ExtResource("18_2cbcq")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.999994, -6, 68)
 
 [node name="ground_straight_earth6" parent="Hole" unique_id=1261639130 instance=ExtResource("18_2cbcq")]
-transform = Transform3D(4.808253e-07, 0, 1, 0, 1, 0, -1, 0, 4.808253e-07, -5.5950577e-06, -4, 64)
+transform = Transform3D(4.808253e-07, 0, 1, 0, 1, 0, -1, 0, 4.808253e-07, -6.1990413e-06, -4, 68)
 
-[node name="ground_straight_earth7" parent="Hole" unique_id=158703618 instance=ExtResource("18_2cbcq")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.0000057, -6, 64)
+[node name="ground_straight_earth8" parent="Hole" unique_id=2124370465 instance=ExtResource("18_2cbcq")]
+transform = Transform3D(4.808253e-07, 0, 1, 0, 1, 0, -1, 0, 4.808253e-07, -6.1990413e-06, -6, 68)
 
-[node name="ground_straight_earth8" parent="Hole" unique_id=656641768 instance=ExtResource("18_2cbcq")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9999945, -6, 64)
-
-[node name="ground_straight_earth9" parent="Hole" unique_id=1859744831 instance=ExtResource("18_2cbcq")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -5.5950577e-06, -6, 64)
+[node name="ground_straight_earth9" parent="Hole" unique_id=1481933061 instance=ExtResource("18_2cbcq")]
+transform = Transform3D(4.808253e-07, 0, 1, 0, 1, 0, -1, 0, 4.808253e-07, -4.000006, -6, 68)
 
 [node name="ground_straight_earth10" parent="Hole" unique_id=1672410104 instance=ExtResource("18_2cbcq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.000005, -2, 52)
@@ -1143,6 +1116,12 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.99
 [node name="ground_straight_earth21" parent="Hole" unique_id=630754243 instance=ExtResource("18_2cbcq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.9999948, -4, 60)
 
+[node name="ground_straight_earth33" parent="Hole" unique_id=1519554886 instance=ExtResource("18_2cbcq")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.9999943, -4, 64)
+
+[node name="ground_straight_earth34" parent="Hole" unique_id=876232990 instance=ExtResource("18_2cbcq")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.9999943, -2, 64)
+
 [node name="ground_straight_earth22" parent="Hole" unique_id=1698162010 instance=ExtResource("18_2cbcq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.999995, -4, 56)
 
@@ -1152,14 +1131,23 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.99
 [node name="ground_straight_earth24" parent="Hole" unique_id=504099299 instance=ExtResource("18_2cbcq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.9999948, -6, 60)
 
+[node name="ground_straight_earth35" parent="Hole" unique_id=1975817050 instance=ExtResource("18_2cbcq")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.9999943, -6, 64)
+
 [node name="ground_straight_earth25" parent="Hole" unique_id=1520513842 instance=ExtResource("18_2cbcq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000005, -2, 56)
 
 [node name="ground_straight_earth26" parent="Hole" unique_id=390527436 instance=ExtResource("18_2cbcq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000006, -2, 60)
 
+[node name="ground_straight_earth32" parent="Hole" unique_id=1111450839 instance=ExtResource("18_2cbcq")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000007, -2, 64)
+
 [node name="ground_straight_earth27" parent="Hole" unique_id=359498857 instance=ExtResource("18_2cbcq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000006, -4, 60)
+
+[node name="ground_straight_earth31" parent="Hole" unique_id=2099252526 instance=ExtResource("18_2cbcq")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000006, -4, 64)
 
 [node name="ground_straight_earth28" parent="Hole" unique_id=615684760 instance=ExtResource("18_2cbcq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000005, -4, 56)
@@ -1169,6 +1157,9 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.0
 
 [node name="ground_straight_earth30" parent="Hole" unique_id=603967570 instance=ExtResource("18_2cbcq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000006, -6, 60)
+
+[node name="ground_straight_earth36" parent="Hole" unique_id=1227189412 instance=ExtResource("18_2cbcq")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000007, -6, 64)
 
 [node name="ground_straight_earth12" parent="Hole" unique_id=367844541 instance=ExtResource("18_2cbcq")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -4.545984e-06, -2, 52)
@@ -1192,7 +1183,16 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.99
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -4.545984e-06, -6, 52)
 
 [node name="Meshy_AI_Mossy_Fallen_Branch_1026211759_texture" parent="." unique_id=1875052206 instance=ExtResource("19_isj1j")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1.9999949, 5, 58)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1.9999946, 5, 59)
 
-[node name="Meshy_AI__1026211657_texture" parent="." unique_id=1603290707 instance=ExtResource("20_so66j")]
-transform = Transform3D(-1, 0, 1.509958e-07, 0, 2.7, 0, -1.509958e-07, 0, -1, -1.0000051, 1, 58)
+[node name="Vine" parent="." unique_id=1603290707 instance=ExtResource("20_so66j")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 2.7, 0, -1.509958e-07, 0, -1, -5.3920785e-06, 1, 59)
+script = ExtResource("23_wbtxt")
+
+[node name="KillZone" parent="." unique_id=1393769249 instance=ExtResource("25_x2fux")]
+transform = Transform3D(-3, 0, 4.4845754e-07, 0, 1, 0, -4.5298742e-07, 0, -2.97, -9.059748e-06, -6, 60)
+
+[node name="KillZone2" parent="." unique_id=616528353 instance=ExtResource("25_x2fux")]
+transform = Transform3D(-2.9, 0, 5.9794337e-07, 0, 2, 0, -4.3788785e-07, 0, -3.96, 0, -0.49, 90)
+
+[editable path="KillZone2"]

@@ -1,46 +1,58 @@
 @tool
 extends Node3D
-## Runde Teergrube wie in Pitfall Harry.
-## Sie ist zuerst offen, schließt sich, bleibt kurz zu und öffnet sich wieder (Endlosschleife).
-## Wer bei offener Grube hineinläuft (nicht drüberspringt), versinkt.
+## Runde Grube wie in Pitfall.
+## Ein 12 x 12 m Bodenblock mit echtem Loch. Eine grüne Abdeckung zieht sich wie eine
+## Blende zusammen (Grube offen) und schließt sich wieder (Grube zu). Endlosschleife.
+## Wer bei offener Grube hineinfällt, landet in der Todeszone am Grubenboden.
 
 signal player_trapped(body: Node3D)
 
-@export var max_radius: float = 2.5:
-	set(v):
-		max_radius = max(v, 0.1)
-		if is_node_ready():
-			_apply_radius()
+const COVER_RADIUS := 4.6   # passt zum Loch in assets/traps/pit_tile.glb (Radius 4.5)
+
 @export var open_time: float = 2.5        ## Sekunden ganz offen
 @export var closed_time: float = 2.0      ## Sekunden ganz geschlossen
-@export var transition_time: float = 1.2  ## Sekunden für Schließen bzw. Öffnen
+@export var transition_time: float = 1.2  ## Sekunden für Öffnen bzw. Schließen
 @export var start_delay: float = 0.0      ## Versatz, damit mehrere Gruben nicht synchron laufen
-@export_range(0.3, 1.0) var kill_margin: float = 0.85  ## tödlicher Anteil des Radius (verzeiht Randberührungen)
-@export var sink_depth: float = 2.0
-@export var sink_time: float = 1.2
 @export var reload_scene_on_trap: bool = true  ## später durch Leben/Respawn ersetzen
-@export_range(0.0, 0.5) var closed_hint_size: float = 0.15:  ## so viel Teer bleibt auch geschlossen sichtbar (Anteil vom Radius)
+@export var reload_delay: float = 0.8
+@export var editor_preview_open: bool = false:  ## nur Editor: Grube offen anzeigen
 	set(v):
-		closed_hint_size = v
-		if is_node_ready():
-			_apply_radius()
+		editor_preview_open = v
+		if is_node_ready() and Engine.is_editor_hint():
+			_set_openness(1.0 if v else 0.0)
 
-@onready var _visual: Node3D = $Visual
-@onready var _mud: Node3D = $MudPatch
-@onready var _shape: CollisionShape3D = $Area3D/CollisionShape3D
+@onready var _cover_mesh: MeshInstance3D = $Cover/CoverMesh
+@onready var _cover_shape: CollisionShape3D = $Cover/CoverShape
+@onready var _death_zone: Area3D = $DeathZone
 
 var _openness := 1.0
 var _trapped := false
 
 
 func _ready() -> void:
-	_shape.shape = _shape.shape.duplicate()   # jede Grube bekommt ihre eigene Form
-	_apply_radius()
+	_cover_shape.shape = _cover_shape.shape.duplicate()   # jede Grube eigene Form
+	_use_grass_material()
 	if Engine.is_editor_hint():
+		_set_openness(1.0 if editor_preview_open else 0.0)
 		return
+	_death_zone.body_entered.connect(_on_death_zone_body_entered)
+	_set_openness(1.0)   # startet offen
 	if start_delay > 0.0:
 		await get_tree().create_timer(start_delay).timeout
 	_start_cycle()
+
+
+## Abdeckung bekommt exakt das Gras-Material des Bodenblocks -> geschlossen kaum vom Boden zu unterscheiden
+func _use_grass_material() -> void:
+	for mi in $PitTile.find_children("*", "MeshInstance3D", true, false):
+		var mesh: Mesh = (mi as MeshInstance3D).mesh
+		if mesh == null:
+			continue
+		for i in mesh.get_surface_count():
+			var m := mesh.surface_get_material(i)
+			if m and m.resource_name == "grass":
+				_cover_mesh.material_override = m
+				return
 
 
 func _start_cycle() -> void:
@@ -54,45 +66,24 @@ func _start_cycle() -> void:
 
 func _set_openness(v: float) -> void:
 	_openness = v
-	_apply_radius()
-
-
-func _apply_radius() -> void:
-	# Teer schrumpft beim Schließen nur bis auf einen kleinen Fleck in der Mitte
-	var s: float = max(max_radius * max(_openness, closed_hint_size), 0.001)
-	_visual.scale = Vector3(s, 1.0, s)
-	_visual.visible = s > 0.002
-	# dunkler Schlammfleck bleibt immer in voller Größe -> Falle ist auch geschlossen erkennbar
-	_mud.scale = Vector3(max_radius, 1.0, max_radius)
-	(_shape.shape as CylinderShape3D).radius = max_radius
+	var c: float = 1.0 - v   # wie weit die Abdeckung geschlossen ist
+	_cover_mesh.scale = Vector3(max(c, 0.001), 1.0, max(c, 0.001))
+	_cover_mesh.visible = c > 0.01
+	(_cover_shape.shape as CylinderShape3D).radius = max(COVER_RADIUS * c, 0.01)
+	_cover_shape.disabled = c < 0.03
 
 
 func is_open() -> bool:
 	return _openness > 0.05
 
 
-func _physics_process(_delta: float) -> void:
-	if Engine.is_editor_hint() or _trapped or not is_open():
+func _on_death_zone_body_entered(body: Node3D) -> void:
+	if _trapped or not (body is CharacterBody3D and (body.is_in_group("player") or body.name == "Player")):
 		return
-	var deadly := max_radius * _openness * kill_margin
-	for body in $Area3D.get_overlapping_bodies():
-		if not (body is CharacterBody3D and (body.is_in_group("player") or body.name == "Player")):
-			continue
-		var offset: Vector3 = body.global_position - global_position
-		var dist := Vector2(offset.x, offset.z).length()
-		# nur fangen, wenn der Spieler am Boden ist (drüberspringen erlaubt)
-		if dist < deadly and offset.y < 0.3:
-			_trap(body)
-			return
-
-
-func _trap(body: CharacterBody3D) -> void:
 	_trapped = true
 	player_trapped.emit(body)
 	body.set_physics_process(false)
-	body.velocity = Vector3.ZERO
-	var target := Vector3(global_position.x, global_position.y - sink_depth, global_position.z)
-	var tw := create_tween()
-	tw.tween_property(body, "global_position", target, sink_time).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	(body as CharacterBody3D).velocity = Vector3.ZERO
 	if reload_scene_on_trap:
-		tw.tween_callback(get_tree().reload_current_scene)
+		await get_tree().create_timer(reload_delay).timeout
+		get_tree().reload_current_scene()

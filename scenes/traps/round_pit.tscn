@@ -1,71 +1,46 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://codr4vqstc7a4"]
 
-[ext_resource type="Script" path="res://scripts/round_pit.gd" id="1_pit"]
+[ext_resource type="Script" uid="uid://b2cmk6qwd27sa" path="res://scripts/round_pit.gd" id="1_pit"]
+[ext_resource type="PackedScene" uid="uid://c2hy2wv8yhj" path="res://assets/traps/pit_tile.glb" id="2_tile"]
 
-[sub_resource type="StandardMaterial3D" id="Mat_Rim"]
-albedo_color = Color(0.16, 0.075, 0.03, 1)
+[sub_resource type="StandardMaterial3D" id="Mat_Cover"]
+albedo_color = Color(0.4, 0.62, 0.19, 1)
 roughness = 1.0
 
-[sub_resource type="CylinderMesh" id="Mesh_Rim"]
-material = SubResource("Mat_Rim")
-top_radius = 1.12
-bottom_radius = 1.12
-height = 0.03
-radial_segments = 14
-rings = 1
-
-[sub_resource type="StandardMaterial3D" id="Mat_Tar"]
-albedo_color = Color(0.03, 0.022, 0.018, 1)
-metallic = 0.4
-roughness = 0.12
-
-[sub_resource type="CylinderMesh" id="Mesh_Tar"]
-material = SubResource("Mat_Tar")
-top_radius = 1.0
-bottom_radius = 1.0
+[sub_resource type="CylinderMesh" id="Mesh_Cover"]
+material = SubResource("Mat_Cover")
+top_radius = 4.6
+bottom_radius = 4.6
 height = 0.04
-radial_segments = 14
+radial_segments = 40
 rings = 1
 
-[sub_resource type="StandardMaterial3D" id="Mat_Mud"]
-albedo_color = Color(0.1, 0.3, 0.06, 1)
-roughness = 0.6
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cknd6"]
+height = 0.3
+radius = 4.6
 
-[sub_resource type="CylinderMesh" id="Mesh_Mud"]
-material = SubResource("Mat_Mud")
-top_radius = 1.15
-bottom_radius = 1.15
-height = 0.02
-radial_segments = 14
-rings = 1
+[sub_resource type="CylinderShape3D" id="Shape_Death"]
+height = 3.0
+radius = 4.5
 
-[sub_resource type="CylinderShape3D" id="Shape_Pit"]
-height = 2.0
-radius = 2.5
-
-[node name="RoundPit" type="Node3D"]
+[node name="RoundPit" type="Node3D" unique_id=10301322]
 script = ExtResource("1_pit")
 
-[node name="MudPatch" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.5, 0, 0, 0, 1, 0, 0, 0, 2.5, 0, 0.008, 0)
-cast_shadow = 0
-mesh = SubResource("Mesh_Mud")
+[node name="PitTile" parent="." unique_id=890388451 instance=ExtResource("2_tile")]
 
-[node name="Visual" type="Node3D" parent="."]
-transform = Transform3D(2.5, 0, 0, 0, 1, 0, 0, 0, 2.5, 0, 0, 0)
+[node name="Cover" type="StaticBody3D" parent="." unique_id=1612520313]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 
-[node name="Rim" type="MeshInstance3D" parent="Visual"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015, 0)
-cast_shadow = 0
-mesh = SubResource("Mesh_Rim")
+[node name="CoverMesh" type="MeshInstance3D" parent="Cover" unique_id=107648093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0185, 0)
+mesh = SubResource("Mesh_Cover")
 
-[node name="Tar" type="MeshInstance3D" parent="Visual"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025, 0)
-cast_shadow = 0
-mesh = SubResource("Mesh_Tar")
+[node name="CoverShape" type="CollisionShape3D" parent="Cover" unique_id=672061672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.11, 0)
+shape = SubResource("CylinderShape3D_cknd6")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="DeathZone" type="Area3D" parent="." unique_id=571935398]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("Shape_Pit")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZone" unique_id=2062807776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.5, 0)
+shape = SubResource("Shape_Death")

@@ -1,28 +1,183 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
-const JUMP_VELOCITY = 6
+const JUMP_VELOCITY = 5.0
+const ROTATION_SPEED = 10.0
 
+# Liane
+const VINE_HAND_OFFSET = 2.0      # Abstand Füße -> Hände (Arme über dem Kopf)
+const VINE_JUMP_BOOST = 3.0       # Extra-Höhe beim Loslassen
+const VINE_REGRAB_COOLDOWN = 0.5  # verhindert sofortiges Wieder-Greifen
+const AIR_CONTROL = 0.3
+
+# Sprung nach vorne
+const FORWARD_JUMP_SPEED = 5.0    # Vorwärtsschwung (zusätzlich zur Luftsteuerung)
+const FORWARD_JUMP_VELOCITY = 5.0  # Sprunghöhe beim Sprung nach vorne           # Lenkbarkeit in der Luft nach der Liane
+const VINE_ANIM = "Rope_Hang_Idle"
+
+
+@export var max_health: int = 3
+@onready var visuals: Node3D = $visuals
+
+var health: int = 3
+var is_dead: bool = false
+
+var current_vine: Node3D = null
+var last_vine: Node3D = null     # zuletzt losgelassene Liane – erst nach Landung wieder greifbar
+var vine_cooldown: float = 0.0
+var air_momentum: Vector3 = Vector3.ZERO
+var hang_forward: Vector3 = Vector3.FORWARD  # Blickrichtung an der Liane (bleibt fest)
+
+@onready var camera_pivot: Node3D = $CameraPivot
+@onready var spring_arm_3d: SpringArm3D = $CameraPivot/SpringArm3D
+@onready var animation_tree: AnimationTree = $AnimationTree
+@onready var playback: AnimationNodeStateMachinePlayback = \
+	animation_tree.get("parameters/playback")
+
+const MOUSE_SENSITY = 0.003
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	spring_arm_3d.add_excluded_object(get_rid())
+
+	animation_tree.active = true
+	playback.start("Idle_9")
+	
+func _unhandled_input(event: InputEvent) -> void:	
+	if event is InputEventMouseMotion:
+		camera_pivot.rotate_y(-event.relative.x * MOUSE_SENSITY)
+		spring_arm_3d.rotate_x(-event.relative.y * MOUSE_SENSITY)
+		
+		spring_arm_3d.rotation.x = clamp(
+			spring_arm_3d.rotation.x,
+			deg_to_rad(-60),
+			deg_to_rad(30)
+		)
+	if event.is_action_pressed("ui_cancel"):
+		Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+	
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	if vine_cooldown > 0.0:
+		vine_cooldown -= delta
+
+	# An der Liane: Position folgt dem Seilende
+	if current_vine:
+		process_vine()
+		return
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	
+	# movement via key press
+	var input_dir= Input.get_vector("move_left",
+		"move_right",
+		"move_forward",
+		"move_backward")
+		
+	#Convert direction to 3D
+	var camera_basis = camera_pivot.global_transform.basis
+	
+	# Minus, weil SpringArm3D um 180° gedreht ist (Kamera schaut entlang +Z des Pivots)
+	var direction = -Vector3(camera_basis.x * input_dir.x +
+		camera_basis.z * input_dir.y).normalized()
+		
+	rotate_character(direction, delta)
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	# jump – beim Laufen als Sprung nach vorne mit Schwung, im Stand senkrecht
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		if direction.length_squared() > 0.01:
+			velocity.y = FORWARD_JUMP_VELOCITY
+			air_momentum = direction * FORWARD_JUMP_SPEED
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
+	
+	#Set horizontal direction (mit Schwung nach dem Loslassen der Liane)
+	if air_momentum != Vector3.ZERO:
+		velocity.x = air_momentum.x + direction.x * SPEED * AIR_CONTROL
+		velocity.z = air_momentum.z + direction.z * SPEED * AIR_CONTROL
+	else:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+	
+	#Moving the player and avoiding collisions
 	move_and_slide()
+
+	if is_on_floor():
+		air_momentum = Vector3.ZERO
+		last_vine = null
+
+	update_animation()
+
+# ---------- Liane ----------
+
+func grab_vine(vine: Node3D) -> void:
+	# Nur im Sprung greifen, nicht direkt nach dem Loslassen
+	if current_vine or vine_cooldown > 0.0 or is_on_floor() or vine == last_vine:
+		return
+	current_vine = vine
+	vine.attach(velocity, global_position + Vector3.UP * VINE_HAND_OFFSET)
+	hang_forward = vine.get_swing_direction()
+	velocity = Vector3.ZERO
+	air_momentum = Vector3.ZERO
+
+func process_vine() -> void:
+	# Hände am Haltepunkt, Körper hängt entlang des Seils
+	var rope_up: Vector3 = current_vine.get_rope_up()
+	global_position = current_vine.get_hold_position() - rope_up * VINE_HAND_OFFSET
+	set_visual_orientation(rope_up, hang_forward)
+
+	update_animation()
+
+	if Input.is_action_just_pressed("jump"):
+		release_vine()
+
+func release_vine() -> void:
+	var v: Vector3 = current_vine.get_hold_velocity()
+	air_momentum = Vector3(v.x, 0.0, v.z)
+
+	# Figur wieder aufrichten, Blick in Flugrichtung
+	var fly_dir := air_momentum if air_momentum.length() > 0.5 else hang_forward
+	set_visual_orientation(Vector3.UP, fly_dir)
+
+	velocity = Vector3(v.x, maxf(v.y, 0.0) + VINE_JUMP_BOOST, v.z)
+	current_vine.detach()
+	last_vine = current_vine
+	current_vine = null
+	vine_cooldown = VINE_REGRAB_COOLDOWN
+
+## Richtet die Figur aus: "up" = Körperachse, "forward" = Blickrichtung
+func set_visual_orientation(up: Vector3, forward: Vector3) -> void:
+	var z := (forward - up * forward.dot(up)).normalized()
+	if z.length_squared() < 0.001:
+		return
+	var x := up.cross(z).normalized()
+	visuals.global_basis = Basis(x, up.normalized(), z)
+
+# ---------- Animation ----------
+	
+func update_animation() -> void:
+	var target_state: String
+	if current_vine and (animation_tree.tree_root as AnimationNodeStateMachine).has_node(VINE_ANIM):
+		target_state = VINE_ANIM
+	elif current_vine or not is_on_floor():
+		target_state = "Jump_with_Arms_Open"
+	elif Vector2(velocity.x, velocity.z).length() > 0.1:
+		target_state = "Walking"
+	else:
+		target_state = "Idle_9"
+
+	# Nur wechseln, wenn sich der State ändert – sonst startet die Animation jeden Frame neu
+	if playback.get_current_node() != target_state:
+		playback.travel(target_state)
+		
+func rotate_character(direction: Vector3, delta: float) -> void:
+	if direction.length_squared() < 0.001:
+		return
+
+	var target_angle = atan2(-direction.x, -direction.z)
+
+	visuals.rotation.y = lerp_angle(
+		visuals.rotation.y,
+		target_angle,
+		min(ROTATION_SPEED * delta, 1.0)
+	)

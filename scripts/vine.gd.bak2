@@ -1,0 +1,120 @@
+extends Node3D
+## Liane im Pitfall-Stil:
+## Hängt still, bis der Spieler sie im Sprung greift. Dann schwingt sie als Pendel
+## in Laufrichtung des Spielers. Nach dem Loslassen pendelt sie langsam aus.
+## Den Node an den AUFHÄNGEPUNKT (oben) setzen.
+
+@export var length: float = 6.0                  # Seillänge
+@export var min_swing_speed: float = 7.0         # Mindest-Schwung beim Greifen (m/s)
+@export var max_angle_deg: float = 80.0          # maximaler Ausschlag
+@export var damping_with_player: float = 0.0     # Dämpfung, während der Spieler hängt
+@export var damping_without_player: float = 1.5  # Dämpfung nach dem Loslassen (pendelt aus)
+@export var grab_radius: float = 0.8             # Dicke des Greifbereichs
+@export var grab_height: float = 2.0             # Greifbereich reicht so weit am Seil nach oben
+@export var rope_color: Color = Color(0.25, 0.45, 0.15)
+
+var pivot: Node3D
+var grab_area: Area3D
+
+var angle: float = 0.0             # aktueller Ausschlag (rad)
+var angular_velocity: float = 0.0  # rad/s
+var swing_yaw: float = 0.0         # Schwingrichtung (lokal, um Y)
+var has_player: bool = false
+
+var prev_hold: Vector3
+var hold_velocity: Vector3 = Vector3.ZERO
+
+@onready var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+func _ready() -> void:
+	# Drehpunkt (oben)
+	pivot = Node3D.new()
+	add_child(pivot)
+
+	# Seil (Low Poly)
+	var rope := MeshInstance3D.new()
+	var mesh := CylinderMesh.new()
+	mesh.top_radius = 0.05
+	mesh.bottom_radius = 0.05
+	mesh.height = length
+	mesh.radial_segments = 6
+	var mat := StandardMaterial3D.new()
+	mat.albedo_color = rope_color
+	mesh.material = mat
+	rope.mesh = mesh
+	rope.position = Vector3(0, -length / 2.0, 0)
+	pivot.add_child(rope)
+
+	# Greifbereich: Kapsel um das untere Seilstück
+	grab_area = Area3D.new()
+	grab_area.monitoring = true
+	var shape := CollisionShape3D.new()
+	var capsule := CapsuleShape3D.new()
+	capsule.radius = grab_radius
+	capsule.height = maxf(grab_height, grab_radius * 2.0)
+	shape.shape = capsule
+	shape.position = Vector3(0, capsule.height / 2.0 - grab_radius, 0)
+	grab_area.add_child(shape)
+	grab_area.position = Vector3(0, -length, 0)  # Ursprung = Seilende (Haltepunkt)
+	pivot.add_child(grab_area)
+
+	prev_hold = get_hold_position()
+
+func _physics_process(delta: float) -> void:
+	# Pendel-Physik: θ'' = -(g/L)·sin(θ) - Dämpfung·θ'
+	var damping := damping_with_player if has_player else damping_without_player
+	angular_velocity += (-(gravity / length) * sin(angle) - damping * angular_velocity) * delta
+	angle += angular_velocity * delta
+
+	var max_angle := deg_to_rad(max_angle_deg)
+	if absf(angle) > max_angle:
+		angle = clampf(angle, -max_angle, max_angle)
+		angular_velocity = 0.0
+
+	# Ohne Spieler ganz zur Ruhe kommen
+	if not has_player and absf(angle) < 0.002 and absf(angular_velocity) < 0.01:
+		angle = 0.0
+		angular_velocity = 0.0
+
+	pivot.rotation = Vector3(0.0, swing_yaw, angle)
+
+	var hold := get_hold_position()
+	hold_velocity = (hold - prev_hold) / delta
+	prev_hold = hold
+
+	# Jeden Frame prüfen, ob der Spieler im Greifbereich ist
+	# (body_entered reicht nicht: steht der Spieler schon drin und springt dann, kommt kein neues Signal)
+	if not has_player:
+		for body in grab_area.get_overlapping_bodies():
+			if body.has_method("grab_vine"):
+				body.grab_vine(self)
+				break
+
+## Wird vom Spieler beim Greifen aufgerufen
+func attach(player_velocity: Vector3) -> void:
+	has_player = true
+
+	# Nur anschubsen, wenn die Liane (fast) ruhig hängt
+	if absf(angle) > 0.05 or absf(angular_velocity) > 0.2:
+		return
+
+	var horizontal := Vector3(player_velocity.x, 0.0, player_velocity.z)
+	if horizontal.length() > 0.1:
+		# Schwingrichtung = Laufrichtung des Spielers (in lokale Koordinaten umrechnen)
+		var local_dir := (global_transform.basis.inverse() * horizontal)
+		local_dir.y = 0.0
+		local_dir = local_dir.normalized()
+		swing_yaw = atan2(-local_dir.z, local_dir.x)
+
+	var speed := maxf(horizontal.length(), min_swing_speed)
+	angular_velocity = speed / length
+
+## Wird vom Spieler beim Loslassen aufgerufen
+func detach() -> void:
+	has_player = false
+
+func get_hold_position() -> Vector3:
+	return grab_area.global_position
+
+func get_hold_velocity() -> Vector3:
+	return hold_velocity

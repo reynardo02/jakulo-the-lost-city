@@ -1,0 +1,160 @@
+extends CharacterBody3D
+
+const SPEED = 5.0
+const JUMP_VELOCITY = 5.0
+const ROTATION_SPEED = 10.0
+
+# Liane
+const VINE_HAND_OFFSET = 1.7      # Abstand Füße -> Hände
+const VINE_JUMP_BOOST = 3.0       # Extra-Höhe beim Loslassen
+const VINE_REGRAB_COOLDOWN = 0.5  # verhindert sofortiges Wieder-Greifen
+const AIR_CONTROL = 0.3           # Lenkbarkeit in der Luft nach der Liane
+const VINE_ANIM = "Rope_Hang_Idle"
+
+
+@export var max_health: int = 3
+@onready var visuals: Node3D = $visuals
+
+var health: int = 3
+var is_dead: bool = false
+
+var current_vine: Node3D = null
+var vine_cooldown: float = 0.0
+var air_momentum: Vector3 = Vector3.ZERO
+
+@onready var camera_pivot: Node3D = $CameraPivot
+@onready var spring_arm_3d: SpringArm3D = $CameraPivot/SpringArm3D
+@onready var animation_tree: AnimationTree = $AnimationTree
+@onready var playback: AnimationNodeStateMachinePlayback = \
+	animation_tree.get("parameters/playback")
+
+const MOUSE_SENSITY = 0.003
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	spring_arm_3d.add_excluded_object(get_rid())
+
+	animation_tree.active = true
+	playback.start("Idle_9")
+	
+func _unhandled_input(event: InputEvent) -> void:	
+	if event is InputEventMouseMotion:
+		camera_pivot.rotate_y(-event.relative.x * MOUSE_SENSITY)
+		spring_arm_3d.rotate_x(-event.relative.y * MOUSE_SENSITY)
+		
+		spring_arm_3d.rotation.x = clamp(
+			spring_arm_3d.rotation.x,
+			deg_to_rad(-60),
+			deg_to_rad(30)
+		)
+	if event.is_action_pressed("ui_cancel"):
+		Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+	
+
+func _physics_process(delta: float) -> void:
+	if vine_cooldown > 0.0:
+		vine_cooldown -= delta
+
+	# An der Liane: Position folgt dem Seilende
+	if current_vine:
+		process_vine()
+		return
+
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+	
+	# jump
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+		
+	# movement via key press
+	var input_dir= Input.get_vector("move_left",
+		"move_right",
+		"move_forward",
+		"move_backward")
+		
+	#Convert direction to 3D
+	var camera_basis = camera_pivot.global_transform.basis
+	
+	# Minus, weil SpringArm3D um 180° gedreht ist (Kamera schaut entlang +Z des Pivots)
+	var direction = -Vector3(camera_basis.x * input_dir.x +
+		camera_basis.z * input_dir.y).normalized()
+		
+	rotate_character(direction, delta)
+
+	
+	#Set horizontal direction (mit Schwung nach dem Loslassen der Liane)
+	if air_momentum != Vector3.ZERO:
+		velocity.x = air_momentum.x + direction.x * SPEED * AIR_CONTROL
+		velocity.z = air_momentum.z + direction.z * SPEED * AIR_CONTROL
+	else:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	
+	#Moving the player and avoiding collisions
+	move_and_slide()
+
+	if is_on_floor():
+		air_momentum = Vector3.ZERO
+
+	update_animation()
+
+# ---------- Liane ----------
+
+func grab_vine(vine: Node3D) -> void:
+	# Nur im Sprung greifen, nicht direkt nach dem Loslassen
+	if current_vine or vine_cooldown > 0.0 or is_on_floor():
+		return
+	current_vine = vine
+	vine.attach(velocity)
+	velocity = Vector3.ZERO
+	air_momentum = Vector3.ZERO
+
+func process_vine() -> void:
+	global_position = current_vine.get_hold_position() - Vector3.UP * VINE_HAND_OFFSET
+
+	# Figur in Schwingrichtung drehen
+	var v: Vector3 = current_vine.get_hold_velocity()
+	if Vector2(v.x, v.z).length() > 0.5:
+		visuals.rotation.y = lerp_angle(visuals.rotation.y, atan2(-v.x, -v.z), 0.1)
+
+	update_animation()
+
+	if Input.is_action_just_pressed("jump"):
+		release_vine()
+
+func release_vine() -> void:
+	var v: Vector3 = current_vine.get_hold_velocity()
+	air_momentum = Vector3(v.x, 0.0, v.z)
+	velocity = Vector3(v.x, maxf(v.y, 0.0) + VINE_JUMP_BOOST, v.z)
+	current_vine.detach()
+	current_vine = null
+	vine_cooldown = VINE_REGRAB_COOLDOWN
+
+# ---------- Animation ----------
+	
+func update_animation() -> void:
+	var target_state: String
+	if current_vine and (animation_tree.tree_root as AnimationNodeStateMachine).has_node(VINE_ANIM):
+		target_state = VINE_ANIM
+	elif current_vine or not is_on_floor():
+		target_state = "extra_regular_jump"
+	elif Vector2(velocity.x, velocity.z).length() > 0.1:
+		target_state = "Walking"
+	else:
+		target_state = "Idle_9"
+
+	# Nur wechseln, wenn sich der State ändert – sonst startet die Animation jeden Frame neu
+	if playback.get_current_node() != target_state:
+		playback.travel(target_state)
+		
+func rotate_character(direction: Vector3, delta: float) -> void:
+	if direction.length_squared() < 0.001:
+		return
+
+	var target_angle = atan2(-direction.x, -direction.z)
+
+	visuals.rotation.y = lerp_angle(
+		visuals.rotation.y,
+		target_angle,
+		min(ROTATION_SPEED * delta, 1.0)
+	)
