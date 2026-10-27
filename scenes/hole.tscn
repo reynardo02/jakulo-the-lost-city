@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://c4b0peipmbor"]
+
+[ext_resource type="PackedScene" uid="uid://dymtvg3skbofb" path="res://assets/terrain/ground_straight_earth.glb" id="1_lerre"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l3403"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h8c8n"]
+material = SubResource("StandardMaterial3D_l3403")
+size = Vector3(12, 1, 8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8c8n"]
+size = Vector3(12, 1, 8)
+
+[node name="Hole" type="Node3D" unique_id=451442777]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1477013283]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1647056774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7, -58)
+mesh = SubResource("BoxMesh_h8c8n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=954751764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7, -58)
+shape = SubResource("BoxShape3D_h8c8n")
+
+[node name="ground_straight_earth" parent="." unique_id=779375604 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.0000057, -2, 64)
+
+[node name="ground_straight_earth3" parent="." unique_id=1391764599 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9999945, -2, 64)
+
+[node name="ground_straight_earth2" parent="." unique_id=905799865 instance=ExtResource("1_lerre")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -5.5950577e-06, -2, 64)
+
+[node name="ground_straight_earth4" parent="." unique_id=223662821 instance=ExtResource("1_lerre")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -4.0000057, -4, 64)
+
+[node name="ground_straight_earth5" parent="." unique_id=560921608 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9999945, -4, 64)
+
+[node name="ground_straight_earth6" parent="." unique_id=953535083 instance=ExtResource("1_lerre")]
+transform = Transform3D(4.808253e-07, 0, 1, 0, 1, 0, -1, 0, 4.808253e-07, -5.5950577e-06, -4, 64)
+
+[node name="ground_straight_earth7" parent="." unique_id=1757471813 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.0000057, -6, 64)
+
+[node name="ground_straight_earth8" parent="." unique_id=1992573748 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9999945, -6, 64)
+
+[node name="ground_straight_earth9" parent="." unique_id=688087967 instance=ExtResource("1_lerre")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -5.5950577e-06, -6, 64)
+
+[node name="ground_straight_earth10" parent="." unique_id=384318169 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.000005, -2, 52)
+
+[node name="ground_straight_earth11" parent="." unique_id=152271991 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9999955, -2, 52)
+
+[node name="ground_straight_earth19" parent="." unique_id=878992749 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.999995, -2, 56)
+
+[node name="ground_straight_earth20" parent="." unique_id=946480911 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.9999948, -2, 60)
+
+[node name="ground_straight_earth21" parent="." unique_id=160855690 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.9999948, -4, 60)
+
+[node name="ground_straight_earth22" parent="." unique_id=934013110 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.999995, -4, 56)
+
+[node name="ground_straight_earth23" parent="." unique_id=1994303930 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.999995, -6, 56)
+
+[node name="ground_straight_earth24" parent="." unique_id=24534030 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.9999948, -6, 60)
+
+[node name="ground_straight_earth25" parent="." unique_id=2126297997 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000005, -2, 56)
+
+[node name="ground_straight_earth26" parent="." unique_id=88455254 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000006, -2, 60)
+
+[node name="ground_straight_earth27" parent="." unique_id=1335034537 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000006, -4, 60)
+
+[node name="ground_straight_earth28" parent="." unique_id=703123383 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000005, -4, 56)
+
+[node name="ground_straight_earth29" parent="." unique_id=2137246900 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000005, -6, 56)
+
+[node name="ground_straight_earth30" parent="." unique_id=1594030641 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.000006, -6, 60)
+
+[node name="ground_straight_earth12" parent="." unique_id=1259167517 instance=ExtResource("1_lerre")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -4.545984e-06, -2, 52)
+
+[node name="ground_straight_earth13" parent="." unique_id=496869370 instance=ExtResource("1_lerre")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -4.000005, -4, 52)
+
+[node name="ground_straight_earth14" parent="." unique_id=1727565760 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9999955, -4, 52)
+
+[node name="ground_straight_earth18" parent="." unique_id=951418130 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.545984e-06, -4, 52)
+
+[node name="ground_straight_earth15" parent="." unique_id=1241179713 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.000005, -6, 52)
+
+[node name="ground_straight_earth16" parent="." unique_id=2040278933 instance=ExtResource("1_lerre")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.9999955, -6, 52)
+
+[node name="ground_straight_earth17" parent="." unique_id=167471090 instance=ExtResource("1_lerre")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -4.545984e-06, -6, 52)

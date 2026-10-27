@@ -1,0 +1,864 @@
+[gd_scene format=3 uid="uid://ber6jj3jqahu4"]
+
+[ext_resource type="PackedScene" uid="uid://7tkbnp3e5nie" path="res://assets/meshy/terrain/Meshy_AI__1025134850_texture.glb" id="1_r3fl7"]
+[ext_resource type="PackedScene" uid="uid://de86yrwk74jjy" path="res://assets/meshy/terrain/Meshy_AI_Verdant_Jungle_Cube_1025140322_texture.glb" id="2_jka67"]
+[ext_resource type="PackedScene" uid="uid://dxlc4tf0dlt84" path="res://assets/meshy/terrain/Meshy_AI_Sapphire_Water_Block_1025143846_texture.glb" id="3_i5arm"]
+[ext_resource type="PackedScene" uid="uid://b8yp1xn1ixmhv" path="res://assets/meshy/Plattform/Meshy_AI_Floating_Meadow_Platf_1025124801_texture.glb" id="4_wc5p8"]
+
+[sub_resource type="Animation" id="Animation_r3fl7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 48)]
+}
+
+[sub_resource type="Animation" id="Animation_jka67"]
+resource_name = "floating"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 1.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 48), Vector3(0, 0, 63)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i5arm"]
+_data = {
+&"RESET": SubResource("Animation_r3fl7"),
+&"floating": SubResource("Animation_jka67")
+}
+
+[node name="DemoLevel" type="Node3D" unique_id=1931687545]
+
+[node name="Meshy_AI__1025134850_texture" parent="." unique_id=1562521690 instance=ExtResource("1_r3fl7")]
+
+[node name="Meshy_AI__1025134850_texture2" parent="." unique_id=252812878 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="Meshy_AI__1025134850_texture13" parent="." unique_id=1299247661 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+
+[node name="Meshy_AI__1025134850_texture27" parent="." unique_id=1268654039 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+
+[node name="Meshy_AI__1025134850_texture25" parent="." unique_id=1457670750 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
+
+[node name="Meshy_AI__1025134850_texture16" parent="." unique_id=1525000145 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -9)
+
+[node name="Meshy_AI__1025134850_texture17" parent="." unique_id=1976761980 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+
+[node name="Meshy_AI__1025134850_texture18" parent="." unique_id=1743510862 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -9)
+
+[node name="Meshy_AI__1025134850_texture14" parent="." unique_id=131191573 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+
+[node name="Meshy_AI__1025134850_texture15" parent="." unique_id=524906664 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="Meshy_AI__1025134850_texture24" parent="." unique_id=327380298 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Meshy_AI__1025134850_texture26" parent="." unique_id=517099838 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+
+[node name="Meshy_AI__1025134850_texture28" parent="." unique_id=1416201219 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
+
+[node name="Meshy_AI__1025134850_texture4" parent="." unique_id=210533033 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+
+[node name="Meshy_AI__1025134850_texture19" parent="." unique_id=632789415 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Meshy_AI__1025134850_texture20" parent="." unique_id=2070370294 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 3)
+
+[node name="Meshy_AI__1025134850_texture23" parent="." unique_id=1024881550 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6)
+
+[node name="Meshy_AI__1025134850_texture21" parent="." unique_id=2032113878 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -9)
+
+[node name="Meshy_AI__1025134850_texture22" parent="." unique_id=1402908332 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+
+[node name="Meshy_AI__1025134850_texture5" parent="." unique_id=1292445257 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Meshy_AI__1025134850_texture6" parent="." unique_id=1563318023 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+
+[node name="Meshy_AI__1025134850_texture7" parent="." unique_id=2017546401 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6)
+
+[node name="Meshy_AI__1025134850_texture8" parent="." unique_id=1641565802 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="Meshy_AI__1025134850_texture9" parent="." unique_id=1559211492 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6)
+
+[node name="Meshy_AI__1025134850_texture3" parent="." unique_id=1263910728 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Meshy_AI__1025134850_texture10" parent="." unique_id=20110328 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3)
+
+[node name="Meshy_AI__1025134850_texture11" parent="." unique_id=1435277774 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
+
+[node name="Meshy_AI__1025134850_texture12" parent="." unique_id=557602431 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture" parent="." unique_id=1665829238 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture16" parent="." unique_id=988375347 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, -3)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture4" parent="." unique_id=1453571414 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, -6)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture6" parent="." unique_id=1901471729 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, -9)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture7" parent="." unique_id=1191226967 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 0, 0, -9)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture9" parent="." unique_id=342363876 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -3, 0, -9)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture10" parent="." unique_id=1998144424 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, -9)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture11" parent="." unique_id=1193387014 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, -6)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture15" parent="." unique_id=764322194 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, -3)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture12" parent="." unique_id=1481657379 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture13" parent="." unique_id=962939332 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 3)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture14" parent="." unique_id=1041008806 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 6)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture8" parent="." unique_id=1080584378 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 3, 0, -9)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture5" parent="." unique_id=1730434985 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, -6)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture2" parent="." unique_id=1724506849 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 3)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture3" parent="." unique_id=1297980795 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 6)
+
+[node name="Meshy_AI__1025134850_texture29" parent="." unique_id=370022536 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+
+[node name="Meshy_AI__1025134850_texture30" parent="." unique_id=41363643 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 12)
+
+[node name="Meshy_AI__1025134850_texture31" parent="." unique_id=1239657810 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 9)
+
+[node name="Meshy_AI__1025134850_texture32" parent="." unique_id=1006723960 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 9)
+
+[node name="Meshy_AI__1025134850_texture33" parent="." unique_id=335149150 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+
+[node name="Meshy_AI__1025134850_texture34" parent="." unique_id=957187945 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 9)
+
+[node name="Meshy_AI__1025134850_texture35" parent="." unique_id=1383652513 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 9)
+
+[node name="Meshy_AI__1025134850_texture36" parent="." unique_id=1586887539 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture37" parent="." unique_id=29197383 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 12)
+
+[node name="Meshy_AI__1025134850_texture38" parent="." unique_id=1904166732 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture39" parent="." unique_id=928863503 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture40" parent="." unique_id=340315644 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture41" parent="." unique_id=1542731873 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture42" parent="." unique_id=305782927 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture43" parent="." unique_id=1040521677 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture44" parent="." unique_id=2012512977 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture45" parent="." unique_id=2125963967 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 12)
+
+[node name="Meshy_AI__1025134850_texture46" parent="." unique_id=1697460602 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture47" parent="." unique_id=123860491 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture48" parent="." unique_id=57237173 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture17" parent="." unique_id=896664679 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 12)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture18" parent="." unique_id=506953598 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 9)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture19" parent="." unique_id=1182430296 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 9)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture20" parent="." unique_id=1276950913 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 12)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture21" parent="." unique_id=1556357932 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 15)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture22" parent="." unique_id=1285931007 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 18)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture27" parent="." unique_id=1486319075 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 21)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture28" parent="." unique_id=1788688947 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 24)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture23" parent="." unique_id=216053645 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture49" parent="." unique_id=884911166 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+
+[node name="Meshy_AI__1025134850_texture50" parent="." unique_id=1199697553 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 12)
+
+[node name="Meshy_AI__1025134850_texture51" parent="." unique_id=2057226582 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture52" parent="." unique_id=536874489 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 12)
+
+[node name="Meshy_AI__1025134850_texture53" parent="." unique_id=321659285 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture54" parent="." unique_id=273574879 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture55" parent="." unique_id=1059315999 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture56" parent="." unique_id=1794902278 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture57" parent="." unique_id=257018491 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture58" parent="." unique_id=73998328 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture59" parent="." unique_id=980218875 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture60" parent="." unique_id=1914673765 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 12)
+
+[node name="Meshy_AI__1025134850_texture61" parent="." unique_id=430775885 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 15)
+
+[node name="Meshy_AI__1025134850_texture62" parent="." unique_id=735091791 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture63" parent="." unique_id=1290962301 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture29" parent="." unique_id=390144081 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 15)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture30" parent="." unique_id=1676651136 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 15)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture24" parent="." unique_id=2006574746 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 18)
+
+[node name="Meshy_AI__1025134850_texture64" parent="." unique_id=1053779893 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
+
+[node name="Meshy_AI__1025134850_texture65" parent="." unique_id=556657679 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 27)
+
+[node name="Meshy_AI__1025134850_texture66" parent="." unique_id=1810073161 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture67" parent="." unique_id=378690933 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 27)
+
+[node name="Meshy_AI__1025134850_texture68" parent="." unique_id=34671734 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture69" parent="." unique_id=1166957615 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture70" parent="." unique_id=683224008 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture71" parent="." unique_id=732971357 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture72" parent="." unique_id=158728556 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture73" parent="." unique_id=1566264509 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture74" parent="." unique_id=858184539 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture75" parent="." unique_id=1297065213 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 27)
+
+[node name="Meshy_AI__1025134850_texture76" parent="." unique_id=909104825 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture77" parent="." unique_id=1817391893 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture78" parent="." unique_id=1950566700 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 27)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture31" parent="." unique_id=1100598104 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 27)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture32" parent="." unique_id=1108324741 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 27)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture33" parent="." unique_id=1810633310 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 30)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture34" parent="." unique_id=947598009 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 33)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture35" parent="." unique_id=1383821306 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture79" parent="." unique_id=2006515618 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
+
+[node name="Meshy_AI__1025134850_texture80" parent="." unique_id=1633301362 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 27)
+
+[node name="Meshy_AI__1025134850_texture81" parent="." unique_id=1089200895 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture82" parent="." unique_id=1925414908 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 27)
+
+[node name="Meshy_AI__1025134850_texture83" parent="." unique_id=1161927420 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture84" parent="." unique_id=1597156082 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture85" parent="." unique_id=853267651 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture86" parent="." unique_id=324356581 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture87" parent="." unique_id=697466837 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture88" parent="." unique_id=267662525 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture89" parent="." unique_id=670072854 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture90" parent="." unique_id=1030330052 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 27)
+
+[node name="Meshy_AI__1025134850_texture91" parent="." unique_id=1824394902 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 30)
+
+[node name="Meshy_AI__1025134850_texture92" parent="." unique_id=431097261 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture93" parent="." unique_id=454934870 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 27)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture36" parent="." unique_id=1911826038 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 30)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture37" parent="." unique_id=1437648318 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 30)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture38" parent="." unique_id=443019878 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 33)
+
+[node name="Meshy_AI__1025134850_texture94" parent="." unique_id=255278978 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36)
+
+[node name="Meshy_AI__1025134850_texture95" parent="." unique_id=1977534496 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 36)
+
+[node name="Meshy_AI__1025134850_texture96" parent="." unique_id=1232102137 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture97" parent="." unique_id=431655843 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 36)
+
+[node name="Meshy_AI__1025134850_texture98" parent="." unique_id=1504170429 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture99" parent="." unique_id=655037384 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture100" parent="." unique_id=1932494214 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture101" parent="." unique_id=82787052 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture102" parent="." unique_id=201578273 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture103" parent="." unique_id=233986457 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture104" parent="." unique_id=2067444416 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture105" parent="." unique_id=812553485 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 36)
+
+[node name="Meshy_AI__1025134850_texture106" parent="." unique_id=2001235716 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture107" parent="." unique_id=1635625279 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture108" parent="." unique_id=646831047 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 36)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture39" parent="." unique_id=842285337 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 36)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture40" parent="." unique_id=1629455320 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 36)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture41" parent="." unique_id=1511156879 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 39)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture42" parent="." unique_id=1461104585 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 42)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture43" parent="." unique_id=363516426 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture109" parent="." unique_id=297268783 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36)
+
+[node name="Meshy_AI__1025134850_texture110" parent="." unique_id=679856579 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 36)
+
+[node name="Meshy_AI__1025134850_texture111" parent="." unique_id=183908287 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture112" parent="." unique_id=1336714325 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 36)
+
+[node name="Meshy_AI__1025134850_texture113" parent="." unique_id=240479774 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture114" parent="." unique_id=1921371108 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture115" parent="." unique_id=1746874728 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture116" parent="." unique_id=1973434515 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture117" parent="." unique_id=1445077167 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture118" parent="." unique_id=1314930075 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture119" parent="." unique_id=1343645325 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture120" parent="." unique_id=130779506 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 36)
+
+[node name="Meshy_AI__1025134850_texture121" parent="." unique_id=673976536 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 39)
+
+[node name="Meshy_AI__1025134850_texture122" parent="." unique_id=947703294 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture123" parent="." unique_id=1649148720 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 36)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture44" parent="." unique_id=474482449 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 39)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture45" parent="." unique_id=1999116801 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 39)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture46" parent="." unique_id=1383112736 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 42)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture57" parent="." unique_id=683970776 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 42)
+
+[node name="Meshy_AI__1025134850_texture164" parent="." unique_id=2139785086 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 59.116993)
+
+[node name="Meshy_AI__1025134850_texture165" parent="." unique_id=1256343607 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 62.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture58" parent="." unique_id=1603913520 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 59.116993)
+
+[node name="Meshy_AI__1025134850_texture166" parent="." unique_id=1112601080 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 59.116993)
+
+[node name="Meshy_AI__1025134850_texture167" parent="." unique_id=341674720 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 62.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture59" parent="." unique_id=942331513 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 59.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture60" parent="." unique_id=641773120 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 62.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture61" parent="." unique_id=126125171 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 62.116993)
+
+[node name="Meshy_AI__1025134850_texture168" parent="." unique_id=2034139745 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 53.116993)
+
+[node name="Meshy_AI__1025134850_texture169" parent="." unique_id=2048328496 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 56.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture62" parent="." unique_id=1269835859 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 53.116993)
+
+[node name="Meshy_AI__1025134850_texture170" parent="." unique_id=87633604 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 53.116993)
+
+[node name="Meshy_AI__1025134850_texture171" parent="." unique_id=796481688 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 56.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture63" parent="." unique_id=1321824542 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 53.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture64" parent="." unique_id=398805774 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 56.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture65" parent="." unique_id=1792257228 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 56.116993)
+
+[node name="Meshy_AI__1025134850_texture172" parent="." unique_id=1702995022 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 47.116993)
+
+[node name="Meshy_AI__1025134850_texture173" parent="." unique_id=1959553730 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 50.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture66" parent="." unique_id=199101604 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 47.116993)
+
+[node name="Meshy_AI__1025134850_texture174" parent="." unique_id=764324604 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 47.116993)
+
+[node name="Meshy_AI__1025134850_texture175" parent="." unique_id=2092902274 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8982315, 0, 50.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture67" parent="." unique_id=1766933567 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 47.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture70" parent="." unique_id=585246609 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 44.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture68" parent="." unique_id=1167130808 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 50.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture69" parent="." unique_id=1752085051 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 5.8982315, 0, 50.116993)
+
+[node name="Meshy_AI__1025134850_texture176" parent="." unique_id=763276600 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 59.116993)
+
+[node name="Meshy_AI__1025134850_texture177" parent="." unique_id=48947103 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 62.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture71" parent="." unique_id=883976164 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 59.116993)
+
+[node name="Meshy_AI__1025134850_texture178" parent="." unique_id=705518736 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 59.116993)
+
+[node name="Meshy_AI__1025134850_texture179" parent="." unique_id=1942420697 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 62.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture72" parent="." unique_id=1471087856 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 59.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture73" parent="." unique_id=1810182621 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 62.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture74" parent="." unique_id=1292368482 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 62.116993)
+
+[node name="Meshy_AI__1025134850_texture180" parent="." unique_id=2144575554 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 53.116993)
+
+[node name="Meshy_AI__1025134850_texture181" parent="." unique_id=330522940 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 56.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture75" parent="." unique_id=1459109847 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 53.116993)
+
+[node name="Meshy_AI__1025134850_texture182" parent="." unique_id=1271278556 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 53.116993)
+
+[node name="Meshy_AI__1025134850_texture183" parent="." unique_id=1975674860 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 56.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture76" parent="." unique_id=710284201 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 53.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture77" parent="." unique_id=1033568933 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 56.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture78" parent="." unique_id=1209463979 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 56.116993)
+
+[node name="Meshy_AI__1025134850_texture184" parent="." unique_id=1617284798 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 47.116993)
+
+[node name="Meshy_AI__1025134850_texture185" parent="." unique_id=384139274 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 50.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture79" parent="." unique_id=837204570 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 47.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture83" parent="." unique_id=2030261688 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 44.116993)
+
+[node name="Meshy_AI__1025134850_texture186" parent="." unique_id=1980213546 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 47.116993)
+
+[node name="Meshy_AI__1025134850_texture187" parent="." unique_id=1319480491 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1017685, 0, 50.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture80" parent="." unique_id=685763485 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 47.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture81" parent="." unique_id=15382081 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 50.116993)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture82" parent="." unique_id=1947013375 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6.1017685, 0, 50.116993)
+
+[node name="Meshy_AI__1025134850_texture124" parent="." unique_id=2115249460 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 66)
+
+[node name="Meshy_AI__1025134850_texture128" parent="." unique_id=1068352307 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 66)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture47" parent="." unique_id=1422347235 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 66)
+
+[node name="Meshy_AI__1025134850_texture129" parent="." unique_id=857941451 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 66)
+
+[node name="Meshy_AI__1025134850_texture133" parent="." unique_id=474660279 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 66)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture48" parent="." unique_id=1785529695 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 66)
+
+[node name="Meshy_AI__1025134850_texture134" parent="." unique_id=1908554912 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 69)
+
+[node name="Meshy_AI__1025134850_texture135" parent="." unique_id=134784366 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 69)
+
+[node name="Meshy_AI__1025134850_texture136" parent="." unique_id=40390150 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture137" parent="." unique_id=857954940 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 69)
+
+[node name="Meshy_AI__1025134850_texture138" parent="." unique_id=1574641657 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture139" parent="." unique_id=879351390 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 75)
+
+[node name="Meshy_AI__1025134850_texture140" parent="." unique_id=99052399 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture141" parent="." unique_id=198395365 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture142" parent="." unique_id=997793587 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 75)
+
+[node name="Meshy_AI__1025134850_texture143" parent="." unique_id=1352563500 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 75)
+
+[node name="Meshy_AI__1025134850_texture144" parent="." unique_id=1659014673 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 75)
+
+[node name="Meshy_AI__1025134850_texture145" parent="." unique_id=2126824688 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 69)
+
+[node name="Meshy_AI__1025134850_texture146" parent="." unique_id=66740163 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture147" parent="." unique_id=2135878216 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 75)
+
+[node name="Meshy_AI__1025134850_texture148" parent="." unique_id=1600346867 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 69)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture49" parent="." unique_id=625630081 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 69)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture50" parent="." unique_id=933515031 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 69)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture51" parent="." unique_id=249784999 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 72)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture52" parent="." unique_id=771729378 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 75)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture53" parent="." unique_id=970082491 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture149" parent="." unique_id=361108191 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 69)
+
+[node name="Meshy_AI__1025134850_texture150" parent="." unique_id=975506893 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 69)
+
+[node name="Meshy_AI__1025134850_texture151" parent="." unique_id=724700764 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture152" parent="." unique_id=1293606815 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 69)
+
+[node name="Meshy_AI__1025134850_texture153" parent="." unique_id=1627878928 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture154" parent="." unique_id=159667496 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 75)
+
+[node name="Meshy_AI__1025134850_texture155" parent="." unique_id=723829022 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture156" parent="." unique_id=478619907 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture157" parent="." unique_id=1388533774 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 75)
+
+[node name="Meshy_AI__1025134850_texture158" parent="." unique_id=397033402 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 75)
+
+[node name="Meshy_AI__1025134850_texture159" parent="." unique_id=1827805326 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 75)
+
+[node name="Meshy_AI__1025134850_texture160" parent="." unique_id=1820645146 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 69)
+
+[node name="Meshy_AI__1025134850_texture161" parent="." unique_id=1239908800 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 72)
+
+[node name="Meshy_AI__1025134850_texture162" parent="." unique_id=1736188586 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 75)
+
+[node name="Meshy_AI__1025134850_texture163" parent="." unique_id=1015106157 instance=ExtResource("1_r3fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 69)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture54" parent="." unique_id=993892626 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, -6, 0, 72)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture55" parent="." unique_id=2077191630 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 72)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture56" parent="." unique_id=1047446848 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 75)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture25" parent="." unique_id=449961139 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 21)
+
+[node name="Meshy_AI_Verdant_Jungle_Cube_1025140322_texture26" parent="." unique_id=873909246 instance=ExtResource("2_jka67")]
+transform = Transform3D(1, 0, 0, 0, 1.67, 0, 0, 0, 1, 6, 0, 24)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture" parent="." unique_id=628788258 instance=ExtResource("3_i5arm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture3" parent="." unique_id=54012604 instance=ExtResource("3_i5arm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 21)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture2" parent="." unique_id=1375666320 instance=ExtResource("3_i5arm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 21)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture4" parent="." unique_id=405488706 instance=ExtResource("3_i5arm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 21)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture5" parent="." unique_id=994559938 instance=ExtResource("3_i5arm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 24)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture6" parent="." unique_id=1736965089 instance=ExtResource("3_i5arm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24)
+
+[node name="Meshy_AI_Sapphire_Water_Block_1025143846_texture7" parent="." unique_id=747982164 instance=ExtResource("3_i5arm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 24)
+
+[node name="Meshy_AI_Floating_Meadow_Platf_1025124801_texture" parent="." unique_id=1360300977 instance=ExtResource("4_wc5p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Meshy_AI_Floating_Meadow_Platf_1025124801_texture" unique_id=2041584617]
+libraries/ = SubResource("AnimationLibrary_i5arm")
