@@ -1,0 +1,16 @@
+{
+  "id": "01a196ff-830f-7560-8d22-ca7cb272fe4e",
+  "type": "text-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "Seamless tileable texture of a natural lush jungle meadow grass ground, viewed straight from above, orthographic top-down, no perspective. Dense short green grass blades with subtle color variation, a few tiny clover leaves and small bits of moss, very few small fallen leaves. Uniform density across the whole image with no large distinctive features, no rocks, no paths, no flowers, even diffuse lighting, no cast shadows, photorealistic PBR albedo, fills the frame edge to edge.",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1793534690098,
+  "started_at": 1793534690112,
+  "finished_at": 1793534725110,
+  "expires_at": 1793793925110,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a196ff-830f-7560-8d22-ca7cb272fe4e_0.png?Expires=1793793925&Signature=Fc87DsFeHZu4qdzdyZr-AzfR3x6HbT7wopM1sRlSW5r2lmMfRJxn-QNxneDnaS48n~caDx5PmSj-XFSOsqXS5bgYBzOH7WFOinBmnQKWhDSX2W-7xPPJAQ5ak5Wi3wA7N4TAjaXo3lWb6qOmwFEdbuqcZcgjCYpdY09qd6JcNa8lkk4SBxOEi6i1W6McwHQj-mb-NIp8aL9QeWeU07lDP9MZAjj-QGgcKnZA6x1Nv8hj24pGRTzqtdk34E2mkNwyQtKPsgjzjEpHDqD7N2tsh0bzbzaZ34tt3NlHEJRJ5aqYKQYnLbwKoKZTHKhJBCs8BaRE4a-QRdSY2XCR3NL-Jw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}

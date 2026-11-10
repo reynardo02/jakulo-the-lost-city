@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "project_name": "stone_wall_floor",
+  "folder": "20261101_211932_stone-wall-floor_01a198c4",
+  "root_task_id": "01a198c4-0c30-7284-9c4a-3a7f42fd805a",
+  "created_at": "2026-11-01T20:19:32.672Z",
+  "updated_at": "2026-11-01T20:21:47.034Z",
+  "tasks": [
+    {
+      "task_id": "01a198c4-0c30-7284-9c4a-3a7f42fd805a",
+      "task_type": "image-to-image",
+      "resource": "image-to-image",
+      "endpoint": "/openapi/v1/image-to-image",
+      "stage": "concept",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "img_01a198c4-0c30-7284-9c4a-3a7f42fd805a/image_0.png"
+      ],
+      "task_json": "task_01a198c4-0c30-7284-9c4a-3a7f42fd805a.json",
+      "operation_id": null,
+      "created_at": "2026-11-01T20:19:35.531Z",
+      "updated_at": "2026-11-01T20:19:38.326Z"
+    },
+    {
+      "task_id": "01a198c4-3ae3-7238-ba11-299c794e1db8",
+      "task_type": "image-to-image",
+      "resource": "image-to-image",
+      "endpoint": "/openapi/v1/image-to-image",
+      "stage": "concept",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "img_01a198c4-3ae3-7238-ba11-299c794e1db8/image_0.png"
+      ],
+      "task_json": "task_01a198c4-3ae3-7238-ba11-299c794e1db8.json",
+      "operation_id": null,
+      "created_at": "2026-11-01T20:20:22.650Z",
+      "updated_at": "2026-11-01T20:20:26.179Z"
+    },
+    {
+      "task_id": "01a198c5-8339-70af-9907-cad9266c0649",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "wall-geometry",
+      "parent_task_id": "01a198c4-0c30-7284-9c4a-3a7f42fd805a",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a198c5-8339-70af-9907-cad9266c0649.json",
+      "operation_id": "c8193c61-3194-47b3-8334-a86b721917b3",
+      "created_at": "2026-11-01T20:20:47.402Z",
+      "updated_at": "2026-11-01T20:21:39.407Z"
+    },
+    {
+      "task_id": "01a198c5-8339-70af-9907-cad9266c0649",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "delivered",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-01T20:21:44.633Z",
+      "updated_at": "2026-11-01T20:21:44.633Z"
+    },
+    {
+      "task_id": "01a198c5-8339-70af-9907-cad9266c0649",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "wall_preview.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-01T20:21:47.034Z",
+      "updated_at": "2026-11-01T20:21:47.034Z"
+    }
+  ]
+}

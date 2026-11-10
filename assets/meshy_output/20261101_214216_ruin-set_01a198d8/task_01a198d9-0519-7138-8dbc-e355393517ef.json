@@ -1,0 +1,16 @@
+{
+  "id": "01a198d9-0519-7138-8dbc-e355393517ef",
+  "type": "image-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "Using exactly the same stone material, colors and style as the wall in this image (weathered grey-beige limestone with masonry joints, cracks, carved Mayan glyph reliefs, patches of green moss), create a ruined L-shaped corner of a temple wall: two short wall sections meeting at a right angle, partly collapsed with jagged stepped broken tops, a few fallen blocks at the base, one carved glyph block. Single isolated object, three-quarter view, plain white background, soft even lighting, no vines.",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1793565726478,
+  "started_at": 1793565726485,
+  "finished_at": 1793565743936,
+  "expires_at": 1793824943936,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a198d9-0519-7138-8dbc-e355393517ef_0.png?Expires=1793824943&Signature=oc~t1qfBK2KJTIomHT2qloGmviqj2Okbq2eIC3Z0VXUL9rKZ2H4ELzYd2i0ga~yceJ05rs3hMcVUckkhgnRZ2yDyKMzRkn6HD~nRM9Scpl3wliZLNSeli1BNExaR0fkF9Qvp8emGu6DR62dBLAnZ71MH~dQFVgys3CXda170DqNEF0VfP~jwPX9TTDLYD5LrAmZlRD7fp-P07wuFZCBFNZvh~fk9wdKkpcyAQj3~EnVmz5nDiOyEvHStZMOMpx5iBpb52REJlfsQI3SN4ctIa-AijyVjOIdr35BijVUqOAwf-FYl~MHTTssDSh5ev-EZP5wOdqJ5~eDhu7F27ySl0g__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}

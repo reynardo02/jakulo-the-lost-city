@@ -2,10 +2,15 @@
 
 [ext_resource type="Script" uid="uid://b2cmk6qwd27sa" path="res://scripts/round_pit.gd" id="1_pit"]
 [ext_resource type="PackedScene" uid="uid://c2hy2wv8yhj" path="res://assets/traps/pit_tile.glb" id="2_tile"]
+[ext_resource type="PackedScene" uid="uid://d2t0p1mbryq3s" path="res://assets/traps/pit_tile_realistic.glb" id="3_real"]
+[ext_resource type="Texture2D" uid="uid://4gq3m20nulqc" path="res://assets/traps/pit_cover_leaves.png" id="4_leaves"]
 
 [sub_resource type="StandardMaterial3D" id="Mat_Cover"]
 albedo_color = Color(0.4, 0.62, 0.19, 1)
-roughness = 1.0
+albedo_texture = ExtResource("4_leaves")
+uv1_scale = Vector3(0.16, 0.16, 0.16)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="CylinderMesh" id="Mesh_Cover"]
 material = SubResource("Mat_Cover")
@@ -15,7 +20,7 @@ height = 0.04
 radial_segments = 40
 rings = 1
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_cknd6"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3rtif"]
 height = 0.3
 radius = 4.6
 
@@ -28,6 +33,9 @@ script = ExtResource("1_pit")
 
 [node name="PitTile" parent="." unique_id=890388451 instance=ExtResource("2_tile")]
 
+[node name="PitVisual" parent="." unique_id=893660739 instance=ExtResource("3_real")]
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 0, -2.8, 0)
+
 [node name="Cover" type="StaticBody3D" parent="." unique_id=1612520313]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 
@@ -37,7 +45,7 @@ mesh = SubResource("Mesh_Cover")
 
 [node name="CoverShape" type="CollisionShape3D" parent="Cover" unique_id=672061672]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.11, 0)
-shape = SubResource("CylinderShape3D_cknd6")
+shape = SubResource("CylinderShape3D_3rtif")
 
 [node name="DeathZone" type="Area3D" parent="." unique_id=571935398]
 

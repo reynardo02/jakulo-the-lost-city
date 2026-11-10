@@ -1,0 +1,16 @@
+{
+  "id": "01a198d8-ace4-72d3-923d-22b497c42bab",
+  "type": "image-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "Using exactly the same stone material, colors and style as the wall in this image (weathered grey-beige limestone with masonry joints, cracks, carved Mayan glyph reliefs, patches of green moss), create a broken standing square temple pillar built from stacked carved stone blocks, the top is jagged and broken off, a few small fallen fragments lying at its base, glyph carvings on its faces. Single isolated object, three-quarter view, plain white background, soft even lighting, no vines.",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1793565703691,
+  "started_at": 1793565703710,
+  "finished_at": 1793565731130,
+  "expires_at": 1793824931130,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a198d8-ace4-72d3-923d-22b497c42bab_0.png?Expires=1793824931&Signature=Od70OJXNh~w0dGXzJ5VGgMjJ7kFwGfTOt3ne48OmkHR4fmPA8dxxUmgY6Mk961~MLbaN4Qy1Qs4JfalioEr7NmCyOOuaBgkMLQgp3bp1a~Kt3OT5pFmi4oSGrI7t33Xx5BBtq1ZuHGYTP9Xj916l75Akb~IWsooQQXjJQMgqX7M7m9QgM39lDd9rL9EHiuVXy21zVSvkYk84nWKr2cC1163G-uUFAZxWAp3TExYMup7NpqHJW1sqOHd8wj5abIpsB3IE7krKdNGoV2o3p3WjrNBeuJAfGUDpZsHBmkGWakHMda7MPXpuEc0rvv1PEPD8mCrUg3LMztlivwqoOFfUuA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}

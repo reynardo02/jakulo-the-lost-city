@@ -1,0 +1,16 @@
+{
+  "id": "01a198ec-f987-72f6-a0d3-46e9062f2ba0",
+  "type": "image-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "Turn this temple gate into an ancient magical portal frame while keeping the same stone material, colors, proportions and overall shape: two thick pillars of weathered grey-beige limestone blocks with a heavy carved lintel on top. Add a stepped stone threshold slab at the base between the pillars, make the lintel slightly arched in the middle with a large carved keystone, and replace some glyph carvings with deeply engraved rune symbols that glow with a faint cyan-turquoise magical light. Thin glowing rune lines run up the inner faces of the pillars. A little moss, no vines. The opening between the pillars must stay completely empty so the plain white background is visible through it. Single isolated object, three-quarter front view, plain white background, soft even lighting.",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1793567033184,
+  "started_at": 1793567033195,
+  "finished_at": 1793567070653,
+  "expires_at": 1793826270653,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a198ec-f987-72f6-a0d3-46e9062f2ba0_0.png?Expires=1793826270&Signature=kmV1h2b2887BGBlet6O2yPh10qSBqnHBV9~tT6xgyWvbn1Xam4Ozj6lrRNIefYSw-VLINjkoZqv3EAO6nBvsswOdlwGhZCF6WnO4NqDcg8n6bPq2Sa-t0y8ITxI7oOykxXl1gvGS6mwUciyRew0SQYFYpdrVAea~~WkWo~MA--dojFzazxASYt1hj89Z1qmgrfQj672oROJr8yG2KkA7hemMT0Qkn5rVRmsyklLKRknFRCfsekLBz~DjxBByaGYWXt9Ju027Qo7N7L9CG389YMCcKRvbDExQG8MqmdXzEvJe3okkcOGCtjrMrS8TmhbmgHbBKSb3PC5jmX1m0QUTJg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}

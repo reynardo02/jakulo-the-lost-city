@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://mcs751vb35c2"]
 
 [ext_resource type="Script" uid="uid://ooqp4hu36i2" path="res://scripts/vine.gd" id="1_1lfx8"]
-[ext_resource type="Texture2D" uid="uid://d1c1y1vxp0vri" path="res://assets/meshy/elements/Meshy_AI__1026211657_texture_0.jpg" id="2_jyij3"]
-[ext_resource type="Texture2D" uid="uid://dj416wx0trle3" path="res://assets/meshy/elements/Meshy_AI__1026211657_texture_1.jpg" id="3_755av"]
-[ext_resource type="Texture2D" uid="uid://c5ip4pgqvpckl" path="res://assets/meshy/elements/Meshy_AI__1026211657_texture_2.jpg" id="4_a5mvc"]
+[ext_resource type="Texture2D" uid="uid://d1c1y1vxp0vri" path="res://assets/elements/Meshy_AI__1026211657_texture_0.jpg" id="2_jyij3"]
+[ext_resource type="Texture2D" uid="uid://dj416wx0trle3" path="res://assets/elements/Meshy_AI__1026211657_texture_1.jpg" id="3_755av"]
+[ext_resource type="Texture2D" uid="uid://c5ip4pgqvpckl" path="res://assets/elements/Meshy_AI__1026211657_texture_2.jpg" id="4_a5mvc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d85js"]
 resource_name = "material_0"
@@ -52,7 +52,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xyrbd")
 
-[node name="Vine" type="Node3D" unique_id=1603290707]
+[node name="Vine" type="Area3D" unique_id=674826947]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_1lfx8")
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=248060572]

@@ -1,0 +1,34 @@
+{
+  "id": "01a198da-1241-77d0-b050-d71e2991c563",
+  "type": "image-to-3d",
+  "name": "",
+  "art_style": "",
+  "object_prompt": "",
+  "style_prompt": "",
+  "negative_prompt": "",
+  "texture_prompt": "weathered grey-beige limestone with masonry joints, cracks, carved Mayan glyph reliefs, patches of green moss",
+  "texture_image_url": "",
+  "text_style_prompt": "",
+  "image_style_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1793565792563,
+  "progress": 100,
+  "started_at": 1793565792569,
+  "finished_at": 1793565827011,
+  "expires_at": 1793825027011,
+  "task_error": null,
+  "model_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198da-1241-77d0-b050-d71e2991c563/output/model.glb?Expires=1793825027&Signature=l2TR0iS63FRpR3pMvKax3Pyp4AhULXyqla7dsmeoTYchWkNND~4aErk2XPuEwFT1eFfLU37UFnp1eYlRFZbBSVdplBGx3sRrJj4za33teAPr~gRx6qLXECr24bhiY1Kl8o~S9B9f8s8gyEPbIKGNio-DmA5JI3YUk6cT8aB~GrY9y9PSg87Evf9toz~zn7HwFASpsX0UvobhYZB3cxSDxS-xnYaAiHkEJKiUbEdFc9eer90JoPynn0lQSb6aHBFlIQ6Y3vCoPgYJUOunoZJeHlzZM4VtqG97NZo8ZDJlkuTU1IPruXSN5Jh2uXe-JHJy26PkS7Wo-xqRhNOUK0KJ9g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198da-1241-77d0-b050-d71e2991c563/output/model.glb?Expires=1793825027&Signature=l2TR0iS63FRpR3pMvKax3Pyp4AhULXyqla7dsmeoTYchWkNND~4aErk2XPuEwFT1eFfLU37UFnp1eYlRFZbBSVdplBGx3sRrJj4za33teAPr~gRx6qLXECr24bhiY1Kl8o~S9B9f8s8gyEPbIKGNio-DmA5JI3YUk6cT8aB~GrY9y9PSg87Evf9toz~zn7HwFASpsX0UvobhYZB3cxSDxS-xnYaAiHkEJKiUbEdFc9eer90JoPynn0lQSb6aHBFlIQ6Y3vCoPgYJUOunoZJeHlzZM4VtqG97NZo8ZDJlkuTU1IPruXSN5Jh2uXe-JHJy26PkS7Wo-xqRhNOUK0KJ9g__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198da-1241-77d0-b050-d71e2991c563/output/preview.png?Expires=1793825027&Signature=h3smhs1b6TYh~ekoSXGY7N9398qo8Mbn3YqCcv9f1nPhiaA8QynAnA0JuneQPeui7HWdq2E3mj3HLUhS4xpqbqxLzLMwLoQagXGcYvWNr032q~FU8nCSrLeM2bYAnIZ79QoGkOO7dP-aU18k3X1gYlBdUSK534-bsQCkBtPHik4UzoEMp8CdsVeVZsiBH1WCXTA2xmudLay1nCekD8GQfLtmvngrqVm601a2CUIcpWfhfErBJbv9lhlyqVLoiltwXJkgur1kDxPInBb3hviV95E~YhvSOGWAXk6xdB~ZV5-Tn7zwD8aptamX9F62VwS8zuLyCe1xWzrbXKlaAJWgQA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198da-1241-77d0-b050-d71e2991c563/output/texture_0.png?Expires=1793825027&Signature=nA5axgg5AlAZ31lgtHDKpNz6iYQjDvQXvOIxSLzfr9eRUZXHD4cFIrhdziAkxKrHu0Wv~DCyUUzN-GERw6I4583zoHXbSWu4CyEXY~gMG~HJKFLGDzH35VaUnJxzZ8~OhJjqOPt9mdYwLMCmfZwMNJi-GGwcggsmPkn64WQJHsM-79GXMzCaKRTEwcZiDTNYD~C-v-tAJtxWnU4dmFrsolSrkknkQB1z5N1jCY5Z1H2yPIzjXn19aY~L8cRHxY8~Gr9wlF1iUa6dE~x9qcOi8camG21FIc5S7hsDYbT3Be6Wwubs92KUoVl1lPaobR6RiOPt9fJTr2EH1aEyKSmTYg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198da-1241-77d0-b050-d71e2991c563/output/texture_0_metallic.png?Expires=1793825027&Signature=jcjCh51ThG0Ka0Y7ldaiyHWmbe0UesClgFhMIlylTYLPJQRdSk-1jwfTYBwFqbn3~CP4uMz7Sq~5fMc1QNJVbWCWfY~AvhQig-~rf2yf6OuwrOa0fqQihlOwhbjdeoGZLKV8bZdYYc1SSGEOSgRlcvOOnoxu1K40gXq06~IoHyhRGFVIOQp6h0rDNbxeGnRtBZFFkJkn20mjuGGKDqmbyqt40mpJKUplMtl65URpSpjtyjlSUB-z68iAsNwcLXLjgIa5Gn2nrkku~3E0YXf10sl7k2BjrYPTnseRuZBqqY6W3CyxTsHQpcNh0oE6jSe3hbfJwyLTig-kVdWxhtopkw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198da-1241-77d0-b050-d71e2991c563/output/texture_0_roughness.png?Expires=1793825027&Signature=Gcw8ZQw13eoek-5hY9ZLWuvnMD2BBzOuUeaoJw76msvPPvR2R3mG7bFUfsO5Pz0eR3StwgF5S0dGAVsB7iKmfChRFRMK4qYbbdbYqCfaziLY1v7t74alOFt9pXC3cm5jlPy3bCOofVOIwbjBo8fEM2vzx4Q6Bl7XI9YY2qqqw7WtQPHJdbK5FnDvl6Pb9AbhTBSB~iHOPaV9BtXsriH4iMthYwEljgiAdASu8BbBdutNotoZqK555ZnLtFv8nvZRmfqirOAyZn5UZ8pwgNqIlVoknvFWzJ0B3raDB1vEa9JSuHGH0CW0g1WsCSa~NWwasZKA3St2LH1HUVcui2QLaw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198da-1241-77d0-b050-d71e2991c563/output/texture_0_normal.png?Expires=1793825027&Signature=aM3KTYd9COMwfwAwgITUP0zYjsKfhvZO07jjjI3JCAOEuO3Xto3iv9nGo9WUqxwpGNZdOlJ5EoEH8rJpeZwPRK24JRA3Z07LA-wH5NyZ-4F3~KjmxykBjtOOK4Ct0TS5Z4k2pKbXvWYsOK9MCSj5r6e2QiEAKt~SYZgbLgSjb9613O~Uzc~s9Tr~nQUe7x~XTAqrrqV9PkceIlv3sOCRWrooMOK3cGN9lCCzpF9R9F1kwAn9nHLaJByWv5mSNykjP6gM-s3HPI7MupNhXNuO3YGYOrlv1QO6eCSUqaAlS6R8F~OC60aE3ZcSwbDZ5OcIiJUc23a2b5QQ32Z5ZNZoPA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 15
+}

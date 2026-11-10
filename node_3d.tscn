@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ber6jj3jqahu4"]
 
-[ext_resource type="PackedScene" uid="uid://7tkbnp3e5nie" path="res://assets/meshy/terrain/Meshy_AI__1025134850_texture.glb" id="1_r3fl7"]
-[ext_resource type="PackedScene" uid="uid://de86yrwk74jjy" path="res://assets/meshy/terrain/Meshy_AI_Verdant_Jungle_Cube_1025140322_texture.glb" id="2_jka67"]
-[ext_resource type="PackedScene" uid="uid://dxlc4tf0dlt84" path="res://assets/meshy/terrain/Meshy_AI_Sapphire_Water_Block_1025143846_texture.glb" id="3_i5arm"]
-[ext_resource type="PackedScene" uid="uid://b8yp1xn1ixmhv" path="res://assets/meshy/Plattform/Meshy_AI_Floating_Meadow_Platf_1025124801_texture.glb" id="4_wc5p8"]
+[ext_resource type="PackedScene" uid="uid://7tkbnp3e5nie" path="res://assets/terrain/Meshy_AI__1025134850_texture.glb" id="1_r3fl7"]
+[ext_resource type="PackedScene" uid="uid://de86yrwk74jjy" path="res://assets/terrain/Meshy_AI_Verdant_Jungle_Cube_1025140322_texture.glb" id="2_jka67"]
+[ext_resource type="PackedScene" uid="uid://dxlc4tf0dlt84" path="res://assets/terrain/Meshy_AI_Sapphire_Water_Block_1025143846_texture.glb" id="3_i5arm"]
+[ext_resource type="PackedScene" uid="uid://b8yp1xn1ixmhv" path="res://assets/Plattform/Meshy_AI_Floating_Meadow_Platf_1025124801_texture.glb" id="4_wc5p8"]
 
 [sub_resource type="Animation" id="Animation_r3fl7"]
 length = 0.001

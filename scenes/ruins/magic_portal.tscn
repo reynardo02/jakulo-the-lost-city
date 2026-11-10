@@ -1,0 +1,66 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/ruins/magic_portal.glb" id="1_model"]
+[ext_resource type="Shader" path="res://assets/ruins/materials/portal_void.gdshader" id="2_void"]
+
+[sub_resource type="ShaderMaterial" id="Mat_Void"]
+shader = ExtResource("2_void")
+
+[sub_resource type="QuadMesh" id="Mesh_Void"]
+material = SubResource("Mat_Void")
+size = Vector2(2.15, 3.25)
+
+[sub_resource type="BoxShape3D" id="Shape_PillarLeft"]
+size = Vector3(0.88, 3.47, 1.01)
+
+[sub_resource type="BoxShape3D" id="Shape_PillarRight"]
+size = Vector3(0.89, 3.47, 1.01)
+
+[sub_resource type="BoxShape3D" id="Shape_Lintel"]
+size = Vector3(4.04, 1.13, 1.26)
+
+[sub_resource type="BoxShape3D" id="Shape_Threshold"]
+size = Vector3(2.05, 0.31, 1.01)
+
+[sub_resource type="BoxShape3D" id="Shape_PortalArea"]
+size = Vector3(2.05, 3.16, 0.4)
+
+[node name="MagicPortal" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+transform = Transform3D(4.83, 0, 0, 0, 4.83, 0, 0, 0, 4.83, 0, 2.3, 0)
+
+[node name="Void" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, 1.89, 0)
+cast_shadow = 0
+mesh = SubResource("Mesh_Void")
+
+[node name="Glow" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+light_color = Color(0.3, 0.95, 0.9, 1)
+light_energy = 0.5
+omni_range = 4.5
+
+[node name="Collision" type="StaticBody3D" parent="."]
+
+[node name="PillarLeft" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.471, 1.735, 0)
+shape = SubResource("Shape_PillarLeft")
+
+[node name="PillarRight" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.466, 1.735, 0)
+shape = SubResource("Shape_PillarRight")
+
+[node name="Lintel" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.035, 0)
+shape = SubResource("Shape_Lintel")
+
+[node name="Threshold" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, 0.155, 0)
+shape = SubResource("Shape_Threshold")
+
+[node name="PortalArea" type="Area3D" parent="."]
+
+[node name="Shape" type="CollisionShape3D" parent="PortalArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, 1.89, 0)
+shape = SubResource("Shape_PortalArea")

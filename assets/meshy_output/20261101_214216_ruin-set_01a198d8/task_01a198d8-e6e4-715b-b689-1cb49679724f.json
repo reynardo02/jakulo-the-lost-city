@@ -1,0 +1,16 @@
+{
+  "id": "01a198d8-e6e4-715b-b689-1cb49679724f",
+  "type": "image-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "Using exactly the same stone material, colors and style as the wall in this image (weathered grey-beige limestone with masonry joints, cracks, carved Mayan glyph reliefs, patches of green moss), create a low pile of collapsed temple rubble: broken rectangular stone blocks, a cracked carved glyph block and smaller fragments heaped together, roughly twice as wide as tall. Single isolated object, three-quarter view, plain white background, soft even lighting, no vines.",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1793565718855,
+  "started_at": 1793565718913,
+  "finished_at": 1793565747111,
+  "expires_at": 1793824947111,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a198d8-e6e4-715b-b689-1cb49679724f_0.png?Expires=1793824947&Signature=ahAfZVIKvfDgnb9CP~6DVnjUYNbdLT14iAHclzfAsJ6g3xfHinHyg0G0Jx5F-TZWEs0ir9gjycS5IM4rBaf8gA2detz0351DuMHlpi~PgCuY6M5sComMSKtWwarkGRP3p9NdH-3uc6Cn0YVknSpwL5I9g1uoRJvDBYe9EhI5VnOalhCw4ipE6xyvHcgBhRKuVCt5sXTGvR0r66cxnevXpQZZ~2ovn37pn3O6NhzEmVpGcFb7s8v5rSXa1fKWfNkvSGBZuSysPXQ~8KN8Bijjwqrdc3fmYlIXbo8OfoDpPmLs-Vc6OgR94NWj0bBOAr177t9i1imAUPr~u2cgd0HFcg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}

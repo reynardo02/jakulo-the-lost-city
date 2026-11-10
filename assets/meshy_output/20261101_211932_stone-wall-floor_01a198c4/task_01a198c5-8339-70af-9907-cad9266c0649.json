@@ -1,0 +1,34 @@
+{
+  "id": "01a198c5-8339-70af-9907-cad9266c0649",
+  "type": "image-to-3d",
+  "name": "",
+  "art_style": "",
+  "object_prompt": "",
+  "style_prompt": "",
+  "negative_prompt": "",
+  "texture_prompt": "weathered grey-beige limestone blocks with masonry joints, cracks, carved Mayan glyph reliefs, green moss on top, same stone on the back side",
+  "texture_image_url": "",
+  "text_style_prompt": "",
+  "image_style_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1793564446652,
+  "progress": 100,
+  "started_at": 1793564446659,
+  "finished_at": 1793564488937,
+  "expires_at": 1793823688937,
+  "task_error": null,
+  "model_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198c5-8339-70af-9907-cad9266c0649/output/model.glb?Expires=1793823688&Signature=do9vX37QkfEalfsB-In9MDEpYklLez45Lg7FmwD7QMD9x5ncbW5DxKwDzinOFZr4~fRA2ueBvXuja68Qtt~pY3pv3-W8EdWQ8Wk4zqXhEoXZITClgX2nqkzPGqbTEHfNk0MWYJO170m~YBqlegYXx0SxI8U-Laa4VXLT3cbw4Tn6R0puy7HJC~hx-6X8z8ua1CnF-UXhTc4DGRuLMGfyIGm~MNVBVufPBWHXFdVlEV3aIRXQB2OkKgOBKq9tUtKgdTZnk4TJUQBztCE6HdPJUIGhzI0dWeziIXI2Iyzw5ANvDXuxuIp2xinbQSa7IhcggT27EUfeZ7TlEY7RooCbvA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198c5-8339-70af-9907-cad9266c0649/output/model.glb?Expires=1793823688&Signature=do9vX37QkfEalfsB-In9MDEpYklLez45Lg7FmwD7QMD9x5ncbW5DxKwDzinOFZr4~fRA2ueBvXuja68Qtt~pY3pv3-W8EdWQ8Wk4zqXhEoXZITClgX2nqkzPGqbTEHfNk0MWYJO170m~YBqlegYXx0SxI8U-Laa4VXLT3cbw4Tn6R0puy7HJC~hx-6X8z8ua1CnF-UXhTc4DGRuLMGfyIGm~MNVBVufPBWHXFdVlEV3aIRXQB2OkKgOBKq9tUtKgdTZnk4TJUQBztCE6HdPJUIGhzI0dWeziIXI2Iyzw5ANvDXuxuIp2xinbQSa7IhcggT27EUfeZ7TlEY7RooCbvA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198c5-8339-70af-9907-cad9266c0649/output/preview.png?Expires=1793823688&Signature=aOKqLreKYJXiqXNW6TmtmFA2IcvGGU8~5vL4nyqKl7~r01OTGelzqj8m0ZiZ-soO0y1ENKZDulM14nZvNtzlE8TDGWmKzgwydzH-Y95F3BqzS5TL~9wJz5A~WzXv1O4U6krSSdOOVFvREuMXLHg7XzVbJbNbZVeRYIvqXjsuRg6wOP9DQVRo-vCPyFqJ33WkdUbHvKWBP-NBrCW2-MQb39p32sP~8nC1Pg7cWJ3RrVrB0ZljbtEhxnfTzdMEaMncTFIrlkJD6EdIZvyPlCPNBICdl2fdDs-UzacgxDunY~YHvVUYfqbvRbw8h1AXRInrY0NxCSK6vyziuK-e2wEs6g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198c5-8339-70af-9907-cad9266c0649/output/texture_0.png?Expires=1793823688&Signature=g5khIvF1l9n78mMLrgxpteR5kpg5Nms7iZ-loymkpMAX0xGvwAqfOxDfQ9Ae~KPPl79GUJDiAzdWrkXA64Qil0jel~5C-1fw1Edwfc4kIRIllbtz61JzZBiokLodAbXjvSEE47ifcHt0Zg8u-2ch2waa~bfW8nK10tJIp5BRQ7PgzDxeSSLT~1lWFNp5Uend313x4w5855S5c~7bFA2RbsSiNTh9xoRKsoMT4qitV0TKqRlEhp9y-vUDu8Uy0-GjCTsBisHhOIwgXKPteU6f7GFszf0zdKLUr9x-LfePbWLJRKJgq31MD0BRU7vkj3K5gRLGc1E1QUQJAQqleKacEA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198c5-8339-70af-9907-cad9266c0649/output/texture_0_metallic.png?Expires=1793823688&Signature=p1XM~1WcatThRea3Nl~TTpkB9uc5d6r0i4m6yynAPY~eLQPZe7KmN56-pSvtKxX6qkfGvMeARFAcqOuTOUp~WgTyoN5LuZP4IFuif4FY-6XilDdBTgK0bzuYh0Xz0yWSYNmRrP6mBcbt7D6kQ0PxY4Gj7eZnUd8ZmXz5DzIbcRKDLHacfe-d-CrVOxqwC19ZAxI8lAlGvProF6ugRpDdZtJs3HYiZ8QYGdz-OIwmrpwfSph1RgNji~MhXS4xwYr0lidS4XvbReo8Y-rkK2wcI4eyNG5RWFm6zjOOwZ4OynA58OdfqTJl355brm4lxHE8g6a7km02-W2l5h9Plk70bA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198c5-8339-70af-9907-cad9266c0649/output/texture_0_roughness.png?Expires=1793823688&Signature=eCkf8jSqsfQtLpP~opdR~Aec3xjm5431riXX7pn7-z61TntkbNYSZfnNdTNLo3Cw2cteLXrRH6JUfeTEmK-bfrVUq3xMcQ9DS131UkFSoVXD9HUpHkoe8caEVIqHcr7HTl0LGwnkX77P6B3sUbbCMxLRzubMdwkk~TJWQw33~UreOLrJmutIBroxWFNY30Xd9lfAYV3MNUEXgVr418C3qoMb9FVpYGF~iYaW8QRtr5eRzUb1jTxQzNfytNhTVxZiOcz3NGQeqfSG2BYWPqRcHaI5mNnGcL9Dao4nfzGmY5yTvYR2cvUFvUFDiltOrl~SPbR7mBs-0GQTThStjV9OJQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a198c5-8339-70af-9907-cad9266c0649/output/texture_0_normal.png?Expires=1793823688&Signature=LPT4EIxMKtjxfHkenTSIJLP9qF0spZvIvcYQVED5YB8LFxBvygfFWbHahOjRz5PjvaPnDBLhrzp~FmIpQNBg1N7BnO0lcuBODpazWfC2Xti1-rwK2X3X~zT4g~LRn53hjX4QgmUdAUgdxcjrvEs6kut6H-MpF5qmkyG-f3np6GIVETfZK6oBk09OfcWntlSqxAjj5FbBa5RhUK3Yz4Ot-n2G1q0iwJr1urSrBIX4z0GhEQPZBC9~3UUjv97wPrqM72AY-R~Yn8kzSgIB7nqMM2VvtNnDJTOUW8AbRQMFFsUntp0Jx3uSUUxLA7KqjLI~-eXfwEt4iB70Uph9NtFC6w__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 15
+}

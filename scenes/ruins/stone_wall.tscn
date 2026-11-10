@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/ruins/stone_wall_realistic.glb" id="1_model"]
+
+[sub_resource type="BoxShape3D" id="Shape_Wall"]
+size = Vector3(4, 3.06, 0.7)
+
+[node name="StoneWall" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+transform = Transform3D(4.19, 0, 0, 0, 4.19, 0, 0, 0, 4.19, 0, 1.531, 0)
+
+[node name="Collision" type="StaticBody3D" parent="."]
+
+[node name="Shape" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.53, 0)
+shape = SubResource("Shape_Wall")

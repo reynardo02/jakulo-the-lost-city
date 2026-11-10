@@ -1,0 +1,16 @@
+{
+  "id": "01a1979b-6f7d-77e5-be51-3288cae363e4",
+  "type": "text-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "A single realistic ancient gold coin from a lost jungle temple civilization, thick coin with a raised rim, embossed relief of a stylized sun flower blossom in the center surrounded by small carved glyphs, polished gold with slightly worn edges and darker patina in the recesses. Shown at a three-quarter angle so both the face and the thickness of the edge are visible, isolated on a plain white background, soft studio lighting, photorealistic product shot.",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1793544908693,
+  "started_at": 1793544908701,
+  "finished_at": 1793544974877,
+  "expires_at": 1793804174877,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a1979b-6f7d-77e5-be51-3288cae363e4_0.png?Expires=1793804174&Signature=h6DXDOdCvsuU56DlezwRNFNxmqC29Gmf9ZWyPRBxvzE5yseQMLFTCfEz~Kov~m0jLLblnefxs9JpMrWpEGLz8qBSHr3L9F9j5DaOt7Shes1smWq8APhrHJaMa5IqpKJ25vq~~9rClgIz8oW-iPlIS~oL~4VGOd39S6kuJdAHbxZmXcRcQgQOEa7bJCvXkVFx-t02PGmy~5cJDY225ytCSS35YnetKXEpFeQIrp-02El8bwdKdh9HzYiHVMNRkYUSIYyw0W8I1hsMfzPy6MDhjbneiq5ee5xeQK8-39ESQWJ9AUmw4L7n9KsrHtUzmb2N4mndSMpujfH70wryUFvcaQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}

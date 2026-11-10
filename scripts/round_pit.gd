@@ -15,6 +15,11 @@ const COVER_RADIUS := 4.6   # passt zum Loch in assets/traps/pit_tile.glb (Radiu
 @export var start_delay: float = 0.0      ## Versatz, damit mehrere Gruben nicht synchron laufen
 @export var reload_scene_on_trap: bool = true  ## später durch Leben/Respawn ersetzen
 @export var reload_delay: float = 0.8
+@export var realistic_visual: bool = true:  ## Meshy-Modell (PitVisual) statt der Low-Poly-Optik von PitTile
+	set(v):
+		realistic_visual = v
+		if is_node_ready():
+			_apply_visual()
 @export var editor_preview_open: bool = false:  ## nur Editor: Grube offen anzeigen
 	set(v):
 		editor_preview_open = v
@@ -27,11 +32,13 @@ const COVER_RADIUS := 4.6   # passt zum Loch in assets/traps/pit_tile.glb (Radiu
 
 var _openness := 1.0
 var _trapped := false
+var _grass_material: Material   # Gras der Low-Poly-Kachel, nur ohne realistic_visual auf der Abdeckung
 
 
 func _ready() -> void:
 	_cover_shape.shape = _cover_shape.shape.duplicate()   # jede Grube eigene Form
 	_use_grass_material()
+	_apply_visual()
 	if Engine.is_editor_hint():
 		_set_openness(1.0 if editor_preview_open else 0.0)
 		return
@@ -42,7 +49,7 @@ func _ready() -> void:
 	_start_cycle()
 
 
-## Abdeckung bekommt exakt das Gras-Material des Bodenblocks -> geschlossen kaum vom Boden zu unterscheiden
+## Merkt sich das Gras-Material des Low-Poly-Bodenblocks -> Abdeckung geschlossen kaum vom Boden zu unterscheiden
 func _use_grass_material() -> void:
 	for mi in $PitTile.find_children("*", "MeshInstance3D", true, false):
 		var mesh: Mesh = (mi as MeshInstance3D).mesh
@@ -51,8 +58,17 @@ func _use_grass_material() -> void:
 		for i in mesh.get_surface_count():
 			var m := mesh.surface_get_material(i)
 			if m and m.resource_name == "grass":
-				_cover_mesh.material_override = m
+				_grass_material = m
 				return
+
+
+## PitTile liefert weiterhin Kollision (-col) und Gras-Material, wird bei realistic_visual aber nur ausgeblendet
+func _apply_visual() -> void:
+	$PitVisual.visible = realistic_visual
+	# realistisch: Laub-Textur aus Mat_Cover, sonst wie bisher das Gras der Kachel
+	_cover_mesh.material_override = null if realistic_visual else _grass_material
+	for mi in $PitTile.find_children("*", "MeshInstance3D", true, false):
+		(mi as MeshInstance3D).visible = not realistic_visual
 
 
 func _start_cycle() -> void:

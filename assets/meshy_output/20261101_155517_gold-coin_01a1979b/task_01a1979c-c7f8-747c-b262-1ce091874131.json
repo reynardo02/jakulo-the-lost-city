@@ -1,0 +1,34 @@
+{
+  "id": "01a1979c-c7f8-747c-b262-1ce091874131",
+  "type": "image-to-3d",
+  "name": "",
+  "art_style": "",
+  "object_prompt": "",
+  "style_prompt": "",
+  "negative_prompt": "",
+  "texture_prompt": "polished worn gold coin, metallic gold, darker patina in the recessed relief, embossed sunflower and glyphs, same design on both faces",
+  "texture_image_url": "",
+  "text_style_prompt": "",
+  "image_style_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1793544999117,
+  "progress": 100,
+  "started_at": 1793544999124,
+  "finished_at": 1793545047280,
+  "expires_at": 1793804247280,
+  "task_error": null,
+  "model_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1979c-c7f8-747c-b262-1ce091874131/output/model.glb?Expires=1793804247&Signature=Fe7QSlskN4hrt0uEYofsFu-eM2nEbJ-PgsGEyVEG3mC8NvU5W7eBrBtH10j5emiihZ1qRt3zitjRZviR~52Wlz9DYmzo~qhsQVrmL85ZgMP-CfM11~s~NYYtW3zhMpzxTzot-hE8bkdg0jBx1VHYc5gYmGUBu4nKG~LckJSxlso6cxmKz7LU1inMJ9gJ2mL8hy6e-Q6W1KfuyGlMQBKhxQkOFHTI~kBCInLBIb8ZQlZOCU7CAIF-oiJL-gXxWr9As3BNOMZMOS6p5SD2tzPO9RqBlFg-MucUSqYEWUTxnkeAQGwjDLwOAK6ejw4j-Auf91gE4uFsqqoNSAEGhRaQyA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1979c-c7f8-747c-b262-1ce091874131/output/model.glb?Expires=1793804247&Signature=Fe7QSlskN4hrt0uEYofsFu-eM2nEbJ-PgsGEyVEG3mC8NvU5W7eBrBtH10j5emiihZ1qRt3zitjRZviR~52Wlz9DYmzo~qhsQVrmL85ZgMP-CfM11~s~NYYtW3zhMpzxTzot-hE8bkdg0jBx1VHYc5gYmGUBu4nKG~LckJSxlso6cxmKz7LU1inMJ9gJ2mL8hy6e-Q6W1KfuyGlMQBKhxQkOFHTI~kBCInLBIb8ZQlZOCU7CAIF-oiJL-gXxWr9As3BNOMZMOS6p5SD2tzPO9RqBlFg-MucUSqYEWUTxnkeAQGwjDLwOAK6ejw4j-Auf91gE4uFsqqoNSAEGhRaQyA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1979c-c7f8-747c-b262-1ce091874131/output/preview.png?Expires=1793804247&Signature=dHpf~l2fG4QpVJl5Vb974N8gmLnqz8ZOvC07N7~ZJmxG6q6LUqvb~PvmxSlnWFArsDTzZAZj~gwSOE90AtnyCjQqsBx8PabikIAugtRHfzZSM25Sga6ovXrYYyQHna0nxgo1i-eViUYYUiJYMer83d4erhb54zj~vB-Fhzr77eya1Y~uSUc5yle4mtnjlG-a5Q-o-dfzsBvoCF9Rw2Crk04OSNYE0NU5ydJ2HkBBLGlF7EOP1Dxu~klo7GFySelLFeqA73DpkUtdmdSt-epiTEtKwtwc~8JJuVzcKHqeFa7zM~TofSnvVlA4vxUvoWddBlCn0Gq-PcML44ocUJJKXQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1979c-c7f8-747c-b262-1ce091874131/output/texture_0.png?Expires=1793804247&Signature=A4niBN~UgHZi~lY16PeGyL9ddX28IGNJie~CKSO7iNb6bJC4oFHw0lqtNQdQ-pm9OsQxSp-eknnfe~KK1RXhndzwXTYCE0H1UrVf75yqxxLZSJ97pcTjKDaKjvXrb89PRp41nhKKBP2S92ir-cJTv8OACTviAnOGo2~wqVYAr2MdgH1sTIA3CMAOjMQHAed0B4BtXUwv40rzK-t-mEpO6AvTmCaBhv5LZB01HnQYJg46FdbuqG-258aoocEFpxj9fksd7bB3dQL-bjfwXyeBmb6V~YvlMeedgtJSVo36SejRJeQeFBvW7vxQPYBsGrunV-apUBjaKeJjQmA9eCuKrA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1979c-c7f8-747c-b262-1ce091874131/output/texture_0_metallic.png?Expires=1793804247&Signature=JIBjfraqAHPyS-Fyc3lz9QLROVz7A65jzSekKTBM9MHb-3u84hTpjJNCSPcQglP32APi0QZBPIX7CekjKi5-HyDI5YDiHYe3xEnVFPRDN~yActI7wuohB-fukTHZJrOY7~xoPrY9C-3mkkhK4AOY~Gn7M5iOGZn-4b0HPctToqb2PhAyHaXUEyCw5WHIfzy1-pR8pneXL1vhscTYT0xZ-03mt1ix8sU8AYmr7p~Z1lvIZjGmpPzc1WudBoC9koXxBURfZDgQd3C4d7dlnqYZmRaV~Hf7Hg~CJrNQUrDxm0xDO8DyYo09pzWO0lqytaUVPPRcsee9r4NQe3pwYLnwiA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1979c-c7f8-747c-b262-1ce091874131/output/texture_0_roughness.png?Expires=1793804247&Signature=YacRSW-djMf4iynozXywonM~vGi0az0lHIQ5CpxJ3wuqsLf59torH6mobGmAL4HDJ0o1zVVZRqmrlb7eFHWQ2BIozWFPLF2eufUEk73SAHaXSWIHUyc6BhOApyfYlx4rtv4WnBEGotCYmEqLPm55O28xGX~VeDLv6Sd~rDWSVRD8gs5FClwyuhVnEPXRz6Rw5fxmmGgm2Yg~lemLBYtTePVC7MZ-CRGolLYeVRg8uqEcZKKvgVJ3kgtNS57d2Z8LkrHsEVDoa6oIfRg0Ey6Vo-p3hcmtyMT0XiBicrbRDYMrFXa31j9Nm1WvOGU7DL6QubNK9eymQTeN-UpucVr5xQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1979c-c7f8-747c-b262-1ce091874131/output/texture_0_normal.png?Expires=1793804247&Signature=Qx~COdUYdOdQoqmPa2I3qNd5-k-6U3ZgF~jvdA92b56aeV2nXMeXo8T0gXAu6L3rVS1zLW5a8xRK8~JfvGmLUMKQHd-SUr0d0~oUXAyeZG8G57F7NKoq4H-AznzbAKDtm93K8wFUp5dhjpLFWWmvKDnEH2BHxxZ8UDKr0dZBf4iYf35E2Fh47LIKDNBiT5sa2zkPOrYJqJvG4A6KPSr0iJhX2-FTIITrb6GCOVvj7OaAT5y5rd4ADAe3thQj6Dw4bh-aF6bYJGEWhVXZKGZOSsDrBVv6jbayhmINAP399KksyO7zyz2zbqCvwNQO593n4vU85iB0oLlm35Y9z-hQFg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 15
+}

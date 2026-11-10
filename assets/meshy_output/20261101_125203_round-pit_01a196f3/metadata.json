@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "project_name": "round_pit",
+  "folder": "20261101_125203_round-pit_01a196f3",
+  "root_task_id": "01a196f3-afca-7357-aeb9-1ce6ef9d77aa",
+  "created_at": "2026-11-01T11:52:03.175Z",
+  "updated_at": "2026-11-01T11:57:53.716Z",
+  "tasks": [
+    {
+      "task_id": "01a196f3-afca-7357-aeb9-1ce6ef9d77aa",
+      "task_type": "image-to-image",
+      "resource": "image-to-image",
+      "endpoint": "/openapi/v1/image-to-image",
+      "stage": "concept",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "concept/image_0.png"
+      ],
+      "task_json": "task_01a196f3-afca-7357-aeb9-1ce6ef9d77aa.json",
+      "operation_id": null,
+      "created_at": "2026-11-01T11:52:36.797Z",
+      "updated_at": "2026-11-01T11:52:39.677Z"
+    },
+    {
+      "task_id": "01a196f4-89ed-744b-aba2-f47f8219099f",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "geometry",
+      "parent_task_id": "01a196f3-afca-7357-aeb9-1ce6ef9d77aa",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a196f4-89ed-744b-aba2-f47f8219099f.json",
+      "operation_id": "17598063-3699-4456-8c2a-486fc60cf102",
+      "created_at": "2026-11-01T11:52:54.390Z",
+      "updated_at": "2026-11-01T11:53:42.279Z"
+    },
+    {
+      "task_id": "01a196f4-89ed-744b-aba2-f47f8219099f",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "delivered",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-01T11:53:54.258Z",
+      "updated_at": "2026-11-01T11:53:54.258Z"
+    },
+    {
+      "task_id": "01a196f4-89ed-744b-aba2-f47f8219099f",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-01T11:53:56.567Z",
+      "updated_at": "2026-11-01T11:53:56.567Z"
+    },
+    {
+      "task_id": "01a196f8-462f-76f4-95ab-2af836767afa",
+      "task_type": "image-to-image",
+      "resource": "image-to-image",
+      "endpoint": "/openapi/v1/image-to-image",
+      "stage": "cover-texture",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "cover/image_0.png"
+      ],
+      "task_json": "task_01a196f8-462f-76f4-95ab-2af836767afa.json",
+      "operation_id": "0534b741-8600-4e63-8105-2663d107936b",
+      "created_at": "2026-11-01T11:57:01.432Z",
+      "updated_at": "2026-11-01T11:57:53.716Z"
+    }
+  ]
+}

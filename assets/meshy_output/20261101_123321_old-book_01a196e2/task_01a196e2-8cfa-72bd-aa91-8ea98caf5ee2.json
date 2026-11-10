@@ -1,0 +1,23 @@
+{
+  "id": "01a196e2-8cfa-72bd-aa91-8ea98caf5ee2",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2247107888,
+  "prompt": "Low poly old ancient book, closed, thick worn leather cover with brass corner fittings and a clasp, aged yellowed page edges, stylized game prop for a jungle lost city adventure game",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1793532794243,
+  "progress": 100,
+  "started_at": 1793532794250,
+  "finished_at": 1793532865727,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a196e2-8cfa-72bd-aa91-8ea98caf5ee2/output/model.glb?Expires=4947091200&Signature=iAr8qD9~BvkdgiTdiivOAgjxIC5aUYTEDUg-n8nmnNuJx-mmWPLwl~auoUy3sY6g0wJK2OZwxU0zHOLyzxMT4YLxMn7kgH8greshYj0kO0FklRcihYifI8WANVJgmZDhbcqB0DbKrV93KgWxasjgFs46NPhvkfYPMHtwBZJXseM4loO0iriyyb1-f0AcAtmzAiif-lbaEYcrR2XLQ0lDBVerYgoqXu8j9U8syzdJfJknwwXAm1c4PkE1KlERA23aVp9Ma9uF~99pVqcLGVAW9eU2mufBAP29T3JmJqzx4XLIhVCb2u~0UA5-Y-UKf32DkVWMROTZ2yzgOokV4sdc0A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a196e2-8cfa-72bd-aa91-8ea98caf5ee2/output/preview.png?Expires=4947091200&Signature=SWmGW~wMry1hJEf11LPOuRCF7xoY7MPSOwCIC0gHI1S0~AQztN9bO5i3tC3S4hgwxTz~0y4FjLVua6KuFyfFHEsk74zRZDpeAqKTslW1gw7FiBp-dBsZqpx~qLmULqKMV92rs4zMajd659Thh7Vnmb0vPLfLpnMoMFVLkwFk~dld8ut~DsZqxdu0S8YUxPICSbrG-uGJcyCLokw6yj-GS40rPw7V8xizDNqnjl5G2NmjXU-Rgg4RYCoudqvgj0fBahMt7N8YeoCbDG4MG2pP76Mp54gkfQI0FV5-RC36goGBNREDAa0KHvEMYfDUNNWU0~72bPENgP8P8NnbG4KpWg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

@@ -1,0 +1,30 @@
+{
+  "id": "01a196e3-ddb0-7712-92e2-651f21c814cc",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 567206936,
+  "prompt": "Low poly old ancient book, closed, thick worn leather cover with brass corner fittings and a clasp, aged yellowed page edges, stylized game prop for a jungle lost city adventure game",
+  "texture_prompt": "weathered dark brown leather cover, tarnished brass corners and clasp, yellowed old parchment page edges, hand-painted stylized look",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1793532879686,
+  "progress": 100,
+  "started_at": 1793532879703,
+  "finished_at": 1793532916315,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a196e3-ddb0-7712-92e2-651f21c814cc/output/model.glb?Expires=4947091200&Signature=FMZXD15iT807jhCOHxtwo1CKRQeSIalD6BAELwDnfik9FyD85eSnyMWz9j30l8W60~LwcM4kRjmItD7UG95y476khz~ZYu4RcAC2aW~g~U14ykbz1-DX6JYAut1LzV7XvFd4sxw557XVU09VuGB47KXe8KUVpyON-359lvza-2cQl5Kp9yyjYwnUP0pSkgdZL-tA0uHzUwUUBzg58bhURzValxV88HqL-z05SiwuSPfV5Lby-XZu-GfoN7sv4q8MttEH3ViJy7orLP2yZ288ss9tejAtf-oYJ2-A89IvMMWPBJNsRZzx4XjHe0DPwALeaO78R9VEEltn~SW0q6gRMQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a196e3-ddb0-7712-92e2-651f21c814cc/output/preview.png?Expires=4947091200&Signature=nINKI3oyFoZNrB2GPRSbPs-~-jipqw1SQtwcw~2DR1CwvRuAv64zkbDxtDzWb9lrLCdL5UqS0iGsUUDqsmDhPLpyUd~2cwY~I3zpyumQfeqDY~ZEMnglMo54vzRybo5Zoc8jnUf~qGoNp8tlbqu9nvcNQed2DYTAbWFeJ6473y-tBpcrNOrfeCNkzUx-X5BOBH-sTYawVoGSfzX6Al3YlmyFMZot6WCPpWza5Yo4B7eZjQ4llRKRHTBcmfrZGlzHpEVpCgOaxuZIfVxFCkYq7Cf-dL5DY43jxA0FsQ5N7TEWWru0mxBDB9kE~3oiYUfjDbTDgAW-YOEprQpWEPtdXQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a196e3-ddb0-7712-92e2-651f21c814cc/output/texture_0.png?Expires=4947091200&Signature=Ouh5wrzXBdXJWNedqu8p1rmWV-dY~9gOYTzC493HICyIJhK0keo7FBNfUNetY62jsLNiQvzGM~pE~8CGqHCXwMZlI47u7ZS1bE~d5RXOCCOk~r5kNGURf2gU5etMXUWr0Iyu-X6R742FhQHBuhJNL-VAHKQED0sTHIZXyDml5ldKucjhatas0HjQLcXbpOVRlBegiMzARtoK65tghwK0ilhqZ9r1OpUa3geemdj9O8VCA1HDc8DqTXFG4sYStftQHK1vbJKgcG~LQR4RAYcTn7Rn-s71mP1F0lDqN8uEN3ZTO5l0ruRv3Ri6TxUkTmLkKPRghcezZn4NFNhpCKwoqQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a196e3-ddb0-7712-92e2-651f21c814cc/output/texture_0_metallic.png?Expires=4947091200&Signature=SQFMf~glx7MX8ggGc3Fps4Ba4wqS6nj5v75RShDHa8hexGHBFGnrJxVeJd-Wb01zpFNYwTv5u4CY~Re4OwwrfPnVsMpuSfadcJb9onixhHesgkRzUeynHKW4C-nCtsMkNkfOGzhQlvGTb9ssPOLbUrllyHrcZMjYJl6f1Djz76I24Sh3z5ia5yZw41m0-eFqlJxl8GlaRIyaeuoIOHU7ufyniNHyrYi32qC8dpcj37QKZbI3xN6i-Weae5vh-yixB1RIToKi9rPyiUkGaQUMujAddc9cw1QVyiI3ydED0IyaKWnBGEOOuUc~PHoCo6cCgFVQTYWVvZ6lZFn7IXLCuA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a196e3-ddb0-7712-92e2-651f21c814cc/output/texture_0_roughness.png?Expires=4947091200&Signature=pexYeIvl0EPbN1CX3DTouWnrWpWhu5y5o1Xa1ow7jYoai1iP95Jo-drmmRv2F0B03deT~60FYSnzQAtko5pbLs8Agg8LRHGG9wNeGYSNORcigxm2EGQ38dDH70OzHJuPkmQVepJBuNYDpMkd~Fx0YklMRHZd8ZqHjFxps-N5EWSd9HwsUsGR2hMtf5sPDIarjZfssdgm8z1hp-3TugQWvuqZ9BE83L21tZJCXTPDs~uxLZ-myvJTZDriwHW0ZAxk7cqajzQ4mIoWXzkDhs-IFKPP4NN9Y59KUwe2hfw5EGXEf7SDaJTjmlw4SBB~GFLE8fTw-976W2Z-bngGUo5smQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a196e3-ddb0-7712-92e2-651f21c814cc/output/texture_0_normal.png?Expires=4947091200&Signature=d8jzGfKZAJ1L8Am-Ny4QPnasHBQS4W6s9bdAhkbLgS9o7Yo2NN8jEfDdrcCwLk27FHHQroj5CK11LvyFIwfqC7gjzwZm~~YNW54Yy-PTfFaMAB24Yxy1PRBPH8keHzuwfYXQNJmRLsmQVQYOpnbLYLNwPe4fk4ifcixVlqWTgR9aMzPGXEBdzZu1AWqtcWgTwxC-cefSvEv0JJmVhvShdlOWZ2mnq-35PJtqQ27Crv6ZWsr4G2MEKd6fj0iKhwSGkld~nycL74FethmBP~q~Ko74-LFpyBgn~MP7ACPwaPd41yOobztbdlf5u1bjr2GPiErLoR2g-vPerZLFLi8Ngg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

@@ -1,0 +1,16 @@
+{
+  "id": "01a198d8-8d40-703c-a649-9cf7e3c67de3",
+  "type": "image-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "Using exactly the same stone material, colors and style as the wall in this image (weathered grey-beige limestone with masonry joints, cracks, carved Mayan glyph reliefs, patches of green moss), create an ancient temple pedestal / altar: a square stepped stone podium with three receding tiers, a flat square top surface to place an object on, carved glyph band around the middle tier, worn chipped corners. Single isolated object, three-quarter view, plain white background, soft even lighting, no vines.",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1793565696024,
+  "started_at": 1793565696034,
+  "finished_at": 1793565731077,
+  "expires_at": 1793824931077,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a198d8-8d40-703c-a649-9cf7e3c67de3_0.png?Expires=1793824931&Signature=BrRUiWuAw9mGrJzCz9UtQNnYtoFJb7cIGfQUYS93mUGUdqprtd95KNSDWQktUsYrvladuw8Uoez~7R9EUi-OMNQFiuxizo7DUM3809veA5zoudAAg9rcAN6bM4o~6DV4koUAKRUzV-qMEp8xb8Z32h-LiGA4g5duR7IVbDspFM6wc3bZMhOv6EudPkB9ncbzPDkYmiIyJokczCmVi5bxNOQrbM5BeqK6O4z~d8kkKEqvwbxajQASrr4AFEjBUR92uazvnyAUZMP21RLeIi7nYvUzhRDZ4vxfXBV7dpM0QwkH4MKNjpLueGen-7VrH69kOpKRZASgtI5PZgj0hl0UDQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}

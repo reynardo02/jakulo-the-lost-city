@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/mesh_collision.gd" id="1_col"]
+[ext_resource type="PackedScene" path="res://assets/ruins/ruin_pedestal.glb" id="2_model"]
+
+[node name="Pedestal" type="Node3D"]
+script = ExtResource("1_col")
+
+[node name="Model" parent="." instance=ExtResource("2_model")]
+transform = Transform3D(2.1, 0, 0, 0, 2.1, 0, 0, 0, 2.1, 0, 0.599, 0)

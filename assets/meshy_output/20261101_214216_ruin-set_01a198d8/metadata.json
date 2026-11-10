@@ -1,0 +1,230 @@
+{
+  "schema_version": 2,
+  "project_name": "ruin_set",
+  "folder": "20261101_214216_ruin-set_01a198d8",
+  "root_task_id": "01a198d8-8d40-703c-a649-9cf7e3c67de3",
+  "created_at": "2026-11-01T20:42:16.251Z",
+  "updated_at": "2026-11-01T20:44:26.087Z",
+  "tasks": [
+    {
+      "task_id": "01a198d8-8d40-703c-a649-9cf7e3c67de3",
+      "task_type": "image-to-image",
+      "resource": "image-to-image",
+      "endpoint": "/openapi/v1/image-to-image",
+      "stage": "concept-pedestal",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "concept_pedestal/image_0.png"
+      ],
+      "task_json": "task_01a198d8-8d40-703c-a649-9cf7e3c67de3.json",
+      "operation_id": null,
+      "created_at": "2026-11-01T20:42:18.987Z",
+      "updated_at": "2026-11-01T20:42:21.985Z"
+    },
+    {
+      "task_id": "01a198d8-ace4-72d3-923d-22b497c42bab",
+      "task_type": "image-to-image",
+      "resource": "image-to-image",
+      "endpoint": "/openapi/v1/image-to-image",
+      "stage": "concept-pillar_broken",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "concept_pillar_broken/image_0.png"
+      ],
+      "task_json": "task_01a198d8-ace4-72d3-923d-22b497c42bab.json",
+      "operation_id": null,
+      "created_at": "2026-11-01T20:42:24.546Z",
+      "updated_at": "2026-11-01T20:42:27.282Z"
+    },
+    {
+      "task_id": "01a198d8-c9ef-72a8-9a76-f60db8607001",
+      "task_type": "image-to-image",
+      "resource": "image-to-image",
+      "endpoint": "/openapi/v1/image-to-image",
+      "stage": "concept-column_fallen",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "concept_column_fallen/image_0.png"
+      ],
+      "task_json": "task_01a198d8-c9ef-72a8-9a76-f60db8607001.json",
+      "operation_id": null,
+      "created_at": "2026-11-01T20:42:29.842Z",
+      "updated_at": "2026-11-01T20:42:32.652Z"
+    },
+    {
+      "task_id": "01a198d8-e6e4-715b-b689-1cb49679724f",
+      "task_type": "image-to-image",
+      "resource": "image-to-image",
+      "endpoint": "/openapi/v1/image-to-image",
+      "stage": "concept-rubble",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "concept_rubble/image_0.png"
+      ],
+      "task_json": "task_01a198d8-e6e4-715b-b689-1cb49679724f.json",
+      "operation_id": null,
+      "created_at": "2026-11-01T20:42:35.422Z",
+      "updated_at": "2026-11-01T20:42:38.988Z"
+    },
+    {
+      "task_id": "01a198d9-0519-7138-8dbc-e355393517ef",
+      "task_type": "image-to-image",
+      "resource": "image-to-image",
+      "endpoint": "/openapi/v1/image-to-image",
+      "stage": "concept-wall_corner_ruin",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "concept_wall_corner_ruin/image_0.png"
+      ],
+      "task_json": "task_01a198d9-0519-7138-8dbc-e355393517ef.json",
+      "operation_id": null,
+      "created_at": "2026-11-01T20:42:42.560Z",
+      "updated_at": "2026-11-01T20:42:46.419Z"
+    },
+    {
+      "task_id": "01a198da-1241-77d0-b050-d71e2991c563",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "model-pedestal",
+      "parent_task_id": "01a198d8-8d40-703c-a649-9cf7e3c67de3",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a198da-1241-77d0-b050-d71e2991c563.json",
+      "operation_id": "6bb31698-7fb2-4a34-8262-418774a12048",
+      "created_at": "2026-11-01T20:43:13.337Z",
+      "updated_at": "2026-11-01T20:43:50.906Z"
+    },
+    {
+      "task_id": "01a198da-28ce-7381-8eeb-fbaa41776869",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "model-pillar_broken",
+      "parent_task_id": "01a198d8-ace4-72d3-923d-22b497c42bab",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a198da-28ce-7381-8eeb-fbaa41776869.json",
+      "operation_id": "2bf1aded-0399-4940-b9c8-30d64a174292",
+      "created_at": "2026-11-01T20:43:18.549Z",
+      "updated_at": "2026-11-01T20:43:58.321Z"
+    },
+    {
+      "task_id": "01a198da-3ca5-7439-ba62-4ca31f1c05ec",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "model-column_fallen",
+      "parent_task_id": "01a198d8-c9ef-72a8-9a76-f60db8607001",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a198da-3ca5-7439-ba62-4ca31f1c05ec.json",
+      "operation_id": "107ae9ef-e581-4582-974c-68e8a11ed922",
+      "created_at": "2026-11-01T20:43:23.688Z",
+      "updated_at": "2026-11-01T20:44:05.673Z"
+    },
+    {
+      "task_id": "01a198da-504b-7332-836d-78b41c83691f",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "model-rubble",
+      "parent_task_id": "01a198d8-e6e4-715b-b689-1cb49679724f",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a198da-504b-7332-836d-78b41c83691f.json",
+      "operation_id": "4e0cde3a-a74f-4611-8e42-cea78fc18a10",
+      "created_at": "2026-11-01T20:43:28.514Z",
+      "updated_at": "2026-11-01T20:44:12.721Z"
+    },
+    {
+      "task_id": "01a198da-63cd-74ff-afc5-abb6ba650a8d",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "model-wall_corner_ruin",
+      "parent_task_id": "01a198d9-0519-7138-8dbc-e355393517ef",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a198da-63cd-74ff-afc5-abb6ba650a8d.json",
+      "operation_id": "2920a64f-0e3a-4635-9710-bea5546a111d",
+      "created_at": "2026-11-01T20:43:33.631Z",
+      "updated_at": "2026-11-01T20:44:21.004Z"
+    },
+    {
+      "task_id": "01a198da-1241-77d0-b050-d71e2991c563",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "delivered",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-01T20:43:55.645Z",
+      "updated_at": "2026-11-01T20:43:55.645Z"
+    },
+    {
+      "task_id": "01a198da-28ce-7381-8eeb-fbaa41776869",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "delivered",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-01T20:44:02.902Z",
+      "updated_at": "2026-11-01T20:44:02.902Z"
+    },
+    {
+      "task_id": "01a198da-3ca5-7439-ba62-4ca31f1c05ec",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "delivered",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-01T20:44:10.044Z",
+      "updated_at": "2026-11-01T20:44:10.044Z"
+    },
+    {
+      "task_id": "01a198da-504b-7332-836d-78b41c83691f",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "delivered",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-01T20:44:17.562Z",
+      "updated_at": "2026-11-01T20:44:17.562Z"
+    },
+    {
+      "task_id": "01a198da-63cd-74ff-afc5-abb6ba650a8d",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "delivered",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-01T20:44:26.087Z",
+      "updated_at": "2026-11-01T20:44:26.087Z"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/ruins/gate_realistic.glb" id="1_model"]
+
+[sub_resource type="BoxShape3D" id="Shape_PillarLeft"]
+size = Vector3(1.12, 3.37, 1.14)
+
+[sub_resource type="BoxShape3D" id="Shape_PillarRight"]
+size = Vector3(0.94, 3.37, 1.14)
+
+[sub_resource type="BoxShape3D" id="Shape_Lintel"]
+size = Vector3(4.19, 1.24, 1.08)
+
+[node name="Gate" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+transform = Transform3D(4.84, 0, 0, 0, 4.84, 0, 0, 0, 4.84, 0, 2.304, 0)
+
+[node name="Collision" type="StaticBody3D" parent="."]
+
+[node name="PillarLeft" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.418, 1.685, -0.01)
+shape = SubResource("Shape_PillarLeft")
+
+[node name="PillarRight" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.503, 1.685, -0.01)
+shape = SubResource("Shape_PillarRight")
+
+[node name="Lintel" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.99, -0.024)
+shape = SubResource("Shape_Lintel")

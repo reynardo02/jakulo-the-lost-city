@@ -1,0 +1,16 @@
+{
+  "id": "01a198b8-9f49-73e2-8f9d-3170ad4f99a1",
+  "type": "image-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "Edit this image: remove the dark back wall and the inner side walls inside the doorway. The gate must be only two separate free-standing stone pillars with the lintel on top, and the opening between the pillars must be completely open so the plain white background is visible through it, like a free-standing gateway with nothing behind it. Keep everything else identical: the stones, carvings, moss, vines, camera angle and white background.",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1793563601599,
+  "started_at": 1793563601605,
+  "finished_at": 1793563660635,
+  "expires_at": 1793822860635,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a198b8-9f49-73e2-8f9d-3170ad4f99a1_0.png?Expires=1793822860&Signature=foh~7s4aWdIzvMWdjOFb4dj8s9JIznEMxjwNaesC2yPyEj2L14~xpd8octFd9e12wUd5f6-iE831SjpXSCEXmzjwPhPKq~c-Q9JVOJt7XI1r91pRF~FbwdhYX3U8-PaCvikphOr4faOaYjzazM8FmTwY0g9looIgACjnzgrlFZE4VBOOVvoVNaftjDcxJfZ3HALP9-cFOq773iF-Ep2XonOa0OZhDj6-GHsX0bywCb2lSXbruPWapDoskqDz~2qPCP1f2fGZvWVj~tgkn-84SDJDm6hamnUIu1mghkaVRTadXs62Njh7zMBQ5-jcfTEP4YE~eON4ZFlOzUZ1C5~cRw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}
