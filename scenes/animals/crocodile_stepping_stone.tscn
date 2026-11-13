@@ -1,0 +1,49 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/crocodile_stepping_stone.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/animals/crocodile_rigged.glb" id="2_model"]
+
+[sub_resource type="BoxShape3D" id="Shape_Trunk"]
+size = Vector3(1.2, 0.6, 3.1)
+
+[sub_resource type="BoxShape3D" id="Shape_Tail"]
+size = Vector3(0.7, 0.5, 1.2)
+
+[sub_resource type="BoxShape3D" id="Shape_Head"]
+size = Vector3(0.6, 0.4, 1.0)
+
+[sub_resource type="BoxShape3D" id="Shape_Bite"]
+size = Vector3(1.4, 1.2, 5.0)
+
+[node name="CrocodileSteppingStone" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="Model" parent="." instance=ExtResource("2_model")]
+
+[node name="Body" type="StaticBody3D" parent="."]
+
+[node name="Trunk" type="CollisionShape3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82, 0.71)
+shape = SubResource("Shape_Trunk")
+
+[node name="Tail" type="CollisionShape3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, -1.4)
+shape = SubResource("Shape_Tail")
+
+[node name="Head" type="CollisionShape3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 2.7)
+shape = SubResource("Shape_Head")
+
+[node name="BiteArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Shape" type="CollisionShape3D" parent="BiteArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 1.0)
+shape = SubResource("Shape_Bite")
+
+[node name="MouthPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 2.5)
+
+[node name="BackPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15, 0.7)

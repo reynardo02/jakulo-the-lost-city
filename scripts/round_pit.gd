@@ -13,7 +13,7 @@ const COVER_RADIUS := 4.6   # passt zum Loch in assets/traps/pit_tile.glb (Radiu
 @export var closed_time: float = 2.0      ## Sekunden ganz geschlossen
 @export var transition_time: float = 1.2  ## Sekunden für Öffnen bzw. Schließen
 @export var start_delay: float = 0.0      ## Versatz, damit mehrere Gruben nicht synchron laufen
-@export var reload_scene_on_trap: bool = true  ## später durch Leben/Respawn ersetzen
+@export var reload_scene_on_trap: bool = true  ## Tod über GameState (Leben abziehen, Level neu laden)
 @export var reload_delay: float = 0.8
 @export var realistic_visual: bool = true:  ## Meshy-Modell (PitVisual) statt der Low-Poly-Optik von PitTile
 	set(v):
@@ -98,8 +98,8 @@ func _on_death_zone_body_entered(body: Node3D) -> void:
 		return
 	_trapped = true
 	player_trapped.emit(body)
-	body.set_physics_process(false)
-	(body as CharacterBody3D).velocity = Vector3.ZERO
 	if reload_scene_on_trap:
-		await get_tree().create_timer(reload_delay).timeout
-		get_tree().reload_current_scene()
+		GameState.player_died(body, reload_delay)
+	else:
+		body.set_physics_process(false)
+		(body as CharacterBody3D).velocity = Vector3.ZERO

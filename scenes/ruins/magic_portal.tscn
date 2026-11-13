@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" path="res://assets/ruins/magic_portal.glb" id="1_model"]
 [ext_resource type="Shader" path="res://assets/ruins/materials/portal_void.gdshader" id="2_void"]
 
+[ext_resource type="Script" path="res://scripts/magic_portal.gd" id="3_script"]
+
 [sub_resource type="ShaderMaterial" id="Mat_Void"]
 shader = ExtResource("2_void")
 
@@ -26,6 +28,7 @@ size = Vector3(2.05, 0.31, 1.01)
 size = Vector3(2.05, 3.16, 0.4)
 
 [node name="MagicPortal" type="Node3D"]
+script = ExtResource("3_script")
 
 [node name="Model" parent="." instance=ExtResource("1_model")]
 transform = Transform3D(4.83, 0, 0, 0, 4.83, 0, 0, 0, 4.83, 0, 2.3, 0)
@@ -60,6 +63,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, 0.155, 0)
 shape = SubResource("Shape_Threshold")
 
 [node name="PortalArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
 [node name="Shape" type="CollisionShape3D" parent="PortalArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, 1.89, 0)

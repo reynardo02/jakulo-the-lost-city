@@ -34,7 +34,6 @@
 [ext_resource type="PackedScene" uid="uid://f8actc71chse" path="res://assets/nature/jungle/giant_tree.glb" id="18_y0ove"]
 [ext_resource type="PackedScene" uid="uid://ds7mbftvgx7ik" path="res://assets/elements/Meshy_AI_Mossy_Fallen_Branch_1026211759_texture.glb" id="19_isj1j"]
 [ext_resource type="PackedScene" uid="uid://8nr44k8spyeh" path="res://assets/elements/Meshy_AI__1026211657_texture.glb" id="20_so66j"]
-[ext_resource type="PackedScene" uid="uid://dmq5q6563eh13" path="res://assets/animals/Meshy_AI_Armored_Alligator_1026212352_texture.glb" id="22_d5akn"]
 [ext_resource type="Script" uid="uid://ooqp4hu36i2" path="res://scripts/vine.gd" id="23_wbtxt"]
 [ext_resource type="PackedScene" uid="uid://clmrkl8dm78s6" path="res://scenes/kill_zone.tscn" id="25_x2fux"]
 [ext_resource type="PackedScene" uid="uid://cd1y5q7rqmume" path="res://assets/deco/mushrooms.glb" id="32_0bysi"]
@@ -56,6 +55,7 @@
 [ext_resource type="PackedScene" path="res://scenes/ruins/ruin_wall_corner_ruin.tscn" id="54_n50md"]
 [ext_resource type="PackedScene" path="res://scenes/ruins/magic_portal.tscn" id="55_mteb0"]
 [ext_resource type="PackedScene" path="res://scenes/ruins/ruin_column_fallen.tscn" id="56_7dh7s"]
+[ext_resource type="PackedScene" path="res://scenes/animals/crocodile_stepping_stone.tscn" id="60_croc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bswci"]
 sky_top_color = Color(0.32, 0.55, 0.72, 1)
@@ -1059,7 +1059,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 86, 
 mesh = SubResource("PlaneMesh_iw4em")
 
 [node name="JungleFloorEnde" type="MeshInstance3D" parent="Umgebung" unique_id=1940078729]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 80.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, 27.25)
 mesh = SubResource("PlaneMesh_hnsmf")
 
 [node name="JungleFloorEnde2" type="MeshInstance3D" parent="Umgebung" unique_id=1768551083]
@@ -1902,11 +1902,12 @@ transform = Transform3D(1, 0, 6.3573026e-08, 0, 1, 0, -6.3573026e-08, 0, 1, -2.5
 
 [node name="animals" type="Node" parent="Umgebung" unique_id=144307362]
 
-[node name="Meshy_AI_Armored_Alligator_1026212352_texture" parent="Umgebung/animals" unique_id=1023720346 instance=ExtResource("22_d5akn")]
-transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.4, -87)
+[node name="Crocodile1" parent="Umgebung/animals" unique_id=1023720346 instance=ExtResource("60_croc")]
+transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -86)
 
-[node name="Meshy_AI_Armored_Alligator_1026212352_texture2" parent="Umgebung/animals" unique_id=258160304 instance=ExtResource("22_d5akn")]
-transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.4, -94)
+[node name="Crocodile2" parent="Umgebung/animals" unique_id=258160304 instance=ExtResource("60_croc")]
+transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -92.5)
+start_delay = 1.6
 
 [node name="tree_large" parent="Umgebung" unique_id=1585308102 instance=ExtResource("13_s7g0b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -131)

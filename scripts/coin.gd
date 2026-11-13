@@ -17,6 +17,7 @@ func _on_body_entered(body: Node3D) -> void:
 		collected=true;
 		$coin/Mesh.hide()
 		$CollisionShape3D.set_deferred("disabled",true)
+		GameState.add_coin()
 		$Sound.play()
 		await $Sound.finished
 		coin.emit()

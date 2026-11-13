@@ -16,11 +16,7 @@ const FORWARD_JUMP_VELOCITY = 5.0  # Sprunghöhe beim Sprung nach vorne         
 const VINE_ANIM = "Rope_Hang_Idle"
 
 
-@export var max_health: int = 3
 @onready var visuals: Node3D = $visuals
-
-var health: int = 3
-var is_dead: bool = false
 
 var current_vine: Node3D = null
 var last_vine: Node3D = null     # zuletzt losgelassene Liane – erst nach Landung wieder greifbar
@@ -152,6 +148,24 @@ func set_visual_orientation(up: Vector3, forward: Vector3) -> void:
 		return
 	var x := up.cross(z).normalized()
 	visuals.global_basis = Basis(x, up.normalized(), z)
+
+# ---------- Gefangen (z. B. im Maul des Krokodils) ----------
+
+## Hält den Spieler fest: keine Steuerung, keine Physik. Die Position setzt der Fänger.
+func capture() -> void:
+	if current_vine:
+		current_vine.detach()
+		current_vine = null
+	velocity = Vector3.ZERO
+	air_momentum = Vector3.ZERO
+	set_physics_process(false)
+	playback.travel("Jump_with_Arms_Open")
+
+## Gibt den Spieler wieder frei und schleudert ihn mit "launch" weg.
+func escape(launch: Vector3) -> void:
+	velocity = launch
+	air_momentum = Vector3(launch.x, 0.0, launch.z)
+	set_physics_process(true)
 
 # ---------- Animation ----------
 	

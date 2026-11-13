@@ -10,8 +10,4 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_body_entered(body: Node3D):
 	if body.is_in_group("player"):
-		body.set_physics_process(false)
-		(body as CharacterBody3D).velocity = Vector3.ZERO
-		await  get_tree().create_timer(0.5).timeout
-	
-		get_tree().reload_current_scene()
+		GameState.player_died(body, 0.5)
