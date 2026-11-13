@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/checkpoint.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://ddcvslr4n108i" path="res://assets/props/checkpoint.glb" id="2_model"]
+
+[sub_resource type="BoxShape3D" id="Shape_Area"]
+size = Vector3(14, 4, 1.5)
+
+[node name="Checkpoint" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="Model" parent="." instance=ExtResource("2_model")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 5, 0, 0)
+
+[node name="ActiveLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.6, 0)
+visible = false
+light_color = Color(1, 0.8, 0.35, 1)
+light_energy = 2.0
+omni_range = 5.0
+
+[node name="SpawnPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="Area" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Shape" type="CollisionShape3D" parent="Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("Shape_Area")

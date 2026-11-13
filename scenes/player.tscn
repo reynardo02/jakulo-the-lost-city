@@ -3,12 +3,16 @@
 [ext_resource type="Script" uid="uid://b4hf5hrueeyor" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="PackedScene" uid="uid://bq7adr4x5gm" path="res://assets/character/Meshy_AI_Adventure_Scout_All_Animations(1).glb" id="2_g2els"]
 [ext_resource type="Animation" uid="uid://buig1u1bjj6ux" path="res://assets/character/anims/regular_jump.res" id="3_qhqgy"]
+[ext_resource type="Animation" path="res://assets/character/anims/croc_jaw_brace.res" id="4_crochang"]
+[ext_resource type="Animation" path="res://assets/character/anims/croc_jaw_push.res" id="5_crocpull"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h8c8n"]
 height = 1.8
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dqkch"]
 _data = {
+&"Croc_Jaw_Brace": ExtResource("4_crochang"),
+&"Croc_Jaw_Push": ExtResource("5_crocpull"),
 &"regular_jump": ExtResource("3_qhqgy")
 }
 
@@ -20,6 +24,12 @@ animation = &"Jump_with_Arms_Open"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rope"]
 animation = &"Rope_Hang_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_crochang"]
+animation = &"extra/Croc_Jaw_Brace"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_crocpull"]
+animation = &"extra/Croc_Jaw_Push"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dqkch"]
 animation = &"Walking"
@@ -45,8 +55,35 @@ xfade_time = 0.1
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rope_out"]
 xfade_time = 0.1
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hang_from_idle"]
+xfade_time = 0.15
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hang_from_walk"]
+xfade_time = 0.15
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hang_from_jump"]
+xfade_time = 0.15
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pull_in"]
+xfade_time = 0.05
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pull_out"]
+xfade_time = 0.1
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hang_out"]
+xfade_time = 0.15
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pull_escape"]
+xfade_time = 0.15
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_h8c8n"]
 reset_ends = true
+states/Croc_Jaw_Brace/node = SubResource("AnimationNodeAnimation_crochang")
+states/Croc_Jaw_Brace/position = Vector2(720, 300)
+states/Croc_Jaw_Push/node = SubResource("AnimationNodeAnimation_crocpull")
+states/Croc_Jaw_Push/position = Vector2(900, 300)
 states/End/position = Vector2(907, 95)
 states/Idle_9/node = SubResource("AnimationNodeAnimation_g2els")
 states/Idle_9/position = Vector2(315, 86.5)
@@ -57,7 +94,7 @@ states/Rope_Hang_Idle/position = Vector2(478.5, 300)
 states/Start/position = Vector2(168, 95)
 states/Walking/node = SubResource("AnimationNodeAnimation_dqkch")
 states/Walking/position = Vector2(708.5, 79)
-transitions = ["Start", "Idle_9", SubResource("AnimationNodeStateMachineTransition_qlg0r"), "Walking", "Idle_9", SubResource("AnimationNodeStateMachineTransition_smehm"), "Idle_9", "Walking", SubResource("AnimationNodeStateMachineTransition_ur7pv"), "Idle_9", "Jump_with_Arms_Open", SubResource("AnimationNodeStateMachineTransition_dqkch"), "Jump_with_Arms_Open", "Idle_9", SubResource("AnimationNodeStateMachineTransition_tuyoq"), "Jump_with_Arms_Open", "Walking", SubResource("AnimationNodeStateMachineTransition_fjrip"), "Walking", "Jump_with_Arms_Open", SubResource("AnimationNodeStateMachineTransition_y4r1p"), "Jump_with_Arms_Open", "Rope_Hang_Idle", SubResource("AnimationNodeStateMachineTransition_rope_in"), "Rope_Hang_Idle", "Jump_with_Arms_Open", SubResource("AnimationNodeStateMachineTransition_rope_out")]
+transitions = ["Start", "Idle_9", SubResource("AnimationNodeStateMachineTransition_qlg0r"), "Walking", "Idle_9", SubResource("AnimationNodeStateMachineTransition_smehm"), "Idle_9", "Walking", SubResource("AnimationNodeStateMachineTransition_ur7pv"), "Idle_9", "Jump_with_Arms_Open", SubResource("AnimationNodeStateMachineTransition_dqkch"), "Jump_with_Arms_Open", "Idle_9", SubResource("AnimationNodeStateMachineTransition_tuyoq"), "Jump_with_Arms_Open", "Walking", SubResource("AnimationNodeStateMachineTransition_fjrip"), "Walking", "Jump_with_Arms_Open", SubResource("AnimationNodeStateMachineTransition_y4r1p"), "Jump_with_Arms_Open", "Rope_Hang_Idle", SubResource("AnimationNodeStateMachineTransition_rope_in"), "Rope_Hang_Idle", "Jump_with_Arms_Open", SubResource("AnimationNodeStateMachineTransition_rope_out"), "Idle_9", "Croc_Jaw_Brace", SubResource("AnimationNodeStateMachineTransition_hang_from_idle"), "Walking", "Croc_Jaw_Brace", SubResource("AnimationNodeStateMachineTransition_hang_from_walk"), "Jump_with_Arms_Open", "Croc_Jaw_Brace", SubResource("AnimationNodeStateMachineTransition_hang_from_jump"), "Croc_Jaw_Brace", "Croc_Jaw_Push", SubResource("AnimationNodeStateMachineTransition_pull_in"), "Croc_Jaw_Push", "Croc_Jaw_Brace", SubResource("AnimationNodeStateMachineTransition_pull_out"), "Croc_Jaw_Brace", "Jump_with_Arms_Open", SubResource("AnimationNodeStateMachineTransition_hang_out"), "Croc_Jaw_Push", "Jump_with_Arms_Open", SubResource("AnimationNodeStateMachineTransition_pull_escape")]
 
 [node name="Player" type="CharacterBody3D" unique_id=1550146983 groups=["player"]]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
