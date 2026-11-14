@@ -1075,6 +1075,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -11)
 
 [node name="FloorLeft" type="MeshInstance3D" parent="Umgebung/deco" unique_id=2127796940]
 transform = Transform3D(-1, 0, -8.837394e-08, 0, 1, 0, 8.742278e-08, 0, -1.0108799, -86, -0.01, 0)
+visible = false
 mesh = SubResource("PlaneMesh_iw4em")
 
 [node name="driftwood" parent="Umgebung/deco" unique_id=758417109 instance=ExtResource("37_awarj")]
@@ -1910,17 +1911,17 @@ transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-
 [node name="Crocodile2" parent="Umgebung/animals" unique_id=258160304 instance=ExtResource("60_croc")]
 transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -92.5)
 
-[node name="checkpoints" type="Node" parent="Umgebung"]
+[node name="checkpoints" type="Node" parent="Umgebung" unique_id=1650075465]
 
-[node name="CheckpointNachGrube" parent="Umgebung/checkpoints" instance=ExtResource("61_checkpoint")]
+[node name="CheckpointNachGrube" parent="Umgebung/checkpoints" unique_id=2002097959 instance=ExtResource("61_checkpoint")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
 checkpoint_id = "CheckpointNachGrube"
 
-[node name="CheckpointVorWasser" parent="Umgebung/checkpoints" instance=ExtResource("61_checkpoint")]
+[node name="CheckpointVorWasser" parent="Umgebung/checkpoints" unique_id=1357963137 instance=ExtResource("61_checkpoint")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -76)
 checkpoint_id = "CheckpointVorWasser"
 
-[node name="CheckpointNachKrokodilen" parent="Umgebung/checkpoints" instance=ExtResource("61_checkpoint")]
+[node name="CheckpointNachKrokodilen" parent="Umgebung/checkpoints" unique_id=1642973016 instance=ExtResource("61_checkpoint")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -102)
 checkpoint_id = "CheckpointNachKrokodilen"
 
@@ -2166,7 +2167,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 52, 0, -119)
 [node name="old_book" parent="Umgebung/ruins" unique_id=739949724 instance=ExtResource("47_48b18")]
 transform = Transform3D(0.5, 0, 0, 0, 0.1, 0, 0, 0, 0.5, 48, 1.48, -116)
 
-[node name="BookInteraction" parent="Umgebung/ruins" instance=ExtResource("62_book")]
+[node name="BookInteraction" parent="Umgebung/ruins" unique_id=760436440 instance=ExtResource("62_book")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -116)
 
 [node name="KillZone" parent="." unique_id=1393769249 instance=ExtResource("25_x2fux")]
