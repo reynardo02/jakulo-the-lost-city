@@ -16,6 +16,7 @@ extends Node3D
 @export var damping_without_player: float = 1.5  # Dämpfung nach dem Loslassen (pendelt aus)
 @export var grab_radius: float = 0.8             # Dicke des Greifbereichs
 @export var rope_color: Color = Color(0.25, 0.45, 0.15)
+@export var note_id: String = "vine"             # Notiz im Buch, die beim ersten Greifen freigeschaltet wird
 
 var pivot: Node3D
 var grab_area: Area3D
@@ -140,6 +141,7 @@ func _physics_process(delta: float) -> void:
 ## Wird vom Spieler beim Greifen aufgerufen
 func attach(player_velocity: Vector3, hand_position: Vector3) -> void:
 	has_player = true
+	GameState.unlock_note(note_id)
 
 	# Dort festhalten, wo die Hände das Seil berühren
 	hold_distance = clampf(pivot.global_position.y - hand_position.y, 0.5, length)

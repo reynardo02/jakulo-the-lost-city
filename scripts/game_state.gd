@@ -53,8 +53,15 @@ const LEVELS: Array[Dictionary] = [
 	},
 ]
 
-## Texte der Notizen im Buch. Freigeschaltet werden sie über unlock_note().
+## Texte der Notizen im Buch. Freigeschaltet werden sie über unlock_note(), sobald der
+## Spieler etwas zum ersten Mal trifft: Krokodil und Liane melden sich selbst (Export
+## `note_id`), für alles andere gibt es scenes/note_trigger.tscn.
+## Neue Notiz = neuer Eintrag hier plus ein Auslöser mit derselben ID.
 const NOTES := {
+	"vine": {
+		"title": "Lianen",
+		"text": "Hängen über Gruben und Wasser. Im Sprung greift man sie von selbst, schwingt hinüber und lässt mit SPRINGEN wieder los. Am meisten Schwung hat man am vorderen Umkehrpunkt.",
+	},
 	"crocodile": {
 		"title": "Krokodile",
 		"text": "Liegen reglos im Wasser und eignen sich als Trittsteine. Berührt man sie, zucken sie kurz und reißen dann das Maul auf. Wer gepackt wird, muss sich mit aller Kraft befreien (SPRINGEN).",
@@ -66,6 +73,7 @@ var coins: int = 0
 var score: int = 0
 var items: Dictionary = {}           # Item-ID -> Anzahl
 var notes: Array[String] = []        # freigeschaltete Notiz-IDs, in Fundreihenfolge
+var unread_notes: Array[String] = [] # davon noch nicht im Buch gelesen
 var unlocked_levels: Array[String] = ["level_1"]
 var flags: Dictionary = {}           # einmalige Ereignisse, z. B. "book_read"
 
@@ -113,6 +121,7 @@ func reset() -> void:
 	score = 0
 	items.clear()
 	notes.clear()
+	unread_notes.clear()
 	unlocked_levels = ["level_1"]
 	flags.clear()
 	_level_start_coins = 0
@@ -158,9 +167,25 @@ func unlock_note(id: String) -> bool:
 	if id in notes or not NOTES.has(id):
 		return false
 	notes.append(id)
+	unread_notes.append(id)
 	note_unlocked.emit(id)
-	flash_message("Neue Notiz im Buch: %s" % NOTES[id].title)
+	# Vor dem Fund des Buchs wird still mitgeschrieben - die Einträge stehen dann schon drin.
+	if has_flag("book_found"):
+		flash_message("Neue Notiz im Buch: %s" % NOTES[id].title)
 	return true
+
+
+func has_note(id: String) -> bool:
+	return id in notes
+
+
+func is_note_unread(id: String) -> bool:
+	return id in unread_notes
+
+
+## Das Buch ruft das auf, nachdem die Notizen-Seite angezeigt wurde.
+func mark_notes_read() -> void:
+	unread_notes.clear()
 
 
 # ---------- Level ----------

@@ -11,6 +11,11 @@ extends Node3D
 ## Animation: Hat das Modell unter "Model" einen AnimationPlayer mit der Animation
 ## `bite_animation` (zu -> offen), wird sie beim Öffnen vorwärts und beim Schließen
 ## rückwärts abgespielt. Ohne diese Animation hebt das ganze Modell den Kopf.
+##
+## Für Ketten aus mehreren Krokodilen (Level 2): Mit `snap_interval` > 0 schnappt das
+## Krokodil zusätzlich von selbst in festem Takt, `snap_offset` verschiebt den Takt, damit
+## mehrere Krokodile nacheinander schnappen. Schneller wird es über `warning_time`,
+## `open_time` und `snap_interval`.
 
 signal mouth_opened
 signal mouth_closed
@@ -21,6 +26,12 @@ enum State { CLOSED, WARNING, OPEN, GRABBED, ESCAPING, SWALLOWED, RESTING }
 @export var open_time: float = 0.6      ## so lange bleibt das Maul offen, wenn der Spieler schon weg ist
 @export var rearm_delay: float = 1.5    ## nach dem Befreien: so lange ohne Spieler, bis es wieder zuschnappt
 @export var bite_animation: StringName = &"bite"  ## Animation des geriggten Modells
+@export var note_id: String = "crocodile"  ## Notiz im Buch, die bei der ersten Berührung freigeschaltet wird
+
+@export_group("Schnappen im Takt")
+@export var snap_interval: float = 0.0  ## alle so viele Sekunden schnappt es von selbst (0 = nur bei Berührung)
+@export var snap_offset: float = 0.0    ## Zeitversatz des Takts, z. B. 0 / 0.5 / 1.0 für drei Krokodile hintereinander
+@export var trigger_on_touch: bool = true  ## aus = reagiert nicht auf Berührung, schnappt nur im Takt
 
 @export_group("Packen und Befreien")
 @export var struggle_time: float = 2.5    ## so lange hat der Spieler Zeit, sich zu befreien
@@ -52,6 +63,7 @@ var _time_left := 0.0
 var _rest: Transform3D
 var _victim: Node3D
 var _presses := 0
+var _snap_left := 0.0   # Zeit bis zum nächsten Schnappen im Takt
 
 # Aufbäumen: 0 = liegt normal, 1 = steht senkrecht mit dem Maul am Spieler
 var _rear_amount := 0.0
@@ -81,6 +93,7 @@ func _ready() -> void:
 	_attach_to_bone(_upper_tip, _upper_bone)
 	_attach_to_bone(_lower_tip, _lower_bone)
 	_bite_area.body_entered.connect(_on_bite_area_body_entered)
+	_snap_left = snap_interval + maxf(snap_offset, 0.0)
 
 
 func is_open() -> bool:
@@ -109,6 +122,14 @@ func _find_bite_player() -> AnimationPlayer:
 
 func _physics_process(delta: float) -> void:
 	_time_left -= delta
+	# Der Takt läuft immer weiter, damit der Versatz in einer Kette auch nach einem
+	# Biss erhalten bleibt. Fällt ein Schlag in eine andere Phase, verfällt er.
+	var snap_due := false
+	if snap_interval > 0.0:
+		_snap_left -= delta
+		if _snap_left <= 0.0:
+			_snap_left += snap_interval
+			snap_due = true
 	if _rear_active:
 		_apply_rear()
 	if _state == State.GRABBED:
@@ -123,7 +144,10 @@ func _physics_process(delta: float) -> void:
 		_hold_victim()
 		return
 	if _state == State.CLOSED:
-		if _player_on_top():
+		var touched := _player_on_top()
+		if touched:
+			GameState.unlock_note(note_id)
+		if snap_due or (trigger_on_touch and touched):
 			_state = State.WARNING
 			_time_left = warning_time
 		return
@@ -192,6 +216,7 @@ func _bite(body: Node3D) -> void:
 	if _state != State.OPEN or not body.is_in_group("player"):
 		return
 	_victim = body
+	GameState.unlock_note(note_id)
 	_presses = 0
 	_extra_open = 0.0
 	_jaw_base_saved = false

@@ -79,6 +79,7 @@ func close() -> void:
 		return
 	is_open = false
 	_root.hide()
+	GameState.mark_notes_read()
 	get_tree().paused = false
 	Input.mouse_mode = _mouse_mode_before
 	closed.emit()
@@ -122,7 +123,8 @@ func _notes_bbcode() -> String:
 	var text := ""
 	for id in GameState.notes:
 		var note: Dictionary = GameState.NOTES[id]
-		text += "[font_size=22][b]%s[/b][/font_size]\n%s\n\n" % [note.title, note.text]
+		var badge := "  [color=#b8860b][b]NEU[/b][/color]" if GameState.is_note_unread(id) else ""
+		text += "[font_size=22][b]%s[/b][/font_size]%s\n%s\n\n" % [note.title, badge, note.text]
 	return text
 
 
