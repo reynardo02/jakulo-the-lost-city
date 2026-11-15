@@ -1,0 +1,23 @@
+{
+  "id": "01a1dfe6-fc5e-76eb-93a7-d2b3299277a6",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3583086378,
+  "prompt": "Jungle tribe warrior guard, athletic adult man standing upright, feather headdress, white face paint stripes, bone necklace, woven leaf and cloth skirt, leather arm bands, barefoot, empty hands, stylized realistic game character, full body",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794757822162,
+  "progress": 100,
+  "started_at": 1794757822171,
+  "finished_at": 1794757878681,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfe6-fc5e-76eb-93a7-d2b3299277a6/output/model.glb?Expires=4948300800&Signature=TcAo1nUbuG5F9-WPHboLdgLCfMSC707dFkOcOEp1B7h1jUiSu9PLlsDLWrBTSanpw08XQnxmMrsLQY3idVkL1LYhy~qDLSmxKXQzDz67HRyzff6ssQVIof6n3ig7lyOwuQ1NBCtQfNaE4Ui1sOlvF9U~mSu6iRSGjCkjTqKDzLaq5dKKwX23pyrEd2xbgX5q~XtW6zyfV8xZNLHnbU~rQevsNTgZAvbineJpM6wIYQP57Oov~K5sWy9ikFhQqWPQF-jGKw4ZbTa2uC-ih69VSVpGxW6JyUavRA2X0lYZ5n6sQzuznYpWtkuFYD2HYy297N96u7g9wFtVwXsz1cEktw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfe6-fc5e-76eb-93a7-d2b3299277a6/output/preview.png?Expires=4948300800&Signature=arG0~3GxGrJs4RO87U0-XT6Bv3AZDoELpYi8dbvYD6k-VvypE4vt~lb4tnRjxahN1FaOCk0h9JX3vQ0y2D0TMw4zyjl-AwTPDF6H7CQQ2Y1Ycn~87OrwKRwfHcQsvhAXXq6S3utodYeManDbsBUW2lTsQa~E0bw7CPxU4HgzzFr8Vrw0gaSKqWkaPudLT3Y~m6wuAx9E1SYFT2Ry42KRRXeYQVOHNjSsCyNkSK6LmJLmq8AkuCWG7jkE0nNGsyo02JXmlP4wKmFFQ4v6E3yqnSWEzKV5v6pJrkngdJ2SIQGegLqBeESk9hbSk0bsAarW5t3hV327diGbl65F2erT7Q__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

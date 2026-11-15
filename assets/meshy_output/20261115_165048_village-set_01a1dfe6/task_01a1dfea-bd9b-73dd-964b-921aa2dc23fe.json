@@ -1,0 +1,30 @@
+{
+  "id": "01a1dfea-bd9b-73dd-964b-921aa2dc23fe",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 438973991,
+  "prompt": "Jungle tribe warrior guard, athletic adult man standing upright, feather headdress, white face paint stripes, bone necklace, woven leaf and cloth skirt, leather arm bands, barefoot, empty hands, stylized realistic game character, full body",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794758065678,
+  "progress": 100,
+  "started_at": 1794758066652,
+  "finished_at": 1794758105663,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-bd9b-73dd-964b-921aa2dc23fe/output/model.glb?Expires=4948300800&Signature=iEHNTy7rT7VULGjfjwhPYLlaEnGDO0E8-Fh2TbMrOXHkkTkBA-YFrL5w7535PQnp4doi9MxPBu-Pr~JgAnrSKYZ79~qwcRlfAm19gzuz0HwUsmTd2ON1Gun2FUJpq6VqQbqKMVnHqAJBPYdJK4YsWwrwhFpXzKPxdGVYle6sosgg41l-AnH9sbCeSr2MFvz3h0aWX-bYeZAD2n8pehUiit5pQ89PbqhIMtBiJL3Be62-wbM1RYyjC2WlpbNlm48O3ViPkTtI4EK1TJ8IzDwksMhbR5i9X2ibekXAbipxgKiuCePXbqLnS8oiYvUFm~7T7dOqBEWxjjS44WdYJ0iLVw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-bd9b-73dd-964b-921aa2dc23fe/output/preview.png?Expires=4948300800&Signature=iugn8ChQzogodzXuGalk2EjbByfhf3B9nA3jvEDNPfgCuT93pUqGhOqrELGcGKI1JxBGYdBslV055Q2GZBjwJSQBk6Dr1gQ~IBe-pDf6BMKOdfPTl~n39m0DBX2zLdboWv-f-vPpFXPGLj1UUsRKMCPldMWsQ0DtroCmkMMnqbyOlgcGRY~KY7LNARud2OsmMUopt7JAZxlJwjuqcguBRGJrtHFe0AXXu7N0JP5TuctW1Q864QuH7ivAXiUoEfWTS7XPtUZkqcVFFG9lshnR6zxAx5m3eUkDFDJDb-sLIml~UBFWReeHv5F25tKR5ldMmS8B-UjJGR874Vzo9E1CCg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-bd9b-73dd-964b-921aa2dc23fe/output/texture_0.png?Expires=4948300800&Signature=VBWZfoc2XVXR0QjPQafN5z9YLWbbU89DGYoB7vG2Z39wGhBxRV~Da1unlsFCcni~a5Ij~-i4Sfi~18CT72D4NVzT9VEpciYmVT2D-LT~hlyBzUQgp-uKdCr8ejs3cnIJwhiWoDDrEZ0vw~1fFRTACXEwbEVOt7DBCg0JaMQQFP2vhEAQ-5PyngUBh1M~Po1WBqC4cf5DNK0P3Z1v0gL-IVR3MfrBj48jx39hZit2vKJTFp7UBEhRZHXUHYC1BOYW8pvJiATdHWdeHIuQrNSc8ueEoNQW0Z4Csb9VyMhpixFGbkkHsAkXJhQECrmXCuJ42xGg-2V~4aZJKwyHloCbmQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-bd9b-73dd-964b-921aa2dc23fe/output/texture_0_metallic.png?Expires=4948300800&Signature=qOokUJKXZ91egAGk0IH4~tZ5Y~jI2glylWz8NuSbQSFD99CMxBlBFBp0nDBCcCaxgYF5DlZnnaY9Ow17IH-zYsxVOA9idrfyE6mzLB8NeNmiexoC9ofMNHITUrPzLcTnJLq-TXsX9K8zVvfpUZbl264HP04xsOxxggRnCbbXOsSjMUwURc~9CeAAW~Ss4RJvCBrsGFvhDHk78r0m0UjUmBExwSdIU6GEQV1b7e1jNx5NwnfaMl-AErzdf9evVwx9c50iPt6RMCsw1zueMQQd1gEcEwks4T3b62TV4eX4Zaywht0c5BHTAYu2Xhdfgl4ct9c1J6j7F0hUDW4GRNsF2A__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-bd9b-73dd-964b-921aa2dc23fe/output/texture_0_roughness.png?Expires=4948300800&Signature=eTfLqmDE5j5CaZ7uG4PGtsWAuiFpi2I4h~ghdyM8CpzAFCizOMJ-xmKrBj6Cc6~oq82Cz0WbMJFAqqNtbAkYhOg7ROD150ftOnL-1vA0OvT1ZRmkE-eIb6Vw~yeflLEskMghHY~OIVJRqDbdOsmtDN2cn1pyreWzdg0c7jJsTVfOd0k2lLW~HShx2sR7FfU147~p4aMD4NFzki9zx50jMtDa-7FGJBsIRHFy5Qb6qtXLpkZtYM0hiXe2h1aYh4-OZ~K2miwvxcWxCG1pNmg7ZXbH~q46DGrgicxvOP9I-7LN9hLKGF6eFq-~T0kILEb0qWv20coeaJjiKNlNhsP-Lg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-bd9b-73dd-964b-921aa2dc23fe/output/texture_0_normal.png?Expires=4948300800&Signature=jI4KpqfBC5sm~Zad2eRXVIQalXeGqvCgDtTzbVxcmDylgk288cl8oBuVX66bWFhlo-dLFCkFKKnNyVHFB~zTxcyxho3vZwlR5MtyjDmBri1klFLF2da8oUqRuT4bicqlmoKb76XdYLLNAFzf3n27D-uOqgjYsO9QDjiN~9A0h9D1sBWWdd5BsO82ayNV7TI8HyaeonUFMvMvwJjRMwGN2U97tqFf6w9n6qCleVTGx3gllIerRLiGeKLpmRN225P8rsDGArJLYcRCW38K-HH8I3XgRuXcXLk50k~fgKcQQNTnxer4~7oNbnqheBpbJicccyHGPxVAGIiJTKpt0KfH7w__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

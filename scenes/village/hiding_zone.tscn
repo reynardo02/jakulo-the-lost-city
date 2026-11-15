@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/hiding_zone.gd" id="1_script"]
+
+[sub_resource type="BoxShape3D" id="Shape_Zone"]
+size = Vector3(4, 2.5, 4)
+
+[node name="HidingZone" type="Area3D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_script")
+
+[node name="Shape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+shape = SubResource("Shape_Zone")

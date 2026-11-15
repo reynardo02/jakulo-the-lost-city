@@ -121,6 +121,46 @@ Akt 1 (Level 1 bis 3) wird komplett spielbar, bevor Akt 2 beginnt. Neu dazu komm
 5. **Trinkflasche als Belohnung:** Item im Game State speichern, mit einer Taste trinken, das füllt Leben auf. Optional mit begrenzten Ladungen.
 6. **Angreifende Tiere (Level 4):** einfacher Gegner, der auf den Spieler zuläuft und dem man ausweichen muss.
 
+## Level 2 – Plan für das Dorf
+
+Das Dorf wird eine Fläche von etwa 36 × 48 m (9 × 12 Kacheln) zwischen z = −180 und dem Portal. Der bisherige Gang ist nur 12 m breit und zum Schleichen zu schmal, der Boden muss also verbreitert werden.
+
+### Draufsicht
+
+Ein Zeichen ist eine Kachel (4 m). Unten kommt der Spieler rein, oben steht das Portal.
+
+```
+		 x: -16  ...  0  ...  +16
+z -224    #  #  #  #  P  #  #  #  #
+z -220    #  #  .  .  T  .  .  #  #
+z -216    G  .  .  W  .  .  .  H  K
+z -212    G  .  H  .  .  .  H  .  W
+z -208    G  .  H  .  F  .  .  .  .
+z -204    G  G  .  .  W  .  H  H  .
+z -200    .  G  .  .  .  .  .  .  .
+z -196    H  .  .  W  .  .  .  H  G
+z -192    G  .  .  .  C  .  .  .  G
+z -188    G  G  .  .  .  .  .  G  G
+z -184    #  #  #  .  W  .  #  #  #
+z -180    #  #  #  .  .  .  #  #  #
+```
+
+H = Hütte, G = hohes Gras, W = Wache, F = Lagerfeuer, K = Käfig, C = Checkpoint, T = Trinkflasche, P = Portal, # = Dschungel
+
+### Aufbau
+
+- **Einstieg (z −184):** eine einzelne Wache mit dem Rücken zum Spieler. Hier lernt man das Schleichen ohne Risiko, direkt danach kommt der Checkpoint.
+- **Linke Route:** durchgehend hohes Gras am Rand. Sicher, aber langsam.
+- **Mitte:** der kürzeste Weg, führt aber am Lagerfeuer und zwei Wachen vorbei.
+- **Rechte Route:** hinter den Hütten entlang zum Käfig mit dem gefangenen Dorfbewohner. Dort steht eine eigene Wache, die Befreiung ist also ein bewusster Umweg.
+- **Wachen:** fünf Stück. Die am Feuer und am Käfig stehen fest, die bei z −196 und z −216 patrouillieren quer, die am Einstieg ist die Übungswache.
+- **Ziel:** Die Trinkflasche liegt auf einem Podest direkt vor dem Portal.
+
+### Assets
+
+- **Vorhanden:** `campfire.glb`, `tent.glb` (als Hütten-Ersatz), `crate.glb`, `barrel.glb`, `torch.glb`, `ruin_pedestal` und `grass_field.gd` fürs hohe Gras.
+- **Fehlt noch:** ein Hütten-Modell, ein Käfig, die Wachen-Figur und die Schleich-Mechanik (Sichtkegel, Entdeckungsanzeige, Ducken).
+
 ## Ideen-Parkplatz
 
 Ideen, die feststehen, aber erst später umgesetzt werden.

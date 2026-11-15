@@ -1,0 +1,30 @@
+{
+  "id": "01a1dfea-c9dc-7357-a318-92231797cc81",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 1614414416,
+  "prompt": "Friendly old jungle villager man, thin, grey hair and short beard, simple woven cloth tunic and shorts, bead necklace, barefoot, kind face, empty hands, stylized realistic game character, full body, standing upright",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794758068727,
+  "progress": 100,
+  "started_at": 1794758068738,
+  "finished_at": 1794758119244,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-c9dc-7357-a318-92231797cc81/output/model.glb?Expires=4948300800&Signature=UEhOa6gmQnhLiz1ussweaSIT~4YySdHV1BjTNgBqpiSPjDYxgEld~SuxdsCt66Wb1ucu~sNh4VXEB~SeO4dO3j~mLwuw0vxTDNNs9dbH-qXWy6Ql2Q9ft0lvfPTh6mGzxhDHNU1QghV7eLjg0RCPownckvBD8s92MGtJpdXNdpCntW9-NwByGv4N0fBTpY2ckYZLG7iYA3W0Mc5ZIk9PFWeB6kpOQHBUT7-bnWeZZtZ9Ul8-pcL7LudbSZwiA68zO44QNGlU3PldwHQVSXvnaiZFV5H83EkeHk7~1ngwlAHdXa8G9dlIUWwOygjhumDx3VYS2WF~6ygV2wormBOHaw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-c9dc-7357-a318-92231797cc81/output/preview.png?Expires=4948300800&Signature=jToPEvWG4eaq3qGGMBnPrv6Bim7vs56FzHtKl2UKVcxnKFV7zILK5dZ0NKRwLGWSTWoO8g1E8jub13Utw5s4cjTumBxxj11sgRWTLMWj12yG5phRQSa~8dWljseADcUdtMYJ5cS5tytF4SQHZy4T-o0mrwLzvKwQ~djdu3~BmUftqrh6MKAiyT-OdAHfLnBtnPDsWrFebXKmVxDY3AWNsAw1wlifRvgHgJaGmeFsPx52uNA~cj3e3CgmGoeI2QSqOcnGbz5jMAYICgQkcR7VDzKzbCzVX36FOKNGG39m3sz2XbgsUOCrgt5NgeEftnJbf2K9ZEnicmRHolMjDxqEgA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-c9dc-7357-a318-92231797cc81/output/texture_0.png?Expires=4948300800&Signature=kVlAZYw8LSOedQdEjHuKwu6qdw6mo3q1tIJZe3py9pgCiXomiBII93~D1ImpMTxx~Oh2KaiphV80vWpV~6NEo1RaTDBZnmBWKVfH9NdKZxQqX-Up~ANmunyZ6X7ah3~DrMn4oFSuFdC3Ggfns8qOP4dHAOApgyQOa1IyKDuJarf0QoMA5f5Ee75wVa3BxfwauQOiMBuvXg2970P3tEv4JfzVkQqZSF2JcuK1UazFv4n4Y8loS7rG6QBFF0txXKTGIcHPFowWxc7gH97U2DuGYYw4jluGqV30aOGE1FeW9J0JB5eqLgAhj8t8vp1hZ3eqHD7~meNVX9XPJuHcNeMj3Q__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-c9dc-7357-a318-92231797cc81/output/texture_0_metallic.png?Expires=4948300800&Signature=iurXBYYNdR88xjiiWccHSmNx89HucUn9jBSy~ST1HEpPszf2gDub1IufKyNukAIQVrx-Tl9cOfj0O22Q5aeo2H2Qvcrqm59hedeBsoL4Uk0mUdDQyqvPAquMiH3a1~OBiMVjJSK5cX-KEVj1AYy2J08jys~WHVm7iXU9GdAu8TUNOuTCknHh0JfMhOx6OR3ksSKxJnHnB4D3yTD8fX-UKjOMqw0NG6s84jDahw1U9rG69rRCBl4JS2-EuEqQfQJpds~59OQcaTdvSlDywKaX60t-FsB7LUBOfTJWKDhOk3p6pHWBgWv9hLLNz9mZrn0xCBoybxqG7Ni9D-5r-yBBGg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-c9dc-7357-a318-92231797cc81/output/texture_0_roughness.png?Expires=4948300800&Signature=Jo81tUtJPkJg3G2M7q~xjarUndPQyuAmod47c8vfbd2xLh0mJBVULO~ugVYJXwFpycilgSyxsmVuS4X2lHy4TIdxWnxj5JZv3sYIA2yZyuz3RYwmM7GkrraxXx7NOd2fSc6pcUy1LFuIqedWTZW1VQhWKBwhiIEgaTMA-Cb8PpuY8KZ9wssWns~MA3S-hrBAiQn6GIt8t6VD2npydfDqMn-M5LAo2J3Lo3QqwxVyLHYCgvz7euJsavBbsKsJzOSqBDapzOzIbqZ-BQTyVbLc~LPRL2qQc~2dkvyM6kQQD0M8QTrxjF2kzgb7AF0toVC33ixGDd46i6Q5I8Z~-95fPg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-c9dc-7357-a318-92231797cc81/output/texture_0_normal.png?Expires=4948300800&Signature=JC8jU-kK1DmxjGU3gJFfzGN1BvSvFIHHgtMc04l5vgSmiST6Q3vSl8-P~Rl8kWU9TqCawfT~qd9hlMUgs2D2mWk6uAUBWikVwpSBdTupJdLN6TEtJkHvCw1BIcwBuuAa189ZtniEDj4edf5euJen~iQC3do60MezV~DpxqEJdPWJC32qAqFRvMQqZDcjrrBdebZHjFZPrOlYFuJMGjjcijuxpHOnMsUtjW9OIM0IPyGTYatpopXyHpqzjyGow5n02tblksEtXdbi1iNTzBGKtb498ESGPfHRGFm7LyUAPg9heVGE-UAXtCPWyHbsqxCBprrCrsHL7oTgiN~lhrH84w__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

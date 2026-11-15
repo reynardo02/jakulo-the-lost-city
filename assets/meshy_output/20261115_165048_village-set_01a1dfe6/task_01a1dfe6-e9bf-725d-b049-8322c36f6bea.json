@@ -1,0 +1,23 @@
+{
+  "id": "01a1dfe6-e9bf-725d-b049-8322c36f6bea",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 1482556449,
+  "prompt": "Large square prisoner cage built from thick bamboo poles lashed together with rope, sturdy corner posts, barred door with rope lock, flat bamboo roof, completely empty inside, tall enough for a standing person, realistic game asset, no ground",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794757816959,
+  "progress": 100,
+  "started_at": 1794757816969,
+  "finished_at": 1794757935763,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfe6-e9bf-725d-b049-8322c36f6bea/output/model.glb?Expires=4948300800&Signature=LMRdQ2TSwqElOaggH3NBAK5r2pxqORgONlXbRjfNKKWAC6A8UpmuRfQBvxRAsfhxUqQr57pDEnWkQSB9mLXGfmd13eNJsZWvBmFgLkVOJ~okRoH834HLXqBtsBmfn4LOQJ93rGjB2P1UWjTairs8FwRcnJROBD9TRut2BJkTyfz3z9gJTp1jdZkbOcicwmeDf9pN5GZCXh39rOCUcI89YYONJKyJFnBM-n0LkYpLtWnMygeMkWWE2A3kv171nD2tx15l6hTgsWpwRuSg9jr91MISsKJ63hTLCg3RGvPZekZ-OYPlzCSPCSZaKc~hUo6-Fpv0VZ4eFnFNDhKjqbEHdA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfe6-e9bf-725d-b049-8322c36f6bea/output/preview.png?Expires=4948300800&Signature=afsVNxSYJQQQkSF2murcW7M0cJcGZb-~KJplCaY41fz8uog0-XQA0HyvbEw0-Muh6OK8RpuIcEV7NonEc55mqy0hirvyxX2PQj3bkUhc~eOXooJ-n7A~HnMcvKyFyRDtseMQ1qz8Mq2gCdu69STmX60V7tb1wB~U4yQkI0D0PS8np5RVRlwOIV1rAqy9~mB~5KYai3hjvv-x8IZUsG6OPD32WXSNq0iDGsCctiUd7LyvRJd8Sd8J-KBtm5P5v-3eIztzZH8R0AVW8QN5Br5N1o01SQN6qrLi0lh9q8uHfqoqUQv9SkuT-p~IFYPzrdfTYQoTedCHWGTbSoTgRy4bTQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

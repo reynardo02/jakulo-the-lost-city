@@ -1,0 +1,27 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/guard.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/village/guard.glb" id="2_model"]
+
+[sub_resource type="CapsuleShape3D" id="Shape_Body"]
+radius = 0.4
+height = 1.8
+
+[node name="Guard" type="AnimatableBody3D"]
+script = ExtResource("1_script")
+
+[node name="Model" parent="." instance=ExtResource("2_model")]
+
+[node name="Shape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("Shape_Body")
+
+[node name="Mark" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45, 0)
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "?"
+font_size = 96
+outline_size = 24

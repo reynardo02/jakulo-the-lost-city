@@ -91,6 +91,10 @@ const NOTES := {
 		"title": "Krokodile",
 		"text": "Liegen reglos im Wasser und eignen sich als Trittsteine. Berührt man sie, zucken sie kurz und reißen dann das Maul auf. Wer gepackt wird, muss sich mit aller Kraft befreien (SPRINGEN).",
 	},
+	"natives": {
+		"title": "Die Wachen im Dorf",
+		"text": "Sie sehen nur, was vor ihnen liegt – der helle Kegel am Boden zeigt ihr Blickfeld. Wer schleicht, wird langsamer entdeckt und nicht gehört. Geduckt im hohen Gras ist man unsichtbar, solange man ihnen nicht direkt vor die Füße läuft.",
+	},
 	"lily_pad": {
 		"title": "Seerosen",
 		"text": "Tragen einen Menschen nur für einen Augenblick. Wer stehen bleibt, versinkt mit ihnen im Wasser – also zügig von Blatt zu Blatt springen.",
@@ -125,10 +129,15 @@ const ACTION_LABELS := {
 	"interact": ["E", "QUADRAT"],
 	"open_book": ["B", "DREIECK"],
 	"close": ["E", "KREIS"],
+	"crouch": ["STRG", "KREIS"],
 	"pages": ["A / D", "L1 / R1"],
 }
 
 var _hud_label: Label
+var _status_label: Label
+var _detection_bar: ProgressBar
+var _detections := {}   # Wache (Instanz-ID) -> Entdeckungsanzeige 0 .. 1
+var _player_status := ""
 var _message_label: Label
 var _flash_id := 0
 
@@ -314,6 +323,53 @@ func get_respawn_position() -> Vector3:
 	return _checkpoint_position
 
 
+# ---------- Schleichen und Entdeckung ----------
+
+## Jede Wache meldet hier laufend ihre Entdeckungsanzeige (0 .. 1). Das HUD zeigt die höchste.
+func report_detection(source: Object, value: float) -> void:
+	if value <= 0.0:
+		_detections.erase(source.get_instance_id())
+	else:
+		_detections[source.get_instance_id()] = value
+	var highest := 0.0
+	for v in _detections.values():
+		highest = maxf(highest, v)
+	if _detection_bar:
+		_detection_bar.value = highest
+		_detection_bar.get_parent().visible = highest > 0.01
+
+
+## Der Spieler meldet, ob er schleicht oder versteckt ist ("" = normal). Steht unter den Leben.
+func set_player_status(text: String) -> void:
+	if text == _player_status:
+		return
+	_player_status = text
+	if _status_label:
+		_status_label.text = text
+
+
+## Eine Wache hat den Spieler entdeckt: zurück zum letzten Checkpoint.
+## Ohne `costs_life` kostet das kein Leben, nur die im Level gesammelten Münzen sind wieder weg.
+func player_caught(player: Node3D = null, costs_life: bool = false, delay: float = 1.5) -> void:
+	if costs_life:
+		player_died(player, delay)
+		return
+	if _transitioning:
+		return
+	_transitioning = true
+	_freeze(player)
+	coins = _level_start_coins
+	score = _level_start_score
+	_update_hud()
+	_show_message("Entdeckt!")
+	await get_tree().create_timer(delay).timeout
+	_detections.clear()
+	report_detection(self, 0.0)
+	get_tree().reload_current_scene()
+	_show_message("")
+	_transitioning = false
+
+
 # ---------- Tod ----------
 
 ## Spieler ist gestorben: ein Leben weniger, Level neu laden – der Spieler startet
@@ -400,6 +456,43 @@ func _build_hud() -> void:
 	_hud_label.add_theme_color_override("font_outline_color", Color.BLACK)
 	_hud_label.add_theme_constant_override("outline_size", 8)
 	layer.add_child(_hud_label)
+
+	_status_label = Label.new()
+	_status_label.position = Vector2(24, 54)
+	_status_label.add_theme_font_size_override("font_size", 24)
+	_status_label.add_theme_color_override("font_color", Color(0.75, 1.0, 0.6))
+	_status_label.add_theme_color_override("font_outline_color", Color.BLACK)
+	_status_label.add_theme_constant_override("outline_size", 8)
+	layer.add_child(_status_label)
+
+	# Entdeckungsanzeige: oben in der Mitte, nur sichtbar, solange eine Wache etwas bemerkt
+	var detection_box := VBoxContainer.new()
+	detection_box.set_anchors_preset(Control.PRESET_CENTER_TOP)
+	detection_box.position = Vector2(-160, 20)
+	detection_box.custom_minimum_size = Vector2(320, 0)
+	detection_box.visible = false
+	layer.add_child(detection_box)
+	var detection_title := Label.new()
+	detection_title.text = "Entdeckung"
+	detection_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	detection_title.add_theme_font_size_override("font_size", 22)
+	detection_title.add_theme_color_override("font_outline_color", Color.BLACK)
+	detection_title.add_theme_constant_override("outline_size", 8)
+	detection_box.add_child(detection_title)
+	_detection_bar = ProgressBar.new()
+	_detection_bar.max_value = 1.0
+	_detection_bar.step = 0.0
+	_detection_bar.show_percentage = false
+	_detection_bar.custom_minimum_size = Vector2(320, 18)
+	var fill := StyleBoxFlat.new()
+	fill.bg_color = Color(0.95, 0.3, 0.15)
+	fill.set_corner_radius_all(4)
+	_detection_bar.add_theme_stylebox_override("fill", fill)
+	var back := StyleBoxFlat.new()
+	back.bg_color = Color(0, 0, 0, 0.55)
+	back.set_corner_radius_all(4)
+	_detection_bar.add_theme_stylebox_override("background", back)
+	detection_box.add_child(_detection_bar)
 
 	_message_label = Label.new()
 	_message_label.set_anchors_preset(Control.PRESET_FULL_RECT)

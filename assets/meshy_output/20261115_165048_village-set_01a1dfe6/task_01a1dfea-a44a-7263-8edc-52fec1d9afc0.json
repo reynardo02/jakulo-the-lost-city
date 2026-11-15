@@ -1,0 +1,30 @@
+{
+  "id": "01a1dfea-a44a-7263-8edc-52fec1d9afc0",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3876641182,
+  "prompt": "Round jungle village hut, walls of bamboo and wooden poles lashed with rope, thick conical thatched palm leaf roof, one small dark doorway, weathered natural materials, realistic game asset, single building, no ground, no people",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794758059132,
+  "progress": 100,
+  "started_at": 1794758059145,
+  "finished_at": 1794758105150,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-a44a-7263-8edc-52fec1d9afc0/output/model.glb?Expires=4948300800&Signature=DNkbF1s3GfTHl7t50C2xCspTkWoIe9dPFBbC64xZOyeOevxkvEGIcPWJtsQ6-si~yqaR74IixnVwzgTQnythuRj8g~MvASFMG2W0mvXmdOHX7B~UDLL2mTlFE2GD7mgiYSxKDe3qg-dqajRn~a3fugG7F6O0c7A1K5TOiAuaOANlrLAol7-zkvhANPrRkZhXcnvXiGWCXLQwx5vZ6alriOzWXTqsHk6Iyo7pIotbMJJe~Z93PiYzyVcXUjlgktj438oBSE8aUOYFaxUzgWNTbBy~RELV9Jc7IvuW3hNrwJOCD4HrS3JOqn-IUdmhbsVi~C736uesMA55W7en7YyTVA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-a44a-7263-8edc-52fec1d9afc0/output/preview.png?Expires=4948300800&Signature=HTBV~GCEEO2I8x8FFgluxgl6TbkOtuftq1rHb8Nb-gkkMrPHZvTHOjV0t1ykPqZ6-E59RBKsOqCa-aLgup-QOexBJGZC55tateKMHE-cZtsanP7fE4rGFh6-P1uDOyaYNc02lIGaLluqPULpHU99RyDkmGh6BK8uiyXbIeBuksFYF8GenjwngUgTd3hG4RO5VThBqyp93G7CRFsD48QkzTX0O1vA12F5GKqWhsojyk8xl1EDW2DO2b4jczoniPpi8O-sJOAH4b0QBytbEdaegOZpvWzTjb~glyrv9wtGWVYSyQCKQXm3kK-mADd4d~zZc3h1kgHVHHrV46fe7lFKww__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-a44a-7263-8edc-52fec1d9afc0/output/texture_0.png?Expires=4948300800&Signature=XsonvYi5GnWmUFhnBUxDf20QQDZiaYctwa4QlxQtgwnoE5AdgtksVOpGK95eXsXQLUJ6EjTQvR8BEZOwwUtUJYRYGUrxcBcIDiTNnqVygjexQElQjbTHaIr2-FThC9xjOa~D0s26SY-ZkKT1OVOd5bczBILdHJ97YFLi1HrI08rZjEdpkiYAfHdlIGucQyh8H~8lK4byI58o1ukbSCy7Rzp7xpBI8DDymSYkiDRleOklIT9eQccaZrWSghR5sRaK1464qn6rK415RyxxGUrH56JQwH2lnDQ5N2JHMgtnNSY9J9TfMGAbQOs~Lq8oXabC0KxqzRdAgKJZ9kuIYk-62Q__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-a44a-7263-8edc-52fec1d9afc0/output/texture_0_metallic.png?Expires=4948300800&Signature=S2lVgOb8b9JgZYsn45EhutN5lH8Vu7S-KAxQ5sjFperArO~PEmow~Kr7rRheI1Eg-pjS2PLDiZA8gESWDSeFRkPeJ7KOnYZOCJfV4i3~juyY~63XosndVt49l4k0liOvWqHDaqnzUZeOVFHB5mytXGahuOwCDm2K3VjrCCHujV-WLXdfgBEZ1o8VUKNo77ZSOXUM3MMWNUaMuJ4eGBNHrPvYmRwaYZI5XfdH588AJQ9VKrRLC0d9EF81LiGJ4Hs568htgIaDg8UJOobGsCvL~AzAg~TPv9KzIU8~1ghX4DVnDquTQLmJ5oX9MYjA3OMNnuBdn86d3N3BBKbw~qFDOA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-a44a-7263-8edc-52fec1d9afc0/output/texture_0_roughness.png?Expires=4948300800&Signature=kmSidVEZtJ3RI-nU9Z4mZFmUFv0HC~vXn4DalcOvbwmEMxEOkYK~wDqL1zElA-M8BvgnG93OopcIZ~H3Gz69XD3FPWD2CB5ASQ2OaQSPUih6b6KJmIrIloNabWwMgQNCOSI6s4ZHYZEG5qawk~lF7~XCCldbPQLoTVvWNfQ0wq-nGEDbQowJf2tMCbyiu32j3QJ63DvbLjP7wD-waqrruk1r341EamUt02U~hQ0O8VXTOVgpPWskkH39KTC8pM4SLyRCS2lSngpy~QdQzxzYBnZEGwrjMyDJ7W4T6dGxuUvfQwDvPD0bgHi4WzcViBttGjmkZQemW2R53UM4l69R8A__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-a44a-7263-8edc-52fec1d9afc0/output/texture_0_normal.png?Expires=4948300800&Signature=h2HhePGTLFGBPVH5lSKyc5nAMOjw4Gm37EpDJM1lfgwIjuTREk7JBlu9~v8rAiuJuOFe-4Gm-AGxcBJK~6sd2etAl6wl-sozGff1DQGaYt58aG35Tpp9Zleq4tvjVm4h1SAHjqEMERxu2C9Bllhm9Z-SEwR2ww3forhYk~mspotvuBbZt8kC3t2uxV3Q8g8LI1LIcozyo2TJoa15z4LK~9E9RnsjEQZ5xkSRdTFZm~ofdcnJTabRAeGAy-BnGKvC1IemyUXo9U4LRO9VuME2-8jmFUkszToN9WbVNKDZX47LW6eD~2l0IxEE11TYhUH43M3nQL3fBzC6gSay1v3~tA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

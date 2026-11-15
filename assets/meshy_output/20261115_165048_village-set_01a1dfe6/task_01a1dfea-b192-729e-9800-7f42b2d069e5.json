@@ -1,0 +1,30 @@
+{
+  "id": "01a1dfea-b192-729e-9800-7f42b2d069e5",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 240026438,
+  "prompt": "Large square prisoner cage built from thick bamboo poles lashed together with rope, sturdy corner posts, barred door with rope lock, flat bamboo roof, completely empty inside, tall enough for a standing person, realistic game asset, no ground",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794758062499,
+  "progress": 100,
+  "started_at": 1794758062509,
+  "finished_at": 1794758109151,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-b192-729e-9800-7f42b2d069e5/output/model.glb?Expires=4948300800&Signature=Ha4-5xAgU0UK9h1EgByK0oa~CTgYEgroE0KUj0m3ZqVvtYbKQOXn68Hilesx-VY6IzF8E01yymnZTHi~GmPxjycJ-pXjOXG0fErwuSVVYXgvobfiDTMl021XGsN~c622flohlRt3O2PfyE8pKohbh2h17GZnV9VJQbxDGrsUyrLMlpAxODrrJfp~07YR2hL6W~YjYQuDmEA1K~8QgU2Xlyp0WUWEQgXFEPofd-gA8GxREktwJT3gyLrMR~4WcWICtxVmIXYzp1cs8~amM5P4Ma1LpGowRAFr8ji1Zri0lghOifm1hagsKTa9kVH95gVBVjIcQtug4b~eLoajkbLDRg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-b192-729e-9800-7f42b2d069e5/output/preview.png?Expires=4948300800&Signature=C-1gyaKIpMMp3AzDR~v1h7kPr3Kov7jcnmG7Gwj1JkK7s4KP66kqx3-E3aDx347VIzdH8X8vUiXOXZ8S4HWRuAkgw~73nV64YYD0aCHmcR8r0eZsLwqceLNztjugdzgO7MxglNhH0R8Sw-Lr8J3IYr4nUMX3xtWOb9a9ZljZgewxD33uGB7kUgk3zm0rbwQBmFdq97hxJGOS47BLycMFfBSe7ijKTrl2VnWJrwNHRaxRWNdf2k7nEplDncLXSNCDAPBakAAUDz1ZFvLQiJv1HEzE1sZsfN5HgY25WYe1PND79a~cq4kdQSnu4zllKafVE-THYN3zxU5Ouz~RQxuc1w__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-b192-729e-9800-7f42b2d069e5/output/texture_0.png?Expires=4948300800&Signature=TwvVKThcb9r9uB91no1ug9peXFxu1rfOwRzJ0s-Z-dbBnb5m2TEdXQeO5uCoxdRczs~tq8fY92F3RcCASoHSUkaEChnvuiALkftU6Pr4YMTzTYYxv27OeTfHXJMKFc2HNZwuX41ifOtNFjep92kjQqsYjq8189dniBGWF1e84ntuVewEFHPIYjUyDYlfdy3SvJA6WEMy0d3JASGNkTNL8OdmxvxW2OLFP~yp-nnLAjceR-6caVy4z8XQeVCowet571KfmqxiMxHyEBRvB2X-yPM-osRm4ddTGhXKoyDPyfxySeiHx4FPqdbijNxukFFJWIC9eb1Pj3f6jSTcI1uXhg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-b192-729e-9800-7f42b2d069e5/output/texture_0_metallic.png?Expires=4948300800&Signature=DdD8w~qHHpQRzTPt~GTKgw86w~mK0wfd96kGTZ05B1HdoeFJ-Dqt94FYL1nYsG7wXN9ZR2b-2T6ucnbj2vLQSzIKDc5ho4fUK8xs3ssarzj-ZG1xvhyDGhN-pzIp1nhk~3vf~MQuceX2~5LerfdAI0XiJMtHDmTuWMGHRYDe~Mw0f~sFskZUkddfAPZU4hPSE6brFhxcAn02iQ6ZhIkAtO4eUgW1v4CIvsoyk4ORd80Vlz~MjbFNktFC4dmAYDgvwvyTkgHSyWGua9KKXPyoa7tCTsB0c4u4itbpheYf2klyzJp8CF-~oRwr3WPf-zBLdQgMpiEwlCsv48A72XLP1w__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-b192-729e-9800-7f42b2d069e5/output/texture_0_roughness.png?Expires=4948300800&Signature=To7YN5TCvc5s7e8vOLxkDHDeUwJMW~BAJ~ssC2k9m3SK68kRoC4o0oheTAVwgI53ealaMWK0rlUu3ycooUtPzgDJDRHKNVDl~Kf8aoPKISmkLBtWpUtxiij6xvOJkumtF~0Z8ODYmH3WiMe8AxIolEaEuuBF95vP21QW~w9mztRPK9xAkfzwdAPIHdvcnnPJNoUJulcXRt08t0ddnmqoCow2rVOwmWEeB7vrH6pR9A0vOSHFh1yYgEe-0~rve00BC4ufsqHjEN60inOO11Dx0Y4LCOlNtIvaumLd4c5jcq3p4TzIgUM3r9CSTXQnMCBQikvpp56EJDAmhsToBbJOuA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfea-b192-729e-9800-7f42b2d069e5/output/texture_0_normal.png?Expires=4948300800&Signature=fw6z6tE5V4PA3S5NAUj7Qr~nVx7iHyk-gRTwflTbqH8m34IYxpsfOBgeRNoqAVyELGRV4qdE~RfdDM4zDk2lgwKlHdL3JpRzXDqSTnIhRlAM7TBs27oo680NFVQRq7clYkXMts9Gz5m~Pr6bNQfHzsEEYu2MtS0zIdtAAD8RHWr9xknOMMKhD4b-CxL-he6DH9ej~4ZLpNhSX5dVxtrI2VDES6DLLCWacZ1n2K3W0hYyzW2R7WUrazfahi8ML6GucVllGk~OLw9BjkTVP~HBXuev2iKqPlu6QRaEboCOCdWFGgU7I4Ys1ov0hjq1MaYrtq-9-IJOUMcrS7gw3GI-uA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

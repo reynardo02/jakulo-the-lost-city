@@ -1,0 +1,346 @@
+{
+  "schema_version": 2,
+  "project_name": "village-set",
+  "folder": "20261115_165048_village-set_01a1dfe6",
+  "root_task_id": "01a1dfe6-d4ab-7527-8327-cbe31f7e0c23",
+  "created_at": "2026-11-15T15:50:48.594Z",
+  "updated_at": "2026-11-15T15:56:47.103Z",
+  "tasks": [
+    {
+      "task_id": "01a1dfe6-d4ab-7527-8327-cbe31f7e0c23",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview-hut",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1dfe6-d4ab-7527-8327-cbe31f7e0c23.json",
+      "operation_id": null,
+      "created_at": "2026-11-15T15:52:51.124Z",
+      "updated_at": "2026-11-15T15:52:51.124Z"
+    },
+    {
+      "task_id": "01a1dfe6-d4ab-7527-8327-cbe31f7e0c23",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview_geo_hut.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-15T15:52:53.941Z",
+      "updated_at": "2026-11-15T15:52:53.941Z"
+    },
+    {
+      "task_id": "01a1dfe6-e9bf-725d-b049-8322c36f6bea",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview-cage",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1dfe6-e9bf-725d-b049-8322c36f6bea.json",
+      "operation_id": null,
+      "created_at": "2026-11-15T15:52:56.399Z",
+      "updated_at": "2026-11-15T15:52:56.399Z"
+    },
+    {
+      "task_id": "01a1dfe6-e9bf-725d-b049-8322c36f6bea",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview_geo_cage.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-15T15:52:58.654Z",
+      "updated_at": "2026-11-15T15:52:58.654Z"
+    },
+    {
+      "task_id": "01a1dfe6-fc5e-76eb-93a7-d2b3299277a6",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview-guard",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1dfe6-fc5e-76eb-93a7-d2b3299277a6.json",
+      "operation_id": null,
+      "created_at": "2026-11-15T15:53:01.299Z",
+      "updated_at": "2026-11-15T15:53:01.299Z"
+    },
+    {
+      "task_id": "01a1dfe6-fc5e-76eb-93a7-d2b3299277a6",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview_geo_guard.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-15T15:53:03.574Z",
+      "updated_at": "2026-11-15T15:53:03.574Z"
+    },
+    {
+      "task_id": "01a1dfe7-108d-70c1-a40c-aacf58aeef13",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview-villager",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1dfe7-108d-70c1-a40c-aacf58aeef13.json",
+      "operation_id": null,
+      "created_at": "2026-11-15T15:53:06.037Z",
+      "updated_at": "2026-11-15T15:53:06.037Z"
+    },
+    {
+      "task_id": "01a1dfe7-108d-70c1-a40c-aacf58aeef13",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview_geo_villager.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-15T15:53:08.282Z",
+      "updated_at": "2026-11-15T15:53:08.282Z"
+    },
+    {
+      "task_id": "01a1dfea-a44a-7263-8edc-52fec1d9afc0",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "refine-hut",
+      "parent_task_id": "01a1dfe6-d4ab-7527-8327-cbe31f7e0c23",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1dfea-a44a-7263-8edc-52fec1d9afc0.json",
+      "operation_id": "df5e216c-b2a3-42ba-a28d-5206ce5c6255",
+      "created_at": "2026-11-15T15:54:27.418Z",
+      "updated_at": "2026-11-15T15:55:21.760Z"
+    },
+    {
+      "task_id": "01a1dfea-b192-729e-9800-7f42b2d069e5",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "refine-cage",
+      "parent_task_id": "01a1dfe6-e9bf-725d-b049-8322c36f6bea",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1dfea-b192-729e-9800-7f42b2d069e5.json",
+      "operation_id": "33ff53bb-6a04-43ad-89c5-f706f04e4917",
+      "created_at": "2026-11-15T15:54:30.788Z",
+      "updated_at": "2026-11-15T15:55:26.535Z"
+    },
+    {
+      "task_id": "01a1dfea-bd9b-73dd-964b-921aa2dc23fe",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "refine-guard",
+      "parent_task_id": "01a1dfe6-fc5e-76eb-93a7-d2b3299277a6",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1dfea-bd9b-73dd-964b-921aa2dc23fe.json",
+      "operation_id": "f23caab8-d131-498a-8eb0-5846f7d703b8",
+      "created_at": "2026-11-15T15:54:33.965Z",
+      "updated_at": "2026-11-15T15:55:31.344Z"
+    },
+    {
+      "task_id": "01a1dfea-c9dc-7357-a318-92231797cc81",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "refine-villager",
+      "parent_task_id": "01a1dfe7-108d-70c1-a40c-aacf58aeef13",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1dfea-c9dc-7357-a318-92231797cc81.json",
+      "operation_id": "c387fcf6-6e40-4cff-83e0-d6237a245204",
+      "created_at": "2026-11-15T15:54:37.019Z",
+      "updated_at": "2026-11-15T15:55:35.988Z"
+    },
+    {
+      "task_id": "01a1dfea-a44a-7263-8edc-52fec1d9afc0",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview_hut.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-15T15:55:24.157Z",
+      "updated_at": "2026-11-15T15:55:24.157Z"
+    },
+    {
+      "task_id": "01a1dfea-b192-729e-9800-7f42b2d069e5",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview_cage.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-15T15:55:28.714Z",
+      "updated_at": "2026-11-15T15:55:28.714Z"
+    },
+    {
+      "task_id": "01a1dfea-bd9b-73dd-964b-921aa2dc23fe",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview_guard.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-15T15:55:33.557Z",
+      "updated_at": "2026-11-15T15:55:33.557Z"
+    },
+    {
+      "task_id": "01a1dfea-c9dc-7357-a318-92231797cc81",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview_villager.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-15T15:55:38.386Z",
+      "updated_at": "2026-11-15T15:55:38.386Z"
+    },
+    {
+      "task_id": "01a1dfea-a44a-7263-8edc-52fec1d9afc0",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "delivered",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "hut_raw.glb"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-15T15:55:42.411Z",
+      "updated_at": "2026-11-15T15:55:42.411Z"
+    },
+    {
+      "task_id": "01a1dfea-b192-729e-9800-7f42b2d069e5",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "delivered",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "cage_raw.glb"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-15T15:55:46.808Z",
+      "updated_at": "2026-11-15T15:55:46.808Z"
+    },
+    {
+      "task_id": "01a1dfeb-e514-7592-b594-131c59924610",
+      "task_type": "rig",
+      "resource": "rigging",
+      "endpoint": "/openapi/v1/rigging",
+      "stage": "rigging-guard",
+      "parent_task_id": "01a1dfea-bd9b-73dd-964b-921aa2dc23fe",
+      "status": "SUCCEEDED",
+      "files": [
+        "guard_walking.glb"
+      ],
+      "task_json": "task_01a1dfeb-e514-7592-b594-131c59924610.json",
+      "operation_id": "fbba0640-77ee-488f-ae2f-de7c8efc67fe",
+      "created_at": "2026-11-15T15:55:55.540Z",
+      "updated_at": "2026-11-15T15:56:20.036Z"
+    },
+    {
+      "task_id": "01a1dfec-06bb-7338-8ce5-0c4ab7ca6d6d",
+      "task_type": "rig",
+      "resource": "rigging",
+      "endpoint": "/openapi/v1/rigging",
+      "stage": "rigging-villager",
+      "parent_task_id": "01a1dfea-c9dc-7357-a318-92231797cc81",
+      "status": "SUCCEEDED",
+      "files": [
+        "villager_walking.glb"
+      ],
+      "task_json": "task_01a1dfec-06bb-7338-8ce5-0c4ab7ca6d6d.json",
+      "operation_id": "eef45005-b22b-4498-b673-ebf9a564aa70",
+      "created_at": "2026-11-15T15:56:04.801Z",
+      "updated_at": "2026-11-15T15:56:29.637Z"
+    },
+    {
+      "task_id": "01a1dfec-6634-7079-9f92-b2d82845b19c",
+      "task_type": "animate",
+      "resource": "animate",
+      "endpoint": "/openapi/v1/animations",
+      "stage": "idle-guard",
+      "parent_task_id": "01a1dfeb-e514-7592-b594-131c59924610",
+      "status": "SUCCEEDED",
+      "files": [
+        "guard_idle.glb"
+      ],
+      "task_json": "task_01a1dfec-6634-7079-9f92-b2d82845b19c.json",
+      "operation_id": "63ba1fda-0daf-4f4d-8393-5b274a078620",
+      "created_at": "2026-11-15T15:56:22.759Z",
+      "updated_at": "2026-11-15T15:56:39.621Z"
+    },
+    {
+      "task_id": "01a1dfec-8bfd-7153-875e-89b7177cef0d",
+      "task_type": "animate",
+      "resource": "animate",
+      "endpoint": "/openapi/v1/animations",
+      "stage": "idle-villager",
+      "parent_task_id": "01a1dfec-06bb-7338-8ce5-0c4ab7ca6d6d",
+      "status": "SUCCEEDED",
+      "files": [
+        "villager_idle.glb"
+      ],
+      "task_json": "task_01a1dfec-8bfd-7153-875e-89b7177cef0d.json",
+      "operation_id": "b577e342-e2ee-47dc-8b88-ac1041c12cac",
+      "created_at": "2026-11-15T15:56:32.546Z",
+      "updated_at": "2026-11-15T15:56:47.103Z"
+    }
+  ]
+}

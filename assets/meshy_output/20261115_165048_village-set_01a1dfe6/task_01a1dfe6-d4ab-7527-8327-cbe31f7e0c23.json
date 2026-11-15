@@ -1,0 +1,23 @@
+{
+  "id": "01a1dfe6-d4ab-7527-8327-cbe31f7e0c23",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3352378638,
+  "prompt": "Round jungle village hut, walls of bamboo and wooden poles lashed with rope, thick conical thatched palm leaf roof, one small dark doorway, weathered natural materials, realistic game asset, single building, no ground, no people",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794757812166,
+  "progress": 100,
+  "started_at": 1794757812178,
+  "finished_at": 1794757962528,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfe6-d4ab-7527-8327-cbe31f7e0c23/output/model.glb?Expires=4948300800&Signature=kcm4QoY0zE1Oqw6BlwgXCfFjxi6~iv0jYjTMbVEtE7JbFx11TU4fnSg7PjnTZBKjNFMN~DpDeZLIxh-BC3kSKYjZgBTN6~KodCT3HdPpWd6il1CgGru6sF0YvhjFp3yL9iYthjwnvNaJsqZGlf7-A6Wg1-vdTEpYgQUK6yxunkQMDOI1WGWofL~aLDxPHsr4hKzsyXGSmcESyqL0t9B1e~k2spc~WfLhUTUHUPzZEabjPLPL82lSenYJRcG1XDmiELysFkud9CNXJiam9XO9ch-Jlqc4ql1GSIEmUpcJ~DStZlhPFdu-BVoM2LQgvTqWCVctkrvow5uoAFI-~9qxjg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfe6-d4ab-7527-8327-cbe31f7e0c23/output/preview.png?Expires=4948300800&Signature=IHL~cQco~6t-x~QnoT-cIKZprIu~-0xabqiCLVANflJTDPwLRplvoV0XF44t8yVh2A7NctzgL6KFZGAvR5jFhzCOCr1uR7OpekL~PNPTGhemGNzpVjhwoyYQI3pwe~y98H0NFfxXDqBAXhie4cwZzDgMUNwHv0~rblEeLpnpZzmP4a8ULakSYOpzxL04HU7F1LHJXzj9j45Ca6SA0ujpsL1RTAl6BZPvgsId~tdPOHCVkEIVPsx1xPYu2b5rSAfASJso8vdt2-Mpd7ANEFM3R0xM623gn8HbE7l6-sXKj-n9RX~CBM~tw~AEsWwLJzkUex03tWlL-hwpbKnMtc0IFA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

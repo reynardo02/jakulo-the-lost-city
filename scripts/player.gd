@@ -9,6 +9,16 @@ const VINE_HAND_OFFSET = 2.0      # Abstand Füße -> Hände (Arme über dem Kop
 const VINE_JUMP_BOOST = 3.0       # Extra-Höhe beim Loslassen
 const VINE_REGRAB_COOLDOWN = 0.5  # verhindert sofortiges Wieder-Greifen
 const VINE_CLIMB_SPEED = 2.0      # m/s beim Klettern an der Liane
+
+# Schleichen
+const SNEAK_SPEED_FACTOR = 0.45   # Anteil der normalen Geschwindigkeit
+const SNEAK_IDLE_ANIM = "Crouch_Idle"   # aus tools/crouch_anim/build_anim.py
+const SNEAK_WALK_ANIM = "Crouch_Walk"
+const SNEAK_ANIMS := {
+	SNEAK_IDLE_ANIM: "res://assets/character/anims/crouch_idle.res",
+	SNEAK_WALK_ANIM: "res://assets/character/anims/crouch_walk.res",
+}
+const SNEAK_BLEND_TIME = 0.2      # Überblenden zwischen aufrecht und geduckt
 const AIR_CONTROL = 0.3
 
 # Sprung nach vorne
@@ -34,6 +44,8 @@ const CROC_IK_BLEND_TIME = 0.15
 var current_vine: Node3D = null
 var last_vine: Node3D = null     # zuletzt losgelassene Liane – erst nach Landung wieder greifbar
 var vine_cooldown: float = 0.0
+var is_sneaking: bool = false   # geduckt: langsamer, leiser, schwerer zu sehen
+var hiding_zones: int = 0       # in so vielen Verstecken (hohes Gras) steht der Spieler gerade
 var vine_climb_up_armed: bool = false  # Hochklettern erst, nachdem VOR einmal losgelassen wurde
 var air_momentum: Vector3 = Vector3.ZERO
 var hang_forward: Vector3 = Vector3.FORWARD  # Blickrichtung an der Liane (bleibt fest)
@@ -60,6 +72,7 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	spring_arm_3d.add_excluded_object(get_rid())
 
+	setup_sneak_animations()
 	animation_tree.active = true
 	playback.start("Idle_9")
 	setup_arm_ik()
@@ -95,6 +108,8 @@ func _physics_process(delta: float) -> void:
 	if vine_cooldown > 0.0:
 		vine_cooldown -= delta
 
+	update_sneak(delta)
+
 	# An der Liane: Position folgt dem Seilende
 	if current_vine:
 		process_vine()
@@ -121,6 +136,7 @@ func _physics_process(delta: float) -> void:
 
 	# jump – beim Laufen als Sprung nach vorne mit Schwung, im Stand senkrecht
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		is_sneaking = false   # Springen richtet auf
 		velocity.y = JUMP_VELOCITY
 		if direction.length_squared() > 0.01:
 			velocity.y = FORWARD_JUMP_VELOCITY
@@ -132,8 +148,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = air_momentum.x + direction.x * SPEED * AIR_CONTROL
 		velocity.z = air_momentum.z + direction.z * SPEED * AIR_CONTROL
 	else:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		var speed := SPEED * (SNEAK_SPEED_FACTOR if is_sneaking else 1.0)
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	
 	#Moving the player and avoiding collisions
 	move_and_slide()
@@ -143,6 +160,48 @@ func _physics_process(delta: float) -> void:
 		last_vine = null
 
 	update_animation()
+
+# ---------- Schleichen ----------
+
+## Hängt die Duck-Animationen in die Bibliothek "extra" und als Zustände in den AnimationTree.
+## Passiert beim Start, damit scenes/player.tscn dafür nicht angefasst werden muss.
+func setup_sneak_animations() -> void:
+	var anim_player := animation_tree.get_node(animation_tree.anim_player) as AnimationPlayer
+	var library := anim_player.get_animation_library(&"extra")
+	var machine := animation_tree.tree_root as AnimationNodeStateMachine
+	for state in SNEAK_ANIMS:
+		if not library.has_animation(state):
+			library.add_animation(state, load(SNEAK_ANIMS[state]))
+		if not machine.has_node(state):
+			var node := AnimationNodeAnimation.new()
+			node.animation = "extra/" + state
+			machine.add_node(state, node)
+	# weiche Übergänge zwischen allen Steh-/Geh-Zuständen, aufrecht wie geduckt
+	var states := ["Idle_9", "Walking", SNEAK_IDLE_ANIM, SNEAK_WALK_ANIM]
+	for from in states:
+		for to in states:
+			var involves_sneak: bool = from in SNEAK_ANIMS or to in SNEAK_ANIMS
+			if from == to or not involves_sneak or machine.has_transition(from, to):
+				continue
+			var transition := AnimationNodeStateMachineTransition.new()
+			transition.xfade_time = SNEAK_BLEND_TIME
+			machine.add_transition(from, to, transition)
+
+
+
+## Ducken an/aus mit "crouch". An der Liane und in der Luft steht die Figur immer aufrecht.
+func update_sneak(_delta: float) -> void:
+	if current_vine or not is_on_floor():
+		is_sneaking = false
+	elif Input.is_action_just_pressed("crouch"):
+		is_sneaking = not is_sneaking
+	GameState.set_player_status("Versteckt" if is_hidden() else ("Schleichen" if is_sneaking else ""))
+
+
+## Geduckt in einem Versteck (hohes Gras): Wachen sehen den Spieler dann nicht.
+func is_hidden() -> bool:
+	return is_sneaking and hiding_zones > 0
+
 
 # ---------- Liane ----------
 
@@ -309,9 +368,9 @@ func update_animation() -> void:
 	elif current_vine or not is_on_floor():
 		target_state = "Jump_with_Arms_Open"
 	elif Vector2(velocity.x, velocity.z).length() > 0.1:
-		target_state = "Walking"
+		target_state = SNEAK_WALK_ANIM if is_sneaking else "Walking"
 	else:
-		target_state = "Idle_9"
+		target_state = SNEAK_IDLE_ANIM if is_sneaking else "Idle_9"
 
 	# Nur wechseln, wenn sich der State ändert – sonst startet die Animation jeden Frame neu
 	if playback.get_current_node() != target_state:

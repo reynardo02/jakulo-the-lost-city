@@ -30,6 +30,7 @@ Laufen: W A D und Pfeiltasten
 Kamera: Maus
 Springen, Liane loslassen, aus dem Maul befreien: Leertaste
 An der Liane klettern: Pfeil runter / W
+Schleichen an/aus: Strg oder C
 Benutzen: E          Buch: B
 
 [font_size=22][b]PS5-Controller[/b][/font_size]
@@ -37,6 +38,7 @@ Laufen: linker Stick oder Steuerkreuz
 Kamera: rechter Stick
 Springen, Liane loslassen, aus dem Maul befreien: Kreuz
 An der Liane klettern: linker Stick runter / hoch
+Schleichen an/aus: Kreis
 Benutzen: Quadrat          Buch: Dreieck
 Im Buch: L1 / R1 blättern, Kreis schließen
 """

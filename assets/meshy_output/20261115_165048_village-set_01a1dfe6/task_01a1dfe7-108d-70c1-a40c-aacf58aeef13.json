@@ -1,0 +1,23 @@
+{
+  "id": "01a1dfe7-108d-70c1-a40c-aacf58aeef13",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 700559001,
+  "prompt": "Friendly old jungle villager man, thin, grey hair and short beard, simple woven cloth tunic and shorts, bead necklace, barefoot, kind face, empty hands, stylized realistic game character, full body, standing upright",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794757827093,
+  "progress": 100,
+  "started_at": 1794757827104,
+  "finished_at": 1794757878099,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfe7-108d-70c1-a40c-aacf58aeef13/output/model.glb?Expires=4948300800&Signature=TgIdV~jwEG9vN8MtUrWzHlnn5cw01MCwdWTlRjgwy0G1Him9ZtgxYxiYus~E3aQhjHtKehAAjUZvdVYLj~3iS5ZIJlsYmNeu4ZlPeGJxMzMjHNTaKIdOVMA4xd1vYvwDmPLGxvx-YWIxnv2utVSJAtstgvr6hfhS0KW-izttem84ov-QC0xs4~Jx252bssdob9DBP9DtWopV3ElcmP6DRTuqR6IFCu9SQEUEBhBmmhR7VW0Q0Pr2j4KhN7VaUz5eSyCvVaguBBhk2okNyqT5L-FKHrYPbLl9dSdyH~3E9nxQn3Mk4WB1wZufo6F0a7DwLymmlyeDl9dLXTa6U3BPTA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dfe7-108d-70c1-a40c-aacf58aeef13/output/preview.png?Expires=4948300800&Signature=oAkoTNSlHvLCP7sAVss93~tQusejivy4JYQmG6wME1YE4R8gmROEL2xlcqXLwWJ3BummMtI~JiAS3RsqxdkHT8w0-gLaD24zKs8xW96nbH3-PKKjy6d2H9luwnT6j4wmtsjrNOXP281kGCt2iS7iBJGD5sOyHbCIO~rZ6YoWTgFLzXJ~V8EvoCanbBAL32FrHyNslwc-mFgOpX2frmPQu0U1CnRX0Ek1~qFIwGBE1F4ZtNC9njbE1Gb6bT~zHNYztoOf3nYMHh4HVT6oPQVltB-R6rtn-74udfhU1SR5qQ6MynPc8eHExQMU7MEVCwvQ1nyOUbJtKf6GC~dlI04tag__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}
