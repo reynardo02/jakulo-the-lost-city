@@ -1,0 +1,30 @@
+{
+  "id": "01a1dc3b-8c2a-72f6-a20e-64dd59865228",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 137180613,
+  "prompt": "A single large realistic giant water lily pad (Victoria amazonica), flat round floating leaf lying horizontally, thick slightly upturned rim, small V-shaped notch, glossy deep green top surface with fine radial veins and water droplets, reddish underside rim, one small pink-white lotus blossom near the edge, photorealistic game asset, isolated object, no water, no base",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794696252482,
+  "progress": 100,
+  "started_at": 1794696252491,
+  "finished_at": 1794696292230,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dc3b-8c2a-72f6-a20e-64dd59865228/output/model.glb?Expires=4948214400&Signature=gxkWeLqomobO4R07I5K6i4nqgjyLp~-hY78GImyXEXtYuM21z0CAkTc6iUK6MMlV774J3SO4y5irCDQ7dKNkymTnmYjqRbFAiuF6O-QtKnLGCmNL7riYxCv4y3M1JQIiuGmP94A7DzZvRMg8giP7I0FZLwXbYg2xFyXTurB17FABTazWGcf8xrc97LX~8D1Zz183i3B4ZPrWpYM8GQ5WsPUsVuzqISaHqZtjOGXyVLY-XJr85ltinoSkirWTBu1~DOs7KrHQwqbQDACCTmemgJoX8EZrX5jUiZXz6atmjicKqMLvpyM0Ec4HDwrFhNrk~0sjjt9aNFmxyhEVkGJ2gg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dc3b-8c2a-72f6-a20e-64dd59865228/output/preview.png?Expires=4948214400&Signature=D6fuAW9mjz6DrL4fAgxH6nMW~X2ggrP5JDF0FGB4d5kU6qY4MJPUVP9bv42MZheNu~DDta4UfSCHwgWBO2lPHEZc7XhsLg4l9PwHaLcM1rdXGGQAimeLKJf2GHPH4YGthaMOIZ2z8kALwbA-mN8pHwj4ZEz3PFnjqvcehr~s3K6YiJKqYkkBcQOGh5xSw9Esm-mHNiCYX2iLQYHNATGkNzNNLJrVJz5QiJpsQCKFTUBsdmIQQ-wDnDopSnMi0UWoviDLQRUbToC1PfPNt44UZBzxjypNaq46qRcBEbJjZoBd0T4lx-w-TGqDGxo44uRG7mXZzsVGWe7DuaaFZmLAgg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dc3b-8c2a-72f6-a20e-64dd59865228/output/texture_0.png?Expires=4948214400&Signature=CSHclk0D2P70jNPHW5mLBG5iW34RfphC2rDlRWFjkRuXvu1dyuPMw8EFDSq-KKE6K-9IYIN0-Kh-Gu6PXiDhC7dQ60FRNar4p8a8TfgbT~N64emVZn5L-EG1JY6OGNPDzJdKCzNuZu0oFnFOtHreqtZeGnpQnLM~BRxH0FmOzd17xMWgtgWjrEkjiMypAUADH8~Ma0DWqQIJz-KQZKW4y~M9K3qgD6hSbWdhu1x7C5ZTJV26DWhBb-OExd6M5bzZflZ0yCQhF44ziIFd3y6A4BKqnBVs9JNXwUxrERIjSXt69-~55aAMqsp788emg47cApI6j9VpZMDlnB06hsL3Qg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dc3b-8c2a-72f6-a20e-64dd59865228/output/texture_0_metallic.png?Expires=4948214400&Signature=fd~e~CWCvv~MvD6DUjrhM4Mo8svUuwf-XKduMTomw-RZYPXGJKMniQ9tH4cs8RlykAY5BFATgF18DZPxWPQqykJQT53E7M9bVh5kzTfzoudoGu~ot~A1jDLvwtEDCLAf~dMhlNrwmxCfdSF0fl-1BxRzFc55yMg3Hb5iHqnyFOzEFpZmxwQjGDxoP27AmMUudK~litqwJtTIvDe6RPe6u5oPKSqpi9kIGCpqqsT~2awkHpTaOHV8sOI5y~PZYFDASzKw1VjaLIy913q5f3XlSRIlERrKAZJIkdOktpz14FX9nXUZ1Rdg-AHQo5abYmKHnxndsbDb-B2J0RWqnjr42Q__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dc3b-8c2a-72f6-a20e-64dd59865228/output/texture_0_roughness.png?Expires=4948214400&Signature=Ci~~zzA8dvSV8hKt91FHIhIN8jAiAnBta7P74ftcNAyneLpX-u3g7nEDe1uFwheJYy8SlKpPnNq32xj-hsGxBbWBxbUgkJKsO40Zql1-V4a5NBu9Xtz8QVAQP9TEnlXrEhOnWmCnj7rocKAWcApyi4V2mciuP5Ll2HMd-FzdFALqRiuo~1WQ3Qx9DcHuxzGjvS-icQKVIc9bJ~brgojUgibYeyprPDv9NN00h97hxUGt~9cB7ihviJ-xwGOHE3dghxAg6p7M0c1fjD3FX85W5bE4hcIBq6UrvRANHuq6uF3WPbTwUb7-GJ52pjAAIdMmE4KRuLtYQ3cRACvp-ocXoA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dc3b-8c2a-72f6-a20e-64dd59865228/output/texture_0_normal.png?Expires=4948214400&Signature=fAd5nbNpCNC6Oz-TLE2gi97DIY2PPPNayf0v~6bVq3D5C6jt2R3-sVZKIVC~H756kpxto1Eop6EXw9YOvcCbrvcDQrsGcaaNVZLq2IMaPUagzIyaOG202OIoWW1RvLDB4tVOLXepP5yY39wqOsdk4W-sMjtVB5iKY81rP-4uSigWeAhc3-yHC9d0195ANoffMsUbzM8Db7jIj~g3PEgFdEdKJbaZDPyGWhxCGUMhuQp8TjACFFcl02IzqCsBdjUT9NIbMMRWuenLPcs7~3qnu~OLLlBB1YFlRDDjBc9Q7PpF28olRQ5pDcgx00J2fhbnwwRYcPVOLLFiDMp~L8Oirw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

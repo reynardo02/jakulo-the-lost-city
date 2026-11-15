@@ -16,7 +16,9 @@ extends Node3D
 @export var damping_without_player: float = 1.5  # Dämpfung nach dem Loslassen (pendelt aus)
 @export var grab_radius: float = 0.8             # Dicke des Greifbereichs
 @export var rope_color: Color = Color(0.25, 0.45, 0.15)
-@export var note_id: String = "vine"             # Notiz im Buch, die beim ersten Greifen freigeschaltet wird
+@export var climb_top: float = 0.5               # so nah am Aufhängepunkt kann man höchstens hängen
+@export var climb_feet_clearance: float = 2.3    # Hände bleiben so weit über dem Boden (2 m Körper + 0,3 m Luft)
+@export var note_id: String = "vine"            # Notiz im Buch, die beim ersten Greifen freigeschaltet wird
 
 var pivot: Node3D
 var grab_area: Area3D
@@ -161,6 +163,16 @@ func attach(player_velocity: Vector3, hand_position: Vector3) -> void:
 
 	var speed := maxf(horizontal.length(), min_swing_speed)
 	angular_velocity = speed / hold_distance
+
+## Klettern: verschiebt den Haltepunkt entlang der Liane (positiv = nach unten).
+## Weiter unten ist das Pendel länger, der Spieler schwingt also weiter aus.
+func climb(distance: float) -> void:
+	var before := get_hold_position()
+	# unten so weit, dass die Füße beim ruhigen Hängen noch über dem Boden (y = 0) bleiben
+	var lowest := minf(length, pivot.global_position.y - climb_feet_clearance)
+	hold_distance = clampf(hold_distance + distance, minf(climb_top, lowest), lowest)
+	# die Kletterbewegung selbst soll nicht als Schwung beim Loslassen zählen
+	prev_hold += get_hold_position() - before
 
 ## Wird vom Spieler beim Loslassen aufgerufen
 func detach() -> void:

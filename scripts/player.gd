@@ -8,6 +8,7 @@ const ROTATION_SPEED = 10.0
 const VINE_HAND_OFFSET = 2.0      # Abstand Füße -> Hände (Arme über dem Kopf)
 const VINE_JUMP_BOOST = 3.0       # Extra-Höhe beim Loslassen
 const VINE_REGRAB_COOLDOWN = 0.5  # verhindert sofortiges Wieder-Greifen
+const VINE_CLIMB_SPEED = 2.0      # m/s beim Klettern an der Liane
 const AIR_CONTROL = 0.3
 
 # Sprung nach vorne
@@ -33,6 +34,7 @@ const CROC_IK_BLEND_TIME = 0.15
 var current_vine: Node3D = null
 var last_vine: Node3D = null     # zuletzt losgelassene Liane – erst nach Landung wieder greifbar
 var vine_cooldown: float = 0.0
+var vine_climb_up_armed: bool = false  # Hochklettern erst, nachdem VOR einmal losgelassen wurde
 var air_momentum: Vector3 = Vector3.ZERO
 var hang_forward: Vector3 = Vector3.FORWARD  # Blickrichtung an der Liane (bleibt fest)
 
@@ -133,12 +135,24 @@ func grab_vine(vine: Node3D) -> void:
 	if current_vine or vine_cooldown > 0.0 or is_on_floor() or vine == last_vine:
 		return
 	current_vine = vine
+	vine_climb_up_armed = false
 	vine.attach(velocity, global_position + Vector3.UP * VINE_HAND_OFFSET)
 	hang_forward = vine.get_swing_direction()
 	velocity = Vector3.ZERO
 	air_momentum = Vector3.ZERO
 
 func process_vine() -> void:
+	# Klettern: ZURÜCK = nach unten (mehr Schwung), VOR = nach oben
+	# Wer mit gedrücktem VOR an die Liane springt, soll nicht sofort hochklettern:
+	# nach oben geht es erst, nachdem VOR einmal losgelassen wurde.
+	if not Input.is_action_pressed("move_forward"):
+		vine_climb_up_armed = true
+	var climb := Input.get_axis("move_forward", "move_backward")
+	if climb < 0.0 and not vine_climb_up_armed:
+		climb = 0.0
+	if climb != 0.0:
+		current_vine.climb(climb * VINE_CLIMB_SPEED * get_physics_process_delta_time())
+
 	# Hände am Haltepunkt, Körper hängt entlang des Seils
 	var rope_up: Vector3 = current_vine.get_rope_up()
 	global_position = current_vine.get_hold_position() - rope_up * VINE_HAND_OFFSET

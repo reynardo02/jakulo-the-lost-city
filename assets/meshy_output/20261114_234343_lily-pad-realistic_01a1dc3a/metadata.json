@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "project_name": "lily-pad-realistic",
+  "folder": "20261114_234343_lily-pad-realistic_01a1dc3a",
+  "root_task_id": "01a1dc3a-d5d2-73ea-90c5-cebb9b4a0b39",
+  "created_at": "2026-11-14T22:43:43.075Z",
+  "updated_at": "2026-11-14T22:45:22.396Z",
+  "tasks": [
+    {
+      "task_id": "01a1dc3a-d5d2-73ea-90c5-cebb9b4a0b39",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview_geometry.png"
+      ],
+      "task_json": "task_01a1dc3a-d5d2-73ea-90c5-cebb9b4a0b39.json",
+      "operation_id": null,
+      "created_at": "2026-11-14T22:44:06.083Z",
+      "updated_at": "2026-11-14T22:44:09.420Z"
+    },
+    {
+      "task_id": "01a1dc3b-8c2a-72f6-a20e-64dd59865228",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "refine",
+      "parent_task_id": "01a1dc3a-d5d2-73ea-90c5-cebb9b4a0b39",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1dc3b-8c2a-72f6-a20e-64dd59865228.json",
+      "operation_id": "cf26ec74-102c-4535-93b0-3217de44d259",
+      "created_at": "2026-11-14T22:44:21.186Z",
+      "updated_at": "2026-11-14T22:45:11.827Z"
+    },
+    {
+      "task_id": "01a1dc3b-8c2a-72f6-a20e-64dd59865228",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-14T22:45:15.520Z",
+      "updated_at": "2026-11-14T22:45:15.520Z"
+    },
+    {
+      "task_id": "01a1dc3b-8c2a-72f6-a20e-64dd59865228",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "delivered",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-14T22:45:22.396Z",
+      "updated_at": "2026-11-14T22:45:22.396Z"
+    }
+  ]
+}

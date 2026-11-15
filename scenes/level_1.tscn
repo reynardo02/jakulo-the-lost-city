@@ -1048,18 +1048,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -54)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 86, -0.01, 0)
 mesh = SubResource("PlaneMesh_iw4em")
 
-[node name="FloorRight4" type="MeshInstance3D" parent="Umgebung" unique_id=876222897]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 86, -0.01, 0)
-mesh = SubResource("PlaneMesh_iw4em")
-
-[node name="FloorRight3" type="MeshInstance3D" parent="Umgebung" unique_id=645759305]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 90, -0.01, 0)
-mesh = SubResource("PlaneMesh_iw4em")
-
-[node name="FloorRight2" type="MeshInstance3D" parent="Umgebung" unique_id=92647007]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 86, -0.1, -16)
-mesh = SubResource("PlaneMesh_iw4em")
-
 [node name="JungleFloorEnde" type="MeshInstance3D" parent="Umgebung" unique_id=1940078729]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, 27.25)
 mesh = SubResource("PlaneMesh_hnsmf")
@@ -1075,7 +1063,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -11)
 
 [node name="FloorLeft" type="MeshInstance3D" parent="Umgebung/deco" unique_id=2127796940]
 transform = Transform3D(-1, 0, -8.837394e-08, 0, 1, 0, 8.742278e-08, 0, -1.0108799, -86, -0.01, 0)
-visible = false
 mesh = SubResource("PlaneMesh_iw4em")
 
 [node name="driftwood" parent="Umgebung/deco" unique_id=758417109 instance=ExtResource("37_awarj")]
@@ -1907,9 +1894,11 @@ transform = Transform3D(1, 0, 6.3573026e-08, 0, 1, 0, -6.3573026e-08, 0, 1, -2.5
 
 [node name="Crocodile1" parent="Umgebung/animals" unique_id=1023720346 instance=ExtResource("60_croc")]
 transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -86)
+warning_time = 1.0
 
 [node name="Crocodile2" parent="Umgebung/animals" unique_id=258160304 instance=ExtResource("60_croc")]
 transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -92.5)
+warning_time = 1.0
 
 [node name="checkpoints" type="Node" parent="Umgebung" unique_id=1650075465]
 
@@ -2270,6 +2259,7 @@ transform = Transform3D(1.9470718e-07, 0, 1, 0, 1, 0, -1, 0, 1.9470718e-07, -43.
 
 [node name="MagicPortal" parent="." unique_id=1388502832 instance=ExtResource("55_mteb0")]
 transform = Transform3D(2.3364863e-07, 0, 1, 0, 1.8, 0, -1.2, 0, 1.9470718e-07, -54.00002, 0, 115.99999)
+next_scene = "res://scenes/level_2.tscn"
 required_flag = "book_read"
 
 [node name="PillarBroken2" parent="." unique_id=965917503 instance=ExtResource("51_4ila6")]

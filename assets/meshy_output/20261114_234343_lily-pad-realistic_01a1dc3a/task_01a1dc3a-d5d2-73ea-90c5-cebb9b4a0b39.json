@@ -1,0 +1,23 @@
+{
+  "id": "01a1dc3a-d5d2-73ea-90c5-cebb9b4a0b39",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3988652571,
+  "prompt": "A single large realistic giant water lily pad (Victoria amazonica), flat round floating leaf lying horizontally, thick slightly upturned rim, small V-shaped notch, glossy deep green top surface with fine radial veins and water droplets, reddish underside rim, one small pink-white lotus blossom near the edge, photorealistic game asset, isolated object, no water, no base",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794696208141,
+  "progress": 100,
+  "started_at": 1794696208154,
+  "finished_at": 1794696235726,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dc3a-d5d2-73ea-90c5-cebb9b4a0b39/output/model.glb?Expires=4948214400&Signature=iKkT9afM9smr4Gj2wXM86Kut7FBWbRXQ39s8KHX0NTDWDR846hvLD1wLfd5Cctd9qkZOKsKj7sUmC-w7o6PRriF81icmxQr74E8yRLorzsxN9qANxWpi9oDj4platvyrCyi3fD9Vg5LrA0wCATZ5XEQxdiBgm4F9Ts8X6WXpeNtFDllPgs8S1Jp2mUbWRPfV977jzzJnFDGxtW6SsGcO34JoIRtceu4vetejqUQgHT4fwjZNacmEoA2CKPYNe80aXkA9du8TNvo4JRwVLYuTaiBqScDMuvWMSScw7FxCFCpgG~~dTSxFXbbdseF84bo5Q3FwoSsh1K7U-OJL7p3xlg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1dc3a-d5d2-73ea-90c5-cebb9b4a0b39/output/preview.png?Expires=4948214400&Signature=F~mdz--qWEVNUlZi0uQOES-5V1Z~rsYXaiPlXC~MyJUVUnYlVvvPxsTBv2Q9Q3CfposYfZ8naLZ2-n0D11CJI7irGYT3HjSsSw2vn-RKSK1-3fOo5tQkiY6cxHDZ2YuJ20cSPk3sF0Xmi2~fyuG~w13u7JN-luUxYiUv7KCe9xYqJyVep3eakFXXBKwHTUM18XzJNDCr5vtSBGQCYHJYrrRE5SDBAklOiU~V8hPF2s5Gctkv~8QPXjt2i5kP5QQbJ1oAxTW4iEuwN1GVx2SmZ0wIfJ-jovhrt7zC4K7CwLzT5N-MAdeNdMufLKnpwzAg~wohT1pbLK85r-Jfo8elXA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

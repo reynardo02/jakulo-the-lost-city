@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/sinking_lily_pad.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/deco/lily_pad_realistic.glb" id="2_model"]
+
+[sub_resource type="CylinderShape3D" id="Shape_Pad"]
+height = 0.2
+radius = 1.5
+
+[sub_resource type="CylinderShape3D" id="Shape_Stand"]
+height = 0.6
+radius = 1.5
+
+[node name="LilyPad" type="AnimatableBody3D"]
+script = ExtResource("1_script")
+sink_speed = 0.07
+
+[node name="Model" parent="." instance=ExtResource("2_model")]
+transform = Transform3D(1.7, 0, 0, 0, 0.8, 0, 0, 0, 1.7, 0, 0.2, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+shape = SubResource("Shape_Pad")
+
+[node name="StandArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Shape" type="CollisionShape3D" parent="StandArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+shape = SubResource("Shape_Stand")

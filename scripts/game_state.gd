@@ -30,26 +30,50 @@ const LEVELS: Array[Dictionary] = [
 	{
 		"id": "level_2",
 		"name": "Das Dorf im Dschungel",
-		"scene": "",
-		"description": "Feindliche Ureinwohner und wilde Tiere. Hier hilft nur Schleichen.",
+		"scene": "res://scenes/level_2.tscn",
+		"description": "Mehr Krokodile und ein Dorf feindlicher Ureinwohner. Hier hilft nur Schleichen.",
 	},
 	{
 		"id": "level_3",
+		"name": "Fluss und Sumpf",
+		"scene": "",
+		"description": "Treibholz, sinkende Seerosen und ein Wasserfall am Ende.",
+	},
+	{
+		"id": "level_4",
 		"name": "Die Höhlen",
 		"scene": "",
 		"description": "Unterirdische Tunnel in völliger Dunkelheit. Eine Fackel wäre hilfreich.",
 	},
 	{
-		"id": "level_4",
+		"id": "level_5",
+		"name": "Die verlassene Mine",
+		"scene": "",
+		"description": "Verschüttete Gänge, die sich nur freisprengen lassen.",
+	},
+	{
+		"id": "level_6",
+		"name": "Der Bergpass",
+		"scene": "",
+		"description": "Eiswände und Gletscher – dahinter der erste Blick auf die Lost City.",
+	},
+	{
+		"id": "level_7",
 		"name": "Die Tempelruinen",
 		"scene": "",
 		"description": "Der Eingang zur Lost City, gesichert mit Fallen und Rätseln.",
 	},
 	{
-		"id": "level_5",
+		"id": "level_8",
 		"name": "Die verlorene Stadt",
 		"scene": "",
-		"description": "Das Herz der Lost City und ihr Wächter.",
+		"description": "Das weite Herz der Lost City.",
+	},
+	{
+		"id": "level_9",
+		"name": "Das Finale",
+		"scene": "",
+		"description": "Der Wächter der Stadt und die Entscheidung über das Artefakt.",
 	},
 ]
 
@@ -60,11 +84,15 @@ const LEVELS: Array[Dictionary] = [
 const NOTES := {
 	"vine": {
 		"title": "Lianen",
-		"text": "Hängen über Gruben und Wasser. Im Sprung greift man sie von selbst, schwingt hinüber und lässt mit SPRINGEN wieder los. Am meisten Schwung hat man am vorderen Umkehrpunkt.",
+		"text": "Hängen über Gruben und Wasser. Im Sprung greift man sie von selbst, schwingt hinüber und lässt mit SPRINGEN wieder los. Am meisten Schwung hat man am vorderen Umkehrpunkt. Mit ZURÜCK klettert man an der Liane nach unten und schwingt dann weiter aus, mit VOR wieder nach oben.",
 	},
 	"crocodile": {
 		"title": "Krokodile",
 		"text": "Liegen reglos im Wasser und eignen sich als Trittsteine. Berührt man sie, zucken sie kurz und reißen dann das Maul auf. Wer gepackt wird, muss sich mit aller Kraft befreien (SPRINGEN).",
+	},
+	"lily_pad": {
+		"title": "Seerosen",
+		"text": "Tragen einen Menschen nur für einen Augenblick. Wer stehen bleibt, versinkt mit ihnen im Wasser – also zügig von Blatt zu Blatt springen.",
 	},
 }
 

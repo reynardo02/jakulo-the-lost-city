@@ -12,10 +12,13 @@ extends Node3D
 ## `bite_animation` (zu -> offen), wird sie beim Öffnen vorwärts und beim Schließen
 ## rückwärts abgespielt. Ohne diese Animation hebt das ganze Modell den Kopf.
 ##
-## Für Ketten aus mehreren Krokodilen (Level 2): Mit `snap_interval` > 0 schnappt das
+## Standard für alle Krokodile im Spiel: Das Maul geht nur auf, wenn der Spieler das
+## Krokodil berührt (`snap_interval` = 0, `trigger_on_touch` = an). Schwieriger wird es
+## über kürzere `warning_time` und `open_time`.
+##
+## Optional, im Spiel bisher nicht verwendet: Mit `snap_interval` > 0 schnappt das
 ## Krokodil zusätzlich von selbst in festem Takt, `snap_offset` verschiebt den Takt, damit
-## mehrere Krokodile nacheinander schnappen. Schneller wird es über `warning_time`,
-## `open_time` und `snap_interval`.
+## mehrere Krokodile nacheinander schnappen.
 
 signal mouth_opened
 signal mouth_closed
