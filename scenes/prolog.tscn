@@ -1,0 +1,470 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/prolog.gd" id="1_bbto1"]
+[ext_resource type="Shader" path="res://assets/prolog/sea.gdshader" id="2_nsy7v"]
+[ext_resource type="PackedScene" path="res://assets/prolog/ship.glb" id="3_o1fi7"]
+[ext_resource type="PackedScene" path="res://assets/character/Meshy_AI_Adventure_Scout_All_Animations(1).glb" id="4_5n5hn"]
+[ext_resource type="PackedScene" path="res://assets/prolog/map.glb" id="5_ipg0q"]
+[ext_resource type="PackedScene" path="res://assets/prolog/captain.glb" id="6_wbs17"]
+[ext_resource type="PackedScene" path="res://assets/prolog/sailors.glb" id="7_roka4"]
+[ext_resource type="PackedScene" path="res://assets/nature/rock_moss.glb" id="8_2rh76"]
+[ext_resource type="PackedScene" path="res://assets/prolog/wreck.glb" id="9_brtvd"]
+[ext_resource type="PackedScene" path="res://assets/props/crate.glb" id="10_fh02k"]
+[ext_resource type="PackedScene" path="res://assets/props/barrel.glb" id="11_qok3l"]
+[ext_resource type="PackedScene" path="res://assets/deco/driftwood.glb" id="12_debi3"]
+[ext_resource type="PackedScene" path="res://assets/nature/palm.glb" id="13_dashv"]
+[ext_resource type="PackedScene" path="res://assets/nature/tree_large.glb" id="14_gsher"]
+[ext_resource type="PackedScene" path="res://assets/nature/jungle/giant_tree.glb" id="15_241yx"]
+[ext_resource type="PackedScene" path="res://assets/nature/jungle/jungle_bush_dense.glb" id="16_ul0ve"]
+[ext_resource type="PackedScene" path="res://assets/nature/big_leaves.glb" id="17_hk7yj"]
+[ext_resource type="PackedScene" path="res://assets/nature/bush.glb" id="18_2n4rr"]
+[ext_resource type="PackedScene" path="res://assets/nature/jungle/monstera.glb" id="19_ymt0v"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_brino"]
+sky_curve = 0.1
+sun_angle_max = 25.0
+
+[sub_resource type="Sky" id="Sky_w1fym"]
+sky_material = SubResource("ProceduralSkyMaterial_brino")
+
+[sub_resource type="Environment" id="Environment_6bq4g"]
+background_mode = 2
+sky = SubResource("Sky_w1fym")
+ambient_light_source = 3
+ambient_light_energy = 0.9
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 0.5
+fog_enabled = true
+fog_density = 0.003
+fog_sky_affect = 0.4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3qicv"]
+render_priority = 0
+shader = ExtResource("2_nsy7v")
+shader_parameter/calm_color = null
+shader_parameter/storm_color = null
+shader_parameter/foam_color = null
+shader_parameter/wave_height = null
+shader_parameter/storm = null
+shader_parameter/offset = null
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pf8fa"]
+size = Vector2(320, 320)
+subdivide_width = 127
+subdivide_depth = 127
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e0453"]
+albedo_color = Color(0.84, 0.72, 0.52, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sgprn"]
+size = Vector3(90, 2, 80)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_87gwa"]
+emission_shape = 3
+emission_box_extents = Vector3(16, 1, 16)
+direction = Vector3(0.12, -1, 0)
+spread = 3.0
+initial_velocity_min = 22.0
+initial_velocity_max = 26.0
+gravity = Vector3(0, -6, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hkgwf"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.75, 0.8, 0.9, 0.35)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1c6q5"]
+material = SubResource("StandardMaterial3D_hkgwf")
+size = Vector3(0.015, 0.7, 0.015)
+
+[sub_resource type="Animation" id="Animation_y3ad3"]
+length = 52.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6, 6.02, 10, 10.02, 20, 20.02, 26.3, 26.32, 29.5, 29.52, 35, 35.02, 40, 45, 51, 52),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-26, 5, 30), Vector3(-12, 4.5, 20), Vector3(0.29999995, 2.5, 2.4), Vector3(-0.4000001, 2.3, 1.7), Vector3(6, 9, 26), Vector3(-4, 7, 19), Vector3(-20, 10, 7), Vector3(-14, 8.5, 5), Vector3(-7, 3.5, 8.5), Vector3(-6.5, 3.1, 10), Vector3(-6.5, 4, 19), Vector3(-5.5, 5.5, 21), Vector3(1.6, 1.3, 3.6), Vector3(1.6, 1.3, 3.6), Vector3(0.6, 1.5, 3.4), Vector3(-3.4, 2.1, 0), Vector3(-3.4, 2.1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera:quaternion")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6, 6.02, 10, 10.02, 20, 20.02, 26.3, 26.32, 29.5, 29.52, 35, 35.02, 40, 45, 51, 52),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Quaternion(-0.011797702, -0.3494798, -0.004400936, 0.9368593), Quaternion(-0.010327955, -0.26691827, -0.0028606781, 0.9636596), Quaternion(-0.08508572, 0.41602018, 0.039133895, 0.90451986), Quaternion(-0.082462944, 0.42878103, 0.039340757, 0.8987764), Quaternion(-0.09189105, 0.11267156, 0.010465291, 0.9893188), Quaternion(-0.07616107, -0.103258036, -0.00793004, 0.9917028), Quaternion(-0.06031474, -0.6588252, -0.053124852, 0.74799013), Quaternion(-0.07064414, -0.65768784, -0.062165413, 0.7473898), Quaternion(-0.1291367, -0.29542625, -0.04033927, 0.9457377), Quaternion(-0.20181838, -0.30220014, -0.065628074, 0.92932093), Quaternion(-0.14257492, -0.17167519, -0.025118131, 0.97445834), Quaternion(-0.17717844, -0.111342855, -0.020178502, 0.97765195), Quaternion(-0.07771017, 0.24175628, 0.019427542, 0.96702516), Quaternion(-0.07771017, 0.24175628, 0.019427542, 0.96702516), Quaternion(-0.07426739, 0.15298419, 0.011530466, 0.9853666), Quaternion(-0.043937806, -0.70574033, -0.043937806, 0.7057404), Quaternion(-0.043937806, -0.70574033, -0.043937806, 0.7057404)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:storm")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 11, 20, 22.5, 35.9, 36),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.65, 1.0, 1.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:sea_volume")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 35, 37.2, 38.6, 40.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 1.0, 0.0, 0.0, 0.4]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Reef:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 19.98, 20, 26.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(150, 0, 0), Vector3(150, 0, 0), Vector3(30, 0, 0), Vector3(11, 0, 0)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2, 1.5, 7, 21, 24.2, 26.5, 27, 27.6, 30.2, 32.6, 33.5, 36, 38.6, 40, 41, 43, 45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0.0, 2.0],
+"method": &"fade"
+}, {
+"args": ["Auf der Suche nach El Dorado …"],
+"method": &"title"
+}, {
+"args": [""],
+"method": &"title"
+}, {
+"args": [],
+"method": &"lightning"
+}, {
+"args": [],
+"method": &"lightning"
+}, {
+"args": [],
+"method": &"crash"
+}, {
+"args": [],
+"method": &"map_fly"
+}, {
+"args": [],
+"method": &"hero_overboard"
+}, {
+"args": [],
+"method": &"lightning"
+}, {
+"args": [],
+"method": &"lightning"
+}, {
+"args": [1.0, 1.5],
+"method": &"fade"
+}, {
+"args": [],
+"method": &"to_beach"
+}, {
+"args": [true],
+"method": &"birds"
+}, {
+"args": [0.0, 2.5],
+"method": &"fade"
+}, {
+"args": ["Irgendwo an einer fremden Küste …"],
+"method": &"title"
+}, {
+"args": [],
+"method": &"stand_up"
+}, {
+"args": [""],
+"method": &"title"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1e7f"]
+_data = {
+&"prolog": SubResource("Animation_y3ad3")
+}
+
+[node name="Prolog" type="Node3D" unique_id=1893181113]
+script = ExtResource("1_bbto1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=408513056]
+environment = SubResource("Environment_6bq4g")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=496501723]
+transform = Transform3D(-0.8775825, 0.07638123, -0.47330204, 0, 0.98722726, 0.15931821, 0.4794256, 0.13981487, -0.86637336, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 90.0
+
+[node name="Sea" type="MeshInstance3D" parent="." unique_id=1197180855]
+material_override = SubResource("ShaderMaterial_3qicv")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_pf8fa")
+
+[node name="Ship" type="Node3D" parent="." unique_id=2007023434]
+
+[node name="Model" type="Node3D" parent="Ship" unique_id=1988950442 instance=ExtResource("3_o1fi7")]
+transform = Transform3D(-8.428199, 0, -7.3681656e-07, 0, 8.428199, 0, 7.3681656e-07, 0, -8.428199, 0, 6.5777507, 0)
+
+[node name="Hero" type="Node3D" parent="Ship" unique_id=1170748644 instance=ExtResource("4_5n5hn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.5, 0.5, 0)
+
+[node name="Map" type="Node3D" parent="Ship/Hero" unique_id=1579772274 instance=ExtResource("5_ipg0q")]
+transform = Transform3D(0.22, 0, 0, 0, 0.16826528, 0.14172788, 0, -0.14172788, 0.16826528, 0, 1.05, 0.34)
+
+[node name="Crew" type="Node3D" parent="Ship" unique_id=1632424145]
+
+[node name="Captain" type="Node3D" parent="Ship/Crew" unique_id=103167429]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.2, 2.95, 0)
+
+[node name="Model" type="Node3D" parent="Ship/Crew/Captain" unique_id=970699164 instance=ExtResource("6_wbs17")]
+transform = Transform3D(0.97401845, 0, 0, 0, 0.97401845, 0, 0, 0, 0.97401845, 0, 0.92626137, 0)
+
+[node name="Sailors" type="Node3D" parent="Ship/Crew" unique_id=731206767]
+transform = Transform3D(0.921061, 0, 0.38941833, 0, 1, 0, -0.38941833, 0, 0.921061, 3, 0.5, 0.1)
+
+[node name="Model" type="Node3D" parent="Ship/Crew/Sailors" unique_id=730337056 instance=ExtResource("7_roka4")]
+transform = Transform3D(0.9468233, 0, 0, 0, 0.9468233, 0, 0, 0, 0.9468233, 0, 0.90069115, 0)
+
+[node name="Reef" type="Node3D" parent="." unique_id=2023749280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 0, 0)
+
+[node name="Rock1" type="Node3D" parent="Reef" unique_id=98438029]
+transform = Transform3D(0.9553365, 0, 0.29552022, 0, 1, 0, -0.29552022, 0, 0.9553365, 0, -1.2, -3)
+
+[node name="Model" type="Node3D" parent="Reef/Rock1" unique_id=239293075 instance=ExtResource("8_2rh76")]
+transform = Transform3D(2.490889, 0, 0, 0, 2.490889, 0, 0, 0, 2.490889, 0, 0.33459967, 0)
+
+[node name="Rock2" type="Node3D" parent="Reef" unique_id=140073770]
+transform = Transform3D(-0.029199546, 0, 0.9995736, 0, 1, 0, -0.9995736, 0, -0.029199546, 2.5, -1.5, 2.5)
+
+[node name="Model" type="Node3D" parent="Reef/Rock2" unique_id=1808209762 instance=ExtResource("8_2rh76")]
+transform = Transform3D(2.0757406, 0, 0, 0, 2.0757406, 0, 0, 0, 2.0757406, 0, 0.278833, 0)
+
+[node name="Rock3" type="Node3D" parent="Reef" unique_id=1677626280]
+transform = Transform3D(-0.7373938, 0, 0.67546314, 0, 1, 0, -0.67546314, 0, -0.7373938, -2, -1, 6.5)
+
+[node name="Model" type="Node3D" parent="Reef/Rock3" unique_id=1131106081 instance=ExtResource("8_2rh76")]
+transform = Transform3D(1.6605926, 0, 0, 0, 1.6605926, 0, 0, 0, 1.6605926, 0, 0.22306642, 0)
+
+[node name="Rock4" type="Node3D" parent="Reef" unique_id=1019383836]
+transform = Transform3D(0.62161, 0, 0.7833269, 0, 1, 0, -0.7833269, 0, 0.62161, 4, -1.3, -7.5)
+
+[node name="Model" type="Node3D" parent="Reef/Rock4" unique_id=1928191981 instance=ExtResource("8_2rh76")]
+transform = Transform3D(2.2833147, 0, 0, 0, 2.2833147, 0, 0, 0, 2.2833147, 0, 0.30671632, 0)
+
+[node name="Rock5" type="Node3D" parent="Reef" unique_id=399383473]
+transform = Transform3D(-0.6536436, 0, -0.7568025, 0, 1, 0, 0.7568025, 0, -0.6536436, 6, -1, 4)
+
+[node name="Model" type="Node3D" parent="Reef/Rock5" unique_id=886096966 instance=ExtResource("8_2rh76")]
+transform = Transform3D(1.4530185, 0, 0, 0, 1.4530185, 0, 0, 0, 1.4530185, 0, 0.19518311, 0)
+
+[node name="Beach" type="Node3D" parent="." unique_id=970779820]
+
+[node name="Sand" type="MeshInstance3D" parent="Beach" unique_id=266919462]
+transform = Transform3D(0.99755895, -0.06982913, 0, 0.06982913, 0.99755895, 0, 0, 0, 1, 20, 0.597553, 0)
+material_override = SubResource("StandardMaterial3D_e0453")
+mesh = SubResource("BoxMesh_sgprn")
+
+[node name="Hero" type="Node3D" parent="Beach" unique_id=589687246 instance=ExtResource("4_5n5hn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0.2, 0)
+
+[node name="Wreck" type="Node3D" parent="Beach" unique_id=844571375]
+transform = Transform3D(0.841092, -0.14528249, 0.5210156, 0.21753167, 0.97277623, -0.07991469, -0.49522135, 0.18055299, 0.8497979, -7, -1.7, -11)
+
+[node name="Model" type="Node3D" parent="Beach/Wreck" unique_id=866307176 instance=ExtResource("9_brtvd")]
+transform = Transform3D(6.315005, 0, 0, 0, 6.315005, 0, 0, 0, 6.315005, 0, 4.1164675, 0)
+
+[node name="Wrackteile" type="Node3D" parent="Beach" unique_id=694174618]
+
+[node name="Crate1" type="Node3D" parent="Beach/Wrackteile" unique_id=1751360174]
+transform = Transform3D(0.9164595, -0.09195267, 0.38941833, 0.09983342, 0.9950042, 0, -0.38747287, 0.038876966, 0.921061, -1.2, -0.034, -3.6)
+
+[node name="Model" type="Node3D" parent="Beach/Wrackteile/Crate1" unique_id=563996927 instance=ExtResource("10_fh02k")]
+transform = Transform3D(0.891089, 0, 0, 0, 0.891089, 0, 0, 0, 0.891089, 0, 4.564402e-09, 0)
+
+[node name="Crate2" type="Node3D" parent="Beach/Wrackteile" unique_id=2012913568]
+transform = Transform3D(0.4535961, 0, 0.8912074, 0, 1, 0, -0.8912074, 0, 0.4535961, 4.5, 0.515, -4.8)
+
+[node name="Model" type="Node3D" parent="Beach/Wrackteile/Crate2" unique_id=1344944255 instance=ExtResource("10_fh02k")]
+transform = Transform3D(0.7920792, 0, 0, 0, 0.7920792, 0, 0, 0, 0.7920792, 0, 1.0992307e-17, 0)
+
+[node name="Barrel1" type="Node3D" parent="Beach/Wrackteile" unique_id=2041994039]
+transform = Transform3D(-4.1759087e-08, -0.9553365, 0.29552022, 1, -4.371139e-08, 0, 1.29175985e-08, 0.29552022, 0.9553365, 2.2, 0.704, -2.4)
+
+[node name="Model" type="Node3D" parent="Beach/Wrackteile/Barrel1" unique_id=1094186609 instance=ExtResource("11_qok3l")]
+transform = Transform3D(1.1111112, 0, 0, 0, 1.1111112, 0, 0, 0, 1.1111112, 0, 3.94746e-16, 0)
+
+[node name="Barrel2" type="Node3D" parent="Beach/Wrackteile" unique_id=1473565201]
+transform = Transform3D(1, 0, 0, 0, 0.9800666, -0.19866933, 0, 0.19866933, 0.9800666, -4, -0.38, 5.5)
+
+[node name="Model" type="Node3D" parent="Beach/Wrackteile/Barrel2" unique_id=289374899 instance=ExtResource("11_qok3l")]
+transform = Transform3D(1.1111112, 0, 0, 0, 1.1111112, 0, 0, 0, 1.1111112, 0, 0, 0)
+
+[node name="Driftwood1" type="Node3D" parent="Beach/Wrackteile" unique_id=1191582854]
+transform = Transform3D(0.7648422, 0, 0.64421767, 0, 1, 0, -0.64421767, 0, 0.7648422, -4.2, -0.094, 1.9)
+
+[node name="Model" type="Node3D" parent="Beach/Wrackteile/Driftwood1" unique_id=758417109 instance=ExtResource("12_debi3")]
+transform = Transform3D(1.064248, 0, 0, 0, 1.064248, 0, 0, 0, 1.064248, 0, -0.021450173, 0)
+
+[node name="Driftwood2" type="Node3D" parent="Beach/Wrackteile" unique_id=1790729610]
+transform = Transform3D(-0.58850116, 0, 0.80849636, 0, 1, 0, -0.80849636, 0, -0.58850116, 3.6, 0.452, 3.4)
+
+[node name="Model" type="Node3D" parent="Beach/Wrackteile/Driftwood2" unique_id=1961773581 instance=ExtResource("12_debi3")]
+transform = Transform3D(0.9005175, 0, 0, 0, 0.9005175, 0, 0, 0, 0.9005175, 0, -0.018150147, 0)
+
+[node name="Driftwood3" type="Node3D" parent="Beach/Wrackteile" unique_id=1566760978]
+transform = Transform3D(0.16996716, 0, 0.98544973, 0, 1, 0, -0.98544973, 0, 0.16996716, -5, -0.35, -5.5)
+
+[node name="Model" type="Node3D" parent="Beach/Wrackteile/Driftwood3" unique_id=1083499003 instance=ExtResource("12_debi3")]
+transform = Transform3D(1.2279785, 0, 0, 0, 1.2279785, 0, 0, 0, 1.2279785, 0, -0.0247502, 0)
+
+[node name="Dschungel" type="Node3D" parent="Beach" unique_id=249182779]
+
+[node name="Palm1" type="Node3D" parent="Beach/Dschungel" unique_id=20780436]
+transform = Transform3D(0.94846636, -0.114365436, 0.29552022, 0.119712204, 0.99280864, 0, -0.293395, 0.035377376, 0.9553365, 10, 0.9, -8)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Palm1" unique_id=648048623 instance=ExtResource("13_dashv")]
+transform = Transform3D(1.2722937, 0, 0, 0, 1.2722937, 0, 0, 0, 1.2722937, 0, 0.0047742045, 0)
+
+[node name="Palm2" type="Node3D" parent="Beach/Dschungel" unique_id=1254510335]
+transform = Transform3D(-0.12884454, 0.099001296, 0.98671067, 0, 0.9950042, -0.09983342, -0.9916648, -0.012862992, -0.12820086, 13, 1.11, 5.5)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Palm2" unique_id=2141860 instance=ExtResource("13_dashv")]
+transform = Transform3D(1.4313303, 0, 0, 0, 1.4313303, 0, 0, 0, 1.4313303, 0, 0.0053709783, 0)
+
+[node name="Palm3" type="Node3D" parent="Beach/Dschungel" unique_id=1592786625]
+transform = Transform3D(-0.9709582, 0, 0.23924923, 0, 1, 0, -0.23924923, 0, -0.9709582, 8, 0.76, 11)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Palm3" unique_id=2097472388 instance=ExtResource("13_dashv")]
+transform = Transform3D(1.1132569, 0, 0, 0, 1.1132569, 0, 0, 0, 1.1132569, 0, 0.004177427, 0)
+
+[node name="Palm4" type="Node3D" parent="Beach/Dschungel" unique_id=216685231]
+transform = Transform3D(-0.57482404, 0, -0.81827706, 0, 1, 0, 0.81827706, 0, -0.57482404, 16, 1.32, -15)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Palm4" unique_id=1878281201 instance=ExtResource("13_dashv")]
+transform = Transform3D(1.5108488, 0, 0, 0, 1.5108488, 0, 0, 0, 1.5108488, 0, 0.005669365, 0)
+
+[node name="Palm5" type="Node3D" parent="Beach/Dschungel" unique_id=367978244]
+transform = Transform3D(0.2836622, 0, -0.9589243, 0, 1, 0, 0.9589243, 0, 0.2836622, 18, 1.46, 14)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Palm5" unique_id=1622195237 instance=ExtResource("13_dashv")]
+transform = Transform3D(1.351812, 0, 0, 0, 1.351812, 0, 0, 0, 1.351812, 0, 0.00507259, 0)
+
+[node name="Tree1" type="Node3D" parent="Beach/Dschungel" unique_id=1285044203]
+transform = Transform3D(0.87758255, 0, 0.47942555, 0, 1, 0, -0.47942555, 0, 0.87758255, 25, 1.95, -6)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Tree1" unique_id=613798807 instance=ExtResource("14_gsher")]
+transform = Transform3D(1.2903016, 0, 0, 0, 1.2903016, 0, 0, 0, 1.2903016, 0, 0, 0)
+
+[node name="Tree2" type="Node3D" parent="Beach/Dschungel" unique_id=247219609]
+transform = Transform3D(-0.41614684, 0, 0.9092974, 0, 1, 0, -0.9092974, 0, -0.41614684, 27, 2.09, 9)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Tree2" unique_id=80846901 instance=ExtResource("14_gsher")]
+transform = Transform3D(1.3895556, 0, 0, 0, 1.3895556, 0, 0, 0, 1.3895556, 0, 0, 0)
+
+[node name="Tree3" type="Node3D" parent="Beach/Dschungel" unique_id=1923564157]
+transform = Transform3D(-0.9874798, 0, -0.15774564, 0, 1, 0, 0.15774564, 0, -0.9874798, 24, 1.88, -20)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Tree3" unique_id=874036837 instance=ExtResource("14_gsher")]
+transform = Transform3D(1.1910477, 0, 0, 0, 1.1910477, 0, 0, 0, 1.1910477, 0, 0, 0)
+
+[node name="GiantTree" type="Node3D" parent="Beach/Dschungel" unique_id=199559103]
+transform = Transform3D(0.5403023, 0, 0.84147096, 0, 1, 0, -0.84147096, 0, 0.5403023, 34, 2.58, 1)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/GiantTree" unique_id=1931555723 instance=ExtResource("15_241yx")]
+transform = Transform3D(1.233444, 0, 0, 0, 1.233444, 0, 0, 0, 1.233444, 0, 0.17259157, 0)
+
+[node name="Bush1" type="Node3D" parent="Beach/Dschungel" unique_id=129843310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1.6, 0.5)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Bush1" unique_id=1664046038 instance=ExtResource("16_ul0ve")]
+transform = Transform3D(2.4982316, 0, 0, 0, 2.4982316, 0, 0, 0, 2.4982316, 0, -0.025342051, 0)
+
+[node name="Bush2" type="Node3D" parent="Beach/Dschungel" unique_id=762899308]
+transform = Transform3D(0.3623577, 0, 0.9320391, 0, 1, 0, -0.9320391, 0, 0.3623577, 19, 1.53, -11)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Bush2" unique_id=687392980 instance=ExtResource("16_ul0ve")]
+transform = Transform3D(2.1859527, 0, 0, 0, 2.1859527, 0, 0, 0, 2.1859527, 0, -0.022174295, 0)
+
+[node name="Bush3" type="Node3D" parent="Beach/Dschungel" unique_id=377733229]
+transform = Transform3D(-0.8011436, 0, 0.5984721, 0, 1, 0, -0.5984721, 0, -0.8011436, 21, 1.67, 12)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Bush3" unique_id=176614001 instance=ExtResource("16_ul0ve")]
+transform = Transform3D(2.4982316, 0, 0, 0, 2.4982316, 0, 0, 0, 2.4982316, 0, -0.025342051, 0)
+
+[node name="Bush4" type="Node3D" parent="Beach/Dschungel" unique_id=319132172]
+transform = Transform3D(-0.8481, 0, -0.5298362, 0, 1, 0, 0.5298362, 0, -0.8481, 22, 1.74, -3.5)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Bush4" unique_id=2074935973 instance=ExtResource("16_ul0ve")]
+transform = Transform3D(2.1859527, 0, 0, 0, 2.1859527, 0, 0, 0, 2.1859527, 0, -0.022174295, 0)
+
+[node name="Leaves1" type="Node3D" parent="Beach/Dschungel" unique_id=1779077826]
+transform = Transform3D(0.8253356, 0, 0.5646425, 0, 1, 0, -0.5646425, 0, 0.8253356, 17, 1.39, 4)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Leaves1" unique_id=941582954 instance=ExtResource("17_hk7yj")]
+transform = Transform3D(1.3468443, 0, 0, 0, 1.3468443, 0, 0, 0, 1.3468443, 0, 0.01665689, 0)
+
+[node name="Leaves2" type="Node3D" parent="Beach/Dschungel" unique_id=1599433502]
+transform = Transform3D(-0.50484604, 0, 0.8632094, 0, 1, 0, -0.8632094, 0, -0.50484604, 16.5, 1.355, -5)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Leaves2" unique_id=821622471 instance=ExtResource("17_hk7yj")]
+transform = Transform3D(1.2121599, 0, 0, 0, 1.2121599, 0, 0, 0, 1.2121599, 0, 0.014991201, 0)
+
+[node name="Bush5" type="Node3D" parent="Beach/Dschungel" unique_id=1732323941]
+transform = Transform3D(0.5403023, 0, 0.84147096, 0, 1, 0, -0.84147096, 0, 0.5403023, 15, 1.25, -1)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Bush5" unique_id=1102882426 instance=ExtResource("18_2n4rr")]
+transform = Transform3D(1.2103236, 0, 0, 0, 1.2103236, 0, 0, 0, 1.2103236, 0, 0.12913626, 0)
+
+[node name="Bush6" type="Node3D" parent="Beach/Dschungel" unique_id=211760008]
+transform = Transform3D(-0.6536436, 0, -0.7568025, 0, 1, 0, 0.7568025, 0, -0.6536436, 14, 1.18, 9)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Bush6" unique_id=363101215 instance=ExtResource("18_2n4rr")]
+transform = Transform3D(1.2103236, 0, 0, 0, 1.2103236, 0, 0, 0, 1.2103236, 0, 0.12913626, 0)
+
+[node name="Monstera" type="Node3D" parent="Beach/Dschungel" unique_id=1152749439]
+transform = Transform3D(0.6967067, 0, 0.7173561, 0, 1, 0, -0.7173561, 0, 0.6967067, 18, 1.46, 7.5)
+
+[node name="Model" type="Node3D" parent="Beach/Dschungel/Monstera" unique_id=1506117112 instance=ExtResource("19_ymt0v")]
+transform = Transform3D(1.53416, 0, 0, 0, 1.53416, 0, 0, 0, 1.53416, 0, 0.022522392, 0)
+
+[node name="Camera" type="Camera3D" parent="." unique_id=583496306]
+current = true
+fov = 55.0
+far = 400.0
+
+[node name="Rain" type="GPUParticles3D" parent="Camera" unique_id=1958852433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -6)
+emitting = false
+amount = 3000
+lifetime = 0.9
+visibility_aabb = AABB(-40, -40, -40, 80, 80, 80)
+process_material = SubResource("ParticleProcessMaterial_87gwa")
+draw_pass_1 = SubResource("BoxMesh_1c6q5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=946492716]
+libraries/ = SubResource("AnimationLibrary_o1e7f")

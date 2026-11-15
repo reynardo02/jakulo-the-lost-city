@@ -1,0 +1,27 @@
+{
+  "id": "01a1e0e2-f38b-7611-8479-b3ba37fc596b",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2076330953,
+  "prompt": "low poly stylized wooden sailing ship, 16th century explorer galleon, three masts with white square sails, flat shaded game asset, simple shapes, whole ship",
+  "texture_prompt": "stylized low poly colors, warm brown wooden hull, cream white sails, red flag, simple hand painted look",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794774335090,
+  "progress": 100,
+  "started_at": 1794774335100,
+  "finished_at": 1794774360293,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e2-f38b-7611-8479-b3ba37fc596b/output/model.glb?Expires=4948300800&Signature=Z-xas7gqexqt70RsQH5W4aVm-7uKd0Fgy5BkbhDcuXyonvi2ALi76qx7NWSYD5QF1a1lIqzLLIwx6JBWlx2eXlV-8tlTdII9ZhHXQzGH4DFiybWN4O-s6~H7gE7Ee2AboNB0UWLEt-Bj5-nOwICucj~JqItwORiZpreaBF90YooGB1UVWxXv-r3SdU3-YUMZzcsfC0ggE0UaSSgnpXq3et4Uvj9y0FQOPos-H-pCnm1L04aQLSsWzgDYJ8ajnIOYq19QERLNiF4OgQJEO6X9GJF6UWuq0lIo29uKj1GMrFGRLdJDmsMyJqrbm5ZcuxyuTWCZtNMKjVJ5lrCAxcQfkg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e2-f38b-7611-8479-b3ba37fc596b/output/preview.png?Expires=4948300800&Signature=ifER6ARwOSS69he~EMCt2RgrgRG9gSNGGL8aqJ0~d5nIVRznqZ-OyaJoj8MB~CK8vq0kB7BpIIehu7tXNPMlHd7g1seyAPhbC1C7dPg0GOp6X8fVa88XdmAI9RwRA5-WqvxQamcvzC-SjkdS7FoLaoBZS5wOyBTvy7lg52lThbXIlAQ6LNawFNO9k-W3hPsHckialWD-2suq3VcRN-K7IR4FVte8Bym7aB0DwfAKDwIUzuc0WjW9fjBOsn8lCFs0GcZQGJGh9jaF~fqU63SXFIVj7Do1HpUhXkJsM3TAYXdjmnwiwa3gObFeXMo-r6CtslFwkoSTIpSb0f5ExxBn2w__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e2-f38b-7611-8479-b3ba37fc596b/output/texture_0.png?Expires=4948300800&Signature=USGFQvDnfFfnr5b4j91WbpLpatX~ptLzzptbe~YnV4E5YnPPwA8f89D8V9gGnTuXWof0IfcWKnyqQ4TW7WUQXwWb2q7e26iWUjX0jPiHLu6juJbUkPJU0GSdMDpXaR2g0wpCBr-WMRL0v5NCJ2qZxNq411bSLVaOeRYUV7IgjkObkgoiT9MgKvOMCdJKxbVJ1HC6mhRt6RBdSZKg~IxKyirlPI2WLLVd4G4jhSUtLXSQ1OOmBPucZi6I8X7vk8NEexIA5fVvO5PpjEH9gwrsQbarCO~UYAaE84IKHLmNL8nwD58AaHbIt~gl5Jf~9Fc6LRnaZn-zt3vmIPXT8L4C9Q__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01a1e0f2-e769-7141-8f1a-6f9c0558366a",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3264486858,
+  "prompt": "low poly stylized old ship captain, long dark blue coat, tricorn hat, grey beard, boots, standing upright, arms relaxed at sides, full body, simple game character",
+  "texture_prompt": "stylized low poly colors, dark navy blue coat with gold buttons, black tricorn hat, grey beard, brown boots",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794775380804,
+  "progress": 100,
+  "started_at": 1794775380814,
+  "finished_at": 1794775412296,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0f2-e769-7141-8f1a-6f9c0558366a/output/model.glb?Expires=4948300800&Signature=Y775O1wits1GXd-uvoWMWgj1fyyZLMJU55OfQQLjLV8zLudtizKN83BWHzAS~iZf~4xxXJ2JautzG2J63tPmsVAIjYSB99VMJrMi0ELOB5T4LUC2v-FsfirG3Vkbn4AmcHkQsx73TfaOGmTamCN5tZiZbbbl4W3-EX-KXZYQEls5KlN6eSRjorpYPFJid~RZ5tTLW8miLFX4sOTum1FG0I~ZMOXqzPmkjjAdDh6BibjiCbo6IkKaPfwJEiTf0rPtrXqTNAPsTqsz4Geh6ZnG2TzEbT9-w~b9JCjXhXQ5RdW14KynlF3w72eEncFOTVQ1qYo7xamOshvieCA0MlKi1A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0f2-e769-7141-8f1a-6f9c0558366a/output/preview.png?Expires=4948300800&Signature=MmSqM00O2XCzsIwoP68eb~QVZzIq-D4lc6Yxr1c2uSYFKB56i4FBK-70CgmNbgMlKzZua4eWYcjVlMsykD47Q5p841P4Dch84g-yfYMqFx4j6h74izjyEjebuncBLgyQiVq4Y-JuWsrgMVokR-b5TldC8lAIxgCrhmURNEYKa52GggbNj9CaD96As9L-sVjNci--2zZLxiUkp5wYC7CX~Ee96HtVnofHX2jl1w4Hi4hUm~qMH7h2rNdmHg3H3xIKEdkSgz0nFSCVKcKDBesMOlEFE6f3z6vIRxZGhE3ZrPquyUzjfm~bOSa93v4dzVh4hb9ucGOjUuCxJEo0PgNUDw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0f2-e769-7141-8f1a-6f9c0558366a/output/texture_0.png?Expires=4948300800&Signature=mOGgHy-EioTkez-~zUdqlNI7HaHdf1pifDbXrGMYo6YR31pvWNUjVqzUtXJ92-wNVc9u7AxoP2peQvuuZhwmjyjExP5OyP0lXubOtm0zi9jQlf4uf9zvRV7M~1DeUwdKgdjmSA7mOE1roE6H7Jvr6v~0L97cDWokSWBE8efsvfyZTfDuLDsb1AC8rSqfEBa33ICjXGdVXprEF41u6iHeYdj-MWifZMutWzfaZwq3z61e-jOCsqxsfVrubjExHnHipvYHiDnGoRKLhC2lpkiueEHakdk3Eu37P2twfIr5u0dOs9wTIyv-N3kzEnqwu~4Ltlm-kf-jRaIIYX1oVB5s2g__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01a1e0e3-0881-72cd-99c3-7b1fac16cd55",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3883551318,
+  "prompt": "low poly stylized shipwreck, broken wooden ship hull lying tilted on a sandy beach, snapped mast, torn sail, flat shaded game asset",
+  "texture_prompt": "stylized low poly, weathered dark wet wood, torn grey sail, moss and seaweed spots",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794774339912,
+  "progress": 100,
+  "started_at": 1794774339925,
+  "finished_at": 1794774374962,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e3-0881-72cd-99c3-7b1fac16cd55/output/model.glb?Expires=4948300800&Signature=TVAdNztitgO-nv8DFNN-P65vcZXW6HMixbhn4tca9zPxAgYhC0jm5Qz-PUY9NRJGWBxHa4g-37zZLLdSyWZG57ApUEqQG6tcIKSFsnObXkWvtwIhg2U-bRzV3m9uw6yh3JjwXJ1Txvhzx7B55y8ASL2L584jSmYaDrDxqLY~7k-s0Mz5996m2AzTTktm1B3tChgyoLLfnFTNfCBRMnmd6AMMM4Rh~ECQEl59nDGfg0p7Ef58i39w-9IWaCRC8yIpXXuzShoaW23i-Pve1itFqiDG0zCi~83AZ2dpMYfXYPiFfj5djSW046cGn-YkNXPYRHlvX8KNk47lTQwK-1Uq8A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e3-0881-72cd-99c3-7b1fac16cd55/output/preview.png?Expires=4948300800&Signature=AzE0R2VOq6xken6sJuI0500wvbvhmzCq-GXGCqVyh8wWvgZUKa0zBs9EsHM4CgZMVrdNCqYgq64FHcx2ku1XPpOxOm6PRgjrELNMJ27EusCbQ3P~mjUh3e4k1zzAvyPI3SWHyow3MV4N~n0tLA9lsw1suqus9LVRJohAyJIYZ9mlW5ibqfZCC04s-6mO42crSv34Uo60UnkLGz3j8pWtD~yLagkIGbL9xdJogDuDiqMEzSL344CXbyUxkm-532IN-egYQ7opr~DBPEEL-Qo9LTHsmqIjC88yoSjRBm4EjAq2b3z6b4dzbg2eRjEqxXRH6XA-l4YSMk7FGZeXyKedVQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e3-0881-72cd-99c3-7b1fac16cd55/output/texture_0.png?Expires=4948300800&Signature=iL4Et1QnTDmL2MdqQeD5LJGKv9Fapc1~WK9mYjkdUppu3eBq0lGQYFMS1IfR5MaVZuvm4InBPEFIMWSxL32wNCx1FOrZCHPBR06hB6FGAzy~RSvJhGroQpAQabyE7Q~sqYJYATlhum5yO0fTvrUs6F1x66izj-yim6BrWdjiNVYqsRh7zDAxef8mRNuXtpQQQQ8RgF8-VCyWpcckohcK98B~1gu6X2dBi8AGz6lpl~uDv41ByMrloUDA38X8PX-bVay4oi02H3QzyjVVluPf4Bb8DkTMftScz-vEWpmsIWvkZMmElj6cNpD7j~iTN8SlaEGtlnNggPOqlnDn91K10A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

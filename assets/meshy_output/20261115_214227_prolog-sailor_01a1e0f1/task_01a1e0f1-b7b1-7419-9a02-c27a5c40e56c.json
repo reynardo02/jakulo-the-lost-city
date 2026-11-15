@@ -1,0 +1,23 @@
+{
+  "id": "01a1e0f1-b7b1-7419-9a02-c27a5c40e56c",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3235837982,
+  "prompt": "low poly stylized sailor man, blue and white striped shirt, red bandana, dark trousers, barefoot, standing upright, arms relaxed at sides, full body, simple game character",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794775302653,
+  "progress": 100,
+  "started_at": 1794775302667,
+  "finished_at": 1794775349084,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0f1-b7b1-7419-9a02-c27a5c40e56c/output/model.glb?Expires=4948300800&Signature=dRS74N4w1xhCNULKRZw4lMzyNycWONC-NBlWzb5NCn-J1K92eg2OgH-sdLPDy47fh4LN7YQiGHb8NINnmGUkS5~997b3euATL84x6ulnvSbW4CBCamRS3aXLWhkL~bDuQTwNrOGdglMPE-4ptN8ApPKM0iMjdLDCo9k0Sqw6i5IRnXlPLlzR~6SLtzM-FrMJHV8LHJIfRvAB8ngA9b48qdrq0IxV4ZZ6H7atRaNzFHicFb7a3~ST56s-RdSBtkyg6APBLRRy7L9VWLBj~Dy5EiWyA~gG31hbgk6-GoEEhlAQ-ElOFz9uGO4o~lh3n7GzQ7RHod3CJ8ToHKHmIq7icA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0f1-b7b1-7419-9a02-c27a5c40e56c/output/preview.png?Expires=4948300800&Signature=B5RW-NAXdhxaKndnnlgmQHTxYoDQComKd0W99HJBdHVQeJX2VjJwUyZDYKNhYtSuQj4MJKG4rqEgkJftqRN9-tkO77CMTjpmuMvG32pQDOXjSH-DcFxhgMsDkVy7IqEQItXN6bTatoxOh8AFWWc6ZN86PePZp4YQ7bllCz9CmoWZ071vRRvr8ABGCHW0vOVs1Mhf4lxOlPuQsHxnGjdgFIm8-SSqgaxn66tIpT4b4BbkmdNqw-iqmTDwbbd8c7jDKuEwexQb-iyf9NCUcWNMOs5rzTYcGRIK8y2eh5ny9KuoeIl~d85hWGVmt1aCVklrJDQTaD~9JVXMLQsuI13qBA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

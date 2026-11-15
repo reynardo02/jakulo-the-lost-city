@@ -1,0 +1,27 @@
+{
+  "id": "01a1e0f2-e7b9-7535-9b54-b09edc6a3de3",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 317053840,
+  "prompt": "low poly stylized sailor man, blue and white striped shirt, red bandana, dark trousers, barefoot, standing upright, arms relaxed at sides, full body, simple game character",
+  "texture_prompt": "stylized low poly colors, blue and white striped shirts, red bandana, dark brown trousers, tanned skin",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794775380682,
+  "progress": 100,
+  "started_at": 1794775380692,
+  "finished_at": 1794775412742,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0f2-e7b9-7535-9b54-b09edc6a3de3/output/model.glb?Expires=4948300800&Signature=op4qOo9X8Bl3-vRT9-EQm-AeLv4E4PRX~A6DK3mECYCIa73hvdqjSfN0NyXQw8U20OO0nPESYFyVRAVD5MXwyL8Kc8vdSIAEz6ym-OKcmCouN5QV-uwctg5FOuZ1kGpTGSyqOVG5BUCgEKypWZ07TS0IxW7CdLSE6ttDApg9nE~o~Gdky9k2c6SiCQQRawD1i4CvP1wjJd2u56-Q2hNCJk1jQ-ppugTW2S09LgovhLDewnxImvLWiScpVCFl05Ged3dPJKUFWwZlZbo8oMuvPH0fEU5ZB1A4aYHfNnodBHneNv4CNj2WjcOEFJyxCNzvFiNSszK-asBt3mfen-3KGg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0f2-e7b9-7535-9b54-b09edc6a3de3/output/preview.png?Expires=4948300800&Signature=OpsitO67MzpR62KsiXOE1o65aH0-9zT-UrZnN5MFECWLiJSaou9qsAGcKYhf4gHp0btZYd07r3FBbU~ninrjB6Bl5SZsGE3eUjAezCytYEMzbBV~gnPdoJ9Od8l4w0u1aT6mgbZZyHNyGn4R0SXpiY7E0FZguthB-4XKr5s7HRCQ2OLGh2039codVr0M5LmHjt3uHoSsMtEasUdh3lEvbCSzorjj0hoIeUbRQvMV8anht50rMIFasT4RqOYsAnps0PYrA-Ruv6Zy~vR-oALtir40I4YhGaQb5hxw80zvkcaMUjPVy8Hpr-LF7bkwCVlm3mgwieV1oW1GvOOZw1i4Ug__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0f2-e7b9-7535-9b54-b09edc6a3de3/output/texture_0.png?Expires=4948300800&Signature=ftL~LEeFPlK5AC2tz6t1HMx7Zky3KdLNopns7dKj6I2n~rwvqkkpzZ6uQpPeENkA7M~vHaBexfWLeOXccjJq4dPVOFBX0-W2JJzOJ8-3jybdJQ9RkUjzrjzde8EwDe1qewkSIPMZXvlrNCS69dbVN~LiM9hlcb0KmzMXEjwEmvjSpdiQ6uVzWRyFdgs2ynrAtlWyQImFnEI4GttHvuAyuGUdTdvNI1Flmh7ctdEcVbfpkBHsVOWP-Wo3G99gPc2ymK0X0SBVLM04QNh2qP5Uw0seg2MysnLNQ0vKGoB~ef6VxJpS7Hl~ebTeSovbrSDfunayYbHVkEeb3HiebQBXXQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

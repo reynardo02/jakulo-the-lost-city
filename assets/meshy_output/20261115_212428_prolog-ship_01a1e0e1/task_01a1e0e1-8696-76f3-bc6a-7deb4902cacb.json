@@ -1,0 +1,23 @@
+{
+  "id": "01a1e0e1-8696-76f3-bc6a-7deb4902cacb",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3677708586,
+  "prompt": "low poly stylized wooden sailing ship, 16th century explorer galleon, three masts with white square sails, flat shaded game asset, simple shapes, whole ship",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794774241358,
+  "progress": 100,
+  "started_at": 1794774241372,
+  "finished_at": 1794774293252,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e1-8696-76f3-bc6a-7deb4902cacb/output/model.glb?Expires=4948300800&Signature=Si14IbtPpsXPBayU00kb9pKcqb8gW6glG0VCsH7bcB6j4ZF5g7gG5OQ7k68UTsNZxaW838zyGbR49to7wNKP05LH-zvrkBlVzaDK9SvDRci0bfJuwM9p8IR6cccEpHYO76kzSLKK8LPlBjBxCPbeufu5KIVDkuhLyozThjDUDFK7tXanyiB6makhsWJ7Y7OfFDtuWF2gS0kUkJLBj1GjkPKWUdxukEXNNduwpF-ACZjBl5EKNHDiZ55j4e7HAySzhJureJn3GhbVv~yc8g880OSZJqiryIUQ~oWARVCTcjmcpFH~tG8AaKrmZXKjf~TouH2yi3iCp8Cr6xV-tUc~lg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e1-8696-76f3-bc6a-7deb4902cacb/output/preview.png?Expires=4948300800&Signature=ATVl9W7CB-B5-S14Y1MBEODiexVTCvMUVBFf7zZu3Cp1qevQ~qHPfwalYfyt4HJUbWPOxW49CGwZs6HVevoNFID43Fs6e~G4xWiBC~qgWFj8Gd2XTnKnS9pH3UAx7sjbA4phjtl1avzhhdlUl2-w~nSOZq84lS04q2LOvGINdPCu4gT8FGV4OXk73ZvlB~Y-vUxmCwld-ZVS8ikZWSISxOBwhct-IdQDGnfrj8BXo6Ro0j099zbyVsEG6qe~dCpH7ooGYBmwFRIFv8xaD0h3SM08e1q5AvR8P6mGGQ5xqqMSpof81h~HdtZ2CbTio3t8qFVYWuzfnAEoV85yxJLcsQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

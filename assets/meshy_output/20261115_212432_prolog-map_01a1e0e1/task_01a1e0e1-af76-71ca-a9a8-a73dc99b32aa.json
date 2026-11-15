@@ -1,0 +1,23 @@
+{
+  "id": "01a1e0e1-af76-71ca-a9a8-a73dc99b32aa",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 1309894397,
+  "prompt": "low poly old treasure map, slightly curled parchment sheet lying flat, game prop",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794774251523,
+  "progress": 100,
+  "started_at": 1794774251531,
+  "finished_at": 1794774288911,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e1-af76-71ca-a9a8-a73dc99b32aa/output/model.glb?Expires=4948300800&Signature=FAhoNJneiYrGrXxoIBga-5DXIi2YItdiWDCAa95V86pslWE7P1vy7DEyYgc0vtA702UvYI1EyuhUjs5KtcIbogOkA9jCKHbLHntGfMYftIrnZXYcK~i0feO3F~iHnnir~b8oSUoToGC-491uvXeVhp6~2mkcuZyPaBqz2Xbqx19~8Ga-FtE0fbj4RM84ToqXjQOglFh0YSOBVjr2UHjBk0dij1tF12tMaZB5Mz62eUWUTPSHZuLMZB66TAxk8alFlMfXUMsTymuNI5R2jfkRhT-mpz9gLOILzuCZPVyqsdrmnYupW0jwcVhnhyrfKLn4IGjfWwYI1qLhf2sDXQmNew__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e1-af76-71ca-a9a8-a73dc99b32aa/output/preview.png?Expires=4948300800&Signature=BeC3T768CeYkU8dF-rNj2-42WMKnjic9MLXvUJ13LvoK0wI3nmLZD5g9y6Lvw10z5ZtlVtgNQvRGrpPlOtM4qOvwzD-REK~Mq16SG2Z6EOrGLo3KE~kt8N3miowUAtG~CohNlauoKD4opjbQg60CDGDwpnAtibFHUTCw0ajurJNqw~8cLBaXsN4qPifjZnO2jqH8ohMYjm32cBaLSS9cKD171TLrX2NHAlFSBO7WvUBM8K3MvfN6gBBM8F6iKeJE7pTjNwK~OKXXqUxF7XM2koAB0H8fHXB8FgyV97CTG1lImCDQrIhYHj~rCjZLhAfBKUAjk-fHRWsE1Dd6~fl-3A__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

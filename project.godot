@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Jakulo The Lost City"
-run/main_scene="uid://bw3s2javy4sg7"
+run/main_scene="res://scenes/prolog.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -140,3 +140,5 @@ crouch={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
+scaling_3d/scale=0.6699999999999999

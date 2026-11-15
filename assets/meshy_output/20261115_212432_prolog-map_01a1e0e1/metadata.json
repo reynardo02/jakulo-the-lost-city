@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "project_name": "prolog-map",
+  "folder": "20261115_212432_prolog-map_01a1e0e1",
+  "root_task_id": "01a1e0e1-af76-71ca-a9a8-a73dc99b32aa",
+  "created_at": "2026-11-15T20:24:32.923Z",
+  "updated_at": "2026-11-15T20:27:58.351Z",
+  "tasks": [
+    {
+      "task_id": "01a1e0e1-af76-71ca-a9a8-a73dc99b32aa",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview.png"
+      ],
+      "task_json": "task_01a1e0e1-af76-71ca-a9a8-a73dc99b32aa.json",
+      "operation_id": null,
+      "created_at": "2026-11-15T20:25:17.148Z",
+      "updated_at": "2026-11-15T20:25:24.543Z"
+    },
+    {
+      "task_id": "01a1e0e3-1b2e-7440-a010-c4a8775792d8",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "refine",
+      "parent_task_id": "01a1e0e1-af76-71ca-a9a8-a73dc99b32aa",
+      "status": "SUCCEEDED",
+      "files": [
+        "refined.png"
+      ],
+      "task_json": "task_01a1e0e3-1b2e-7440-a010-c4a8775792d8.json",
+      "operation_id": "prolog-map-refine",
+      "created_at": "2026-11-15T20:25:53.939Z",
+      "updated_at": "2026-11-15T20:27:58.351Z"
+    }
+  ]
+}

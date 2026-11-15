@@ -90,6 +90,51 @@
       "created_at": "2026-11-15T15:50:48.594Z",
       "updated_at": "2026-11-15T15:56:47.103Z",
       "task_count": 22
+    },
+    {
+      "folder": "20261115_212428_prolog-ship_01a1e0e1",
+      "prompt": "prolog-ship",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e0e1-8696-76f3-bc6a-7deb4902cacb",
+      "created_at": "2026-11-15T20:24:28.839Z",
+      "updated_at": "2026-11-15T20:27:50.949Z",
+      "task_count": 2
+    },
+    {
+      "folder": "20261115_212430_prolog-wreck_01a1e0e1",
+      "prompt": "prolog-wreck",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e0e1-9b1b-72a2-b174-30b0237a5b65",
+      "created_at": "2026-11-15T20:24:30.929Z",
+      "updated_at": "2026-11-15T20:27:54.263Z",
+      "task_count": 2
+    },
+    {
+      "folder": "20261115_212432_prolog-map_01a1e0e1",
+      "prompt": "prolog-map",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e0e1-af76-71ca-a9a8-a73dc99b32aa",
+      "created_at": "2026-11-15T20:24:32.923Z",
+      "updated_at": "2026-11-15T20:27:58.351Z",
+      "task_count": 2
+    },
+    {
+      "folder": "20261115_214227_prolog-sailor_01a1e0f1",
+      "prompt": "prolog-sailor",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e0f1-b7b1-7419-9a02-c27a5c40e56c",
+      "created_at": "2026-11-15T20:42:27.803Z",
+      "updated_at": "2026-11-15T20:43:57.932Z",
+      "task_count": 2
+    },
+    {
+      "folder": "20261115_214242_prolog-captain_01a1e0f1",
+      "prompt": "prolog-captain",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e0f1-cbd0-72d8-902c-b8c9b7189588",
+      "created_at": "2026-11-15T20:42:42.289Z",
+      "updated_at": "2026-11-15T20:43:57.808Z",
+      "task_count": 2
     }
   ]
 }

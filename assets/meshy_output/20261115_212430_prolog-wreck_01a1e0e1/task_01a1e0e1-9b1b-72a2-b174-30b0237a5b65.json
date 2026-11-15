@@ -1,0 +1,23 @@
+{
+  "id": "01a1e0e1-9b1b-72a2-b174-30b0237a5b65",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 503483493,
+  "prompt": "low poly stylized shipwreck, broken wooden ship hull lying tilted on a sandy beach, snapped mast, torn sail, flat shaded game asset",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794774246392,
+  "progress": 100,
+  "started_at": 1794774246417,
+  "finished_at": 1794774300578,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e1-9b1b-72a2-b174-30b0237a5b65/output/model.glb?Expires=4948300800&Signature=iUEJbNrEyVw9g1FDbjC-WW2lR-LKiBOduZ~Q6rU7Ov~BZedw3WhljT6qW7IDDcuz4VhoFVgnE0GlfDlR-e9sp4Q4YUKrrzMmMiwqziW6N2XAe0ao~lT3NxqgFp2kRIQyFlYUU-eBF-~HctpKGTslNG-7OJ8ccwCkAYYfrZvc10Iy4nkKotg8vxZZG6kYAVhMDULQ1T69JAJ-h~9YaactGwCQ8Uz318UpjYTxffTLNVt68nYwMRPCSGJY9B7XbqYzZoO0BbSnZV6POCwYVs9szRbFI6-2QF1zWoB7Crmg9VA~J0dpYCIsx0Jau4L6-XmEQJfNUStvmSVFztmY3~44yg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e1-9b1b-72a2-b174-30b0237a5b65/output/preview.png?Expires=4948300800&Signature=g~n6hgsxoqgSPMzPJRIfmZSZjdKIGQprzrtKKCJJYrGS~hUOvl3tXB2uCEFtoP1xTxF7xM-0DKFsd0OyeB6Tj0d~Ez0rfvIb~uc4JAghzmh32-cO9smqSG~02lIl0tmgtB612CYoR4LqvaM0qbClm9ccwlVR~sCBqJib4tsCzQx8l0QPSCoXtHYQRdXylIOIgigf0FHdiKy07TrkNukxsvd~ECmurpv3JfMLLWaRnqI6lo6yD5NLt2p-bCrNxDNqPjZfWCAgjl7TewqKEmpQQ~Z999lPf-09VHC61FIq~EmFscbTTFJtYO3UkJ-PhA3wdFQ-~twIY25t3029gjzaPg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

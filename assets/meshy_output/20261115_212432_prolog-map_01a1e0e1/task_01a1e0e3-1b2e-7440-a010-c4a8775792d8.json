@@ -1,0 +1,27 @@
+{
+  "id": "01a1e0e3-1b2e-7440-a010-c4a8775792d8",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2000543513,
+  "prompt": "low poly old treasure map, slightly curled parchment sheet lying flat, game prop",
+  "texture_prompt": "old yellowed parchment treasure map with ink drawn coastline, jungle and a red X",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794774345798,
+  "progress": 100,
+  "started_at": 1794774345807,
+  "finished_at": 1794774380827,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e3-1b2e-7440-a010-c4a8775792d8/output/model.glb?Expires=4948300800&Signature=Fyygc3N343Ion40w3ho~p7I1ua96q-cRKG~jZTWPCVXs~6LDoWOYVBL1ZLoEZ64~eWFyyFLLCR7VmxH4OZ2DwKLAx6sPD0mUFlaD-VkQBW-E7zL1Or6N0YbMHiici6qDku~JxWQ6lNENn97pPHyfYm-cB59WQw-jLaHDT0Ib-0qxub59BKImjYtHBpD8cs7WEtFhsfIUFYy~l513S5ndYVf-G9zlaZFLvOyWZETVtZJ4TXjbyZbz4-q5q-KpDZzh2UnrYgd72faGswUZSrrrYIJ31ldoVlr0eW8tnuqB-0488RbkglaMBymluMcs7tBJQpgzkA9u-qRxqKKZ848Kww__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e3-1b2e-7440-a010-c4a8775792d8/output/preview.png?Expires=4948300800&Signature=lW5xi8YItueF~YzUM6tU9riWX-AP3wakTsU5gHrtB4RIAbpWSNWc50XcLvU-55I~aQ-x8Uh0MBtRXqVjce~u7OcCz1wUj1Vkiz2dowhZwDiFa1yE6lIJtgqH1uO4gsrktTMRdugS1iZ7rY~lUt1Jix-kNohIQN9~-FsGHWrVpWLYpfnmBMSaBZYSr3j95lEe5LJWF3e4~oJ~ecYjsL-uHNXO19u1DEFbz8XoKRhruuG4CJqxhpQk18e5lAmjI6QVM4r8txD-EKpWeCHpV7wDYMB-UDY9ZJ3ZTnS0oSe6io6bI1a7PQ2LQDu1DgnG4cdg1MrtKNgWTUbZKwV50FN4mg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0e3-1b2e-7440-a010-c4a8775792d8/output/texture_0.png?Expires=4948300800&Signature=a7it5qoDYwMMx1wPBJLfhsSSyK4-1QLWiqIrZi~9I98YSkHNuUlorS3ZSfz7GPU9UotMiEHy2kdephAMy0VXCwhWRw4p-vZ2FmsCwW53GdaNMKcIKpvLlJF4K5~Dc~bec331hG6HQvjwtHkD0ZpQka-ng~wFde3MmoDDPAx~qv2uJrYwUdykd5hKvxLLxvxG9CPMIV7byq~5V9YY~f~VHt08bvNas~qdUqe37Jxtxdvh0bGD7zC5rmzrilqZZg34Iv85m7D2Zj7NukWlu5MqiGzuaOHHuCt5PalVKQ5J~1qflVdCsnD~8k~waSIKQWI4F3AnZI2UYmDMwFJlnlDmIQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

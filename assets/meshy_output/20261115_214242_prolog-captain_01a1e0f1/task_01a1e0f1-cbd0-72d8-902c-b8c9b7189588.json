@@ -1,0 +1,23 @@
+{
+  "id": "01a1e0f1-cbd0-72d8-902c-b8c9b7189588",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 220129715,
+  "prompt": "low poly stylized old ship captain, long dark blue coat, tricorn hat, grey beard, boots, standing upright, arms relaxed at sides, full body, simple game character",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794775307494,
+  "progress": 100,
+  "started_at": 1794775307501,
+  "finished_at": 1794775348100,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0f1-cbd0-72d8-902c-b8c9b7189588/output/model.glb?Expires=4948300800&Signature=hbVUGwMrJ9HgwDELBB8Hy5om5Z0wWMYJNWfVX6VEFVYzNGbR0fWGkwuU6pBzBQFowS~tL9W6QmMGTDEkxB~tum5VwfcF-jsXqYESWjoh1l~E6SNeEHxxI4Om6aQRGMmKuEKlGL8n2kJU2P9smVgApJYnfrkb6MHwpdQ69qK2FkSLey~6w8XzPRaAlBAi~BsAYgAgmrjGYdliCx125mw28oWIuilicL3~In4vowURlUYZ3yJM34-km8tCgtj3MuGQFggtJ8Ssd8WzqPlYayvbfzbdzuOXyvLhVoS1-GdmkUYVPZvu8d2ZqV8QwfoZBPzw6Exo~hCCl4l45grYkW0yyA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e0f1-cbd0-72d8-902c-b8c9b7189588/output/preview.png?Expires=4948300800&Signature=XcG8bTMn~Y6WKVi-zAujJrVX0er1-pjg21snPYcPlyMqiQ-8oQIMzinJFKaJsGwT8gaKGf91aHMpyn5OgckhVvcONp6myOUPQZScm8Fy40d~VE-8mlVKbsZhOpxxtUwLp~wDbyqdx1GU0YSxoLsgCQ0s7huets1D6OpFqfchhu~YFE4BwjRmHTriS7x9rH7wlHCU2zf01O93b9SJr5WZCG3ZjD4SxAZw-jkahHn96QLjY5zIz270KkFAG1PwpUTSrTGTJuTkADnOpHmcQP1WzQ0Dir7fG~0CuIyYVvRvYxHIMfctpAwpq~paBw6xVCLHCfQbyIhGTLqHUkD~Twzv9A__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

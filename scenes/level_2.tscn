@@ -43,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://sq4vibmbp3st" path="res://assets/nature/palm.glb" id="v_palm"]
 [ext_resource type="PackedScene" path="res://scenes/ruins/ruin_pedestal.tscn" id="v_pedestal"]
 [ext_resource type="PackedScene" uid="uid://bokqifudgg4qj" path="res://assets/props/torch.glb" id="v_torch"]
+[ext_resource type="PackedScene" path="res://scenes/village/rescue_cutscene.tscn" id="v_rescue_cutscene"]
 [ext_resource type="PackedScene" uid="uid://qhm1c70583iu" path="res://assets/nature/tree_large.glb" id="v_tree_large"]
 [ext_resource type="PackedScene" uid="uid://bymunw0b4nj10" path="res://assets/nature/tree_medium.glb" id="v_tree_medium"]
 
@@ -3272,6 +3273,9 @@ omni_range = 9.0
 
 [node name="Kaefig" parent="Umgebung/Dorf" unique_id=1967084143 instance=ExtResource("v_cage")]
 transform = Transform3D(6.1232e-17, 0, 1, 0, 1, 0, -1, 0, 6.1232e-17, -8, 0, -228)
+cutscene = NodePath("../Rettung")
+
+[node name="Rettung" parent="Umgebung/Dorf" instance=ExtResource("v_rescue_cutscene")]
 
 [node name="Podest" parent="Umgebung/Dorf" unique_id=2024759987 instance=ExtResource("v_pedestal")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -228)
