@@ -3,7 +3,8 @@ extends Node3D
 ## erscheint ein Hinweis, mit "interact" (E) wird das Buch geöffnet.
 ## Beim ersten Lesen werden die Flags "book_found" und "book_read" gesetzt.
 
-@export var hint: String = "E drücken, um das Buch zu lesen"
+## %s wird durch die Taste des gerade benutzten Eingabegeräts ersetzt (E bzw. QUADRAT).
+@export var hint: String = "%s drücken, um das Buch zu lesen"
 
 @onready var _area: Area3D = $Area
 @onready var _glow: OmniLight3D = $Glow
@@ -15,6 +16,7 @@ func _ready() -> void:
 	_area.body_entered.connect(_on_body_entered)
 	_area.body_exited.connect(_on_body_exited)
 	Book.closed.connect(_on_book_closed)
+	GameState.input_device_changed.connect(_on_input_device_changed)
 	_glow.visible = not GameState.has_flag("book_read")
 
 
@@ -27,10 +29,19 @@ func _unhandled_input(event: InputEvent) -> void:
 		Book.open(0 if first_time else -1)
 
 
+func _hint_text() -> String:
+	return hint % GameState.action_label("interact") if hint.contains("%s") else hint
+
+
+func _on_input_device_changed(_gamepad: bool) -> void:
+	if _player_near and not Book.is_open:
+		GameState.show_message(_hint_text())
+
+
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		_player_near = true
-		GameState.show_message(hint)
+		GameState.show_message(_hint_text())
 
 
 func _on_body_exited(body: Node3D) -> void:
@@ -45,6 +56,6 @@ func _on_book_closed() -> void:
 	if not GameState.has_flag("book_read"):
 		GameState.set_flag("book_read")
 		_glow.visible = false
-		GameState.flash_message("Das Portal ist erwacht!\n(B: Buch jederzeit öffnen)", 3.0)
+		GameState.flash_message("Das Portal ist erwacht!\n(%s: Buch jederzeit öffnen)" % GameState.action_label("open_book"), 3.0)
 	else:
-		GameState.show_message(hint)
+		GameState.show_message(_hint_text())

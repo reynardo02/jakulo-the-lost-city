@@ -51,6 +51,8 @@ var elbow_poles: Array[Marker3D] = []
 var arm_ik_tween: Tween
 
 const MOUSE_SENSITY = 0.003
+const STICK_YAW_SPEED = 2.8     # rad/s: Kamera drehen mit dem rechten Stick
+const STICK_PITCH_SPEED = 1.8   # rad/s: Kamera neigen mit dem rechten Stick
 func _ready() -> void:
 	# Nach einem Tod am letzten Checkpoint statt am Levelanfang starten
 	if GameState.has_checkpoint():
@@ -74,6 +76,19 @@ func _unhandled_input(event: InputEvent) -> void:
 		)
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+
+
+func _process(delta: float) -> void:
+	# Kamera mit dem rechten Stick des Controllers (läuft auch an der Liane und im Krokodilmaul)
+	var look := Input.get_vector("camera_left", "camera_right", "camera_up", "camera_down")
+	if look == Vector2.ZERO:
+		return
+	camera_pivot.rotate_y(-look.x * STICK_YAW_SPEED * delta)
+	spring_arm_3d.rotation.x = clamp(
+		spring_arm_3d.rotation.x - look.y * STICK_PITCH_SPEED * delta,
+		deg_to_rad(-60),
+		deg_to_rad(30)
+	)
 	
 
 func _physics_process(delta: float) -> void:
@@ -98,8 +113,9 @@ func _physics_process(delta: float) -> void:
 	var camera_basis = camera_pivot.global_transform.basis
 	
 	# Minus, weil SpringArm3D um 180° gedreht ist (Kamera schaut entlang +Z des Pivots)
+	# Länge = Ausschlag des Sticks (Tastatur immer 1): leicht gekippt geht die Figur langsam
 	var direction = -Vector3(camera_basis.x * input_dir.x +
-		camera_basis.z * input_dir.y).normalized()
+		camera_basis.z * input_dir.y).normalized() * minf(input_dir.length(), 1.0)
 		
 	rotate_character(direction, delta)
 

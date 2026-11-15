@@ -25,6 +25,22 @@ Das Portal in dieser Ruine öffnet den Weg. Jeder Abschnitt der Reise ist gefäh
 [font_size=22][b]Missionsziele[/b][/font_size]
 """
 
+const CONTROLS_TEXT := """[font_size=22][b]Tastatur und Maus[/b][/font_size]
+Laufen: W A D und Pfeiltasten
+Kamera: Maus
+Springen, Liane loslassen, aus dem Maul befreien: Leertaste
+An der Liane klettern: Pfeil runter / W
+Benutzen: E          Buch: B
+
+[font_size=22][b]PS5-Controller[/b][/font_size]
+Laufen: linker Stick oder Steuerkreuz
+Kamera: rechter Stick
+Springen, Liane loslassen, aus dem Maul befreien: Kreuz
+An der Liane klettern: linker Stick runter / hoch
+Benutzen: Quadrat          Buch: Dreieck
+Im Buch: L1 / R1 blättern, Kreis schließen
+"""
+
 var is_open := false
 
 var _root: Control
@@ -34,6 +50,8 @@ var _map: MapView
 var _map_info: Label
 var _notes_text: RichTextLabel
 var _inventory_text: RichTextLabel
+var _close_button: Button
+var _footer: Label
 var _mouse_mode_before := Input.MOUSE_MODE_CAPTURED
 
 
@@ -46,13 +64,14 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if is_open:
-		if event.is_action_pressed("ui_cancel") or event.is_action_pressed("open_book") \
+		if event.is_action_pressed("ui_cancel") or event.is_action_pressed("book_close") \
+				or event.is_action_pressed("open_book") \
 				or event.is_action_pressed("interact"):
 			close()
 			get_viewport().set_input_as_handled()
-		elif event.is_action_pressed("move_left"):
+		elif event.is_action_pressed("move_left") or event.is_action_pressed("book_prev"):
 			_tabs.current_tab = wrapi(_tabs.current_tab - 1, 0, _tabs.get_tab_count())
-		elif event.is_action_pressed("move_right"):
+		elif event.is_action_pressed("move_right") or event.is_action_pressed("book_next"):
 			_tabs.current_tab = wrapi(_tabs.current_tab + 1, 0, _tabs.get_tab_count())
 	elif event.is_action_pressed("open_book") and GameState.has_flag("book_found") \
 			and not get_tree().paused:
@@ -88,6 +107,7 @@ func close() -> void:
 # ---------- Inhalt ----------
 
 func _refresh() -> void:
+	_update_key_hints()
 	_mission_goals.text = _goals_text()
 	_map.queue_redraw()
 	_map_info.text = _map_info_text()
@@ -173,11 +193,10 @@ func _build() -> void:
 	title.add_theme_font_size_override("font_size", 30)
 	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	header.add_child(title)
-	var close_button := Button.new()
-	close_button.text = "Schließen (E)"
-	close_button.focus_mode = Control.FOCUS_NONE
-	close_button.pressed.connect(close)
-	header.add_child(close_button)
+	_close_button = Button.new()
+	_close_button.focus_mode = Control.FOCUS_NONE
+	_close_button.pressed.connect(close)
+	header.add_child(_close_button)
 
 	_tabs = TabContainer.new()
 	_tabs.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -198,12 +217,21 @@ func _build() -> void:
 
 	_notes_text = _add_text_page("Notizen")
 	_inventory_text = _add_text_page("Erfolge & Inventar")
+	_add_text_page("Steuerung").text = CONTROLS_TEXT
 
-	var footer := Label.new()
-	footer.text = "A / D: Seite wechseln     B: Buch öffnen und schließen"
-	footer.add_theme_color_override("font_color", INK_FADED)
-	footer.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	vbox.add_child(footer)
+	_footer = Label.new()
+	_footer.add_theme_color_override("font_color", INK_FADED)
+	_footer.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	vbox.add_child(_footer)
+	_update_key_hints()
+	GameState.input_device_changed.connect(func(_gamepad: bool) -> void: _update_key_hints())
+
+
+## Beschriftungen passend zum zuletzt benutzten Eingabegerät (Tastatur oder Controller).
+func _update_key_hints() -> void:
+	_close_button.text = "Schließen (%s)" % GameState.action_label("close")
+	_footer.text = "%s: Seite wechseln     %s: Buch öffnen und schließen" % [
+		GameState.action_label("pages"), GameState.action_label("open_book")]
 
 
 func _add_text_page(page_name: String) -> RichTextLabel:

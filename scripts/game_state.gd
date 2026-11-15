@@ -12,6 +12,7 @@ signal note_unlocked(id: String)
 signal level_unlocked(id: String)
 signal checkpoint_changed(id: String)
 signal flag_set(id: String)
+signal input_device_changed(gamepad: bool)
 
 const MAX_LIVES := 3
 const FIRST_LEVEL := "res://scenes/level_1.tscn"
@@ -115,6 +116,18 @@ var _level_start_coins: int = 0
 var _level_start_score: int = 0
 var _transitioning := false
 
+## true, sobald zuletzt ein Controller benutzt wurde - Hinweise zeigen dann dessen Tasten.
+var using_gamepad := false
+
+## Anzeigenamen der Tasten je Aktion: [Tastatur, PS5-Controller]
+const ACTION_LABELS := {
+	"jump": ["LEERTASTE", "KREUZ"],
+	"interact": ["E", "QUADRAT"],
+	"open_book": ["B", "DREIECK"],
+	"close": ["E", "KREIS"],
+	"pages": ["A / D", "L1 / R1"],
+}
+
 var _hud_label: Label
 var _message_label: Label
 var _flash_id := 0
@@ -124,6 +137,29 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_build_hud()
 	_update_hud()
+
+
+# ---------- Eingabegerät ----------
+
+func _input(event: InputEvent) -> void:
+	var gamepad := using_gamepad
+	if event is InputEventJoypadButton:
+		gamepad = true
+	elif event is InputEventJoypadMotion:
+		if absf((event as InputEventJoypadMotion).axis_value) < 0.5:
+			return   # Stick-Rauschen zählt nicht als Wechsel
+		gamepad = true
+	elif event is InputEventKey or event is InputEventMouseButton:
+		gamepad = false
+	if gamepad != using_gamepad:
+		using_gamepad = gamepad
+		input_device_changed.emit(gamepad)
+
+
+## Name der Taste für eine Aktion, passend zum zuletzt benutzten Eingabegerät.
+func action_label(action: String) -> String:
+	var labels: Array = ACTION_LABELS.get(action, [action, action])
+	return labels[1] if using_gamepad else labels[0]
 
 
 # ---------- Spielstand ----------
