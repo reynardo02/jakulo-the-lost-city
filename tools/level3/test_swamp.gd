@@ -107,26 +107,23 @@ func _run() -> void:
 			break
 	check(monkey._state == monkey.State.ASLEEP, "Affe schläft danach wieder ein")
 
-	# Ausweichen: ein seitlich laufender Spieler wird nicht getroffen
-	state.lives = 3
+	# Ausweichen: ein Spieler, der im Kreis läuft, wird nicht getroffen
 	await frames(200)   # Schonfrist nach dem letzten Treffer abwarten
+	state.lives = 3
 	var monkey2 = level.get_node("Teil1_Sumpf/Affe1")
-	player.global_position = Vector3(2, 0.3, -5)
+	var center := Vector3(1, 0.3, -2)
+	player.global_position = center + Vector3(3, 0, 0)
 	await frames(10)
 	lives_before = state.lives
 	monkey2.wake()
-	var dir := 1.0
 	var threw := false
+	var angle := 0.0
 	for i in 500:
 		await physics_frame
 		if not monkey2._stones.is_empty():
 			threw = true
-		# quer zur Wurfrichtung hin und her laufen
-		player.global_position.z += 4.5 * dir / 60.0
-		if player.global_position.z < -9.0:
-			dir = 1.0
-		elif player.global_position.z > 1.0:
-			dir = -1.0
+		angle += 4.5 / 3.0 / 60.0   # 4,5 m/s auf einem Kreis mit 3 m Radius
+		player.global_position = center + Vector3(cos(angle) * 3.0, 0, sin(angle) * 3.0)
 	check(threw, "Zweiter Affe wirft ebenfalls")
 	check(state.lives == lives_before, "Wer sich bewegt, kann den Steinen ausweichen")
 

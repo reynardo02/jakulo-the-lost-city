@@ -34,7 +34,7 @@ Springen, Liane loslassen, aus dem Maul befreien: Leertaste
 Weiter Sprung: im Laufen zweimal Leertaste
 An der Liane klettern: Pfeil runter / W
 Schleichen an/aus: Strg oder C
-Benutzen: E          Buch: B
+Benutzen: E          Buch: B          Menü: Esc
 Schlinge: F oder linke Maustaste halten = zielen, loslassen = schießen
 
 [font_size=22][b]PS5-Controller[/b][/font_size]
@@ -44,7 +44,7 @@ Springen, Liane loslassen, aus dem Maul befreien: Kreuz
 Weiter Sprung: im Laufen zweimal Kreuz
 An der Liane klettern: linker Stick runter / hoch
 Schleichen an/aus: Kreis
-Benutzen: Quadrat          Buch: Dreieck
+Benutzen: Quadrat          Buch: Dreieck          Menü: Options
 Schlinge: R2 halten = zielen, loslassen = schießen
 Im Buch: L1 / R1 blättern, Kreis schließen
 """

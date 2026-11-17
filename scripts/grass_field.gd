@@ -41,11 +41,14 @@ func _ready() -> void:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = random_seed
 	var chunks := {}   # Vector2i -> Array[Transform3D]
-	var per_tile := int(blades_per_m2 * (TILE_HALF * 2.0) * (TILE_HALF * 2.0))
+	# Grafikstufe "Niedrig" (Autoload GameSettings): halb so viele Halme
+	var settings := get_node_or_null("/root/GameSettings")
+	var density := blades_per_m2 * (float(settings.call("grass_factor")) if settings else 1.0)
+	var per_tile := int(density * (TILE_HALF * 2.0) * (TILE_HALF * 2.0))
 
 	for tile in get_children():
 		if tile.has_method("random_top_point"):
-			_scatter_on_island(tile, rng, chunks)
+			_scatter_on_island(tile, rng, chunks, density)
 			continue
 		if not (tile is Node3D and tile.scene_file_path in tile_scenes):
 			continue
@@ -86,11 +89,14 @@ func _ready() -> void:
 		mmi.visibility_range_end = visibility_range
 		mmi.visibility_range_end_margin = 8.0
 		mmi.visibility_range_fade_mode = GeometryInstance3D.VISIBILITY_RANGE_FADE_SELF
+		mmi.add_to_group("grass_chunks")
+		if settings:
+			settings.call("apply_grass", mmi)
 		add_child(mmi)
 
 ## Organische Inseln (swamp_island.gd) liefern selbst Punkte auf ihrer Grasfläche.
-func _scatter_on_island(island: Node, rng: RandomNumberGenerator, chunks: Dictionary) -> void:
-	var count := int(blades_per_m2 * float(island.call("top_area")))
+func _scatter_on_island(island: Node, rng: RandomNumberGenerator, chunks: Dictionary, density: float) -> void:
+	var count := int(density * float(island.call("top_area")))
 	for i in count:
 		var pos: Vector3 = island.call("random_top_point", rng)
 		var h := rng.randf_range(blade_height.x, blade_height.y)

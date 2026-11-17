@@ -1,0 +1,70 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="PackedScene" path="res://scenes/level_1_beach.tscn" id="2_beach"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bswci"]
+sky_top_color = Color(0.36, 0.56, 0.78, 1)
+sky_horizon_color = Color(0.96, 0.8, 0.6, 1)
+sky_curve = 0.12
+ground_bottom_color = Color(0.02, 0.03, 0.02, 1)
+ground_horizon_color = Color(0.62, 0.6, 0.46, 1)
+sun_angle_max = 25.0
+sun_curve = 0.1
+
+[sub_resource type="Sky" id="Sky_l3403"]
+sky_material = SubResource("ProceduralSkyMaterial_bswci")
+
+[sub_resource type="Environment" id="Environment_rus8k"]
+background_mode = 2
+sky = SubResource("Sky_l3403")
+ambient_light_source = 3
+ambient_light_color = Color(0.62, 0.72, 0.82, 1)
+ambient_light_energy = 0.55
+reflected_light_source = 2
+tonemap_mode = 2
+ssao_enabled = true
+ssao_radius = 1.5
+ssao_intensity = 2.5
+ssil_enabled = true
+glow_enabled = true
+glow_intensity = 0.7
+glow_bloom = 0.1
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.78, 0.72, 0.55, 1)
+fog_sun_scatter = 0.35
+fog_density = 0.62
+fog_sky_affect = 0.45
+fog_depth_begin = 8.0
+fog_depth_end = 95.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.012
+volumetric_fog_albedo = Color(0.78, 0.72, 0.55, 1)
+volumetric_fog_length = 80.0
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 0.95
+
+[node name="MainMenu" type="Node3D"]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, 0)
+script = ExtResource("1_menu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.829038, -0.1728, 0.531824, 0, 0.951057, 0.309017, -0.559193, -0.256187, 0.788462, 0, 20, 0)
+light_color = Color(1, 0.78, 0.52, 1)
+light_energy = 1.3
+shadow_enabled = true
+shadow_blur = 1.5
+directional_shadow_max_distance = 80.0
+sky_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rus8k")
+
+[node name="Strand" parent="." instance=ExtResource("2_beach")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, 5)
+current = true
+fov = 60.0

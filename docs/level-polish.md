@@ -90,3 +90,16 @@ godot --headless --path . --script res://tools/test_level_polish.gd
 ```
 
 `test_swamp.gd` prüft Boden unter allen alten Kachelflächen, das flache Wasser, Stand auf einer Insel, Gras, Aufheben und Werfen, Treffer, Ruhe nach dem Treffer, keinen Doppeltreffer, das Wiedereinschlafen und das Ausweichen. Ergebnis: beide Tests ohne Fehler. Die Vorschau hat jetzt zusätzlich `screenshots/polish_level_3_islands.png`.
+
+# Menü und Grafikstufen – 17. November 2026
+
+- **Hauptmenü** (`scenes/main_menu.tscn`, neue Startszene): Der Strand aus Level 1 im Morgenlicht dient als Hintergrund, die Kamera gleitet langsam am Ufer entlang. Punkte: Spiel starten (setzt den Spielstand zurück und startet den Prolog), Optionen, Steuerung, Beenden.
+- **Pausenmenü**: Esc bzw. Options-Taste am PS5-Controller (Aktion `pause`). Punkte: Fortsetzen, Optionen, Steuerung, am Checkpoint neu starten, Hauptmenü, Spiel beenden. Das Spiel ist so lange pausiert. Bei offenem Buch und im Hauptmenü öffnet es sich nicht.
+- Beide Menüs gehören zum Autoload `Menu` (`scripts/menu.gd`), gestaltet im Papierstil des Buchs und mit Maus, Tastatur und Controller bedienbar.
+- **Optionen** (Autoload `GameSettings`, `scripts/settings.gd`, gespeichert in `user://settings.cfg`):
+  - Grafik **Hoch**: alle Effekte, wie die Level gebaut sind.
+  - Grafik **Niedrig**: ohne volumetrischen Nebel, SSAO, SSIL, SSR und SDFGI; harte Schatten mit 2048er-Atlas und höchstens 45 m Schattenreichweite; 3D-Auflösung 0,58 mit FSR; gröbere LODs; halb so viel Gras mit kürzerer Sichtweite; halb so viele Regentropfen.
+  - Musik- und Effektlautstärke sowie Vollbild.
+  - Alles wirkt sofort; nur die Grasdichte erst beim nächsten Levelstart.
+- Gemessen in Level 2 (Testrechner, ohne VSync): **Hoch etwa 123 FPS, Niedrig etwa 224 FPS**.
+- Test: `godot --path . --windowed --resolution 1280x720 --script res://tools/test_menu.gd` (Screenshots `screenshots/menu_*.png`).

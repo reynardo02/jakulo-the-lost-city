@@ -58,9 +58,8 @@
 [ext_resource type="PackedScene" path="res://scenes/checkpoint.tscn" id="61_checkpoint"]
 [ext_resource type="PackedScene" path="res://scenes/book_interaction.tscn" id="62_book"]
 [ext_resource type="PackedScene" path="res://scenes/level_1_beach.tscn" id="90_beach"]
-
+[ext_resource type="Script" uid="uid://cickteinopf72" path="res://scripts/jungle_ambience.gd" id="polish_ambience"]
 [ext_resource type="PackedScene" path="res://scenes/dressing/level_1.tscn" id="polish_dressing"]
-[ext_resource type="Script" path="res://scripts/jungle_ambience.gd" id="polish_ambience"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bswci"]
 sky_top_color = Color(0.36, 0.56, 0.78, 1)
@@ -82,7 +81,6 @@ ambient_light_color = Color(0.62, 0.72, 0.82, 1)
 ambient_light_energy = 0.55
 reflected_light_source = 2
 tonemap_mode = 2
-tonemap_exposure = 1.0
 ssao_enabled = true
 ssao_radius = 1.5
 ssao_intensity = 2.5
@@ -93,7 +91,6 @@ glow_bloom = 0.1
 fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0.78, 0.72, 0.55, 1)
-fog_light_energy = 1.0
 fog_sun_scatter = 0.35
 fog_density = 0.62
 fog_sky_affect = 0.45
@@ -420,11 +417,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -114)
 
 [node name="ground" type="Node" parent="Umgebung" unique_id=2097670381]
 script = ExtResource("40_grass")
-worn_paths = Array[Vector4]([Vector4(0, -8, 0.8, -30), Vector4(0.8, -48, -0.7, -74), Vector4(-0.7, -99, 0.0, -109)])
+blades_per_m2 = 20.0
+worn_paths = Array[Vector4]([Vector4(0, -8, 0.8, -30), Vector4(0.8, -48, -0.7, -74), Vector4(-0.7, -99, 0, -109)])
 path_half_width = 0.55
 path_opacity = 0.24
 path_grass_retention = 0.65
-blades_per_m2 = 20.0
 
 [node name="ground_grass" parent="Umgebung/ground" unique_id=1022730500 instance=ExtResource("1_bswci")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, -4)
@@ -2139,6 +2136,8 @@ transform = Transform3D(0.5, 0, 0, 0, 0.1, 0, 0, 0, 0.5, 48, 1.48, -116)
 [node name="BookInteraction" parent="Umgebung/ruins" unique_id=760436440 instance=ExtResource("62_book")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -116)
 
+[node name="LandscapeDetails" parent="Umgebung" unique_id=448175167 instance=ExtResource("polish_dressing")]
+
 [node name="KillZone" parent="." unique_id=1393769249 instance=ExtResource("25_x2fux")]
 transform = Transform3D(-3, 0, 4.4845754e-07, 0, 1, 0, -4.5298742e-07, 0, -2.97, -9.059748e-06, -6, 60)
 
@@ -2257,9 +2256,7 @@ transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -38.
 [node name="WallCornerRuin2" parent="." unique_id=820550481 instance=ExtResource("54_n50md")]
 transform = Transform3D(-2.8212997e-07, 0, -1, 0, 1, 0, 1, 0, -2.8212997e-07, -42.00002, 0, 122.99999)
 
-[editable path="KillZone2"]
-
-[node name="LandscapeDetails" parent="Umgebung" instance=ExtResource("polish_dressing")]
-
-[node name="JungleAmbience" type="Node3D" parent="."]
+[node name="JungleAmbience" type="Node3D" parent="." unique_id=755404054]
 script = ExtResource("polish_ambience")
+
+[editable path="KillZone2"]
