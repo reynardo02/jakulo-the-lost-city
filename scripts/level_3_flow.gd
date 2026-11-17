@@ -6,17 +6,18 @@ extends Node
 ##    Checkpoint "l3_flut" und das Wasser (rising_water.gd) beginnt zu steigen.
 ## 2. Oben in der Krone legt der Spieler den Hebel um (CrownLever): Das Wasser sinkt, die
 ##    Abschluss-Cutscene zeigt den Dorfbewohner aus Level 2 am Fuß des Baums und den
-##    freigespülten Höhleneingang. Der Spieler steht danach unten (Checkpoint "l3_ende").
+##    freigespülten Höhleneingang. Danach übernimmt der Spieler am Baumfuß.
 ##
 ## Der Zustand hängt am Checkpoint, damit er nach einem Tod (Level lädt neu) stimmt:
 ## Ab "l3_flut" ist die Schleuse offen und die Cutscene läuft nicht noch einmal,
-## bei "l3_ende" ist die Flut gestoppt.
+## bei "l3_ende" ist die Flut gestoppt. Alte Abstiegs-Checkpoints werden migriert.
 ## Hat der Spieler den Dorfbewohner in Level 2 befreit (Flag "villager_freed"), ist er am Ende
 ## freundlicher. Optional kann er beim Aufstieg mit einer Liane helfen (helper_vine, helper_area).
 
 const FLOOD_CHECKPOINT := "l3_flut"
 const FLOODED_CHECKPOINTS := ["l3_flut", "l3_wurzeln", "l3_stamm", "l3_krone"]
 const END_CHECKPOINT := "l3_ende"
+const LEGACY_DESCENT_CHECKPOINT := "l3_abstieg"
 const DONE_FLAG := "l3_flood_stopped"
 const FREED_FLAG := "villager_freed"
 
@@ -38,11 +39,14 @@ const FREED_FLAG := "villager_freed"
 
 var _sluice_open := false
 var _ended := false
+var _gate_closed_y := 0.0
+var _gate_tween: Tween
 
 
 func _ready() -> void:
+	_gate_closed_y = (get_node(sluice_gate) as Node3D).position.y
 	var checkpoint := GameState.checkpoint_id
-	var done := checkpoint == END_CHECKPOINT
+	var done := checkpoint in [END_CHECKPOINT, LEGACY_DESCENT_CHECKPOINT]
 	if not done:
 		GameState.set_flag(DONE_FLAG, false)   # z. B. beim erneuten Spielen des Levels
 	if checkpoint in FLOODED_CHECKPOINTS or done:
@@ -53,6 +57,8 @@ func _ready() -> void:
 		_show_ending_state()
 		(get_node(crown_lever) as Node).call("pull", false)
 		(get_node(water) as Node).call("drain_now")
+		if checkpoint == LEGACY_DESCENT_CHECKPOINT:
+			_on_end_cutscene_finished.call_deferred()
 	else:
 		(get_node(villager) as Node3D).hide()
 		(get_node(crown_lever) as Node).connect("pulled", _on_crown_lever_pulled)
@@ -144,6 +150,10 @@ func _on_crown_lever_pulled() -> void:
 		return
 	_ended = true
 	GameState.set_flag(DONE_FLAG)
+	var gate := get_node(sluice_gate) as Node3D
+	_gate_tween = create_tween()
+	_gate_tween.tween_property(gate, "position:y", _gate_closed_y, 1.4)
+	(get_node(sluice_water) as Node3D).hide()
 	(get_node(water) as Node).call("recede")
 	var cutscene := get_node(end_cutscene)
 	cutscene.finished.connect(_on_end_cutscene_finished, CONNECT_ONE_SHOT)
@@ -151,22 +161,23 @@ func _on_crown_lever_pulled() -> void:
 
 
 ## Methoden-Spur der Abschluss-Cutscene: Schnitt nach unten. Wasser weg, Dorfbewohner da,
-## Höhle frei, Spieler am Fuß des Baums.
+## Höhle frei. Der Spieler wird während des Kameraschnitts zum Baumfuß versetzt.
 func show_ending() -> void:
 	(get_node(water) as Node).call("drain_now")
 	_show_ending_state()
 	var player := get_tree().get_first_node_in_group("player") as Node3D
 	var spawn := get_node(end_spawn) as Node3D
 	if player:
+		if player.get("current_vine") != null:
+			player.current_vine.detach()
+			player.current_vine = null
 		player.global_position = spawn.global_position
 		player.rotation.y = spawn.global_rotation.y
-		# Kamera und Figur blicken danach beide zum Baum (Dorfbewohner, Höhleneingang)
-		var pivot := player.get_node_or_null("CameraPivot") as Node3D
-		if pivot:
-			pivot.rotation.y = 0.0
-		var visuals := player.get_node_or_null("visuals") as Node3D
-		if visuals:
-			visuals.global_rotation.y = spawn.global_rotation.y
+		player.velocity = Vector3.ZERO
+		player.air_momentum = Vector3.ZERO
+		player.jump_time = -1.0
+		player.get_node("CameraPivot").rotation.y = 0.0
+		player.get_node("visuals").global_rotation.y = spawn.global_rotation.y
 
 
 ## Methoden-Spur der Abschluss-Cutscene: Zeile `index` des Dorfbewohners. Der Text hängt
@@ -194,6 +205,10 @@ func _on_end_cutscene_finished() -> void:
 
 func _show_ending_state() -> void:
 	GameState.set_flag(DONE_FLAG)
+	if _gate_tween:
+		_gate_tween.kill()
+	(get_node(sluice_gate) as Node3D).position.y = _gate_closed_y
+	(get_node(sluice_water) as Node3D).hide()
 	(get_node(villager) as Node3D).show()
 	var block := get_node_or_null(cave_block) as Node3D
 	if block:

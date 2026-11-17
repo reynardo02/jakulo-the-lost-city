@@ -1,0 +1,489 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/nature/fern_small.glb" id="model_0"]
+[ext_resource type="PackedScene" path="res://assets/nature/jungle/ground_leaves.glb" id="model_1"]
+[ext_resource type="PackedScene" path="res://assets/level3/reeds.glb" id="model_2"]
+
+[sub_resource type="StandardMaterial3D" id="polish_1"]
+albedo_color = Color(0.23, 0.27, 0.21, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="polish_2"]
+albedo_color = Color(0.22, 0.17, 0.10, 1)
+roughness = 0.95
+
+[sub_resource type="SphereMesh" id="polish_3"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_7"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_11"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_15"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_19"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_23"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_27"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_31"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_35"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_39"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_43"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_47"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_51"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_55"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_59"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_63"]
+material = SubResource("polish_1")
+radial_segments = 9
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_67"]
+material = SubResource("polish_2")
+radial_segments = 12
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_70"]
+material = SubResource("polish_2")
+radial_segments = 12
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_73"]
+material = SubResource("polish_2")
+radial_segments = 12
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_76"]
+material = SubResource("polish_2")
+radial_segments = 12
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_79"]
+material = SubResource("polish_2")
+radial_segments = 12
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_82"]
+material = SubResource("polish_2")
+radial_segments = 12
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_85"]
+material = SubResource("polish_2")
+radial_segments = 12
+rings = 5
+
+[sub_resource type="SphereMesh" id="polish_88"]
+material = SubResource("polish_2")
+radial_segments = 12
+rings = 5
+
+[sub_resource type="BoxMesh" id="polish_91"]
+material = SubResource("polish_1")
+size = Vector3(0.8, 0.25, 0.55)
+
+[sub_resource type="BoxMesh" id="polish_93"]
+material = SubResource("polish_1")
+size = Vector3(0.8, 0.25, 0.55)
+
+[sub_resource type="BoxMesh" id="polish_95"]
+material = SubResource("polish_1")
+size = Vector3(0.8, 0.25, 0.55)
+
+[sub_resource type="BoxMesh" id="polish_97"]
+material = SubResource("polish_1")
+size = Vector3(0.8, 0.25, 0.55)
+
+[sub_resource type="BoxMesh" id="polish_99"]
+material = SubResource("polish_1")
+size = Vector3(0.8, 0.25, 0.55)
+
+[sub_resource type="BoxMesh" id="polish_101"]
+material = SubResource("polish_1")
+size = Vector3(0.8, 0.25, 0.55)
+
+[sub_resource type="BoxMesh" id="polish_103"]
+material = SubResource("polish_1")
+size = Vector3(0.8, 0.25, 0.55)
+
+[sub_resource type="BoxMesh" id="polish_105"]
+material = SubResource("polish_1")
+size = Vector3(0.8, 0.25, 0.55)
+
+[sub_resource type="BoxMesh" id="polish_107"]
+material = SubResource("polish_1")
+size = Vector3(0.8, 0.25, 0.55)
+
+[node name="Dressing" type="Node3D"]
+
+[node name="Uferfels_4" type="MeshInstance3D" parent="."]
+position = Vector3(-5.95240, 0.08000, -12.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.84624, 0.45000, 1.14575)
+mesh = SubResource("polish_3")
+
+[node name="Plant_5" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.8961277728034629, 0, -0.3826377268861925, 0, 0.9744006441019666, 0, 0.3826377268861925, 0, -0.8961277728034629, -5.5524021992691335, 0, -10.9)
+
+[node name="Plant_6" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(-0.41092852326920976, 0, 0.5036246109591811, 0, 0.65, 0, -0.5036246109591811, 0, -0.41092852326920976, -5.252402199269134, 0.025, -12.8)
+
+[node name="Uferfels_8" type="MeshInstance3D" parent="."]
+position = Vector3(5.63297, 0.08000, -12.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.10208, 0.45000, 1.09360)
+mesh = SubResource("polish_7")
+
+[node name="Plant_9" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(0.7256096192632953, 0, 0.7919936384123865, 0, 1.0741337173988694, 0, -0.7919936384123865, 0, 0.7256096192632953, 5.232971762200343, 0, -10.9)
+
+[node name="Plant_10" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(-0.5956506366244978, 0, 0.2601928498034304, 0, 0.65, 0, -0.2601928498034304, 0, -0.5956506366244978, 4.932971762200343, 0.025, -12.8)
+
+[node name="Uferfels_12" type="MeshInstance3D" parent="."]
+position = Vector3(-5.91113, 0.08000, -18.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.13823, 0.45000, 1.15743)
+mesh = SubResource("polish_11")
+
+[node name="Plant_13" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.458548208004413, 0, -0.5535274394190383, 0, 0.7187900147149064, 0, 0.5535274394190383, 0, -0.458548208004413, -5.511126872013897, 0, -16.9)
+
+[node name="Plant_14" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(0.3278563539422656, 0, 0.5612577047842496, 0, 0.65, 0, -0.5612577047842496, 0, 0.3278563539422656, -5.211126872013897, 0.025, -18.8)
+
+[node name="Uferfels_16" type="MeshInstance3D" parent="."]
+position = Vector3(5.64400, 0.08000, -18.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.13630, 0.45000, 1.29057)
+mesh = SubResource("polish_15")
+
+[node name="Plant_17" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.7027805728338428, 0, -0.185857110689471, 0, 0.7269411249520159, 0, 0.185857110689471, 0, -0.7027805728338428, 5.244000585132855, 0, -16.9)
+
+[node name="Plant_18" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(0.18707523223371098, 0, 0.6224972750821509, 0, 0.65, 0, -0.6224972750821509, 0, 0.18707523223371098, 4.944000585132855, 0.025, -18.8)
+
+[node name="Uferfels_20" type="MeshInstance3D" parent="."]
+position = Vector3(-5.50863, 0.08000, -25.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.99319, 0.45000, 0.86382)
+mesh = SubResource("polish_19")
+
+[node name="Plant_21" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.24477212807457918, 0, 0.6115815270032018, 0, 0.6587452913332483, 0, -0.6115815270032018, 0, -0.24477212807457918, -5.108626083126779, 0, -23.9)
+
+[node name="Plant_22" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(-0.35365368208249814, 0, -0.5453705833188028, 0, 0.65, 0, 0.5453705833188028, 0, -0.35365368208249814, -4.8086260831267795, 0.025, -25.8)
+
+[node name="Uferfels_24" type="MeshInstance3D" parent="."]
+position = Vector3(5.70035, 0.08000, -25.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.96207, 0.45000, 1.08990)
+mesh = SubResource("polish_23")
+
+[node name="Plant_25" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(0.5938886925644983, 0, -0.36123686517187187, 0, 0.6951229041796639, 0, 0.36123686517187187, 0, 0.5938886925644983, 5.30034802406578, 0, -23.9)
+
+[node name="Plant_26" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(-0.41520022976645055, 0, 0.5001087573737204, 0, 0.65, 0, -0.5001087573737204, 0, -0.41520022976645055, 5.00034802406578, 0.025, -25.8)
+
+[node name="Uferfels_28" type="MeshInstance3D" parent="."]
+position = Vector3(-6.21254, 0.08000, -30.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.81226, 0.45000, 1.11556)
+mesh = SubResource("polish_27")
+
+[node name="Plant_29" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(0.12952297903274299, 0, -0.8266761983759073, 0, 0.836761458875084, 0, 0.8266761983759073, 0, 0.12952297903274299, -5.8125438201809425, 0, -28.9)
+
+[node name="Plant_30" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(0.035441453968379284, 0, 0.6490330525794563, 0, 0.65, 0, -0.6490330525794563, 0, 0.035441453968379284, -5.512543820180943, 0.025, -30.8)
+
+[node name="Uferfels_32" type="MeshInstance3D" parent="."]
+position = Vector3(5.85571, 0.08000, -30.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.95815, 0.45000, 1.09764)
+mesh = SubResource("polish_31")
+
+[node name="Plant_33" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.18378428674628075, 0, 0.7143749391541726, 0, 0.7376369145767903, 0, -0.7143749391541726, 0, -0.18378428674628075, 5.455706324773027, 0, -28.9)
+
+[node name="Plant_34" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(0.1922424846405726, 0, 0.6209209507652478, 0, 0.65, 0, -0.6209209507652478, 0, 0.1922424846405726, 5.1557063247730275, 0.025, -30.8)
+
+[node name="Uferfels_36" type="MeshInstance3D" parent="."]
+position = Vector3(-5.49294, 0.08000, -51.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.09598, 0.45000, 1.23129)
+mesh = SubResource("polish_35")
+
+[node name="Plant_37" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.15406363395648198, 0, -0.9482506470862516, 0, 0.9606845960081652, 0, 0.9482506470862516, 0, -0.15406363395648198, -5.092937847080601, 0, -49.9)
+
+[node name="Plant_38" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(0.23354930725246506, 0, 0.6065927143330142, 0, 0.65, 0, -0.6065927143330142, 0, 0.23354930725246506, -4.792937847080601, 0.025, -51.8)
+
+[node name="Uferfels_40" type="MeshInstance3D" parent="."]
+position = Vector3(5.75508, 0.08000, -51.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.96830, 0.45000, 0.83990)
+mesh = SubResource("polish_39")
+
+[node name="Plant_41" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(0.8994496147268459, 0, 0.14382591246088383, 0, 0.9108762278858075, 0, -0.14382591246088383, 0, 0.8994496147268459, 5.355079422829453, 0, -49.9)
+
+[node name="Plant_42" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(-0.6118725225526581, 0, 0.21934451473662822, 0, 0.65, 0, -0.21934451473662822, 0, -0.6118725225526581, 5.055079422829453, 0.025, -51.8)
+
+[node name="Uferfels_44" type="MeshInstance3D" parent="."]
+position = Vector3(-5.65418, 0.08000, -58.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00722, 0.45000, 1.11733)
+mesh = SubResource("polish_43")
+
+[node name="Plant_45" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.6312453842562616, 0, 0.33125606330588075, 0, 0.7128823988721738, 0, -0.33125606330588075, 0, -0.6312453842562616, -5.254180420593725, 0, -56.9)
+
+[node name="Plant_46" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(0.4391146869842252, 0, -0.4792476308493825, 0, 0.65, 0, 0.4792476308493825, 0, 0.4391146869842252, -4.954180420593725, 0.025, -58.8)
+
+[node name="Uferfels_48" type="MeshInstance3D" parent="."]
+position = Vector3(5.91822, 0.08000, -58.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.98280, 0.45000, 1.24793)
+mesh = SubResource("polish_47")
+
+[node name="Plant_49" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.6285123746565578, 0, -0.5418964374215832, 0, 0.8298671905712559, 0, 0.5418964374215832, 0, -0.6285123746565578, 5.518215067132182, 0, -56.9)
+
+[node name="Plant_50" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(-0.0789245535432195, 0, 0.6451906035025646, 0, 0.65, 0, -0.6451906035025646, 0, -0.0789245535432195, 5.218215067132182, 0.025, -58.8)
+
+[node name="Uferfels_52" type="MeshInstance3D" parent="."]
+position = Vector3(-5.74879, 0.08000, -66.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.77493, 0.45000, 1.45165)
+mesh = SubResource("polish_51")
+
+[node name="Plant_53" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.8440391803081159, 0, 0.07003468751960144, 0, 0.8469397826003714, 0, -0.07003468751960144, 0, -0.8440391803081159, -5.348791984802111, 0, -64.9)
+
+[node name="Plant_54" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(-0.5947838586744105, 0, -0.2621681930753211, 0, 0.65, 0, 0.2621681930753211, 0, -0.5947838586744105, -5.048791984802111, 0.025, -66.8)
+
+[node name="Uferfels_56" type="MeshInstance3D" parent="."]
+position = Vector3(6.42974, 0.08000, -66.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.75387, 0.45000, 1.15489)
+mesh = SubResource("polish_55")
+
+[node name="Plant_57" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.0003142684914141643, 0, 1.0987407510022034, 0, 1.0987407959466922, 0, -1.0987407510022034, 0, -0.0003142684914141643, 6.02973819983796, 0, -64.9)
+
+[node name="Plant_58" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(0.15496478825767782, 0, -0.631257407402284, 0, 0.65, 0, 0.631257407402284, 0, 0.15496478825767782, 5.729738199837961, 0.025, -66.8)
+
+[node name="Uferfels_60" type="MeshInstance3D" parent="."]
+position = Vector3(-5.45890, 0.08000, -73.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.18349, 0.45000, 1.08333)
+mesh = SubResource("polish_59")
+
+[node name="Plant_61" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.7628061107088807, 0, 0.6642050180454182, 0, 1.0114551243290646, 0, -0.6642050180454182, 0, -0.7628061107088807, -5.058904050332233, 0, -71.9)
+
+[node name="Plant_62" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(0.17446372357773887, 0, -0.6261488713999175, 0, 0.65, 0, 0.6261488713999175, 0, 0.17446372357773887, -4.758904050332233, 0.025, -73.8)
+
+[node name="Uferfels_64" type="MeshInstance3D" parent="."]
+position = Vector3(5.53656, 0.08000, -73.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(0.77345, 0.45000, 0.87467)
+mesh = SubResource("polish_63")
+
+[node name="Plant_65" parent="." instance=ExtResource("model_0")]
+transform = Transform3D(-0.24767771666332916, 0, -0.7665323550272762, 0, 0.8055532897550742, 0, 0.7665323550272762, 0, -0.24767771666332916, 5.136562634034825, 0, -71.9)
+
+[node name="Plant_66" parent="." instance=ExtResource("model_1")]
+transform = Transform3D(-0.6460923806051618, 0, 0.0711662541093376, 0, 0.65, 0, -0.0711662541093376, 0, -0.6460923806051618, 4.836562634034825, 0.025, -73.8)
+
+[node name="FeuchtesUfer_68" type="MeshInstance3D" parent="."]
+position = Vector3(-6.15000, -0.25000, -83.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 0.40000, 2.40000)
+mesh = SubResource("polish_67")
+
+[node name="Plant_69" parent="." instance=ExtResource("model_2")]
+transform = Transform3D(0.563177432718176, 0, 0.3245476533222269, 0, 0.65, 0, -0.3245476533222269, 0, 0.563177432718176, -6.3, -0.12, -82.6)
+
+[node name="FeuchtesUfer_71" type="MeshInstance3D" parent="."]
+position = Vector3(6.15000, -0.25000, -83.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 0.40000, 2.40000)
+mesh = SubResource("polish_70")
+
+[node name="Plant_72" parent="." instance=ExtResource("model_2")]
+transform = Transform3D(-0.4243217662974598, 0, -0.49239317485745465, 0, 0.65, 0, 0.49239317485745465, 0, -0.4243217662974598, 6.3, -0.12, -82.6)
+
+[node name="FeuchtesUfer_74" type="MeshInstance3D" parent="."]
+position = Vector3(-6.15000, -0.25000, -87.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 0.40000, 2.40000)
+mesh = SubResource("polish_73")
+
+[node name="Plant_75" parent="." instance=ExtResource("model_2")]
+transform = Transform3D(-0.6485090866969901, 0, -0.04399959626446332, 0, 0.65, 0, 0.04399959626446332, 0, -0.6485090866969901, -6.3, -0.12, -86.6)
+
+[node name="FeuchtesUfer_77" type="MeshInstance3D" parent="."]
+position = Vector3(6.15000, -0.25000, -87.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 0.40000, 2.40000)
+mesh = SubResource("polish_76")
+
+[node name="Plant_78" parent="." instance=ExtResource("model_2")]
+transform = Transform3D(-0.5216500156691961, 0, -0.3877902282837043, 0, 0.65, 0, 0.3877902282837043, 0, -0.5216500156691961, 6.3, -0.12, -86.6)
+
+[node name="FeuchtesUfer_80" type="MeshInstance3D" parent="."]
+position = Vector3(-6.15000, -0.25000, -91.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 0.40000, 2.40000)
+mesh = SubResource("polish_79")
+
+[node name="Plant_81" parent="." instance=ExtResource("model_2")]
+transform = Transform3D(-0.5886439637378333, 0, 0.27567786264952865, 0, 0.65, 0, -0.27567786264952865, 0, -0.5886439637378333, -6.3, -0.12, -90.6)
+
+[node name="FeuchtesUfer_83" type="MeshInstance3D" parent="."]
+position = Vector3(6.15000, -0.25000, -91.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 0.40000, 2.40000)
+mesh = SubResource("polish_82")
+
+[node name="Plant_84" parent="." instance=ExtResource("model_2")]
+transform = Transform3D(-0.10637924288331907, 0, -0.6412358822489364, 0, 0.65, 0, 0.6412358822489364, 0, -0.10637924288331907, 6.3, -0.12, -90.6)
+
+[node name="FeuchtesUfer_86" type="MeshInstance3D" parent="."]
+position = Vector3(-6.15000, -0.25000, -95.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 0.40000, 2.40000)
+mesh = SubResource("polish_85")
+
+[node name="Plant_87" parent="." instance=ExtResource("model_2")]
+transform = Transform3D(0.6411965188816615, 0, 0.10661624723295732, 0, 0.65, 0, -0.10661624723295732, 0, 0.6411965188816615, -6.3, -0.12, -94.6)
+
+[node name="FeuchtesUfer_89" type="MeshInstance3D" parent="."]
+position = Vector3(6.15000, -0.25000, -95.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 0.40000, 2.40000)
+mesh = SubResource("polish_88")
+
+[node name="Plant_90" parent="." instance=ExtResource("model_2")]
+transform = Transform3D(-0.5577316125467299, 0, -0.33381948470097483, 0, 0.65, 0, 0.33381948470097483, 0, -0.5577316125467299, 6.3, -0.12, -94.6)
+
+[node name="Ruinenfragment_92" type="MeshInstance3D" parent="."]
+position = Vector3(4.90000, 0.04000, -101.00000)
+rotation = Vector3(0.00000, 0.51258, 0.12000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_91")
+
+[node name="Ruinenfragment_94" type="MeshInstance3D" parent="."]
+position = Vector3(5.08000, 0.04000, -102.40000)
+rotation = Vector3(0.00000, 0.03568, 0.12000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_93")
+
+[node name="Ruinenfragment_96" type="MeshInstance3D" parent="."]
+position = Vector3(5.26000, 0.04000, -103.80000)
+rotation = Vector3(0.00000, 0.52594, 0.12000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_95")
+
+[node name="Ruinenfragment_98" type="MeshInstance3D" parent="."]
+position = Vector3(5.44000, 0.04000, -105.20000)
+rotation = Vector3(0.00000, 0.65243, 0.12000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_97")
+
+[node name="Ruinenfragment_100" type="MeshInstance3D" parent="."]
+position = Vector3(5.62000, 0.04000, -106.60000)
+rotation = Vector3(0.00000, 0.84950, 0.12000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_99")
+
+[node name="Ruinenfragment_102" type="MeshInstance3D" parent="."]
+position = Vector3(5.80000, 0.04000, -108.00000)
+rotation = Vector3(0.00000, 0.19250, 0.12000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_101")
+
+[node name="Ruinenfragment_104" type="MeshInstance3D" parent="."]
+position = Vector3(5.98000, 0.04000, -109.40000)
+rotation = Vector3(0.00000, 0.81773, 0.12000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_103")
+
+[node name="Ruinenfragment_106" type="MeshInstance3D" parent="."]
+position = Vector3(6.16000, 0.04000, -110.80000)
+rotation = Vector3(0.00000, 0.30194, 0.12000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_105")
+
+[node name="Ruinenfragment_108" type="MeshInstance3D" parent="."]
+position = Vector3(6.34000, 0.04000, -112.20000)
+rotation = Vector3(0.00000, 0.52456, 0.12000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_107")

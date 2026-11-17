@@ -20,6 +20,8 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	_player = AudioStreamPlayer3D.new()
 	_player.stream = sound
+	if sound.resource_path == "res://assets/music/sounds/tap.wav":
+		_player.stream = preload("res://assets/music/sounds/step_wood.wav") if once else preload("res://assets/music/sounds/step_water.wav")
 	_player.pitch_scale = pitch
 	_player.bus = &"Sounds"
 	_player.unit_size = 8.0
@@ -32,6 +34,7 @@ func _on_body_entered(body: Node3D) -> void:
 	_done = once
 	_player.play()
 	get_tree().call_group("sleeper", "hear_noise", body.global_position, noise_radius)
+	get_tree().call_group("guards", "hear_noise", body.global_position, noise_radius)
 	if message != "":
 		GameState.flash_message(message, 2.0)
 	if once:
@@ -51,6 +54,9 @@ func _snap() -> void:
 
 
 func _splash(at: Vector3) -> void:
+	var ring := preload("res://scripts/water_ring.gd").new()
+	get_tree().current_scene.add_child(ring)
+	ring.global_position = at + Vector3.UP * 0.04
 	var drops := GPUParticles3D.new()
 	drops.amount = 24
 	drops.lifetime = 0.7

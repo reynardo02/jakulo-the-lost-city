@@ -11,8 +11,12 @@
 [ext_resource type="PackedScene" path="res://assets/nature/big_leaves.glb" id="9_fkfxw"]
 [ext_resource type="PackedScene" path="res://assets/nature/jungle/jungle_bush_dense.glb" id="10_pbuaa"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mm87h"]
-albedo_color = Color(0.84, 0.72, 0.52, 1)
+[ext_resource type="Shader" path="res://assets/terrain/beach_sand.gdshader" id="polish_sand"]
+
+[ext_resource type="PackedScene" path="res://scenes/dressing/beach.tscn" id="polish_dressing"]
+
+[sub_resource type="ShaderMaterial" id="StandardMaterial3D_mm87h"]
+shader = ExtResource("polish_sand")
 
 [sub_resource type="BoxMesh" id="BoxMesh_tg7xj"]
 material = SubResource("StandardMaterial3D_mm87h")
@@ -244,3 +248,5 @@ shape = SubResource("BoxShape3D_i0p0t")
 [node name="Meer" type="CollisionShape3D" parent="StrandGrenze" unique_id=237950284]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 24)
 shape = SubResource("BoxShape3D_ky7cs")
+
+[node name="StrandSpuren" parent="." instance=ExtResource("polish_dressing")]

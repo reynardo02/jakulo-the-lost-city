@@ -1,0 +1,284 @@
+[gd_scene format=3]
+
+
+[sub_resource type="StandardMaterial3D" id="polish_1"]
+albedo_color = Color(0.28, 0.22, 0.14, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="polish_2"]
+albedo_color = Color(0.26, 0.19, 0.12, 1)
+roughness = 0.95
+
+[sub_resource type="SphereMesh" id="polish_3"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_5"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_7"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_9"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_11"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_13"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_15"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_17"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_19"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_21"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_23"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_25"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_27"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_29"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_31"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_33"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_35"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_37"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_39"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_41"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_43"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="SphereMesh" id="polish_45"]
+material = SubResource("polish_1")
+radial_segments = 10
+rings = 4
+
+[sub_resource type="BoxMesh" id="polish_47"]
+material = SubResource("polish_2")
+size = Vector3(0.25, 0.09, 1.4)
+
+[sub_resource type="BoxMesh" id="polish_49"]
+material = SubResource("polish_2")
+size = Vector3(0.25, 0.09, 1.4)
+
+[sub_resource type="BoxMesh" id="polish_51"]
+material = SubResource("polish_2")
+size = Vector3(0.25, 0.09, 1.4)
+
+[node name="Dressing" type="Node3D"]
+
+[node name="Fussspur_4" type="MeshInstance3D" parent="."]
+position = Vector3(0.14448, -0.03600, 3.00000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_3")
+
+[node name="Fussspur_6" type="MeshInstance3D" parent="."]
+position = Vector3(0.52169, -0.06080, 3.62000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_5")
+
+[node name="Fussspur_8" type="MeshInstance3D" parent="."]
+position = Vector3(0.25579, -0.08560, 4.24000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_7")
+
+[node name="Fussspur_10" type="MeshInstance3D" parent="."]
+position = Vector3(0.62629, -0.11040, 4.86000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_9")
+
+[node name="Fussspur_12" type="MeshInstance3D" parent="."]
+position = Vector3(0.35276, -0.13520, 5.48000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_11")
+
+[node name="Fussspur_14" type="MeshInstance3D" parent="."]
+position = Vector3(0.71479, -0.16000, 6.10000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_13")
+
+[node name="Fussspur_16" type="MeshInstance3D" parent="."]
+position = Vector3(0.43204, -0.18480, 6.72000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_15")
+
+[node name="Fussspur_18" type="MeshInstance3D" parent="."]
+position = Vector3(0.78416, -0.20960, 7.34000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_17")
+
+[node name="Fussspur_20" type="MeshInstance3D" parent="."]
+position = Vector3(0.49089, -0.23440, 7.96000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_19")
+
+[node name="Fussspur_22" type="MeshInstance3D" parent="."]
+position = Vector3(0.83200, -0.25920, 8.58000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_21")
+
+[node name="Fussspur_24" type="MeshInstance3D" parent="."]
+position = Vector3(0.52730, -0.28400, 9.20000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_23")
+
+[node name="Fussspur_26" type="MeshInstance3D" parent="."]
+position = Vector3(0.85666, -0.30880, 9.82000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_25")
+
+[node name="Fussspur_28" type="MeshInstance3D" parent="."]
+position = Vector3(0.53999, -0.33360, 10.44000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_27")
+
+[node name="Fussspur_30" type="MeshInstance3D" parent="."]
+position = Vector3(0.85728, -0.35840, 11.06000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_29")
+
+[node name="Fussspur_32" type="MeshInstance3D" parent="."]
+position = Vector3(0.52854, -0.38320, 11.68000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_31")
+
+[node name="Fussspur_34" type="MeshInstance3D" parent="."]
+position = Vector3(0.83385, -0.40800, 12.30000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_33")
+
+[node name="Fussspur_36" type="MeshInstance3D" parent="."]
+position = Vector3(0.49333, -0.43280, 12.92000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_35")
+
+[node name="Fussspur_38" type="MeshInstance3D" parent="."]
+position = Vector3(0.78717, -0.45760, 13.54000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_37")
+
+[node name="Fussspur_40" type="MeshInstance3D" parent="."]
+position = Vector3(0.43559, -0.48240, 14.16000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_39")
+
+[node name="Fussspur_42" type="MeshInstance3D" parent="."]
+position = Vector3(0.71886, -0.50720, 14.78000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_41")
+
+[node name="Fussspur_44" type="MeshInstance3D" parent="."]
+position = Vector3(0.35730, -0.53200, 15.40000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_43")
+
+[node name="Fussspur_46" type="MeshInstance3D" parent="."]
+position = Vector3(0.63127, -0.55680, 16.02000)
+rotation = Vector3(0.04000, 0.00000, 0.00000)
+scale = Vector3(0.12000, 0.00700, 0.28000)
+mesh = SubResource("polish_45")
+
+[node name="Wrackbrett_48" type="MeshInstance3D" parent="."]
+position = Vector3(2.80000, -0.27000, 10.00000)
+rotation = Vector3(0.04000, 0.30000, 0.08000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_47")
+
+[node name="Wrackbrett_50" type="MeshInstance3D" parent="."]
+position = Vector3(-3.00000, -0.11000, 6.00000)
+rotation = Vector3(0.04000, -0.80000, 0.08000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_49")
+
+[node name="Wrackbrett_52" type="MeshInstance3D" parent="."]
+position = Vector3(4.00000, -0.55000, 17.00000)
+rotation = Vector3(0.04000, 1.10000, 0.08000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_51")

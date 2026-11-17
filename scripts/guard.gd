@@ -2,7 +2,7 @@ extends AnimatableBody3D
 ## Wache im Dorf der Ureinwohner.
 ## Sieht in einem Sichtkegel nach vorn (+Z der Szene) und hört einen Spieler, der in ihrer
 ## Nähe nicht schleicht. Solange sie den Spieler wahrnimmt, steigt ihre Entdeckungsanzeige;
-## ist sie voll, wurde der Spieler entdeckt und startet wieder am letzten Checkpoint.
+## ist sie voll, verfolgt sie ihn. Erst bei Sichtkontakt in Greifnähe wird er gefangen.
 ## Wer geduckt im hohen Gras steckt (Player.is_hidden()), wird nur aus nächster Nähe bemerkt.
 ##
 ## Steht fest oder patrouilliert zwischen ihrem Startpunkt und Start + `patrol_offset`.
@@ -18,6 +18,17 @@ extends AnimatableBody3D
 @export var forget_time: float = 2.0          ## Sekunden, bis eine volle Anzeige wieder leer ist
 @export var costs_life: bool = false          ## an = Entdeckung kostet ein Leben wie jeder andere Tod
 @export var note_id: String = "natives"       ## Notiz im Buch, sobald der Spieler der Wache nahe kommt
+@export var show_view_cone: bool = true
+@export var search_duration: float = 4.0
+@export var chase_speed: float = 3.6
+@export var pursuit_radius: float = 12.0
+
+enum Awareness { PATROL, INVESTIGATE, CHASE, SEARCH, RETURN }
+var awareness := Awareness.PATROL
+var _last_known := Vector3.ZERO
+var _search_left := 0.0
+var _sees_player := false
+var _heard_until := 0
 
 @export_group("Patrouille")
 @export var patrol_offset: Vector3 = Vector3.ZERO  ## Ziel der Patrouille relativ zum Start (0 = steht fest)
@@ -51,6 +62,7 @@ var _caught := false
 
 
 func _ready() -> void:
+	add_to_group("guards")
 	_start = global_position
 	_base_yaw = rotation.y
 	for p in _model.find_children("*", "AnimationPlayer", true, false):
@@ -71,13 +83,17 @@ func _physics_process(delta: float) -> void:
 	if _caught:
 		return
 	_time += delta
-	_move(delta)
 	_perceive(delta)
+	if not _caught:
+		_move(delta)
 
 
 # ---------- Bewegung ----------
 
 func _move(delta: float) -> void:
+	if awareness != Awareness.PATROL:
+		_alert_move(delta)
+		return
 	if patrol_offset.length_squared() < 0.01:
 		if look_sweep > 0.0:
 			rotation.y = _base_yaw + deg_to_rad(look_sweep) * sin(_time * TAU / look_sweep_time)
@@ -99,7 +115,7 @@ func _move(delta: float) -> void:
 	if absf(angle_difference(rotation.y, want_yaw)) > 0.3:
 		_play(idle_animation)
 		return
-	global_position += to_target.normalized() * minf(patrol_speed * delta, to_target.length())
+	_safe_step(to_target.normalized() * minf(patrol_speed * delta, to_target.length()))
 	_play(walk_animation)
 
 
@@ -114,15 +130,27 @@ func _perceive(delta: float) -> void:
 	if not is_instance_valid(_player):
 		_player = get_tree().get_first_node_in_group("player")
 	var noticed := 0.0   # Anstieg pro Sekunde
+	_sees_player = false
 	if is_instance_valid(_player) and _player.is_physics_processing():
 		noticed = _notice_rate()
+	else:
+		return
 	if noticed > 0.0:
 		detection = minf(detection + noticed * delta, 1.0)
 	else:
 		detection = maxf(detection - delta / forget_time, 0.0)
+	if _sees_player:
+		_last_known = _player.global_position
+		_search_left = search_duration
+		if detection >= 1.0:
+			awareness = Awareness.CHASE
+		elif detection > 0.2 and awareness != Awareness.CHASE:
+			awareness = Awareness.INVESTIGATE
+	elif awareness == Awareness.CHASE:
+		awareness = Awareness.INVESTIGATE
 	GameState.report_detection(self, detection)
 	_update_signs()
-	if detection >= 1.0:
+	if detection >= 0.7 and global_position.distance_to(_player.global_position) <= touch_radius and _has_line_of_sight(_player.get("is_sneaking") == true):
 		_caught = true
 		_mark.text = "!"
 		_play(idle_animation)
@@ -139,19 +167,78 @@ func _notice_rate() -> float:
 	var sneaking: bool = _player.get("is_sneaking") == true
 	var hidden: bool = _player.has_method("is_hidden") and _player.is_hidden()
 	if dist <= touch_radius:
-		return 1.0 / detect_time_near
+		if _has_line_of_sight(sneaking) and absf(to_player.y) < 2.0:
+			_sees_player = true
+			return 1.0 / detect_time_near
 	if hidden:
 		return 0.0
 	var rate := 0.0
 	if dist <= view_distance and dist > 0.01:
 		var angle := rad_to_deg(global_basis.z.normalized().angle_to(flat.normalized()))
 		if angle <= view_angle and _has_line_of_sight(sneaking):
+			_sees_player = true
 			rate = 1.0 / lerpf(detect_time_near, detect_time_far, dist / view_distance)
 			if sneaking:
 				rate *= sneak_factor
-	if not sneaking and dist <= hear_radius:
+	if Time.get_ticks_msec() < _heard_until:
 		rate = maxf(rate, 1.0 / lerpf(detect_time_near, detect_time_far, 0.5))
 	return rate
+
+func hear_noise(origin: Vector3, radius: float) -> void:
+	if _caught or global_position.distance_to(origin) > radius * hear_radius / 5.0:
+		return
+	if awareness == Awareness.CHASE:
+		return
+	_last_known = origin
+	_heard_until = Time.get_ticks_msec() + 450
+	_search_left = search_duration
+	awareness = Awareness.INVESTIGATE
+
+func _safe_step(motion: Vector3) -> bool:
+	# Do not walk through huts or step into water/pits while investigating.
+	if test_move(global_transform, motion):
+		return false
+	var ahead := global_position + motion.normalized() * 0.65
+	var query := PhysicsRayQueryParameters3D.create(ahead + Vector3.UP * 0.5, ahead + Vector3.DOWN * 0.8, 1)
+	query.exclude = [get_rid()]
+	if get_world_3d().direct_space_state.intersect_ray(query).is_empty():
+		return false
+	global_position += motion
+	return true
+
+func _alert_move(delta: float) -> void:
+	if awareness == Awareness.SEARCH:
+		_search_left -= delta
+		rotation.y += sin(_time * 1.8) * delta
+		_play(idle_animation)
+		if _search_left <= 0.0:
+			awareness = Awareness.RETURN
+		return
+	var patrol_end := _start + patrol_offset
+	var nearest := Geometry3D.get_closest_point_to_segment(global_position, _start, patrol_end) if patrol_offset.length_squared() > 0.01 else _start
+	if global_position.distance_to(nearest) > pursuit_radius:
+		awareness = Awareness.RETURN
+	var target := _start if awareness == Awareness.RETURN else _last_known
+	var offset := target - global_position
+	offset.y = 0.0
+	if offset.length() < 0.5:
+		if awareness == Awareness.RETURN:
+			awareness = Awareness.PATROL
+			rotation.y = _base_yaw
+		else:
+			awareness = Awareness.SEARCH
+			_search_left = search_duration
+		_play(idle_animation)
+		return
+	rotation.y = rotate_toward(rotation.y, atan2(offset.x, offset.z), turn_speed * delta)
+	var speed := chase_speed if awareness == Awareness.CHASE else patrol_speed
+	if _safe_step(offset.normalized() * minf(offset.length(), speed * delta)):
+		_play(walk_animation)
+	else:
+		_play(idle_animation)
+		if awareness != Awareness.RETURN:
+			awareness = Awareness.SEARCH
+			_search_left = search_duration
 
 
 func _has_line_of_sight(sneaking: bool) -> bool:
@@ -168,8 +255,8 @@ func _has_line_of_sight(sneaking: bool) -> bool:
 # ---------- Anzeige ----------
 
 func _update_signs() -> void:
-	_mark.visible = detection > 0.05
-	_mark.text = "?"
+	_mark.visible = detection > 0.05 or awareness in [Awareness.SEARCH, Awareness.CHASE]
+	_mark.text = "!" if awareness == Awareness.CHASE else "?"
 	_mark.modulate = Color(1.0, 0.9, 0.2).lerp(Color(1.0, 0.15, 0.1), detection)
 	_cone_material.albedo_color = Color(1.0, 0.9, 0.3, 0.16).lerp(Color(1.0, 0.1, 0.05, 0.4), detection)
 
@@ -197,3 +284,4 @@ func _build_cone() -> void:
 	_cone.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	_cone.position.y = 0.45   # über den Grashalmen, sonst verschwindet er darin
 	add_child(_cone)
+	_cone.visible = show_view_cone

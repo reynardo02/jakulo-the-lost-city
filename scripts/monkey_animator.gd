@@ -3,6 +3,7 @@ extends Node3D
 ## Hängt beim Start die Animationen aus Meshy als Bibliothek "monkey" an den AnimationPlayer
 ## des Modells. Andere Skripte (sleeping_monkey.gd, scared_animal.gd) rufen play_anim() auf.
 ## Animationen: sleep, idle, throw, angry, running, walking (tools/level3/extract_monkey_anims.gd).
+## "throw" endet damit, dass sich der Affe bückt und etwas vom Boden greift (ab ca. 3,35 s).
 
 const DIR := "res://assets/level3/monkey/"
 const NAMES := ["sleep", "idle", "throw", "angry", "running", "walking"]
@@ -37,3 +38,15 @@ func play_anim(anim_name: StringName, blend: float = 0.3, speed: float = 1.0) ->
 		return 0.0
 	_player.play(full, blend, speed)
 	return _player.get_animation(full).length / maxf(speed, 0.01)
+
+
+## Springt in der laufenden Animation an eine Stelle (Sekunden bei Tempo 1).
+func seek_anim(time: float) -> void:
+	if _player and _player.current_animation != "":
+		_player.seek(time, true)
+
+
+## Länge einer Animation in Sekunden (bei Tempo 1), 0 wenn es sie nicht gibt.
+func anim_length(anim_name: StringName) -> float:
+	var full := StringName("monkey/" + anim_name)
+	return _player.get_animation(full).length if _player and _player.has_animation(full) else 0.0

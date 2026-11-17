@@ -1,0 +1,420 @@
+[gd_scene format=3]
+
+
+[sub_resource type="StandardMaterial3D" id="polish_1"]
+albedo_color = Color(0.29, 0.19, 0.10, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="polish_2"]
+albedo_color = Color(0.48, 0.37, 0.23, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="polish_3"]
+albedo_color = Color(0.36, 0.23, 0.15, 1)
+roughness = 0.95
+
+[sub_resource type="CylinderMesh" id="polish_4"]
+material = SubResource("polish_1")
+top_radius = 0.055
+bottom_radius = 0.055
+height = 2.4
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_6"]
+material = SubResource("polish_1")
+top_radius = 0.055
+bottom_radius = 0.055
+height = 2.4
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_8"]
+material = SubResource("polish_1")
+top_radius = 0.025
+bottom_radius = 0.025
+height = 1.7000000000000028
+radial_segments = 10
+
+[sub_resource type="BoxMesh" id="polish_10"]
+material = SubResource("polish_2")
+size = Vector3(1.15, 1.05, 0.025)
+
+[sub_resource type="CylinderMesh" id="polish_12"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_14"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_16"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_18"]
+material = SubResource("polish_3")
+top_radius = 0.25
+bottom_radius = 0.32
+height = 0.55
+radial_segments = 16
+
+[sub_resource type="CylinderMesh" id="polish_20"]
+material = SubResource("polish_1")
+top_radius = 0.055
+bottom_radius = 0.055
+height = 2.4
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_22"]
+material = SubResource("polish_1")
+top_radius = 0.055
+bottom_radius = 0.055
+height = 2.4
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_24"]
+material = SubResource("polish_1")
+top_radius = 0.025
+bottom_radius = 0.025
+height = 1.6999999999999993
+radial_segments = 10
+
+[sub_resource type="BoxMesh" id="polish_26"]
+material = SubResource("polish_2")
+size = Vector3(1.15, 1.05, 0.025)
+
+[sub_resource type="CylinderMesh" id="polish_28"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_30"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_32"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_34"]
+material = SubResource("polish_3")
+top_radius = 0.25
+bottom_radius = 0.32
+height = 0.55
+radial_segments = 16
+
+[sub_resource type="CylinderMesh" id="polish_36"]
+material = SubResource("polish_1")
+top_radius = 0.055
+bottom_radius = 0.055
+height = 2.4
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_38"]
+material = SubResource("polish_1")
+top_radius = 0.055
+bottom_radius = 0.055
+height = 2.4
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_40"]
+material = SubResource("polish_1")
+top_radius = 0.025
+bottom_radius = 0.025
+height = 1.6999999999999993
+radial_segments = 10
+
+[sub_resource type="BoxMesh" id="polish_42"]
+material = SubResource("polish_2")
+size = Vector3(1.15, 1.05, 0.025)
+
+[sub_resource type="CylinderMesh" id="polish_44"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_46"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_48"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_50"]
+material = SubResource("polish_3")
+top_radius = 0.25
+bottom_radius = 0.32
+height = 0.55
+radial_segments = 16
+
+[sub_resource type="CylinderMesh" id="polish_52"]
+material = SubResource("polish_1")
+top_radius = 0.055
+bottom_radius = 0.055
+height = 2.4
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_54"]
+material = SubResource("polish_1")
+top_radius = 0.055
+bottom_radius = 0.055
+height = 2.4
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_56"]
+material = SubResource("polish_1")
+top_radius = 0.025
+bottom_radius = 0.025
+height = 1.6999999999999993
+radial_segments = 10
+
+[sub_resource type="BoxMesh" id="polish_58"]
+material = SubResource("polish_2")
+size = Vector3(1.15, 1.05, 0.025)
+
+[sub_resource type="CylinderMesh" id="polish_60"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_62"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_64"]
+material = SubResource("polish_1")
+top_radius = 0.085
+bottom_radius = 0.085
+height = 1.7066048165876009
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="polish_66"]
+material = SubResource("polish_3")
+top_radius = 0.25
+bottom_radius = 0.32
+height = 0.55
+radial_segments = 16
+
+[node name="Dressing" type="Node3D"]
+
+[node name="Seil_5" type="MeshInstance3D" parent="."]
+position = Vector3(-17.85000, 1.20000, -204.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_4")
+
+[node name="Seil_7" type="MeshInstance3D" parent="."]
+position = Vector3(-16.15000, 1.20000, -204.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_6")
+
+[node name="Seil_9" type="MeshInstance3D" parent="."]
+position = Vector3(-17.00000, 2.30000, -204.00000)
+rotation = Vector3(1.57080, 1.57080, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_8")
+
+[node name="TrockenTuch_11" type="MeshInstance3D" parent="."]
+position = Vector3(-17.00000, 1.72000, -204.00000)
+rotation = Vector3(0.07000, 0.00000, 0.03000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_10")
+
+[node name="Seil_13" type="MeshInstance3D" parent="."]
+position = Vector3(-17.15000, 0.12000, -203.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_12")
+
+[node name="Seil_15" type="MeshInstance3D" parent="."]
+position = Vector3(-17.15000, 0.25000, -203.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_14")
+
+[node name="Seil_17" type="MeshInstance3D" parent="."]
+position = Vector3(-17.15000, 0.38000, -203.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_16")
+
+[node name="Vorratstopf_19" type="MeshInstance3D" parent="."]
+position = Vector3(-15.80000, 0.27500, -203.30000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_18")
+
+[node name="Seil_21" type="MeshInstance3D" parent="."]
+position = Vector3(-10.85000, 1.20000, -219.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_20")
+
+[node name="Seil_23" type="MeshInstance3D" parent="."]
+position = Vector3(-9.15000, 1.20000, -219.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_22")
+
+[node name="Seil_25" type="MeshInstance3D" parent="."]
+position = Vector3(-10.00000, 2.30000, -219.00000)
+rotation = Vector3(1.57080, 1.57080, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_24")
+
+[node name="TrockenTuch_27" type="MeshInstance3D" parent="."]
+position = Vector3(-10.00000, 1.72000, -219.00000)
+rotation = Vector3(0.07000, 0.00000, 0.03000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_26")
+
+[node name="Seil_29" type="MeshInstance3D" parent="."]
+position = Vector3(-10.15000, 0.12000, -218.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_28")
+
+[node name="Seil_31" type="MeshInstance3D" parent="."]
+position = Vector3(-10.15000, 0.25000, -218.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_30")
+
+[node name="Seil_33" type="MeshInstance3D" parent="."]
+position = Vector3(-10.15000, 0.38000, -218.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_32")
+
+[node name="Vorratstopf_35" type="MeshInstance3D" parent="."]
+position = Vector3(-8.80000, 0.27500, -218.30000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_34")
+
+[node name="Seil_37" type="MeshInstance3D" parent="."]
+position = Vector3(9.15000, 1.20000, -219.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_36")
+
+[node name="Seil_39" type="MeshInstance3D" parent="."]
+position = Vector3(10.85000, 1.20000, -219.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_38")
+
+[node name="Seil_41" type="MeshInstance3D" parent="."]
+position = Vector3(10.00000, 2.30000, -219.00000)
+rotation = Vector3(1.57080, 1.57080, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_40")
+
+[node name="TrockenTuch_43" type="MeshInstance3D" parent="."]
+position = Vector3(10.00000, 1.72000, -219.00000)
+rotation = Vector3(0.07000, 0.00000, 0.03000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_42")
+
+[node name="Seil_45" type="MeshInstance3D" parent="."]
+position = Vector3(9.85000, 0.12000, -218.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_44")
+
+[node name="Seil_47" type="MeshInstance3D" parent="."]
+position = Vector3(9.85000, 0.25000, -218.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_46")
+
+[node name="Seil_49" type="MeshInstance3D" parent="."]
+position = Vector3(9.85000, 0.38000, -218.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_48")
+
+[node name="Vorratstopf_51" type="MeshInstance3D" parent="."]
+position = Vector3(11.20000, 0.27500, -218.30000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_50")
+
+[node name="Seil_53" type="MeshInstance3D" parent="."]
+position = Vector3(13.15000, 1.20000, -204.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_52")
+
+[node name="Seil_55" type="MeshInstance3D" parent="."]
+position = Vector3(14.85000, 1.20000, -204.00000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_54")
+
+[node name="Seil_57" type="MeshInstance3D" parent="."]
+position = Vector3(14.00000, 2.30000, -204.00000)
+rotation = Vector3(1.57080, 1.57080, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_56")
+
+[node name="TrockenTuch_59" type="MeshInstance3D" parent="."]
+position = Vector3(14.00000, 1.72000, -204.00000)
+rotation = Vector3(0.07000, 0.00000, 0.03000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_58")
+
+[node name="Seil_61" type="MeshInstance3D" parent="."]
+position = Vector3(13.85000, 0.12000, -203.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_60")
+
+[node name="Seil_63" type="MeshInstance3D" parent="."]
+position = Vector3(13.85000, 0.25000, -203.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_62")
+
+[node name="Seil_65" type="MeshInstance3D" parent="."]
+position = Vector3(13.85000, 0.38000, -203.22500)
+rotation = Vector3(1.57080, 1.48279, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_64")
+
+[node name="Vorratstopf_67" type="MeshInstance3D" parent="."]
+position = Vector3(15.20000, 0.27500, -203.30000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+scale = Vector3(1.00000, 1.00000, 1.00000)
+mesh = SubResource("polish_66")

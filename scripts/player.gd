@@ -3,6 +3,11 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 5.0
 const ROTATION_SPEED = 10.0
+const COYOTE_TIME := 0.10
+const JUMP_BUFFER_TIME := 0.12
+var _coyote_left := 0.0
+var _jump_buffer := 0.0
+var _footsteps: Node
 
 # Liane
 const VINE_HAND_OFFSET = 2.0      # Abstand Füße -> Hände (Arme über dem Kopf)
@@ -81,6 +86,8 @@ func _ready() -> void:
 	animation_tree.active = true
 	playback.start("Idle_9")
 	setup_arm_ik()
+	_footsteps = preload("res://scripts/player_foley.gd").new()
+	add_child(_footsteps)
 	
 func _unhandled_input(event: InputEvent) -> void:	
 	if event is InputEventMouseMotion:
@@ -117,6 +124,8 @@ func _physics_process(delta: float) -> void:
 
 	# An der Liane: Position folgt dem Seilende
 	if current_vine:
+		_coyote_left = 0.0
+		_jump_buffer = 0.0
 		jump_time = -1.0
 		process_vine()
 		return
@@ -143,15 +152,22 @@ func _physics_process(delta: float) -> void:
 	# jump – beim Laufen als Sprung nach vorne mit Schwung, im Stand senkrecht
 	if jump_time >= 0.0:
 		jump_time += delta
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	_coyote_left = COYOTE_TIME if is_on_floor() and velocity.y <= 0.0 else maxf(0.0, _coyote_left - delta)
+	_jump_buffer = maxf(0.0, _jump_buffer - delta)
+	if Input.is_action_just_pressed("jump"):
+		if not is_on_floor() and jump_time >= 0.0 and jump_time <= LONG_JUMP_WINDOW:
+			extend_jump()
+		else:
+			_jump_buffer = JUMP_BUFFER_TIME
+	if _jump_buffer > 0.0 and _coyote_left > 0.0:
+		_jump_buffer = 0.0
+		_coyote_left = 0.0
 		is_sneaking = false   # Springen richtet auf
 		velocity.y = JUMP_VELOCITY
 		if direction.length_squared() > 0.01:
 			velocity.y = FORWARD_JUMP_VELOCITY
 			air_momentum = direction * SHORT_JUMP_SPEED
 			jump_time = 0.0
-	elif Input.is_action_just_pressed("jump") and jump_time >= 0.0 and jump_time <= LONG_JUMP_WINDOW:
-		extend_jump()
 
 	
 	#Set horizontal direction (mit Schwung nach dem Loslassen der Liane)
@@ -164,7 +180,10 @@ func _physics_process(delta: float) -> void:
 		velocity.z = direction.z * speed
 	
 	#Moving the player and avoiding collisions
+	var was_grounded := is_on_floor()
+	var impact_speed := maxf(0.0, -velocity.y)
 	move_and_slide()
+	_footsteps.update_motion(delta, was_grounded, impact_speed)
 
 	if is_on_floor():
 		air_momentum = Vector3.ZERO
@@ -227,6 +246,8 @@ func knockback(push: Vector3) -> void:
 	if current_vine:
 		return
 	is_sneaking = false
+	_coyote_left = 0.0
+	_jump_buffer = 0.0
 	velocity.y = 3.5
 	air_momentum = Vector3(push.x, 0.0, push.z)
 	jump_time = -1.0
@@ -235,6 +256,9 @@ func knockback(push: Vector3) -> void:
 ## Geduckt in einem Versteck (hohes Gras): Wachen sehen den Spieler dann nicht.
 func is_hidden() -> bool:
 	return is_sneaking and hiding_zones > 0
+
+func movement_loudness() -> float:
+	return _footsteps.loudness() if _footsteps else 0.0
 
 
 # ---------- Liane ----------
@@ -299,6 +323,8 @@ func set_visual_orientation(up: Vector3, forward: Vector3) -> void:
 ## Hält den Spieler fest: keine Steuerung, keine Physik. Er stemmt das Maul mit beiden
 ## Händen auf, die Position setzt der Fänger über brace_between().
 func capture() -> void:
+	_coyote_left = 0.0
+	_jump_buffer = 0.0
 	if current_vine:
 		current_vine.detach()
 		current_vine = null

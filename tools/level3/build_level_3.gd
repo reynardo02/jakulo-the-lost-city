@@ -50,6 +50,9 @@ const TARGET := "res://assets/level3/target_t2.glb"
 const MANGROVE := "res://assets/level3/mangrove.glb"
 const REEDS := "res://assets/level3/reeds.glb"
 const CLIFF := "res://assets/level3/cliff.glb"
+const ISLAND := "res://scripts/swamp_island.gd"
+const RIVER_STONE := "res://assets/deco/river_stone.glb"
+const ROOTS := "res://assets/nature/roots.glb"
 const PLAYER_SCENE := "res://scenes/player.tscn"
 
 var level: Node3D
@@ -83,6 +86,7 @@ func _build() -> void:
 	_cutscenes()
 	_flow()
 	_rain()
+	_polish_nodes()
 
 	var packed := PackedScene.new()
 	var err := packed.pack(level)
@@ -92,6 +96,18 @@ func _build() -> void:
 	level.free()
 	quit()
 
+
+## Knoten, die tools/build_level_polish.py eingeführt hat (Dressing, Vogelrufe, Flutdetails).
+## Hier mit erzeugt, damit ein Neubau von Level 3 sie nicht verliert.
+func _polish_nodes() -> void:
+	var dressing := "res://scenes/dressing/level_3.tscn"
+	if ResourceLoader.exists(dressing):
+		_scene(dressing, "LandscapeDetails", level)
+	var ambience := _node("Node3D", "JungleAmbience", level)
+	ambience.set_script(load("res://scripts/jungle_ambience.gd"))
+	ambience.set("quiet", true)
+	var flood := _node("Node3D", "FloodDetails", level)
+	flood.set_script(load("res://scripts/flood_details.gd"))
 
 # ---------- Hilfen ----------
 
@@ -314,7 +330,7 @@ func _environment() -> void:
 	env.background_mode = Environment.BG_SKY
 	env.sky = sky
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
-	env.ambient_light_energy = 0.85
+	env.ambient_light_energy = 0.75
 	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
 	env.tonemap_exposure = 1.0
 	# kein SSAO/SSIL/volumetrischer Nebel: gibt es im Mobile-Renderer des Projekts nicht
@@ -322,13 +338,14 @@ func _environment() -> void:
 	env.glow_intensity = 0.5
 	env.fog_enabled = true
 	env.fog_mode = Environment.FOG_MODE_DEPTH
-	env.fog_light_color = Color(0.46, 0.5, 0.5)
-	env.fog_density = 0.7
+	env.fog_light_color = Color(0.4, 0.48, 0.45)   # Regen: grünlich-grauer Dunst
+	env.fog_density = 0.78
 	env.fog_sky_affect = 0.3
-	env.fog_depth_begin = 12.0
+	env.fog_depth_begin = 9.0
 	env.fog_depth_end = 105.0
 	env.adjustment_enabled = true
-	env.adjustment_saturation = 0.85
+	env.adjustment_saturation = 0.8
+	env.adjustment_contrast = 1.06
 	var world := WorldEnvironment.new()
 	world.name = "WorldEnvironment"
 	world.environment = env
@@ -337,8 +354,8 @@ func _environment() -> void:
 	var sun := DirectionalLight3D.new()
 	sun.name = "DirectionalLight3D"
 	sun.rotation = Vector3(-0.9, 0.6, 0.0)
-	sun.light_color = Color(0.85, 0.88, 0.92)
-	sun.light_energy = 0.75
+	sun.light_color = Color(0.78, 0.84, 0.9)   # kühles, diffuses Licht unter Regenwolken
+	sun.light_energy = 0.65
 	sun.shadow_enabled = true
 	sun.directional_shadow_max_distance = 70.0
 	_own(sun, level)
@@ -415,10 +432,14 @@ func _water() -> void:
 
 func _swamp(floating: Node3D) -> void:
 	var s := _node("Node3D", "Teil1_Sumpf", level) as Node3D
+	s.set_script(load("res://scripts/grass_field.gd"))
+	s.set("blades_per_m2", 30.0)
+	s.set("blade_height", Vector2(0.16, 0.38))
+	s.set("random_seed", 731)
 
 	# Insel A: Start, ein einzelner Affe abseits des Wegs
-	_tiles(s, "InselA", [-2, 2], [4, 0, -4, -8], 0.0)
-	_tiles(s, "Inselchen", [8], [-5], 0.0)
+	_island(s, "InselA", Vector3(0, 0, -2), Vector2(4, 8), Vector4(0.8, 0.8, 0.4, 0.6), 11)
+	_island(s, "Inselchen", Vector3(8, 0, -5), Vector2(2, 2), Vector4(0.6, 0.3, 0.6, 0.6), 12)
 	_sleeper(s, "Affe1", Vector3(8, 0, -5), -PI / 2.0, 8.5)
 	_model(LOG, s, "AffeLiegestamm", Vector3(8.4, 0, -6.6), 3.0, "max", 0.3, true)
 	_hint("HinweisAffe", s, Vector3(0, 0, 0), "Psst – ein schlafender Affe.\nGeduckt schleichen: %s", "crouch", Vector3(8, 3, 2))
@@ -430,7 +451,7 @@ func _swamp(floating: Node3D) -> void:
 	_scene("res://scenes/lily_pad.tscn", "Seerose3", floating, Vector3(-0.4, WATER_START, -21.8))
 
 	# Insel B: zwei Affen, dazwischen ein trockener Ast quer über dem Weg
-	_tiles(s, "InselB", [-6, -2, 2, 6], [-27, -31, -35, -39], 0.0)
+	_island(s, "InselB", Vector3(0, 0, -33), Vector2(8, 8), Vector4(0.5, 0.5, 0.3, 0.4), 13)
 	_sleeper(s, "Affe2", Vector3(-6, 0, -33), PI / 2.0, 8.0)
 	_sleeper(s, "Affe3", Vector3(6, 0, -33), -PI / 2.0, 8.0)
 	_dry_branch(s, "TrockenerAst1", Vector3(0, 0, -33), 8.4)
@@ -446,7 +467,7 @@ func _swamp(floating: Node3D) -> void:
 	_coin(s, Vector3(0, 3.0, -45))
 
 	# Insel C mit Checkpoint
-	_tiles(s, "InselC", [-2, 2], [-51, -55, -59], 0.0)
+	_island(s, "InselC", Vector3(0, 0, -55), Vector2(4, 6), Vector4(0.7, 0.7, 0.3, 0.3), 14)
 	_checkpoint("l3_sumpf", s, Vector3(0, 0, -53))
 
 	# Krokodil, Treibholz, Seerose
@@ -460,8 +481,15 @@ func _swamp(floating: Node3D) -> void:
 	_scene("res://scenes/lily_pad.tscn", "Seerose4", floating, Vector3(0, WATER_START, -72))
 
 	# Insel D: die Affenbande direkt am Pfad, mit Ästen und flachem Wasser
-	_tiles(s, "InselD1", [-6, -2, 2, 6], [-78, -82, -86], 0.0)
-	_tiles(s, "InselD2", [-6, -2, 2, 6], [-92.5, -96.5, -100.5], 0.0)
+	# Das flache Wasser (z -88 bis -90,5) bleibt genau so breit wie vorher: dort keine Ausbuchtung,
+	# und die Grundrundung ist von der Rechteckgröße abgezogen.
+	_island(s, "InselD1", Vector3(0, 0, -81.85), Vector2(8, 5.85), Vector4(0.5, 0.5, 0.0, 0.4), 15)
+	_island(s, "InselD2", Vector3(0, 0, -96.65), Vector2(8, 5.85), Vector4(0.5, 0.5, 0.6, 0.0), 16)
+	# kleine Schlammbänke mit Schilf am Rand: nur Kulisse, außer Reichweite des Wegs
+	for bank in [[Vector3(-9.2, -0.3, -18), Vector2(0.9, 1.6)], [Vector3(9.4, -0.3, -45.5), Vector2(0.7, 2.2)],
+			[Vector3(-9.3, -0.3, -66), Vector2(0.8, 1.4)], [Vector3(9.2, -0.3, -71), Vector2(0.9, 1.2)],
+			[Vector3(-9.0, -0.3, -10.5), Vector2(0.6, 0.9)]]:
+		_island(s, "Schlammbank%d" % int(-bank[0].z), bank[0], bank[1], Vector4(0.4, 0.4, 0.4, 0.4), int(-bank[0].z), false)
 	_hint("HinweisBande", s, Vector3(0, 0, -77), "Eine ganze Affenbande direkt am Weg.\nKein Knacken, kein Platschen – und immer geduckt (%s).", "crouch")
 	_sleeper(s, "Affe4", Vector3(-3.5, 0, -80), PI / 2.0, 6.0)
 	_sleeper(s, "Affe5", Vector3(3.5, 0, -83.5), -PI / 2.0, 6.0)
@@ -494,6 +522,47 @@ func _swamp(floating: Node3D) -> void:
 	for i in 14:
 		var side := -1.0 if i % 2 == 0 else 1.0
 		_model(REEDS, s, "Schilf%d" % i, Vector3(side * (5.0 + (i % 3) * 1.4), -0.8, -11.0 - i * 6.0), 1.8, "height", i * 0.9)
+
+
+## Organische Sumpfinsel (scripts/swamp_island.gd). `half` ist das begehbare Rechteck um
+## `center` (wie vorher die Kacheln), `bulge` die erlaubte Ausbuchtung je Seite (-x, +x, -z, +z).
+## Am Ufer stehen Schilf, Steine und Wurzeln, aber nie dort, wo der Weg weiterführt (±z-Seiten
+## nahe der Mitte). `solid = false`: Schlammbank ohne Gras und ohne Kollision (Kulisse).
+func _island(parent: Node, node_name: String, center: Vector3, half: Vector2, bulge: Vector4,
+		seed_value: int, solid := true) -> Node3D:
+	var island := _node("Node3D", node_name, parent, center) as Node3D
+	island.set_script(load(ISLAND))
+	island.set("half_size", half)
+	island.set("max_bulge", bulge)
+	island.set("island_seed", seed_value)
+	island.set("solid", solid)
+	var data: Array = load(ISLAND).outline(half, bulge, seed_value)
+	var points: PackedVector2Array = data[0]
+	var normals: PackedVector2Array = data[1]
+	var rng := RandomNumberGenerator.new()
+	rng.seed = seed_value * 31 + 7
+	var deco := _node("Node3D", node_name + "_Ufer", parent, center) as Node3D
+	var placed := 0
+	for i in points.size():
+		var n := normals[i]
+		var p := points[i]
+		# Wegseiten frei lassen: dort springt der Spieler auf die Insel oder von ihr herunter
+		if absf(n.y) > 0.6 and absf(p.x) < half.x * 0.6 + 1.5 and solid:
+			continue
+		var roll := rng.randf()
+		var yaw := atan2(n.x, n.y)
+		var at := Vector3(p.x + n.x * 0.3, -0.25, p.y + n.y * 0.3)
+		if roll < (0.55 if solid else 0.9):
+			if i % 2 == 0:
+				_model(REEDS, deco, "Schilf%d" % i, at + Vector3(0, -0.15, 0), rng.randf_range(1.2, 2.1), "height", rng.randf() * TAU, true)
+				placed += 1
+		elif roll < 0.68:
+			_model(RIVER_STONE, deco, "Stein%d" % i, at, rng.randf_range(0.35, 0.7), "max", rng.randf() * TAU, true)
+		elif roll < 0.76 and solid:
+			_model(ROOTS, deco, "Wurzel%d" % i, Vector3(p.x, -0.45, p.y), rng.randf_range(1.2, 1.8), "max", yaw, true)
+		elif roll < 0.8 and solid:
+			_model(DRIFTWOOD, deco, "Holz%d" % i, at + Vector3(0, -0.1, 0), rng.randf_range(1.4, 2.2), "max", yaw + PI / 2.0, true)
+	return island
 
 
 ## Schlafender Affe; yaw dreht ihn zum Weg hin.
@@ -548,6 +617,10 @@ func _drifting_log(parent: Node, node_name: String, pos: Vector3) -> void:
 
 func _clearing() -> void:
 	var s := _node("Node3D", "Lichtung", level) as Node3D
+	s.set_script(load("res://scripts/grass_field.gd"))
+	s.set("blades_per_m2", 22.0)
+	s.set("blade_height", Vector2(0.14, 0.32))
+	s.set("random_seed", 732)
 	var xs := []
 	for i in 11:
 		xs.append(-20 + i * 4)

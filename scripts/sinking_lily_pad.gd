@@ -17,6 +17,7 @@ var water_offset: float = 0.0
 
 var _rest_y := 0.0
 var _sunk := 0.0
+var _occupied := false
 
 
 func _ready() -> void:
@@ -24,12 +25,22 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if _player_on_top():
+	var occupied := _player_on_top()
+	if occupied and not _occupied:
+		var ring := preload("res://scripts/water_ring.gd").new()
+		get_parent().add_child(ring)
+		ring.global_position = global_position + Vector3.UP * 0.04
+	_occupied = occupied
+	if occupied:
 		GameState.unlock_note(note_id)
 		_sunk = move_toward(_sunk, sink_depth, sink_speed * delta)
 	else:
 		_sunk = move_toward(_sunk, 0.0, rise_speed * delta)
 	position.y = _rest_y + water_offset - _sunk
+	# Visual roll only: keep the established collision and jump timing stable.
+	var model := get_node_or_null("Model") as Node3D
+	if model:
+		model.rotation.z = lerp_angle(model.rotation.z, 0.045 if occupied else 0.0, minf(1.0, delta * 4.0))
 
 
 func _player_on_top() -> bool:

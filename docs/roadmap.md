@@ -222,7 +222,7 @@ Level 3 besteht aus zwei Teilen: einem Sumpf, den man vorsichtig durchquert, und
 - **Hindernisse:** sinkende Seerosen, treibendes Holz, Schlammlöcher mit Lianen darüber und einzelne Krokodile. Alles ist aus Level 1 und 2 bekannt, hier aber dichter kombiniert.
 - **Schlafende Affen:** Sie liegen auf Ästen und Inseln am Weg. Der Spieler schleicht geduckt vorbei, wie im Dorf.
 - **Was Affen weckt:** rennen, ins Wasser platschen oder auf einen knackenden Ast treten. Knackende Äste sind sichtbar markiert, damit es fair bleibt.
-- **Folge beim Aufwecken:** Die Affen bewerfen den Spieler mit Früchten und stoßen ihn zurück. Das kostet ein Leben oder wirft ihn ins Wasser, führt aber nicht sofort zum Checkpoint.
+- **Folge beim Aufwecken:** Die Affen bewerfen den Spieler mit Steinen und stoßen ihn zurück. Das kostet ein Leben oder wirft ihn ins Wasser, führt aber nicht sofort zum Checkpoint.
 - **Aufbau:** erst ein einzelner Affe abseits des Wegs, dann zwei mit einem knackenden Ast dazwischen, am Ende eine ganze Gruppe direkt am Pfad.
 - **Checkpoint** am Rand der Lichtung.
 
@@ -270,7 +270,7 @@ Der Aufstieg hat drei Ebenen, das Wasser steigt hinter dem Spieler her.
 ### Stand (Nov 16, 2026)
 
 - scenes/level_3.tscn ist neu nach diesem Plan gebaut und wird von tools/level3/build_level_3.gd erzeugt. Das alte Level 3 (Fluss mit Regen und Papagei) ist gelöscht.
-- **Sumpf:** schlafende Affen (scripts/sleeping_monkey.gd) hören aufrechtes Laufen, knackende Äste und Platschen im flachen Wasser (scripts/noise_zone.gd). Wach werfen sie Früchte, ein Treffer kostet ein Leben (`GameState.hurt()`) und stößt zurück. Aufbau: ein Affe abseits, zwei mit Ast dazwischen, eine Bande mit zwei Ästen und flachem Wasser. Dazu Seerosen, Liane über dem Schlammloch, Krokodil und Treibholz.
+- **Sumpf:** schlafende Affen (scripts/sleeping_monkey.gd) hören aufrechtes Laufen, knackende Äste und Platschen im flachen Wasser (scripts/noise_zone.gd). Wach werfen sie Steine, ein Treffer kostet ein Leben (`GameState.hurt()`) und stößt zurück. Aufbau: ein Affe abseits, zwei mit Ast dazwischen, eine Bande mit zwei Ästen und flachem Wasser. Dazu Seerosen, Liane über dem Schlammloch, Krokodil und Treibholz.
 - **Lichtung:** Die Flut-Cutscene zeigt eine Wache aus dem Dorf am Schleusenhebel (offene Frage entschieden: Wache statt Rivale, weil das Modell da ist). Der Ablauf hängt an scripts/level_3_flow.gd.
 - **Schlinge:** Man zielt selbst: Taste (F, linke Maustaste, R2) halten = Zielmodus mit Fadenkreuz und leichtem Zoom, loslassen = Schuss. Ziele in Reichweite tragen einen goldenen Ring, unter dem Fadenkreuz wird er rot. Getroffen ist, was höchstens ca. 1 m neben dem Zielstrahl liegt (scripts/sling.gd).
 - **Großer Baum:** genau drei Ziele für die Schlinge, alle gut sichtbar: der rote Knoten am Seil (Stamm fällt als Rampe), das Wespennest über den Affen und eine große Zielscheibe, die einen Ast als Brücke umklappt. Große Plattformen mit Lücken unter 1 m, keine fahrende Plattform, das Wasser steigt langsam. Checkpoints l3_wurzeln, l3_stamm, l3_krone; das Wasser wartet jeweils knapp darunter.
