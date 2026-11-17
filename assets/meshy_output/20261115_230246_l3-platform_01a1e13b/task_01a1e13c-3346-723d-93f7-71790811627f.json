@@ -1,0 +1,27 @@
+{
+  "id": "01a1e13c-3346-723d-93f7-71790811627f",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 596504676,
+  "prompt": "low poly stylized wooden plank platform with rope railing, tree house ledge, flat walkable top, game asset",
+  "texture_prompt": "weathered brown wooden planks, beige rope, stylized hand painted",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794780185559,
+  "progress": 100,
+  "started_at": 1794780188475,
+  "finished_at": 1794780221417,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13c-3346-723d-93f7-71790811627f/output/model.glb?Expires=4948300800&Signature=WqmFSFsm9PAbqrxxghr-Ysbp--IlnY3r7lcvfXpdE2K8FoXxO02WGrpuL3jp-v3IuQ8xl70c-Uh8zr~2D5ACFzQrVAutjRAe1rlXq661EO5KIUuDnx20jnREVvm0rykW2v811nt2MECQPiXlX8Q704g~ZwZXfRlqKwFGJixzy9L2zbsYYeEdK9vZJj8cSB0L4dUqnsaiEppgKnmugqQGQSVIOZnFICEM-nIv9RQjp3e5J7gF56kPO1NdrnZWWoQItHpSTM31YHudxk7RaqmKTm0KmMSQBevmuaQAvMTI5H1ilBFNY9Dhb-CIVaq2Gc6B8CUJwIhyPn-l1vdsHCSIVQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13c-3346-723d-93f7-71790811627f/output/preview.png?Expires=4948300800&Signature=mbdt5IPWMq0ESKYrlni3UpLVMNUrEYInEs1zQ6JM3zZEtOBUUPtj7dHnGf9KdA4LGNxi-FSeKkuUwt-ox5qRyV5qUqmOmK5-l~PfiTT9XVw62n453Oc8Z1hoZFLOQRKtxFcB2gmlwas-BtJT4-1dNQPrDT7~QGZl3qovfA3Av2gPTnvmJ2S~MvYXkj4NT9ZKDGS0o9ZoDwMxY~lbBvXTkqkDm9joXLLyDjnGzZNevuxoinVhgVmXbwDTIpJaDR1TEyD9SUPaoIsSQ6afqxAuIDZGPTJWWw19Ib9K1iFryCA7SSZB0whVQKaK4FJ02ca6sIYWja37llL23DiemIHBlw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13c-3346-723d-93f7-71790811627f/output/texture_0.png?Expires=4948300800&Signature=A1ZW7-QIsUAtYsb3GMfqHU3pXRNqOULTGsiCvJI1ScqDQtH59ewisr6GqsZjEtuc6tVjaqI3wJE~uoyhiKRKt8Rcqmfy1GYbqVO26jm6SiFVmD4DwCXc0vU1sRVTK47fDtOO9eO5hYHjs2YNYdjvaipmC33SpDS-KqLVirDJL2sseU4eTbEYiOOozVdltjV237Wu4KQFcjec68JaAa3Bi0Stv~Qpnhb537HZ4D0iRoTjZdlfzj-OzPwk2uw9GO6ubA8YaxK2cmotGZwBkE1MLHUmohLrk3sdrAxZyisQGPeaH04Ut9v7Iqaalfe8ClfXR5iAporGLnWssmh0NC2M~Q__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

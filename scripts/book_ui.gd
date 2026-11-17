@@ -16,6 +16,8 @@ const GOLD := Color(0.85, 0.62, 0.15)
 ## Anzeigenamen für Items im Inventar (Fallback: die Item-ID)
 const ITEM_NAMES := {
 	"water_bottle": "Trinkflasche",
+	"sling": "Schlinge",
+	"jewel": "Juwel",
 }
 
 const MISSION_TEXT := """[font_size=26][b]Die Lost City[/b][/font_size]
@@ -29,17 +31,21 @@ const CONTROLS_TEXT := """[font_size=22][b]Tastatur und Maus[/b][/font_size]
 Laufen: W A D und Pfeiltasten
 Kamera: Maus
 Springen, Liane loslassen, aus dem Maul befreien: Leertaste
+Weiter Sprung: im Laufen zweimal Leertaste
 An der Liane klettern: Pfeil runter / W
 Schleichen an/aus: Strg oder C
 Benutzen: E          Buch: B
+Schlinge: F oder linke Maustaste halten = zielen, loslassen = schießen
 
 [font_size=22][b]PS5-Controller[/b][/font_size]
 Laufen: linker Stick oder Steuerkreuz
 Kamera: rechter Stick
 Springen, Liane loslassen, aus dem Maul befreien: Kreuz
+Weiter Sprung: im Laufen zweimal Kreuz
 An der Liane klettern: linker Stick runter / hoch
 Schleichen an/aus: Kreis
 Benutzen: Quadrat          Buch: Dreieck
+Schlinge: R2 halten = zielen, loslassen = schießen
 Im Buch: L1 / R1 blättern, Kreis schließen
 """
 

@@ -1,0 +1,27 @@
+{
+  "id": "01a1e13e-2a38-770e-8f76-321b85933285",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2485815100,
+  "prompt": "low poly stylized swamp mangrove tree with tall arching stilt roots above water, twisted trunk, dark green leafy crown, game asset",
+  "texture_prompt": "dark brown wet bark roots and trunk, lush dark green leaves, stylized swamp colors",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794780312505,
+  "progress": 100,
+  "started_at": 1794780312514,
+  "finished_at": 1794780342836,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13e-2a38-770e-8f76-321b85933285/output/model.glb?Expires=4948300800&Signature=aKmmF4gnuwKCmI9ckIDCYYpDtzm9wGgYiT7qvoifysdWtK80QdpyuK2gC3OCxJ1ePcLVvDmXouQPU95MdEAS3Pd12Sqfai5KsxHKs8aTHpSFomqn2k5q~ahbd4KP6GUuOG-51UkQS~HHHynNglKADuWbeexwrZcJmJ7tTv0xueeoAT9XcmrFQPTIoo~5Zec6j2R6C8hDMpLicNPLVtBee1821qqRUg-CYFiiOhFbicJB8mv~VO3LsAQ0d-8STwF7W61Xc4wmeziqVKsGZOi11gbwDAXp2IDInxzAVwQWt9IyrItKNh3xmcI65fJz93AU5OLi3Ts9ypp2f7p2VmmQSw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13e-2a38-770e-8f76-321b85933285/output/preview.png?Expires=4948300800&Signature=LEyT8J3C9y3L-X07Z4jTk6CHZ57ntF4HixdB4bOyCGepPtOA0hi1b5LWu95ouH8y6gcK0MxuxHnw1jT7N8eQyDiSZLVdlUOlR2DvECCg5QOxNB6Asz3H7c8qBN7PNaEzw0b6vYUA2Zoon5iXuh-XR~QDKl7ZYa5yFqxv0ghOeTfaOFUAREYgroTest3JNKlEBStDgoXalCiRjpE2w1xZWTwrAe0ofYbJG3WqGR8ganEbFIjglOVoyXN~5IgI0lzj8j0kHLfeim~DEs34HbLAvMGo~nVJ~I~jHh7Jmz2B2Q~Vb82dHe6sKgDUK8LgWVA6OrE1WAW6sr1prLr3oI5hLw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13e-2a38-770e-8f76-321b85933285/output/texture_0.png?Expires=4948300800&Signature=Na--CfgqX~IZSN5Og4Ofz7S6UwrdDm1cmvZkCQckjlCJY7jcKNcQ2KI4eozRPdfTIuhPsogtDMhsIUl2VZ1V~kY9LjGwBgcISWYKnQ1J92i9C29Hxz6ieCLizMwzXxBcvoN2R4KY4gNcN9C1ne-TuPCw8MGocsHANgUuU4n~UGPqrZIyIoyhOAkb0biZ~HxHz2VqKHc5dvv1LW3WZBZxj8081o8q7E2MOsOaBhKmYUzBeLIsCe1SJTqrpEWJ0Nxi-Gmh4a4ffeKDaEzJZoe8sd03QiJkVd2EljUxtv~ADtHGbhs2envGIFYcvdwKXZtFCzSx2cdHJ~X580eaz8nP8w__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

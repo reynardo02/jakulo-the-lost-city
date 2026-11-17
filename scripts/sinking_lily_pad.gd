@@ -10,6 +10,9 @@ extends AnimatableBody3D
 @export var sink_depth: float = 0.6   ## so tief sinkt sie höchstens
 @export var note_id: String = "lily_pad"  ## Notiz im Buch, die beim ersten Betreten freigeschaltet wird
 
+## Wasserstand über der Ausgangshöhe (setzt z. B. rising_water.gd, wenn das Wasser steigt)
+var water_offset: float = 0.0
+
 @onready var _stand_area: Area3D = $StandArea
 
 var _rest_y := 0.0
@@ -26,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		_sunk = move_toward(_sunk, sink_depth, sink_speed * delta)
 	else:
 		_sunk = move_toward(_sunk, 0.0, rise_speed * delta)
-	position.y = _rest_y - _sunk
+	position.y = _rest_y + water_offset - _sunk
 
 
 func _player_on_top() -> bool:

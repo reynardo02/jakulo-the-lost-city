@@ -24,11 +24,11 @@ Level 1 steht als Dschungelpfad mit Tempeltor und Portal am Ende. Jedes weitere 
 * Spieler muss sich durch Dorf von Ureinwohnern schleichen ohne dass sie ihn bemerken
 * Am Ende erhält der Spieler als Item eine Trinkflasche mit der er Leben auffüllen kann
 
-### **Level 3 – Fluss & Sumpf**
+### **Level 3 – Sumpf & der große Baum**
 
-- Neues Item: **Schlinge**. Damit trifft man entfernte Ziele und vertreibt Tiere.
-- Treibholz, das sich bewegt, und Seerosen, die unter dem Spieler absinken.
-- Ein Wasserfall als Abschluss von Akt 1.
+- Teil 1: Sumpf mit Hindernissen und schlafenden Affen, an denen man vorbeischleicht.
+- Teil 2: Auf einer Lichtung wird der Bereich überflutet. Der Spieler klettert mit dem neuen Item **Schlinge** einen großen Baum hoch und stoppt oben die Flut per Hebel.
+- Der Dorfbewohner aus Level 2 kehrt zurück und zeigt den Weg zum nächsten Level.
 
 ### **Level 4 – Unterirdische Höhlen / Tunnel**
 
@@ -78,7 +78,7 @@ Die neun Level verteilen sich auf drei Akte, und jedes Level ab Level 2 bringt e
 | --- | --- | --- |
 | 1 – Dschungel | 1 Tutorial | Buch |
 | 1 – Dschungel | 2 Dorf | Schleichen, Trinkflasche |
-| 1 – Dschungel | 3 Fluss & Sumpf | Schlinge |
+| 1 – Dschungel | 3 Sumpf & großer Baum | Schlinge |
 | 2 – Unterwelt & Berge | 4 Höhlen | Fackel, Dunkelheit |
 | 2 – Unterwelt & Berge | 5 Verlassene Mine | Dynamit |
 | 2 – Unterwelt & Berge | 6 Bergpass / Gletscher | Eispickel |
@@ -213,38 +213,72 @@ H = Hütte, G = hohes Gras, W = Wache, F = Lagerfeuer, K = Käfig, C = Checkpoin
 - **Vorhanden:** `campfire.glb`, `tent.glb` (als Hütten-Ersatz), `crate.glb`, `barrel.glb`, `torch.glb`, `ruin_pedestal` und `grass_field.gd` fürs hohe Gras.
 - **Fehlt noch:** ein Hütten-Modell, ein Käfig, die Wachen-Figur und die Schleich-Mechanik (Sichtkegel, Entdeckungsanzeige, Ducken).
 
-## Level 3 – Plan für Fluss & Sumpf
+## Level 3 – Plan für Sumpf und den großen Baum
 
-Level 3 dreht sich um steigendes Wasser und Tempo, als Gegenstück zum Schleichen in Level 2. Das neue Item ist die Schlinge.
+Level 3 besteht aus zwei Teilen: einem Sumpf, den man vorsichtig durchquert, und einem großen Baum, den man hochklettert, während die Lichtung überflutet wird. Das neue Item ist die Schlinge.
 
-### Grundidee: Das Wasser steigt
+### Teil 1 – Der Sumpf
 
-- Der Spieler kommt in einem Flusstal an, kurz darauf setzt Regen ein und der Wasserspiegel steigt langsam.
-- Der Weg führt stetig nach oben: vom Ufer über Felsen und Wurzeln bis in die Baumkronen.
-- Das Wasser tötet nicht sofort. Wer hineinfällt, verliert ein Leben und landet am letzten Checkpoint, der noch trocken ist.
+- **Hindernisse:** sinkende Seerosen, treibendes Holz, Schlammlöcher mit Lianen darüber und einzelne Krokodile. Alles ist aus Level 1 und 2 bekannt, hier aber dichter kombiniert.
+- **Schlafende Affen:** Sie liegen auf Ästen und Inseln am Weg. Der Spieler schleicht geduckt vorbei, wie im Dorf.
+- **Was Affen weckt:** rennen, ins Wasser platschen oder auf einen knackenden Ast treten. Knackende Äste sind sichtbar markiert, damit es fair bleibt.
+- **Folge beim Aufwecken:** Die Affen bewerfen den Spieler mit Früchten und stoßen ihn zurück. Das kostet ein Leben oder wirft ihn ins Wasser, führt aber nicht sofort zum Checkpoint.
+- **Aufbau:** erst ein einzelner Affe abseits des Wegs, dann zwei mit einem knackenden Ast dazwischen, am Ende eine ganze Gruppe direkt am Pfad.
+- **Checkpoint** am Rand der Lichtung.
 
-### Drei Abschnitte
+### Die Lichtung – Zwischensequenz
 
-1. **Flussufer (ruhig):** Hier findet man die Schlinge und lernt sie ohne Zeitdruck, z. B. an einer Frucht am Baum oder einem Wespennest, das einen Affen vertreibt.
-2. **Der Sumpf (das Wasser beginnt zu steigen):** Treibholz und sinkende Seerosen als Trittsteine. Frühe Wege liegen später unter Wasser, dafür trägt das Wasser Treibholz nach oben und macht neue Wege erreichbar.
-3. **Aufstieg zum Wasserfall (Finale):** Klettern über Lianen und Äste, während das Wasser dicht folgt. Oben am Wasserfall endet Akt 1.
+1. Der Spieler betritt die Lichtung, in der Mitte steht der große Baum.
+2. Die Kamera schwenkt zu einem Feind an einem Hebel am Rand der Lichtung (ca. 10 bis 15 s, überspringbar).
+3. Er legt den Hebel um, eine Schleuse öffnet sich und Wasser strömt herein.
+4. Die Kamera kehrt zum Spieler zurück. Am Fuß des Baums liegt die Schlinge, direkt auf dem Weg nach oben.
 
-### Einsatz der Schlinge
+### Teil 2 – Der große Baum
 
-- **Schalter aus der Ferne:** ein Seil durchschießen, damit eine Brücke oder ein Baumstamm herunterfällt.
-- **Tiere vertreiben:** Papageien oder Affen, die auf einem Ast den Weg blockieren (`parrot.glb` und `monkey.glb` sind vorhanden).
-- **Krokodile betäuben:** Ein Treffer hält das Maul kurz geschlossen.
+Der Aufstieg hat drei Ebenen, das Wasser steigt hinter dem Spieler her.
 
-### Weitere Ideen
+1. **Wurzeln:** Die Schlinge aufheben und am ersten Ziel ausprobieren. Das Wasser steigt hier noch langsam, damit man die neue Mechanik in Ruhe lernt.
+2. **Stamm:** Äste und Holzplattformen führen spiralförmig nach oben. Ziele für die Schlinge:
+   - ein Seil durchschießen, damit eine Plattform oder Strickleiter herunterfällt
+   - ein Wespennest treffen, das Affen von einem Ast vertreibt
+   - eine Zielscheibe treffen, die einen Ast als Brücke umklappt
+3. **Krone:** ein letzter Sprungabschnitt, dann der Hebel. Er stoppt die Überflutung, das Wasser zieht sich zurück.
 
-- **Versteckte Juwelen unter Zeitdruck:** Sie liegen in tiefen Bereichen, die früh überflutet werden.
-- **Wiedersehen mit dem Dorfbewohner:** Hat man ihn in Level 2 befreit, wirft er an einer schwierigen Stelle eine Liane herunter.
-- **Notizen fürs Buch:** Einträge zu Papagei, Affe und zur Regenzeit.
+- **Checkpoints** auf jeder Ebene. Wer ins Wasser fällt, verliert ein Leben und startet am letzten trockenen Checkpoint.
+- **Faires Tempo:** Das Wasser steigt bis zu einer Marke unter dem nächsten Checkpoint und wartet dort, bis der Spieler ihn erreicht.
+- **Versteckte Juwelen** liegen auf Seitenästen, die ein zusätzliches Ziel für die Schlinge brauchen.
+
+### Abschluss
+
+- Nach dem Hebel sinkt das Wasser. Am Fuß des Baums wartet der Dorfbewohner aus Level 2.
+- Er zeigt dem Spieler einen Weg zum nächsten Level. Vorschlag: Das abfließende Wasser hat zwischen den Wurzeln einen Höhleneingang freigelegt, der zu den Höhlen von Level 4 führt.
+- Notizen fürs Buch: Affe, Schlinge, der große Baum.
+
+### Offene Fragen
+
+- **Wer ist der Feind am Hebel?** Vorschlag: der Rivale der anderen Expedition, der in Level 5 wieder auftaucht. Alternative: eine Wache aus dem Dorf.
+- **Was passiert, wenn der Spieler den Dorfbewohner in Level 2 nicht befreit hat?** Vorschlag: Er taucht trotzdem auf, weil er sich selbst befreien konnte, ist aber misstrauisch und hilft nur knapp. Mit Befreiung hilft er zusätzlich schon beim Aufstieg, z. B. mit einer heruntergeworfenen Liane.
 
 ### Technik
 
-- Das steigende Wasser ist eine Wasserfläche, deren Höhe ein Tween oder AnimationPlayer anhebt, mit einer Kill-Zone darunter. Der Meeres-Shader aus dem Prolog lässt sich wiederverwenden.
-- Das Tempo hängt an Abschnitten statt an einer festen Uhr: Das Wasser steigt bis zu einer Marke und wartet dort, bis der Spieler den nächsten Checkpoint erreicht.
+- **Wasser:** eine Wasserfläche, deren Höhe ein Tween anhebt und nach dem Hebel wieder senkt, mit einer Kill-Zone darunter. Der Meeres-Shader aus dem Prolog lässt sich wiederverwenden.
+- **Affen:** das Schleich-System aus dem Dorf, aber mit Geräusch statt Sichtkegel (Area3D um den Affen, die auf Rennen und knackende Äste reagiert).
+- **Schlinge:** Zielen mit einer Taste, Projektil als RigidBody3D oder RayCast3D, Ziele als eigene Szene mit einem Signal `hit`.
+- **Zwischensequenz:** AnimationPlayer mit eigener Kamera, wie im Prolog.
+- **Fehlende Assets:** der große Baum mit Plattformen, Hebel und Schleuse (`lever.glb` ist vorhanden), die Schlinge, eine Schlaf-Animation für den Affen.
+
+### Stand (Nov 16, 2026)
+
+- scenes/level_3.tscn ist neu nach diesem Plan gebaut und wird von tools/level3/build_level_3.gd erzeugt. Das alte Level 3 (Fluss mit Regen und Papagei) ist gelöscht.
+- **Sumpf:** schlafende Affen (scripts/sleeping_monkey.gd) hören aufrechtes Laufen, knackende Äste und Platschen im flachen Wasser (scripts/noise_zone.gd). Wach werfen sie Früchte, ein Treffer kostet ein Leben (`GameState.hurt()`) und stößt zurück. Aufbau: ein Affe abseits, zwei mit Ast dazwischen, eine Bande mit zwei Ästen und flachem Wasser. Dazu Seerosen, Liane über dem Schlammloch, Krokodil und Treibholz.
+- **Lichtung:** Die Flut-Cutscene zeigt eine Wache aus dem Dorf am Schleusenhebel (offene Frage entschieden: Wache statt Rivale, weil das Modell da ist). Der Ablauf hängt an scripts/level_3_flow.gd.
+- **Schlinge:** Man zielt selbst: Taste (F, linke Maustaste, R2) halten = Zielmodus mit Fadenkreuz und leichtem Zoom, loslassen = Schuss. Ziele in Reichweite tragen einen goldenen Ring, unter dem Fadenkreuz wird er rot. Getroffen ist, was höchstens ca. 1 m neben dem Zielstrahl liegt (scripts/sling.gd).
+- **Großer Baum:** genau drei Ziele für die Schlinge, alle gut sichtbar: der rote Knoten am Seil (Stamm fällt als Rampe), das Wespennest über den Affen und eine große Zielscheibe, die einen Ast als Brücke umklappt. Große Plattformen mit Lücken unter 1 m, keine fahrende Plattform, das Wasser steigt langsam. Checkpoints l3_wurzeln, l3_stamm, l3_krone; das Wasser wartet jeweils knapp darunter.
+- **Juwelen:** zwei auf Seitenästen, über einen festen Ast erreichbar (Item `jewel`).
+- **Wetter:** Im ganzen Level regnet es (scripts/rain.gd): Tropfen über der Kamera, grauer Himmel, prozedurales Regenrauschen und ab und zu ein Blitz mit Donner.
+- **Abschluss:** Nach dem Hebel steht der Spieler unten beim Dorfbewohner, der Höhleneingang ist frei. Ein Portal führt weiter, solange es Level 4 noch nicht gibt, aber zurück zum Spielanfang.
+- **Affen:** geriggt mit Meshy (Rigging + Animationen Schlafen, Idle, Werfen, Wut, Rennen; tools/level3/extract_monkey_anims.gd, scripts/monkey_animator.gd). Schlafende Affen hören jeden, der aufrecht in ihrer Nähe ist (Radius 6–8,5 m), stampfen beim Aufwachen auf und werfen mit Wurfbewegung; ein Treffer kostet höchstens ein Leben pro Aufwachen. Geduckt kommt man direkt an ihnen vorbei.
+- **Fehlt noch:** die Rivalen-Figur, Geräusche für Affen und Wasser.
 
 ## **Ideen-Parkplatz**
 

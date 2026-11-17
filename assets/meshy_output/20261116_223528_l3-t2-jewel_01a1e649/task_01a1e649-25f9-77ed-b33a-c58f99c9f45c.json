@@ -1,0 +1,16 @@
+{
+  "id": "01a1e649-25f9-77ed-b33a-c58f99c9f45c",
+  "type": "text-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "Single loose brilliant-cut ruby gemstone, deep blood red, many sharp facets, flat table on top and pointed pavilion below, realistic glossy gem, three-quarter view, neutral studio lighting, plain white background, single isolated object, 3D game asset reference",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1794864915973,
+  "started_at": 1794864915981,
+  "finished_at": 1794864933620,
+  "expires_at": 1795124133620,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a1e649-25f9-77ed-b33a-c58f99c9f45c_0.png?Expires=1795124133&Signature=EYIs6hqjqiN2Le3vI8ks0P13baFOdJFLDYI5q0uOX9~t3MqmTbaA0~dhi4a1esUX2lwxE3FSjvE4cF50uH~ugSr-0BZ1nOqnGnfbwqezW98JZdWZp1-qbuIn2H-g2o6HckB-WPnUiBu9kUk2KqN84Z7yiVKDi~Jn3TxktLc7yBfWNhuejkfnfkt4YarR1jSRmMqMvOYidzMwolf09zd1fkt4wvfO2zfK5VkBgcPXeCuqdoAcPpi0mS0cCrP7UUvRQRmGmUAYseUfKGLvrGLRaJinyXByp4nXsAtUubeLYpyl4eMM385T9roFpdKtGkhdTbQ11hG~x-bkfBfiFsfz6g__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}

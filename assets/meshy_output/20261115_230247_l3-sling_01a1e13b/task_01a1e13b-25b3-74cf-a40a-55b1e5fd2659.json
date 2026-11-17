@@ -1,0 +1,23 @@
+{
+  "id": "01a1e13b-25b3-74cf-a40a-55b1e5fd2659",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 266598402,
+  "prompt": "low poly stylized hunting slingshot sling, Y-shaped wooden fork with leather pouch and rubber band, game item prop, simple shapes",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794780115248,
+  "progress": 100,
+  "started_at": 1794780115261,
+  "finished_at": 1794780147198,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13b-25b3-74cf-a40a-55b1e5fd2659/output/model.glb?Expires=4948300800&Signature=PGewWGBsn2vVgMBDyJf95Lii8xwrjitJvoQRRFsGGZP5W5IM-ZvWYlJXSuYQALoxHVQ9eN8CxNQHjG1WITm-ZpaBWEksOYDqk4JETZpvt6fztawiw6xosVCq1beM-BYKe0Y~lzgwUED8I8DIGuvSM3MTXm1F-cDhWQQZ5LYRraB5j-3mEvpRxfMd53HdiXIuldewG6bZJa34E2oLh7ZqVRzSEIus2ix88tgkO0vXobQ1MV7uHFHs69~JH794~ai7rT7VX6p7Q90oLkTOdFOpo46qCVTb0YXmEYGOgOANQlg1QBAjJnrTPPlYxqezG9L5UC~bTGPgddt5ZJqIe~T5Dg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13b-25b3-74cf-a40a-55b1e5fd2659/output/preview.png?Expires=4948300800&Signature=SVRIDXCGp9XnOGR6D4cLcpGRsKW7Vi~a4Tlzc0PQkfqozMDxkRp2doDctCkPzpSVSgqbXjQE4l~UVwxcAd1WjD8CUnkosT6nYcHBWFZtYLbS8j1KL4j8TKST2U0SQW84wBj7Ver7WdiJhkrnGyBhxbcHPd1irXg3nsadpoiGcF2u4l3up1MIeM19tMVtpqXmMp7~SmSQejV1KbK3UmQVOmzklN6tKKn2PQu35MCWY8DLO4QDn6Wnu2fc0VHX1XWH43t9qYhpL9MbjUF59eeejMQ19tztU5QaVhSupJJPqf0qyUHdmOz66zYit-nfDrkxv0eO9OAGXCPSaU6QtqyTMQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

@@ -42,8 +42,8 @@
 [ext_resource type="PackedScene" uid="uid://de86yrwk74jjy" path="res://assets/terrain/Meshy_AI_Verdant_Jungle_Cube_1025140322_texture.glb" id="v_junglebox"]
 [ext_resource type="PackedScene" uid="uid://sq4vibmbp3st" path="res://assets/nature/palm.glb" id="v_palm"]
 [ext_resource type="PackedScene" path="res://scenes/ruins/ruin_pedestal.tscn" id="v_pedestal"]
-[ext_resource type="PackedScene" uid="uid://bokqifudgg4qj" path="res://assets/props/torch.glb" id="v_torch"]
 [ext_resource type="PackedScene" path="res://scenes/village/rescue_cutscene.tscn" id="v_rescue_cutscene"]
+[ext_resource type="PackedScene" uid="uid://bokqifudgg4qj" path="res://assets/props/torch.glb" id="v_torch"]
 [ext_resource type="PackedScene" uid="uid://qhm1c70583iu" path="res://assets/nature/tree_large.glb" id="v_tree_large"]
 [ext_resource type="PackedScene" uid="uid://bymunw0b4nj10" path="res://assets/nature/tree_medium.glb" id="v_tree_medium"]
 
@@ -895,15 +895,19 @@ transform = Transform3D(1.21, 0, 0, 0, 1, 0, 0, 0, 1.21, 16, -1, -116)
 [node name="animals" type="Node" parent="Umgebung" unique_id=1668848297]
 
 [node name="Crocodile1" parent="Umgebung/animals" unique_id=1322506865 instance=ExtResource("4_croc")]
-transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -26.5)
+transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -25.2)
 open_time = 0.5
 
 [node name="Crocodile2" parent="Umgebung/animals" unique_id=1919710718 instance=ExtResource("4_croc")]
-transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -32.5)
+transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -29.9)
 open_time = 0.5
 
 [node name="Crocodile3" parent="Umgebung/animals" unique_id=1223401913 instance=ExtResource("4_croc")]
-transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -38.5)
+transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -34.7)
+open_time = 0.5
+
+[node name="Crocodile4" parent="Umgebung/animals" unique_id=1749203317 instance=ExtResource("4_croc")]
+transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -39.3)
 open_time = 0.5
 
 [node name="traps" type="Node" parent="Umgebung" unique_id=1908100040]
@@ -914,13 +918,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -68)
 [node name="obstacle" type="Node" parent="Umgebung" unique_id=959857975]
 
 [node name="LilyPadLinks1" parent="Umgebung/obstacle" unique_id=293799188 instance=ExtResource("10_lily")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, -97.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, -97.9)
+
+[node name="LilyPadLinks2" parent="Umgebung/obstacle" unique_id=1402937715 instance=ExtResource("10_lily")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -103.3)
 
 [node name="LilyPadLinks3" parent="Umgebung/obstacle" unique_id=864675346 instance=ExtResource("10_lily")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 0, -106.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 0, -108.7)
 
 [node name="LilyPadLinks5" parent="Umgebung/obstacle" unique_id=1784556234 instance=ExtResource("10_lily")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -114.1)
 
 [node name="GrubeLinks" type="Node3D" parent="Umgebung/obstacle" unique_id=506495856]
 
@@ -1117,13 +1124,16 @@ script = ExtResource("13_vinescript")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 5, -149)
 
 [node name="LilyPadRechts1" parent="Umgebung/obstacle" unique_id=201620686 instance=ExtResource("10_lily")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -97.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -97.9)
+
+[node name="LilyPadRechts2" parent="Umgebung/obstacle" unique_id=1638290541 instance=ExtResource("10_lily")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -103.3)
 
 [node name="LilyPadRechts3" parent="Umgebung/obstacle" unique_id=683100938 instance=ExtResource("10_lily")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -106.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -108.7)
 
 [node name="LilyPadRechts5" parent="Umgebung/obstacle" unique_id=1746893436 instance=ExtResource("10_lily")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -114.1)
 
 [node name="GrubeRechts" type="Node3D" parent="Umgebung/obstacle" unique_id=1991454123]
 
@@ -3275,7 +3285,7 @@ omni_range = 9.0
 transform = Transform3D(6.1232e-17, 0, 1, 0, 1, 0, -1, 0, 6.1232e-17, -8, 0, -228)
 cutscene = NodePath("../Rettung")
 
-[node name="Rettung" parent="Umgebung/Dorf" instance=ExtResource("v_rescue_cutscene")]
+[node name="Rettung" parent="Umgebung/Dorf" unique_id=953631035 instance=ExtResource("v_rescue_cutscene")]
 
 [node name="Podest" parent="Umgebung/Dorf" unique_id=2024759987 instance=ExtResource("v_pedestal")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -228)
@@ -3557,6 +3567,7 @@ shape = SubResource("Shape_Dorf_Z")
 
 [node name="MagicPortal" parent="." unique_id=866163846 instance=ExtResource("7_portal")]
 transform = Transform3D(1.2, 0, 0, 0, 1.8, 0, 0, 0, 1, 0, 0, -232)
+next_scene = "res://scenes/level_3.tscn"
 required_flag = "villager_freed"
 locked_hint = "Das Portal ist verschlossen.
 Vielleicht weiß der Gefangene im Käfig mehr."

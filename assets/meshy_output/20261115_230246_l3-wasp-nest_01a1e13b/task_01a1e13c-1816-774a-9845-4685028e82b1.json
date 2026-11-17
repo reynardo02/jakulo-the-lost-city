@@ -1,0 +1,27 @@
+{
+  "id": "01a1e13c-1816-774a-9845-4685028e82b1",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3123089625,
+  "prompt": "low poly stylized paper wasp nest hanging from a short branch, grey brown layered paper texture, game prop",
+  "texture_prompt": "grey beige papery wasp nest with layered stripes, brown branch, stylized",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794780177372,
+  "progress": 100,
+  "started_at": 1794780177585,
+  "finished_at": 1794780208447,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13c-1816-774a-9845-4685028e82b1/output/model.glb?Expires=4948300800&Signature=gTvCaj4Rn6RzkfewZ73VO2Y3Q7xziKYR00lRNSEs5C3X2RQjIRiUylTDst-JeYP3zhNqjBWV3q2xI7MF4CZ64LsPtNU6~LtWG-EzUsA3dtoNrTvr-Nn5lXmuXhKYCNmk65Rh3N3BUq9y2yZPMA8lkVQ8OtHshvbqTm2VtdCOF8dILs3HZTfmGWni7Yjo7XFwEMsVljCFckAiEIUPHNJfDRqSvrRvhwSw4BsLNlndjOk0U1lEtk8WNzG0OoXuMyNLcGj3-mtuUflSVjysWDjXdxWpeN8OdocfDDb0Xu5tTOE5Zw-eQG2STntLKTdYgikDvBb2JuRPD0iO9SXU1UI4Og__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13c-1816-774a-9845-4685028e82b1/output/preview.png?Expires=4948300800&Signature=UOQJ-uTBLnrkO51~RfO1AIznWUIvDSnKCpX6H3sIlIDPRQ6YGuXvtnA5bfDoJ3tyt-j8AjcdizYMWY9kgMQiJNwG7Ki7PlsP02PPi8Pe2a7Qid3-byDcfZhEwqY9u-Tl839XtuNZF6IN0x~y~u9U9G2wZiakew-y99pXjERbvVXtterhnz2KIF5SMuD9CiiEoKgaQR7T-RJinigjh60kzJ-s813pgNpdvtpKopi~DiyZgDthpmu1lXx-SshY~xT57kbfJTDC0PsSMLbAcDwR~1Ce-NhqhZ39tYbg9jSJTc5AV6VEUT5~hCJdkuK1FrOVeWVzrbzmJL8i6Z8cxPF8JA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13c-1816-774a-9845-4685028e82b1/output/texture_0.png?Expires=4948300800&Signature=bPi5FSbCpUAoyMdgQ~Ap86uN~AWxpLxnalQVh6BUw2ZB-Lci19wo2pCJyX5kzbYFJFP0Xkqz-aosDR1xnw3zlCXyDTUgtuBhGmV-4D20GemLVjG-YsABRjzeTsQ44oq2hf3iF6CfzelzZ-2W2sakZBYX0WrStm41eBP0Wd7oK2mmYVZKZSnLSFj5A7nrc3tO3IO5y4cMqZZYhvrFuCI79fprFiP2B9Ez2KJraiYk6Z3XOoX6iiPz89Ec88Xwzjnu~Uz3SKFtF35ehOabmK5MBBqWt92gaN~eQ6mvReUosvoT56OZU9avfjyzKAlPube0UvC48BENbGa51dPx7TsZKQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

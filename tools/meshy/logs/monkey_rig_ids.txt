@@ -1,0 +1,6 @@
+PROJ=C:\Users\Paul\Projects\GamingProjects\Godot\jakulo-the-lost-city\assets\meshy_output\20261116_231811_l3-monkey-rig_01a1e670 IMG=01a1e670-4432-740a-b4a6-87aa1750c668 MOD=01a1e670-ce84-7051-9ca8-8d212a5f2810
+RIG=01a1e672-0260-740d-be24-fd114282571e
+angry -> 01a1e672-c377-77cf-a076-5c7f59623f99
+sleep -> 01a1e672-c366-7330-92f3-902aa515ea99
+throw -> 01a1e672-c2fe-7227-a9d0-7f56dd5af20a
+idle -> 01a1e672-c2fc-70c7-b266-2d337c5dce19

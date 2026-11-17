@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://cr1a6uhexrs6y" path="res://assets/nature/flower_yellow.glb" id="8_jscgt"]
 [ext_resource type="PackedScene" uid="uid://4durf7c5jmsp" path="res://assets/nature/tropical_plant.glb" id="8_so66j"]
 [ext_resource type="PackedScene" uid="uid://71th1p514ngq" path="res://assets/plants/Meshy_AI_Emerald_Fern_Bloom_1027212651_texture.glb" id="8_tdlki"]
-[ext_resource type="PackedScene" uid="uid://d25jtp6d2nbdc" path="res://assets/nature/bush.glb" id="9_tr1x6"]
 [ext_resource type="PackedScene" uid="uid://1pc8kxqvfo6w" path="res://assets/plants/Meshy_AI__1027212759_texture.glb" id="9_v8pws"]
 [ext_resource type="PackedScene" uid="uid://8im08wo2yllh" path="res://assets/nature/flower_red.glb" id="10_d5akn"]
 [ext_resource type="PackedScene" uid="uid://bcqu7sltwuher" path="res://assets/nature/jungle/bamboo_cluster.glb" id="10_rscm6"]
@@ -1044,7 +1043,7 @@ mesh = SubResource("PlaneMesh_iw4em")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, -149.75)
 mesh = SubResource("PlaneMesh_hnsmf")
 
-[node name="Strand" parent="Umgebung" instance=ExtResource("90_beach")]
+[node name="Strand" parent="Umgebung" unique_id=1302452900 instance=ExtResource("90_beach")]
 
 [node name="deco" type="Node" parent="Umgebung" unique_id=170019334]
 
@@ -1845,7 +1844,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.99
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -4.545984e-06, -6, 52)
 
 [node name="Meshy_AI_Mossy_Fallen_Log_1026200851_texture" parent="Umgebung/obstacle" unique_id=1813438665 instance=ExtResource("17_x2xxo")]
-transform = Transform3D(1.6, 0, -6.357302e-08, 0, 0.8, 0, 1.0171683e-07, 0, 1, -1, 0, -22)
+transform = Transform3D(1.6, 0, -6.357302e-08, 0, 0.7, 0, 1.0171683e-07, 0, 1, -1, 0, -22)
 
 [node name="Vine" parent="Umgebung/obstacle" unique_id=1603290707 instance=ExtResource("20_so66j")]
 transform = Transform3D(1, 0, 0, 0, 2.7, 0, 0, 0, 1, -3.516674e-06, 1, -59)
@@ -1859,11 +1858,15 @@ transform = Transform3D(1, 0, 6.3573026e-08, 0, 1, 0, -6.3573026e-08, 0, 1, -2.5
 [node name="animals" type="Node" parent="Umgebung" unique_id=144307362]
 
 [node name="Crocodile1" parent="Umgebung/animals" unique_id=1023720346 instance=ExtResource("60_croc")]
-transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -86)
+transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -85.2)
 warning_time = 1.0
 
 [node name="Crocodile2" parent="Umgebung/animals" unique_id=258160304 instance=ExtResource("60_croc")]
-transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -92.5)
+transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -89.8)
+warning_time = 1.0
+
+[node name="Crocodile3" parent="Umgebung/animals" unique_id=1587340211 instance=ExtResource("60_croc")]
+transform = Transform3D(-6.5567065e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.5567065e-08, 0.5, -0.6, -94.4)
 warning_time = 1.0
 
 [node name="checkpoints" type="Node" parent="Umgebung" unique_id=1650075465]

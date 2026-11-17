@@ -1,0 +1,23 @@
+{
+  "id": "01a1e13b-6f97-713e-b83f-439c907fe4f4",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2258495279,
+  "prompt": "low poly stylized wooden plank platform with rope railing, tree house ledge, flat walkable top, game asset",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794780134713,
+  "progress": 100,
+  "started_at": 1794780134723,
+  "finished_at": 1794780172213,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13b-6f97-713e-b83f-439c907fe4f4/output/model.glb?Expires=4948300800&Signature=FAE-tIVI24YVBqvLGtkLPwN8NljQpKcfWudte-OxowhNfMsRvLfjb~afPMQs01RLPpj9D4ikOuaalOA5EIa3YoDJKeWuCBvamKuK2VYOpHkEVhArlPrPvgSfq21IEyxlkFUa8QmV~YJPTzyG0DflVAab08DKij-QBBa42DT5UdeEvapUAyE4-IeK0rmv3yzM2fuSsugfy3-xQPAjm7RDeAX~s-fDdYvjHXpZBzHxhH3RmJ4OFRQ6mxBIBlBJpDCme0lKpFlOYI~gB7exc4BDVybmfM1UC4xB7d8XgXbzuIQlsPMYhCA8Wlbtt-k-EKDG2ld39UljbQhLniXPZXPP8A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13b-6f97-713e-b83f-439c907fe4f4/output/preview.png?Expires=4948300800&Signature=HGBZJcwn8PwrA8xp7Acyhpo8BK6vxXVzrUxRN1znpYmRIWskNjr~UcGvh8xi~uafk~RkJ~LPNEYlikt9k7Ix5RODC1NhQnUBn0HCvy3YIZV2giuNhx5xw4IJLWJVNs1BQo4Xw5ikSuo10F6VrvgOsacfUnUiM2Xs-XHTA9GDlR9EWONUHxMNfMB0vUT~6Cv7nAP0uRA2h6z8S1xvByzY1JsUQJ4OUZgw3cH-N2ie3-V30YMBgXzhOkHBey4gHq1GRiHGISJIJ53u4T4ijusiU-BwIS8ZaD0yfJOgZBvR~WGQZEQGYHosgKfqGOxofJMJ0Ps7FxcqFtEEif2~byTZpw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

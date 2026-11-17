@@ -36,9 +36,9 @@ const LEVELS: Array[Dictionary] = [
 	},
 	{
 		"id": "level_3",
-		"name": "Fluss und Sumpf",
-		"scene": "",
-		"description": "Treibholz, sinkende Seerosen und ein Wasserfall am Ende.",
+		"name": "Sumpf und der große Baum",
+		"scene": "res://scenes/level_3.tscn",
+		"description": "Schlafende Affen im Sumpf, dann eine Flut – und ein Baum, der höher ist als alles Wasser.",
 	},
 	{
 		"id": "level_4",
@@ -99,6 +99,22 @@ const NOTES := {
 		"title": "Seerosen",
 		"text": "Tragen einen Menschen nur für einen Augenblick. Wer stehen bleibt, versinkt mit ihnen im Wasser – also zügig von Blatt zu Blatt springen.",
 	},
+	"sling": {
+		"title": "Die Schlinge",
+		"text": "Trifft, was man mit der Hand nicht erreicht. Ziele in Reichweite tragen einen goldenen Ring. Zum Zielen F, die linke Maustaste oder R2 gedrückt halten – das Fadenkreuz wird golden, wenn es auf einem Ziel liegt. Loslassen schießt. Sie durchtrennt Seile, verscheucht Tiere und lässt ein Krokodil für ein paar Sekunden das Maul geschlossen halten.",
+	},
+	"monkey": {
+		"title": "Affen",
+		"text": "Schlafen am liebsten am Wasser und haben ein feines Gehör. Wer aufrecht an ihnen vorbeiläuft, ins flache Wasser platscht oder auf einen hellen, trockenen Ast tritt, weckt sie – und dann fliegen Früchte. Geduckt schleichen, über trockene Äste springen. Ein Wespennest über ihrem Kopf vertreibt sie ganz.",
+	},
+	"big_tree": {
+		"title": "Der große Baum",
+		"text": "Der älteste Baum des Dschungels steht mitten auf einer Lichtung, die sich mit Schleusen fluten lässt. Jemand hat Plattformen und Stege in seinen Stamm gebaut – und ganz oben in der Krone einen Hebel, der die Schleusen wieder schließt.",
+	},
+	"driftwood": {
+		"title": "Treibholz",
+		"text": "Treibt auf dem Wasser hin und her und trägt einen Menschen. Am besten aufspringen, wenn es gerade am nächsten ist, und mitfahren.",
+	},
 }
 
 var lives: int = MAX_LIVES
@@ -131,6 +147,7 @@ const ACTION_LABELS := {
 	"close": ["E", "KREIS"],
 	"crouch": ["STRG", "KREIS"],
 	"pages": ["A / D", "L1 / R1"],
+	"sling": ["F", "R2"],
 }
 
 var _hud_label: Label
@@ -371,6 +388,20 @@ func player_caught(player: Node3D = null, costs_life: bool = false, delay: float
 
 
 # ---------- Tod ----------
+
+## Ein Treffer, der ein Leben kostet, ohne das Level neu zu laden (z. B. Frucht eines Affen).
+## Ist es das letzte Leben, gilt es als Tod.
+func hurt(player: Node3D = null, text: String = "Autsch!") -> void:
+	if _transitioning:
+		return
+	if lives <= 1:
+		player_died(player)
+		return
+	lives -= 1
+	lives_changed.emit(lives)
+	_update_hud()
+	flash_message(text, 1.5)
+
 
 ## Spieler ist gestorben: ein Leben weniger, Level neu laden – der Spieler startet
 ## dann am letzten Checkpoint. Ohne Leben: Game Over und Neustart bei Level 1.

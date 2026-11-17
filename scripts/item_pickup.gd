@@ -8,11 +8,12 @@ extends Area3D
 @export var message: String = ""   ## Hinweis beim Aufsammeln ("" = keiner)
 @export var once: bool = true
 @export var required_flag: String = ""   ## z. B. "villager_freed"; leer = liegt von Anfang an da
+@export var pickup_flag: String = ""   ## wird beim Aufsammeln gesetzt; ist es schon gesetzt, liegt er nicht mehr da (z. B. Juwelen)
 @export var spin_speed: float = 1.2   ## rad/s, dreht das Modell zur besseren Sichtbarkeit
 
 
 func _ready() -> void:
-	if once and GameState.has_item(item_id):
+	if (once and GameState.has_item(item_id)) or (pickup_flag != "" and GameState.has_flag(pickup_flag)):
 		queue_free()
 		return
 	body_entered.connect(_on_body_entered)
@@ -42,6 +43,8 @@ func _on_body_entered(body: Node3D) -> void:
 	if not body.is_in_group("player") or not is_available():
 		return
 	GameState.add_item(item_id, amount)
+	if pickup_flag != "":
+		GameState.set_flag(pickup_flag)
 	if message != "":
 		GameState.flash_message(message, 3.0)
 	queue_free()

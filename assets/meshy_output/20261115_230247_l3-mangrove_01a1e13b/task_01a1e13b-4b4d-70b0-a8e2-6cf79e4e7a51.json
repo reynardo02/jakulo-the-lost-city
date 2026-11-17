@@ -1,0 +1,23 @@
+{
+  "id": "01a1e13b-4b4d-70b0-a8e2-6cf79e4e7a51",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 859315875,
+  "prompt": "low poly stylized swamp mangrove tree with tall arching stilt roots above water, twisted trunk, dark green leafy crown, game asset",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794780124224,
+  "progress": 100,
+  "started_at": 1794780124233,
+  "finished_at": 1794780295300,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13b-4b4d-70b0-a8e2-6cf79e4e7a51/output/model.glb?Expires=4948300800&Signature=Q7qo4RxusqCBfnNBKO-Z2kCwd3opu9MAcwZgO98f4wLXg8BGdJXOiKQ-km0xwgn7M-S68M6e155bLXUGkoSFQQTf1c58oQqnYt9rxEXPIDndmTrMTGdoulo31AdlUKRLZCdX004dEBJ23kovOpHxZL6RcBKGBEH130EKJGJPGt1fzrJV4mn6UalJRPPkZyf~j4U2yXpfFEGC~cgQJLd5LU~cn6mXLPJwm7MedmXACbSlfOU51iUvRrceV2PWVAd523yFEchuKc~qCMa34XE2tCExGePKiygy34ZbddsIKoWtmrn1Ac16vlxBP2YgM2n3L~1DeUmaZUC8c8RfG~cbag__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13b-4b4d-70b0-a8e2-6cf79e4e7a51/output/preview.png?Expires=4948300800&Signature=JqNvLQVIealZxcfJIuedTegKc7bzpV9CkOLH1GgTG~aObfscv63olMiuOMnaSfvsYqGniHwnFxkXwurPqyHUo-lZMxA5lDrgjwvWhBpzZyXVoeUJI2AkwbUgpmBppfMJ8Y8n2LtixsRTsRi1kTmtfWbC1D~K0110MsTG9poy5cirdT~QXzAvzFXDvigpnTgiMTDtE2tQDiXqgbd0dpmoEV5W6OBCR5ACWmyLfqtdoUhTCppzAduoZZutDCMDhwcJ~dsCZVzaG91ONYw~OKxQROIjQYA5HH~lkg707YuIGHMUlKD~dPULJO-Qpv7JPSBQTEN27RFSHrVMB~sRLn0Clg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

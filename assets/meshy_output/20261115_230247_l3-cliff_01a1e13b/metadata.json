@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "project_name": "l3-cliff",
+  "folder": "20261115_230247_l3-cliff_01a1e13b",
+  "root_task_id": "01a1e13b-8631-71fe-a638-5e7e3745a742",
+  "created_at": "2026-11-15T22:02:47.068Z",
+  "updated_at": "2026-11-15T22:04:11.833Z",
+  "tasks": [
+    {
+      "task_id": "01a1e13b-8631-71fe-a638-5e7e3745a742",
+      "task_type": "text-to-3d-preview",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview.png"
+      ],
+      "task_json": "task_01a1e13b-8631-71fe-a638-5e7e3745a742.json",
+      "operation_id": null,
+      "created_at": "2026-11-15T22:03:31.542Z",
+      "updated_at": "2026-11-15T22:03:33.571Z"
+    },
+    {
+      "task_id": "01a1e13c-9994-77cd-98d2-d29d63647c7d",
+      "task_type": "text-to-3d-refine",
+      "resource": "text-to-3d",
+      "endpoint": "/openapi/v2/text-to-3d",
+      "stage": "refine",
+      "parent_task_id": "01a1e13b-8631-71fe-a638-5e7e3745a742",
+      "status": "SUCCEEDED",
+      "files": [
+        "refined.png"
+      ],
+      "task_json": "task_01a1e13c-9994-77cd-98d2-d29d63647c7d.json",
+      "operation_id": "l3-cliff-refine",
+      "created_at": "2026-11-15T22:03:38.948Z",
+      "updated_at": "2026-11-15T22:04:11.833Z"
+    }
+  ]
+}

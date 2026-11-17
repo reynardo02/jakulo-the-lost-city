@@ -30,6 +30,7 @@ enum State { CLOSED, WARNING, OPEN, GRABBED, ESCAPING, SWALLOWED, RESTING }
 @export var rearm_delay: float = 1.5    ## nach dem Befreien: so lange ohne Spieler, bis es wieder zuschnappt
 @export var bite_animation: StringName = &"bite"  ## Animation des geriggten Modells
 @export var note_id: String = "crocodile"  ## Notiz im Buch, die bei der ersten Berührung freigeschaltet wird
+@export var stun_time: float = 4.0      ## so lange hält ein Treffer mit der Schlinge das Maul zu
 
 @export_group("Schnappen im Takt")
 @export var snap_interval: float = 0.0  ## alle so viele Sekunden schnappt es von selbst (0 = nur bei Berührung)
@@ -67,6 +68,7 @@ var _rest: Transform3D
 var _victim: Node3D
 var _presses := 0
 var _snap_left := 0.0   # Zeit bis zum nächsten Schnappen im Takt
+var _stun_left := 0.0   # Restzeit der Betäubung durch die Schlinge
 
 # Aufbäumen: 0 = liegt normal, 1 = steht senkrecht mit dem Maul am Spieler
 var _rear_amount := 0.0
@@ -97,6 +99,28 @@ func _ready() -> void:
 	_attach_to_bone(_lower_tip, _lower_bone)
 	_bite_area.body_entered.connect(_on_bite_area_body_entered)
 	_snap_left = snap_interval + maxf(snap_offset, 0.0)
+	add_to_group("sling_target")
+
+
+# ---------- Schlinge: betäuben ----------
+
+## Ein Treffer mit der Schlinge hält das Maul `stun_time` Sekunden geschlossen.
+func sling_hit() -> void:
+	if _state in [State.GRABBED, State.ESCAPING, State.SWALLOWED]:
+		return
+	if _state == State.OPEN:
+		_close()
+	_state = State.CLOSED
+	_model.transform = _rest
+	_stun_left = stun_time
+
+
+func can_be_hit() -> bool:
+	return _state in [State.CLOSED, State.WARNING, State.OPEN, State.RESTING] and _stun_left <= 0.0
+
+
+func get_sling_point() -> Vector3:
+	return _model.global_position + Vector3.UP * 0.4
 
 
 func is_open() -> bool:
@@ -145,6 +169,13 @@ func _physics_process(delta: float) -> void:
 		return
 	if _state == State.SWALLOWED:
 		_hold_victim()
+		return
+	if _stun_left > 0.0:
+		# betäubt: Maul bleibt zu, Berührungen lösen nichts aus; zum Zeichen ein leichtes Schaukeln
+		_stun_left -= delta
+		_model.rotation.z = _rest.basis.get_euler().z + sin(_stun_left * 9.0) * deg_to_rad(1.5)
+		if _stun_left <= 0.0:
+			_model.transform = _rest
 		return
 	if _state == State.CLOSED:
 		var touched := _player_on_top()

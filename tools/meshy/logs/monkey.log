@@ -1,0 +1,185 @@
+[monkey] Referenzbild anfordern
+[monkey] Bild-Task 01a1e647-8cad-733f-bd47-5dba03e34b87
+[monkey] Projekt C:\Users\Paul\Projects\GamingProjects\Godot\jakulo-the-lost-city\assets\meshy_output\20261116_223342_l3-t2-monkey_01a1e647
+text-to-image 01a1e647-8cad-733f-bd47-5dba03e34b87
+[text-to-image] IN_PROGRESS 30%
+[text-to-image] SUCCEEDED 100%
+      ok in 16s
+[monkey] Bild fertig: SUCCEEDED
+{
+  "schema_version": "meshy.cli/v1",
+  "command": "download",
+  "ok": true,
+  "result": {
+    "source": {
+      "kind": "task-json",
+      "path": "C:\\Users\\Paul\\Projects\\GamingProjects\\Godot\\jakulo-the-lost-city\\assets\\meshy_output\\20261116_223342_l3-t2-monkey_01a1e647\\task_01a1e647-8cad-733f-bd47-5dba03e34b87.json",
+      "shape": "api",
+      "resource": "text-to-image",
+      "task_id": "01a1e647-8cad-733f-bd47-5dba03e34b87"
+    },
+    "selection": {
+      "selected": [
+        "image.0"
+      ],
+      "dependencies": []
+    },
+    "downloads": {
+      "state": "completed",
+      "files": [
+        {
+          "key": "image.0",
+          "path": "C:\\Users\\Paul\\Projects\\GamingProjects\\Godot\\jakulo-the-lost-city\\assets\\meshy_output\\20261116_223342_l3-t2-monkey_01a1e647\\reference\\image_0.png",
+          "relative_path": "meshy_output/20261116_223342_l3-t2-monkey_01a1e647/reference/image_0.png",
+          "bytes": 904492,
+          "sha256": "00a671cd3b8092cf8c72c21f4c7cf2cd5ef550e5e23d99cea355b588cf0e8a56",
+          "content_type": "image/png",
+          "format": "png",
+          "container_format": null,
+          "extracted": null,
+          "status": "written",
+          "error": null,
+          "publish_method": "link",
+          "relinked": false
+        }
+      ],
+      "metadata_path": null,
+      "material_links": null
+    },
+    "unknown_urls": [],
+    "saved_json": null,
+    "project": {
+      "project_dir": "C:\\Users\\Paul\\Projects\\GamingProjects\\Godot\\jakulo-the-lost-city\\assets\\meshy_output\\20261116_223342_l3-t2-monkey_01a1e647",
+      "action": "merged",
+      "stage": "reference",
+      "recorded_files": [
+        "reference/image_0.png"
+      ]
+    }
+  },
+  "error": null,
+  "warnings": []
+}
+[monkey] 3D-Modell anfordern (Smart Topology, 8000 Dreiecke)
+[monkey] 3D-Task 01a1e647-f689-712d-930e-3b11fae03e2a
+image-to-3d 01a1e647-f689-712d-930e-3b11fae03e2a
+[image-to-3d] IN_PROGRESS 3%
+[image-to-3d] IN_PROGRESS 13%
+[image-to-3d] IN_PROGRESS 37%
+[image-to-3d] IN_PROGRESS 67%
+[image-to-3d] IN_PROGRESS 84%
+[image-to-3d] SUCCEEDED 100%
+      ok in 42s
+[monkey] 3D fertig: ok=True
+{
+  "schema_version": "meshy.cli/v1",
+  "command": "download",
+  "ok": true,
+  "result": {
+    "source": {
+      "kind": "task-json",
+      "path": "C:\\Users\\Paul\\Projects\\GamingProjects\\Godot\\jakulo-the-lost-city\\assets\\meshy_output\\20261116_223342_l3-t2-monkey_01a1e647\\task_01a1e647-f689-712d-930e-3b11fae03e2a.json",
+      "shape": "api",
+      "resource": "image-to-3d",
+      "task_id": "01a1e647-f689-712d-930e-3b11fae03e2a"
+    },
+    "selection": {
+      "selected": [
+        "model.glb"
+      ],
+      "dependencies": []
+    },
+    "downloads": {
+      "state": "completed",
+      "files": [
+        {
+          "key": "model.glb",
+          "path": "C:\\Users\\Paul\\Projects\\GamingProjects\\Godot\\jakulo-the-lost-city\\assets\\level3\\monkey_t2.glb",
+          "relative_path": "level3/monkey_t2.glb",
+          "bytes": 5739568,
+          "sha256": "fa92656d3e1c3f31a835f3479002fff1825357c4b3c747bcba85db8b34171db1",
+          "content_type": "model/gltf-binary",
+          "format": "glb",
+          "container_format": null,
+          "extracted": null,
+          "status": "written",
+          "error": null,
+          "publish_method": "rename",
+          "relinked": false
+        }
+      ],
+      "metadata_path": null,
+      "material_links": null
+    },
+    "unknown_urls": [],
+    "saved_json": null,
+    "project": {
+      "project_dir": "C:\\Users\\Paul\\Projects\\GamingProjects\\Godot\\jakulo-the-lost-city\\assets\\meshy_output\\20261116_223342_l3-t2-monkey_01a1e647",
+      "action": "added",
+      "stage": "delivered",
+      "recorded_files": []
+    }
+  },
+  "error": null,
+  "warnings": [
+    {
+      "code": "files_outside_project",
+      "message": "some files were written outside the project directory and were not recorded"
+    }
+  ]
+}
+{
+  "schema_version": "meshy.cli/v1",
+  "command": "download",
+  "ok": true,
+  "result": {
+    "source": {
+      "kind": "task-json",
+      "path": "C:\\Users\\Paul\\Projects\\GamingProjects\\Godot\\jakulo-the-lost-city\\assets\\meshy_output\\20261116_223342_l3-t2-monkey_01a1e647\\task_01a1e647-f689-712d-930e-3b11fae03e2a.json",
+      "shape": "api",
+      "resource": "image-to-3d",
+      "task_id": "01a1e647-f689-712d-930e-3b11fae03e2a"
+    },
+    "selection": {
+      "selected": [
+        "thumbnail.primary"
+      ],
+      "dependencies": []
+    },
+    "downloads": {
+      "state": "completed",
+      "files": [
+        {
+          "key": "thumbnail.primary",
+          "path": "C:\\Users\\Paul\\Projects\\GamingProjects\\Godot\\jakulo-the-lost-city\\assets\\meshy_output\\20261116_223342_l3-t2-monkey_01a1e647\\preview.png",
+          "relative_path": "meshy_output/20261116_223342_l3-t2-monkey_01a1e647/preview.png",
+          "bytes": 149245,
+          "sha256": "7c65786c93ddded1657d10e796f1a1b01fb5f3fd54f3d9d7eb585acad07858eb",
+          "content_type": "image/png",
+          "format": "png",
+          "container_format": null,
+          "extracted": null,
+          "status": "written",
+          "error": null,
+          "publish_method": "link",
+          "relinked": false
+        }
+      ],
+      "metadata_path": null,
+      "material_links": null
+    },
+    "unknown_urls": [],
+    "saved_json": null,
+    "project": {
+      "project_dir": "C:\\Users\\Paul\\Projects\\GamingProjects\\Godot\\jakulo-the-lost-city\\assets\\meshy_output\\20261116_223342_l3-t2-monkey_01a1e647",
+      "action": "added",
+      "stage": "preview",
+      "recorded_files": [
+        "preview.png"
+      ]
+    }
+  },
+  "error": null,
+  "warnings": []
+}
+[monkey] FERTIG C:\Users\Paul\Projects\GamingProjects\Godot\jakulo-the-lost-city\assets\meshy_output\20261116_223342_l3-t2-monkey_01a1e647  Credits(Bild,3D)=

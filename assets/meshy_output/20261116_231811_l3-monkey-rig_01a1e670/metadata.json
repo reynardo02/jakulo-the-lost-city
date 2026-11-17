@@ -1,0 +1,138 @@
+{
+  "schema_version": 2,
+  "project_name": "l3-monkey-rig",
+  "folder": "20261116_231811_l3-monkey-rig_01a1e670",
+  "root_task_id": "01a1e670-4432-740a-b4a6-87aa1750c668",
+  "created_at": "2026-11-16T22:18:11.031Z",
+  "updated_at": "2026-11-16T22:21:07.973Z",
+  "tasks": [
+    {
+      "task_id": "01a1e670-4432-740a-b4a6-87aa1750c668",
+      "task_type": "text-to-image",
+      "resource": "text-to-image",
+      "endpoint": "/openapi/v1/text-to-image",
+      "stage": "reference",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "reference/image_0.png"
+      ],
+      "task_json": "task_01a1e670-4432-740a-b4a6-87aa1750c668.json",
+      "operation_id": null,
+      "created_at": "2026-11-16T22:18:39.321Z",
+      "updated_at": "2026-11-16T22:18:41.595Z"
+    },
+    {
+      "task_id": "01a1e670-ce84-7051-9ca8-8d212a5f2810",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "model",
+      "parent_task_id": "01a1e670-4432-740a-b4a6-87aa1750c668",
+      "status": "SUCCEEDED",
+      "files": [],
+      "task_json": "task_01a1e670-ce84-7051-9ca8-8d212a5f2810.json",
+      "operation_id": "f1ae9f5d-e97e-4dbf-b62a-33d4ca916f03",
+      "created_at": "2026-11-16T22:18:44.833Z",
+      "updated_at": "2026-11-16T22:19:28.986Z"
+    },
+    {
+      "task_id": "01a1e670-ce84-7051-9ca8-8d212a5f2810",
+      "task_type": "image-to-3d",
+      "resource": "image-to-3d",
+      "endpoint": "/openapi/v1/image-to-3d",
+      "stage": "preview",
+      "parent_task_id": null,
+      "status": "SUCCEEDED",
+      "files": [
+        "preview.png"
+      ],
+      "task_json": null,
+      "operation_id": null,
+      "created_at": "2026-11-16T22:19:31.084Z",
+      "updated_at": "2026-11-16T22:19:31.084Z"
+    },
+    {
+      "task_id": "01a1e672-0260-740d-be24-fd114282571e",
+      "task_type": "rig",
+      "resource": "rigging",
+      "endpoint": "/openapi/v1/rigging",
+      "stage": "rigging",
+      "parent_task_id": "01a1e670-ce84-7051-9ca8-8d212a5f2810",
+      "status": "SUCCEEDED",
+      "files": [
+        "anims/rigged.glb",
+        "anims/walking.glb",
+        "anims/running.glb"
+      ],
+      "task_json": "task_01a1e672-0260-740d-be24-fd114282571e.json",
+      "operation_id": "a4acdd0b-57a9-4bdb-af75-cf8c3cc5cbb9",
+      "created_at": "2026-11-16T22:20:11.277Z",
+      "updated_at": "2026-11-16T22:20:39.920Z"
+    },
+    {
+      "task_id": "01a1e672-c366-7330-92f3-902aa515ea99",
+      "task_type": "animate",
+      "resource": "animate",
+      "endpoint": "/openapi/v1/animations",
+      "stage": "anim-sleep",
+      "parent_task_id": "01a1e672-0260-740d-be24-fd114282571e",
+      "status": "SUCCEEDED",
+      "files": [
+        "anims/sleep.glb"
+      ],
+      "task_json": "task_01a1e672-c366-7330-92f3-902aa515ea99.json",
+      "operation_id": "3b6ddec5-62a2-413e-8082-8e3288f18553",
+      "created_at": "2026-11-16T22:20:52.276Z",
+      "updated_at": "2026-11-16T22:21:07.973Z"
+    },
+    {
+      "task_id": "01a1e672-c377-77cf-a076-5c7f59623f99",
+      "task_type": "animate",
+      "resource": "animate",
+      "endpoint": "/openapi/v1/animations",
+      "stage": "anim-angry",
+      "parent_task_id": "01a1e672-0260-740d-be24-fd114282571e",
+      "status": "SUCCEEDED",
+      "files": [
+        "anims/angry.glb"
+      ],
+      "task_json": "task_01a1e672-c377-77cf-a076-5c7f59623f99.json",
+      "operation_id": "aebbed56-a3d9-4ffc-b162-d282d2f0f572",
+      "created_at": "2026-11-16T22:20:52.284Z",
+      "updated_at": "2026-11-16T22:21:01.812Z"
+    },
+    {
+      "task_id": "01a1e672-c2fe-7227-a9d0-7f56dd5af20a",
+      "task_type": "animate",
+      "resource": "animate",
+      "endpoint": "/openapi/v1/animations",
+      "stage": "anim-throw",
+      "parent_task_id": "01a1e672-0260-740d-be24-fd114282571e",
+      "status": "SUCCEEDED",
+      "files": [
+        "anims/throw.glb"
+      ],
+      "task_json": "task_01a1e672-c2fe-7227-a9d0-7f56dd5af20a.json",
+      "operation_id": "bac637e9-a403-4ef8-9ff8-ec744d8899c9",
+      "created_at": "2026-11-16T22:20:52.299Z",
+      "updated_at": "2026-11-16T22:21:07.773Z"
+    },
+    {
+      "task_id": "01a1e672-c2fc-70c7-b266-2d337c5dce19",
+      "task_type": "animate",
+      "resource": "animate",
+      "endpoint": "/openapi/v1/animations",
+      "stage": "anim-idle",
+      "parent_task_id": "01a1e672-0260-740d-be24-fd114282571e",
+      "status": "SUCCEEDED",
+      "files": [
+        "anims/idle.glb"
+      ],
+      "task_json": "task_01a1e672-c2fc-70c7-b266-2d337c5dce19.json",
+      "operation_id": "17c8f122-5144-49b3-a152-9a341087373e",
+      "created_at": "2026-11-16T22:20:52.386Z",
+      "updated_at": "2026-11-16T22:21:07.707Z"
+    }
+  ]
+}

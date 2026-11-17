@@ -1,0 +1,16 @@
+{
+  "id": "01a1e649-25a0-7008-87bd-5799ea489aee",
+  "type": "text-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "Round wooden treehouse platform seen from slightly above: a flat circular deck of weathered, slightly irregular wooden planks resting on a round log frame with crossing support beams underneath. Open flat walkable top with NO railing, NO posts, NO ropes on top. Realistic aged wood with moss in the cracks, neutral studio lighting, plain white background, single isolated object, 3D game asset reference",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1794864915886,
+  "started_at": 1794864915899,
+  "finished_at": 1794864930052,
+  "expires_at": 1795124130052,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a1e649-25a0-7008-87bd-5799ea489aee_0.png?Expires=1795124130&Signature=QqPId~iBuqmdu9q8DIqqLenpPFAKqj5AEu7cqIox98nkgnCxL8gj8uezfCZk0U~3AhWA5mnVmsmQz2jKSxE7b5Vyib3pKU3127ab304C0rt8XJeoqP5wziNXi1U-Q6WTM48Sqt5Dh9GSNSJZdUfay2L2dzcl~KiIH1oxklqSKqXdQrMkaBB4SsBGEAEXEetqE6lLrHZDpmH~fD-6TVZUB5IKqNOWpxzgj70FPb2mRMhfyTvpvlRpDEvaFFu5Lp2uSQGeY9-xQrSs0rmRsYnnOC~IfzQC5EOuAmw4kpf~A~coefuwXu8gBlQBgHppJFygaRSJk5iw8hmLPwAKRSPRbA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}

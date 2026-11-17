@@ -1,0 +1,23 @@
+{
+  "id": "01a1e13b-8631-71fe-a638-5e7e3745a742",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3969136356,
+  "prompt": "low poly stylized tall mossy rock cliff wall, stacked grey stone layers with moss on top, game environment asset",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794780139378,
+  "progress": 100,
+  "started_at": 1794780139387,
+  "finished_at": 1794780187902,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13b-8631-71fe-a638-5e7e3745a742/output/model.glb?Expires=4948300800&Signature=C~RMA5XHdaI-gneHkyoz5E3j2~NOJpVjcXKUfRVAnPtqfZtSX3TqXuzOXHuJR6aNzsapSqOdmrqNcqAjQR9LCzNV6c~H6AcdWO3hZnN5zzF0IfhWGl7Sq-KG7TKtlZNwZiE5hF-TtKQI8ZzU0AiF08GC0vwiX985IjjbdLo69Nj7xycvBI4f1TaczkcD1zMkcB6smH0GhPwdwjot83By7Rh2Ap0QD8cIIp9izzRGrVTujknkZ1-aeBJxn2ny5On~SFKr6Ern6XRAPiGzWr0Et1WNnjBNmrJ8wfmI5YHwkZXcArCY-i-n7gUbQcVCT1-yeCzsHEnpEYPwUNtBxYkZUA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13b-8631-71fe-a638-5e7e3745a742/output/preview.png?Expires=4948300800&Signature=jS~FTuySLa6W7hsN~sKaGUVa62fthjJXxumU4ySRY5x2VIt4qc6~sTwubMlF~bQIF3kL4Fz2q7BgHnCR367B1ylLKdzVR-Xac99oJb8C50gZ3mQjoiQJqdDgf3obCGrOKyUZoHK-YCQQOP4u5KUYMEbhe25~0SJ1a3UTXcemZ0X-DxSMQFldim3LdfSD6ed0xY1LmE9bNLA1n7JWW8RuuF4Gvzmz~w~zn~qUAkLUItyeQkB~n15iHWdGlv3WX4oyZ4-HktPoZ5TkehxVWkZiThqwd9MmmShI5B~Bvq7p1USVL65pyyhrAZiBXX2XrC-nWogGTxgDeA2FjUn2iYl58A__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

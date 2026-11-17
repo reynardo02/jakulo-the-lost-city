@@ -1,0 +1,27 @@
+{
+  "id": "01a1e13d-daa2-71b3-b3af-dc5bb73a2a45",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 1738142952,
+  "prompt": "low poly stylized clump of swamp reeds and cattails, green blades with brown cattail heads, game foliage asset",
+  "texture_prompt": "fresh green reed blades, brown velvety cattail heads, stylized",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794780293134,
+  "progress": 100,
+  "started_at": 1794780293141,
+  "finished_at": 1794780320496,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13d-daa2-71b3-b3af-dc5bb73a2a45/output/model.glb?Expires=4948300800&Signature=LctaLyt2UDphi6-vLUXbfR2pGf5ut8lISfacjplHp4agngn4UOPMuZraMviyStlpcp6nsP13486-1KE1ZLMRxWOxUUMLYZrmuraqficexTBR2pHliGmtlHAEuMIN3Vn6r~7YqhxL6FDc9XNg7B0-WCUX1SVF6BX68O7xJ07tthW-bIDraOBvX-~bpw-F5lT~MZrw~AiUJtsEQIRh167DHHkjDslW4pQ1cA6pCXht9XyP3EcupJcAGxsByQtxm9Ej2Iv6zciaSr3hoqEabQ5pakWHkmrEeszVzCQ-Lxr25Gke6c4jFXUdP9kF7L7SLpOchmOYkyZO2uPkCXsbbs2qhA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13d-daa2-71b3-b3af-dc5bb73a2a45/output/preview.png?Expires=4948300800&Signature=nHWWL1m3yQIBJVyhkmgcn7O2~5l5IIX8gK5L8huid0NhEaBXyujq9eecSWFq5B0SaKjWJ2zEQJllA1-M1fo7cY38wrboVj5lTUqB5d3RZQ3XOvFcdnXZH4tHINEt8Z1QPSMCslLMGumOMklDVgrdubNWhPyeyieYnuzgRpV-mvGe81TL4HLSOynkk38KPAm-te-tdxEqUt1XCBlalUQQZ3NAog-FRyIbaesBJNKagMGq6q1408wX9KOekkxxszTLczOsA0JYCkLvNlBOlcTj5ABtMVRMhkZksuWE3FtPgn-5TajtNtURCz-x8Q~eYbCey7hQtFt3tFxmUgYvO0wcWw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13d-daa2-71b3-b3af-dc5bb73a2a45/output/texture_0.png?Expires=4948300800&Signature=fJYALwpE8kqk~Y2eHbjB2GpUirJPTD5J25AX9nFWsJ0Iyv2I5PM3405G15~oilqsHnuyDvi8i3~0icLDxBjPsqOfw8yu5oghP6WTA92jeV6ncP9ubfTBikNUCu4Dqe9SfqSJek0Y1my07CFsr2xvEK1WR~ElEkKUN18fs9z4C-2OBDgomDMXFngU4f3ZyguVxp4j9Hf14-3OuM36e-HvmLRa7XzqzwqxV0xUOetpqzxl3EJ4KmZDdnJaYIdy7BHBZJ4XQq6qpjpaMsu5lsy3cNpyQgPFY8x2wXDTnrXOoiCvT6jst~PCREyEjOhGtAesXR7HxX~Yk28A8lNhV8iEXw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

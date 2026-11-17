@@ -1,0 +1,16 @@
+{
+  "id": "01a1e670-4432-740a-b4a6-87aa1750c668",
+  "type": "text-to-image",
+  "ai_model": "nano-banana-pro",
+  "prompt": "Photorealistic capuchin jungle monkey standing upright on two legs in a neutral A-pose, arms slightly away from the body, dark brown fur, light tan face and chest, long tail hanging down behind, full body visible from head to feet, front view, neutral studio lighting, plain white background, single isolated character, 3D game character reference",
+  "status": "SUCCEEDED",
+  "progress": 100,
+  "created_at": 1794867480343,
+  "started_at": 1794867480359,
+  "finished_at": 1794867506325,
+  "expires_at": 1795126706325,
+  "image_urls": [
+    "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/uploads/image_01a1e670-4432-740a-b4a6-87aa1750c668_0.png?Expires=1795126706&Signature=PzWs25WQyEgBpKYPF~UwBYzhxrTZ9H5iWn-EwUVMEnj0WK9uMiSaOMhQIXjYkRnCbF8Ld6bSLuX-tURbPEX6kAEOvbTOv~RjFelk-1P6KkaSwKhfKfCwZiaJVe~Mn-oHDaWNhVg7xmDMKZSyLgUlRQEFYcvS30hfH5lDdtfWV7O-Odmla~3xP9GvzZCvenXNLptIcmN38pUgDrYo-wFfMNcimLk63kJetR-o3O82D0MNpQy13mCZRH-iE8KbnEdEHT7plH7pGXAPE~7cuReU9yRzHC0ZBWyHSTAAj1EwX42XUNxYQL-T~hXBHjAMjb5286TD92FBlwbzGVY6sRw4rw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "consumed_credits": 9
+}

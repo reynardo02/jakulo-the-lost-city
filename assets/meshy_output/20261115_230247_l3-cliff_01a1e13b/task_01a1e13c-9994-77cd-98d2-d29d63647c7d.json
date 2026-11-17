@@ -1,0 +1,27 @@
+{
+  "id": "01a1e13c-9994-77cd-98d2-d29d63647c7d",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 1237595781,
+  "prompt": "low poly stylized tall mossy rock cliff wall, stacked grey stone layers with moss on top, game environment asset",
+  "texture_prompt": "grey wet stone layers, green moss on top and ledges, stylized",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794780210654,
+  "progress": 100,
+  "started_at": 1794780210664,
+  "finished_at": 1794780237358,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13c-9994-77cd-98d2-d29d63647c7d/output/model.glb?Expires=4948300800&Signature=Aj5Oxea2pkm~hbhvqGiiZBfUQKd9YHaX9ZXhtFGn~ErH6vAcSesA4ZV2lKpgn4WS0Vvm-ewyw3n8-MeqG2MYhn3241gYvUSss6Iblum9s9pOa~CXSWdwZzPK7BngUx-LJ4w9GN1xt80SjtcQKIY6gvdBS6Bqc4fQXi0cvQZJqEnyGyaysSR5cpGzN6cGB3KusnujX~wfjWK0yPG23~ipvkyIC0w4hf6U2M-bdKSiY87PtqirmDkQxzEbzov50OPLqxxJ-6Lj7elKd4X754K32GlQ9bQmcBhwHhzg6RgWcuPPKJGfsJKfgsinkhWTZwCE-tpxkRcLJe-yNEQMEqsqiw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13c-9994-77cd-98d2-d29d63647c7d/output/preview.png?Expires=4948300800&Signature=QTjYKeiDMPTCAA-0h0eKeATQloVdmSUAW6NiwTq-NYg5lX1GzEgMJCWhepnBbRfeFbDksj3k7Pebcojr9doKfyzYoEcCxqpOYiEVlc6ZIrM-IyjFe9Go3FSpDokkTwS-fAktk6iTDxQI1vYUyovQEyVHpKq1HCmzm7c548Cs7slcGI54QUe9I0m0iboXM-sAqT5W9TD9Tj30ulxowfcBpEfGlWFh0VhycLflFw0bpTIdgkohvGjGLClsBkXnfpki8CdHH4M9XJKWw1t5YqV2KTR3O-waIUW0id9VFDDvo8gQp1zm8azu15KzEeepw1ETlUJEi~-V4q51r2nms99Kuw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13c-9994-77cd-98d2-d29d63647c7d/output/texture_0.png?Expires=4948300800&Signature=GLixilnLN9sP9nAlLwK~Epxec-DITk6ncf9vlscBBHLPimQrfs3cXUHC6cPZXtkztdrs92n8EVOrb0TOTTsATk451mrwgoZSg70o9Av91st25zNAdQES7-IXksFI6yTChB8kRxURM3A2yAIMEiWb3ST54IKLAi~FOhcanU0xzhhpi7YbkJv5y87b2GLXD-Wt5sE4TcEjmlEQ0i4buQMEHu~pnamHgWj4IErprldMq8gN4A5ogyaxfP5yx4oVgnBbzziHy-ZDHHD~AQbZHJxDEHjfYGDd3PdUE9gXgQzWyPgf3DGYqpeez3b16Gw7Uquw6ZmOqbxpZWozIkpjqwKtsQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "consumed_credits": 10
+}

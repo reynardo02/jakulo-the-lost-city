@@ -1,0 +1,23 @@
+{
+  "id": "01a1e13b-5d18-740f-b975-0bac871b188b",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3544519143,
+  "prompt": "low poly stylized clump of swamp reeds and cattails, green blades with brown cattail heads, game foliage asset",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1794780128997,
+  "progress": 100,
+  "started_at": 1794780129004,
+  "finished_at": 1794780272760,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13b-5d18-740f-b975-0bac871b188b/output/model.glb?Expires=4948300800&Signature=IDw602Jkp8rBJJeXK4xKWegpEVyqBv-aZGOqXGyfoWHkYPCTVtbzaim-nsOIo0DfsPK2EBZ42xWJ8DuDbGGeJ103SkDEf3IJuS~vPYeIGHvRD500RPbJb5kPYrjNyA7RqSXXy2ojIQ3MBX2O2zi3cw1K7KE0I20W2BVQNK2sbYuOrlw3l95WJ-WHTGocGtPBR01EJB2SQNlvXyij2-tt6yp~pteQYjTsYuEJu3k5DW0pxaxuQLWXd51OAf7I7iCk6obF7iGWPgu1OJUGpxPIwUE6~D5htemobqJuLgg0dzD6zB1gJpwY6mFgBDF70zgQTzBJ3Bc7ptQPq-8dg2izVg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/8f4e6c58-f9b3-41a4-b434-6e74ae657a40/tasks/01a1e13b-5d18-740f-b975-0bac871b188b/output/preview.png?Expires=4948300800&Signature=Osu4NwOfuzsOfWB-J5ghIsVYsMmZFYw-qRpVfVxnAI91EUzcaFap8vrVOq-C44tHV8iKTG3xM~FJkEuLrRCgFYNBYsiK6S~PYErsnyLTmAfbT9O0dQSpNaNtxU5Evqdjl0wjRQu2krgbv6gZNqaBiOieOUtgQWNutzzZ8hydaKK6pJ-voTX3xN4Ai7seWMD7g-IB8v9JTDWfxBWVjqoAjcsbVeQ15HFQpmOl1lhulaggMJZvqC9UyCWHzcgqm4v-gNXMXvzaS2AzY~uhitxPlQ02w-xp5l5UI5eS9UiUN260teJK5~jsTTjLDbXXIawuIZDkp1Q-KELTKV8L77YFuA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

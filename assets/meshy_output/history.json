@@ -135,6 +135,114 @@
       "created_at": "2026-11-15T20:42:42.289Z",
       "updated_at": "2026-11-15T20:43:57.808Z",
       "task_count": 2
+    },
+    {
+      "folder": "20261115_230246_l3-platform_01a1e13b",
+      "prompt": "l3-platform",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e13b-6f97-713e-b83f-439c907fe4f4",
+      "created_at": "2026-11-15T22:02:46.986Z",
+      "updated_at": "2026-11-15T22:04:02.792Z",
+      "task_count": 2
+    },
+    {
+      "folder": "20261115_230246_l3-wasp-nest_01a1e13b",
+      "prompt": "l3-wasp_nest",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e13b-39b1-75f4-b852-d0aa447953d9",
+      "created_at": "2026-11-15T22:02:46.998Z",
+      "updated_at": "2026-11-15T22:03:54.511Z",
+      "task_count": 2
+    },
+    {
+      "folder": "20261115_230247_l3-mangrove_01a1e13b",
+      "prompt": "l3-mangrove",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e13b-4b4d-70b0-a8e2-6cf79e4e7a51",
+      "created_at": "2026-11-15T22:02:47.010Z",
+      "updated_at": "2026-11-15T22:06:09.635Z",
+      "task_count": 2
+    },
+    {
+      "folder": "20261115_230247_l3-cliff_01a1e13b",
+      "prompt": "l3-cliff",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e13b-8631-71fe-a638-5e7e3745a742",
+      "created_at": "2026-11-15T22:02:47.068Z",
+      "updated_at": "2026-11-15T22:04:11.833Z",
+      "task_count": 2
+    },
+    {
+      "folder": "20261115_230247_l3-reeds_01a1e13b",
+      "prompt": "l3-reeds",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e13b-5d18-740f-b975-0bac871b188b",
+      "created_at": "2026-11-15T22:02:47.151Z",
+      "updated_at": "2026-11-15T22:05:34.582Z",
+      "task_count": 2
+    },
+    {
+      "folder": "20261115_230247_l3-sling_01a1e13b",
+      "prompt": "l3-sling",
+      "task_type": "text-to-3d-preview",
+      "root_task_id": "01a1e13b-25b3-74cf-a40a-55b1e5fd2659",
+      "created_at": "2026-11-15T22:02:47.425Z",
+      "updated_at": "2026-11-15T22:03:30.432Z",
+      "task_count": 2
+    },
+    {
+      "folder": "20261116_223342_l3-t2-monkey_01a1e647",
+      "prompt": "l3-t2-monkey",
+      "task_type": "text-to-image",
+      "root_task_id": "01a1e647-8cad-733f-bd47-5dba03e34b87",
+      "created_at": "2026-11-16T21:33:42.613Z",
+      "updated_at": "2026-11-16T21:34:59.591Z",
+      "task_count": 4
+    },
+    {
+      "folder": "20261116_223528_l3-t2-target_01a1e649",
+      "prompt": "l3-t2-target",
+      "task_type": "text-to-image",
+      "root_task_id": "01a1e649-25cb-762f-aaf5-13ec5aa96bc5",
+      "created_at": "2026-11-16T21:35:28.285Z",
+      "updated_at": "2026-11-16T21:36:49.628Z",
+      "task_count": 4
+    },
+    {
+      "folder": "20261116_223528_l3-t2-jewel_01a1e649",
+      "prompt": "l3-t2-jewel",
+      "task_type": "text-to-image",
+      "root_task_id": "01a1e649-25f9-77ed-b33a-c58f99c9f45c",
+      "created_at": "2026-11-16T21:35:28.312Z",
+      "updated_at": "2026-11-16T21:36:49.334Z",
+      "task_count": 4
+    },
+    {
+      "folder": "20261116_223528_l3-t2-platform_01a1e649",
+      "prompt": "l3-t2-platform",
+      "task_type": "text-to-image",
+      "root_task_id": "01a1e649-25a0-7008-87bd-5799ea489aee",
+      "created_at": "2026-11-16T21:35:28.380Z",
+      "updated_at": "2026-11-16T21:36:42.099Z",
+      "task_count": 4
+    },
+    {
+      "folder": "20261116_223528_l3-t2-wasp-nest_01a1e649",
+      "prompt": "l3-t2-wasp_nest",
+      "task_type": "text-to-image",
+      "root_task_id": "01a1e649-26b0-73e3-93b5-b41a7496ac3f",
+      "created_at": "2026-11-16T21:35:28.503Z",
+      "updated_at": "2026-11-16T21:36:34.773Z",
+      "task_count": 4
+    },
+    {
+      "folder": "20261116_231811_l3-monkey-rig_01a1e670",
+      "prompt": "l3-monkey-rig",
+      "task_type": "text-to-image",
+      "root_task_id": "01a1e670-4432-740a-b4a6-87aa1750c668",
+      "created_at": "2026-11-16T22:18:11.031Z",
+      "updated_at": "2026-11-16T22:21:07.973Z",
+      "task_count": 8
     }
   ]
 }

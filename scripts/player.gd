@@ -21,8 +21,12 @@ const SNEAK_ANIMS := {
 const SNEAK_BLEND_TIME = 0.2      # Überblenden zwischen aufrecht und geduckt
 const AIR_CONTROL = 0.3
 
-# Sprung nach vorne
-const FORWARD_JUMP_SPEED = 5.0    # Vorwärtsschwung (zusätzlich zur Luftsteuerung)
+# Sprung nach vorne: einmal SPRINGEN = kurzer Sprung (etwa 2/3 der Weite), ein zweites
+# SPRINGEN kurz nach dem Absprung macht daraus den weiten Sprung (gleiche Landestelle wie
+# ein weiter Sprung von Anfang an).
+const FORWARD_JUMP_SPEED = 5.0    # Vorwärtsschwung des weiten Sprungs (zusätzlich zur Luftsteuerung)
+const SHORT_JUMP_SPEED = 2.85     # Vorwärtsschwung des kurzen Sprungs: (5 + 1,5 Luftsteuerung) * 2/3 - 1,5
+const LONG_JUMP_WINDOW = 0.35     # so lange nach dem Absprung zählt ein zweites SPRINGEN
 const FORWARD_JUMP_VELOCITY = 5.0  # Sprunghöhe beim Sprung nach vorne           # Lenkbarkeit in der Luft nach der Liane
 const VINE_ANIM = "Rope_Hang_Idle"
 
@@ -48,6 +52,7 @@ var is_sneaking: bool = false   # geduckt: langsamer, leiser, schwerer zu sehen
 var hiding_zones: int = 0       # in so vielen Verstecken (hohes Gras) steht der Spieler gerade
 var vine_climb_up_armed: bool = false  # Hochklettern erst, nachdem VOR einmal losgelassen wurde
 var air_momentum: Vector3 = Vector3.ZERO
+var jump_time: float = -1.0      # Zeit seit dem kurzen Sprung nach vorne (-1 = keiner, der noch verlängert werden kann)
 var hang_forward: Vector3 = Vector3.FORWARD  # Blickrichtung an der Liane (bleibt fest)
 
 @onready var camera_pivot: Node3D = $CameraPivot
@@ -112,6 +117,7 @@ func _physics_process(delta: float) -> void:
 
 	# An der Liane: Position folgt dem Seilende
 	if current_vine:
+		jump_time = -1.0
 		process_vine()
 		return
 
@@ -135,12 +141,17 @@ func _physics_process(delta: float) -> void:
 	rotate_character(direction, delta)
 
 	# jump – beim Laufen als Sprung nach vorne mit Schwung, im Stand senkrecht
+	if jump_time >= 0.0:
+		jump_time += delta
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		is_sneaking = false   # Springen richtet auf
 		velocity.y = JUMP_VELOCITY
 		if direction.length_squared() > 0.01:
 			velocity.y = FORWARD_JUMP_VELOCITY
-			air_momentum = direction * FORWARD_JUMP_SPEED
+			air_momentum = direction * SHORT_JUMP_SPEED
+			jump_time = 0.0
+	elif Input.is_action_just_pressed("jump") and jump_time >= 0.0 and jump_time <= LONG_JUMP_WINDOW:
+		extend_jump()
 
 	
 	#Set horizontal direction (mit Schwung nach dem Loslassen der Liane)
@@ -158,6 +169,8 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		air_momentum = Vector3.ZERO
 		last_vine = null
+		if jump_time > 0.05:
+			jump_time = -1.0
 
 	update_animation()
 
@@ -196,6 +209,27 @@ func update_sneak(_delta: float) -> void:
 	elif Input.is_action_just_pressed("crouch"):
 		is_sneaking = not is_sneaking
 	GameState.set_player_status("Versteckt" if is_hidden() else ("Schleichen" if is_sneaking else ""))
+
+
+## Zweites SPRINGEN: macht aus dem kurzen Sprung den weiten. Die Höhe bleibt, der Schwung
+## nach vorne wird so erhöht, dass die Landestelle der des weiten Sprungs entspricht
+## (die verpasste Strecke seit dem Absprung wird auf die restliche Flugzeit verteilt).
+func extend_jump() -> void:
+	var flight := 2.0 * FORWARD_JUMP_VELOCITY / maxf(get_gravity().length(), 0.1)
+	var rest := maxf(flight - jump_time, 0.1)
+	var speed := (FORWARD_JUMP_SPEED * flight - SHORT_JUMP_SPEED * jump_time) / rest
+	air_momentum = air_momentum.normalized() * speed
+	jump_time = -1.0
+
+
+## Rückstoß (z. B. Treffer einer Frucht): kurzer Hüpfer in Richtung `push`.
+func knockback(push: Vector3) -> void:
+	if current_vine:
+		return
+	is_sneaking = false
+	velocity.y = 3.5
+	air_momentum = Vector3(push.x, 0.0, push.z)
+	jump_time = -1.0
 
 
 ## Geduckt in einem Versteck (hohes Gras): Wachen sehen den Spieler dann nicht.
@@ -380,10 +414,12 @@ func rotate_character(direction: Vector3, delta: float) -> void:
 	if direction.length_squared() < 0.001:
 		return
 
-	var target_angle = atan2(-direction.x, -direction.z)
+	# In Weltkoordinaten drehen: Die Figur schaut dann in Laufrichtung, egal wie der
+	# Spielerknoten selbst gedreht ist (z. B. nachdem eine Cutscene ihn umgesetzt hat).
+	var target_angle = atan2(direction.x, direction.z)
 
-	visuals.rotation.y = lerp_angle(
-		visuals.rotation.y,
+	visuals.global_rotation.y = lerp_angle(
+		visuals.global_rotation.y,
 		target_angle,
 		min(ROTATION_SPEED * delta, 1.0)
 	)
